@@ -88,7 +88,13 @@ class lib_euca_ui_test(unittest.TestCase):
     def test_ui_logout(self):
 	print "Started Test: Logout"
         driver = self.driver
-        driver.find_element_by_id("euca-logo").click()
+        for i in range(60):
+            try:
+                if self.is_element_present(By.ID, "euca-logo"): break
+            except: pass
+            time.sleep(1)
+        else: self.fail("time out")
+	driver.find_element_by_id("euca-logo").click()
 	print "Test: Received the Page Title -> " + driver.title
         for i in range(60):
             try:
