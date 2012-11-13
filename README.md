@@ -28,140 +28,166 @@ runtest_ip_address.py
 
 ## USAGE
 
-Run the command below first:
+### Prerequisite
+
+Run the command below on your console:
 
 <code>
 export DISPLAY=:0
 </code>
 
-### View Page
+### View Page Test
 
 <code>
 ./runtest_view_page.py -i [ui_ip] -p [port] -a [accountname] -u [username] -w [password] -t [testcase]
-</code>
 
-, where [testcase] can be: 
+, where [testcase] is: 
 
-   [ check_login_and_logout, view_keypairs_page, view_running_page, view_volumes_page, view_secuirty_groups_page, view_all_page, get_dashboard_source ]
+     [ check_login_and_logout, view_keypairs_page, view_running_page, view_volumes_page, view_secuirty_groups_page, view_all_page, get_dashboard_source ]
 
-Ex.
+Example.
 
+<code>
 export DISPLAY=:0
 
+<code>
 ./runtest_view_page.py -i 192.168.51.131 -p 8888 -a ui-test-acct-00 -u user00 -w mypassword1 -t view_all_page
 
+<code>
 ./runtest_view_page.py -i 192.168.51.131 -p 8888 -a ui-test-acct-03 -u admin -w mypassword6 -t view_keypairs_page
 
+<code>
 ./runtest_view_page.py -i 192.168.51.106 -p 8888 -a ui-test-acct-00 -u user00 -w mypassword1 -t get_dashboard_source
 
----
+### Instance Test
 
+<code>
+./runtest_instance.py -i [ui_ip] -p [port] -a [accountname] -u [username] -w [password] -t [testcase]
 
----
-
-./runtest_instance.py -i <ui_ip> -p <port> -a <accountname> -u <username> -w <password> -t <testcase>
-
-where <testcase>:
+, where [testcase] is:
 
 	[ launch_instance_basic, terminate_instance_basic ]
 
-Ex.
+Example.
 
+<code>
 export DISPLAY=:0
 
+<code>
 ./runtest_instance.py -i 192.168.51.106 -p 8888 -a ui-test-acct-00 -u user00 -w mypassword1 -t launch_instance_basic
 
+<code>
 ./runtest_instance.py -i 192.168.51.106 -p 8888 -a ui-test-acct-00 -u user00 -w mypassword1 -t terminate_instance_basic
 
----
+### Keypair Test
 
+<code>
+./runtest_keypair.py -i [ui_ip] -p [port] -a [accountname] -u [username] -w [password] -t [testcase]
 
----
-./runtest_keypair.py -i <ui_ip> -p <port> -a <accountname> -u <username> -w <password> -t <testcase>
-
-where <testcase>:
+, where [testcase] is:
 
 	[ generate_keypair, delete_keypair ]
 
-Ex.
+Example.
 
+<code>
 export DISPLAY=:0
 
+<code>
 ./runtest_keypair.py -i 192.168.51.106 -p 8888 -a ui-test-acct-00 -u user00 -w mypassword1 -t generate_keypair
 
+<code>
 ./runtest_keypair.py -i 192.168.51.106 -p 8888 -a ui-test-acct-00 -u user00 -w mypassword1 -t delete_keypair
 
----
+### Volume Test
 
----
-./runtest_volume.py -i <ui_ip> -p <port> -a <accountname> -u <username> -w <password> -t <testcase>
+<code>
+./runtest_volume.py -i [ui_ip] -p [port] -a [accountname] -u [username] -w [password] -t [testcase]
 
-where <testcase>:
+, where [testcase] is:
 
         [ create_volume, delete_volume, create_snapshot_from_volume ]
 
-Ex.
+Example.
 
+<code>
 export DISPLAY=:0
 
+<code>
 ./runtest_volume.py -i 192.168.51.106 -p 8888 -a ui-test-acct-00 -u user00 -w mypassword1 -t create_volume
 
+<code>
 ./runtest_volume.py -i 192.168.51.106 -p 8888 -a ui-test-acct-00 -u user00 -w mypassword1 -t delete_volume
 
+<code>
 ./runtest_volume.py -i 192.168.51.106 -p 8888 -a ui-test-acct-00 -u user00 -w mypassword1 -t create_snapshot_from_volume
 
----
+### Snapshot Test
 
+<code>
+./runtest_snapshot.py -i [ui_ip] -p [port] -a [accountname] -u [username] -w [password] -t [testcase]
 
----
-./runtest_snapshot.py -i <ui_ip> -p <port> -a <accountname> -u <username> -w <password> -t <testcase>
+, where [testcase] is:
 
-where <testcase>:
+        [ delete_snapshot, create_volume_from_snapshot ]
 
-        [ delete_snapshot ]
+Example.
 
-Ex.
-
+<code>
 export DISPLAY=:0
 
+<code>
 ./runtest_snapshot.py -i 192.168.51.106 -p 8888 -a ui-test-acct-00 -u user00 -w mypassword1 -t delete_snapshot
 
+<code>
 ./runtest_snapshot.py -i 192.168.51.106 -p 8888 -a ui-test-acct-00 -u user00 -w mypassword1 -t create_volume_from_snapshot
 
----
+### Security Group Test
 
+<code>
+./runtest_security_group.py -i [ui_ip] -p [port] -a [accountname] -u [username] -w [password] -t [testcase]
 
----
-./runtest_security_group.py -i <ui_ip> -p <port> -a <accountname> -u <username> -w <password> -t <testcase>
-
-where <testcase>:
+, where [testcase] is:
 
         [ create_security_group, delete_security_group ]
 
-Ex.
+Example.
 
+<code>
 export DISPLAY=:0
 
+<code>
 ./runtest_security_group.py -i 192.168.51.106 -p 8888 -a ui-test-acct-00 -u user00 -w mypassword1 -t create_security_group
 
+<code>
 ./runtest_security_group.py -i 192.168.51.106 -p 8888 -a ui-test-acct-00 -u user00 -w mypassword1 -t delete_security_group
 
----
+### IP Address Test
 
----
-./runtest_ip_address.py -i <ui_ip> -p <port> -a <accountname> -u <username> -w <password> -t <testcase>
+<code>
+./runtest_ip_address.py -i [ui_ip] -p [port] -a [accountname] -u [username] -w [password] -t [testcase]
 
-where <testcase>:
+, where [testcase] is:
 
         [ allocate_two_ip_addresses, release_ip_address ]
 
-Ex.
+Example.
 
+<code>
 export DISPLAY=:0
 
+<code>
 ./runtest_ip_address.py -i 192.168.51.106 -p 8888 -a ui-test-acct-00 -u user00 -w mypassword1 -t allocate_two_ip_addresses
 
+<code>
 ./runtest_ip_address.py -i 192.168.51.106 -p 8888 -a ui-test-acct-00 -u user00 -w mypassword1 -t release_ip_address
 
----
+## Contact
+
+Please contact developers for any questions or suggestions:
+
+Kyo Lee
+
+kyo.lee@eucalyptus.com
+
 
