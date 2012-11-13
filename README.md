@@ -1,10 +1,9 @@
-
 se34euca
 ========
 
 Selenium 34 Eucalyptus -- Eucalyptus User Console Test Framework Based on Selenium
 
-## CLASS
+### CLASS
 lib_euca_ui_test.py  		- Main Library for Exported Selenium Scripts
 testcase_view_page.py 		- Test Cases for Viewing Pages
 testcase_instance.py 		- Test Cases for Instance
@@ -14,7 +13,7 @@ testcase_snapshot.py		- Test Cases for Snapshot
 testcase_security_group.py	- Test Cases for Security Group
 testcase_ip_address.py		- Test Cases for IP Address
 
-## EXECUTABLE
+### EXECUTABLE
 runtest_view_page.py
 runtest_instance.py
 runtest_keypair.py
@@ -23,13 +22,13 @@ runtest_snapshot.py
 runtest_security_group.py
 runtest_ip_address.py
 
-# USAGE
+## USAGE
 
-## PRE-REQ
+### PRE-REQ
 
 export DISPLAY=:0
 
-## PER TEST CASE
+### PER TEST CASE
 
 ---
 ./runtest_view_page.py -i <ui_ip> -p <port> -a <accountname> -u <username> -w <password> -t <testcase>
