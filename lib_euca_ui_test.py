@@ -98,12 +98,26 @@ class lib_euca_ui_test(unittest.TestCase):
         else: self.fail("time out")
         try: self.assertTrue(self.is_element_present(By.LINK_TEXT, "Launch new instance"))
         except AssertionError as e: self.verificationErrors.append(str(e))
-#	this_link = self.accountname + "/" + self.username
 	this_link = self.username + "@" + self.accountname
+	for i in range(60):
+            try:
+                if self.is_element_present(By.LINK_TEXT, this_link): break
+            except: pass
+            time.sleep(1)
+        else: self.fail("time out")
+	print "Test: Clicking User Account Menu " + this_link
         driver.find_element_by_link_text(this_link).click()
-        driver.find_element_by_css_selector("body").click()
-        driver.find_element_by_link_text("Log out").click()
-        driver.find_element_by_css_selector("body").click()
+#        driver.find_element_by_css_selector("body").click()
+	print "Test: Clicked User Account Menu " + this_link
+	for i in range(60):
+            try:
+                if self.is_element_present(By.LINK_TEXT, "Log out"): break
+            except: pass
+	    time.sleep(1)
+        else: self.fail("time out")
+	print "Test: Clicking Log out"
+	driver.find_element_by_link_text("Log out").click()
+#        driver.find_element_by_css_selector("body").click()
 	print "Test: Clicked the Logout Button"
         for i in range(60):
             try:
@@ -316,7 +330,7 @@ class lib_euca_ui_test(unittest.TestCase):
 	else: self.fail("time out")
 	print "Test: Delete Volume"
 	driver.find_element_by_id("more-actions-volumes").click()
-	driver.find_element_by_css_selector("body").click()
+#	driver.find_element_by_css_selector("body").click()
 	for i in range(60):
 	    try:
 		if self.is_element_present(By.LINK_TEXT, "Delete"): break
@@ -324,7 +338,7 @@ class lib_euca_ui_test(unittest.TestCase):
 	    time.sleep(1)
 	else: self.fail("time out")
 	driver.find_element_by_link_text("Delete").click()
-	driver.find_element_by_css_selector("body").click()
+#	driver.find_element_by_css_selector("body").click()
 	for i in range(60):
 	    try:
 		if self.is_element_present(By.ID, "btn-volumes-delete-delete"): break
@@ -354,7 +368,7 @@ class lib_euca_ui_test(unittest.TestCase):
         else: self.fail("time out")
 	print "Test: Create Snapshot From Volume"
         driver.find_element_by_id("more-actions-volumes").click()
-        driver.find_element_by_css_selector("body").click()
+#        driver.find_element_by_css_selector("body").click()
         for i in range(60):
             try:
                 if self.is_element_present(By.LINK_TEXT, "Create snapshot from volume"): break
@@ -362,7 +376,7 @@ class lib_euca_ui_test(unittest.TestCase):
             time.sleep(1)
         else: self.fail("time out")
         driver.find_element_by_link_text("Create snapshot from volume").click()
-        driver.find_element_by_css_selector("body").click()
+#        driver.find_element_by_css_selector("body").click()
         driver.find_element_by_id("snapshot-create-description").clear()
         driver.find_element_by_id("snapshot-create-description").send_keys("snapshot by selenium script")
         driver.find_element_by_id("snapshot-create-btn").click()
@@ -395,7 +409,7 @@ class lib_euca_ui_test(unittest.TestCase):
         else: self.fail("time out")
 	print "Test: Delete Snapshot"
         driver.find_element_by_link_text("Delete").click()
-        driver.find_element_by_css_selector("body").click()
+#        driver.find_element_by_css_selector("body").click()
         for i in range(60):
             try:
                 if self.is_element_present(By.ID, "btn-snapshots-delete-delete"): break
@@ -426,7 +440,7 @@ class lib_euca_ui_test(unittest.TestCase):
 	print "Test: Create Volume From Snapshot"
         driver.find_element_by_id("more-actions-snapshots").click()
         driver.find_element_by_link_text("Create volume from snapshot").click()
-        driver.find_element_by_css_selector("body").click()
+#        driver.find_element_by_css_selector("body").click()
         for i in range(60):
             try:
                 if self.is_element_present(By.ID, "volumes-add-btn"): break
@@ -574,7 +588,7 @@ class lib_euca_ui_test(unittest.TestCase):
         else: self.fail("time out")
 	print "Test: Delete Security Group"
         driver.find_element_by_link_text("Delete").click()
-        driver.find_element_by_css_selector("body").click()
+#        driver.find_element_by_css_selector("body").click()
         for i in range(60):
             try:
                 if self.is_element_present(By.ID, "btn-sgroups-delete-delete"): break
@@ -634,7 +648,7 @@ class lib_euca_ui_test(unittest.TestCase):
             time.sleep(1)
         else: self.fail("time out")
         driver.find_element_by_id("more-actions-eips").click()
-        driver.find_element_by_css_selector("body").click()
+#        driver.find_element_by_css_selector("body").click()
         for i in range(60):
             try:
                 if self.is_element_present(By.LINK_TEXT, "Release to cloud"): break
@@ -643,7 +657,7 @@ class lib_euca_ui_test(unittest.TestCase):
         else: self.fail("time out")
 	print "Test: Release IP Address"
         driver.find_element_by_link_text("Release to cloud").click()
-        driver.find_element_by_css_selector("body").click()
+#        driver.find_element_by_css_selector("body").click()
         for i in range(60):
             try:
                 if self.is_element_present(By.ID, "btn-eips-release-release"): break
