@@ -26,6 +26,25 @@ runtest_security_group.py
 runtest_ip_address.py
 </pre>
 
+## INSTALLATION GUIDE
+
+### ON UBUNTU LINUX
+
+<code>
+sudo apt-get -y install git-core
+
+<code>
+git clone git://github.com/eucalyptus/se34euca.git
+
+<code>
+cd ./se34euca/script/
+
+<code>
+./installer_se34euca.py
+
+<code>
+cd ..
+
 ## USAGE
 
 ### Prerequisite
