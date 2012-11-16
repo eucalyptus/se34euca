@@ -1,4 +1,15 @@
-7  apt-get update
+
+# INSTALLER
+
+Located in ./script directory
+
+<code>
+cd ./script
+./installer_se34euca.py
+
+### Captured Installation Process
+
+    7  apt-get update
     8  ls
     9  vim /etc/apt/sources.list
    10  apt-get install vim
