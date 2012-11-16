@@ -13,6 +13,7 @@ testcase_volume.py		- Test Cases for Volume
 testcase_snapshot.py		- Test Cases for Snapshot
 testcase_security_group.py	- Test Cases for Security Group
 testcase_ip_address.py		- Test Cases for IP Address
+testcase_simulate_user.py	- Test Cases for Simulate User
 </pre>
 
 ### EXECUTABLE
@@ -24,7 +25,27 @@ runtest_volume.py
 runtest_snapshot.py
 runtest_security_group.py
 runtest_ip_address.py
+runtest_simulate_user.py
 </pre>
+
+## INSTALLATION GUIDE
+
+### ON UBUNTU LINUX
+
+<code>
+sudo apt-get -y install git-core
+
+<code>
+git clone git://github.com/eucalyptus/se34euca.git
+
+<code>
+cd ./se34euca/script/
+
+<code>
+./installer_se34euca.py
+
+<code>
+cd ..
 
 ## USAGE
 
@@ -181,6 +202,24 @@ export DISPLAY=:0
 
 <code>
 ./runtest_ip_address.py -i 192.168.51.106 -p 8888 -a ui-test-acct-00 -u user00 -w mypassword1 -t release_ip_address
+
+### SIMULATE USER
+
+<code>
+./runtest_simulate.py -i [ui_ip] -p [port] -a [accountname] -u [username] -w [password] -t [testcase]
+
+, where [testcase] is:
+
+        [ simulate_user_case_00 ]
+
+Example.
+
+<code>
+export DISPLAY=:0
+
+<code>
+./runtest_simulate_user.py -i 192.168.51.106 -p 8888 -a ui-test-acct-00 -u user00 -w mypassword1 -t simulate_user_case_00
+
 
 ## Contact
 

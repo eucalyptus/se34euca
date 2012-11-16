@@ -240,6 +240,27 @@ class lib_euca_ui_test(unittest.TestCase):
 	print "Finished Test: GotoPage Volumes"
 	print 
 
+    def test_ui_gotopage_dashboard(self):
+	print "Started Test: GotoPage Dashboard"
+        driver = self.driver
+        for i in range(60):
+            try:
+                if self.is_element_present(By.ID, "euca-logo"): break
+            except: pass
+            time.sleep(1)
+        else: self.fail("time out")
+	driver.find_element_by_id("euca-logo").click()
+	print "Test: Received the Page Title -> " + driver.title
+        for i in range(60):
+            try:
+                if self.is_element_present(By.LINK_TEXT, "Launch new instance"): break
+            except: pass
+            time.sleep(1)
+        else: self.fail("time out")
+        try: self.assertTrue(self.is_element_present(By.LINK_TEXT, "Launch new instance"))
+        except AssertionError as e: self.verificationErrors.append(str(e))
+	print "Finished Test: GotoPage Dashboard"
+	print
 
     def test_ui_launch_instance_basic(self):
 	print "Started Test: Launch Instance Baisc"
