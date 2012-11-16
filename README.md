@@ -51,11 +51,14 @@ cd ..
 
 ### Prerequisite
 
-Run the command below on your console:
+1 Run the command below on your console:
 
 <code>
 export DISPLAY=:0
 </code>
+
+2 Have the Account, User and its Password Populated.
+  * Se34Euca scripts do not automatically create a user for testing.
 
 ### View Page Test
 
