@@ -263,59 +263,71 @@ class lib_euca_ui_test(unittest.TestCase):
 	print
 
     def test_ui_launch_instance_basic(self):
-	print "Started Test: Launch Instance Baisc"
+	print "Started Test: Launch Instance Basic"
         driver = self.driver
-        driver.find_element_by_link_text("Launch new instance").click()
-	print "Test: Clicking Through Default Options"
-        driver.find_element_by_css_selector("tr.odd.selected-row").click()
-        driver.find_element_by_id("launch-wizard-buttons-image-next").click()
-        driver.find_element_by_id("launch-wizard-buttons-type-next").click()
-        driver.find_element_by_id("launch-wizard-buttons-security-launch").click()
-	print "Test: Launched an Instance at its default setting"
-	print "Finished Test: Launch Instance Basic"
+	try:
+		driver.find_element_by_link_text("Launch new instance").click()
+		print "Test: Clicking Through Default Options"
+		driver.find_element_by_css_selector("tr.odd.selected-row").click()
+		driver.find_element_by_id("launch-wizard-buttons-image-next").click()
+		driver.find_element_by_id("launch-wizard-buttons-type-next").click()
+		driver.find_element_by_id("launch-wizard-buttons-security-launch").click()
+		print "Test: Launched an Instance at its default setting"
+		print "Finished Test: Launch Instance Basic"
+	except:
+		print "Failed Test: Launch Instance Basic"
 	print 
 
 
     def test_ui_terminate_instance_basic(self):
 	print "Started Test: Terminate Instance Basic"
         driver = self.driver
-	print "Test: Go to the Page Running Instances"
-	driver.find_element_by_css_selector("div.status-readout").click()
-	print "Test: Terminate an Instance"
-        driver.find_element_by_xpath("//table[@id='instances']/tbody/tr/td[5]").click()
-        driver.find_element_by_id("more-actions-instances").click()
-        driver.find_element_by_link_text("Terminate").click()
-        driver.find_element_by_id("btn-instances-terminate-terminate").click()
-	print "Finished Test: Terminate Instance Basic"
+	try:
+		print "Test: Go to the Page Running Instances"
+		driver.find_element_by_css_selector("div.status-readout").click()
+		print "Test: Terminate an Instance"
+        	driver.find_element_by_xpath("//table[@id='instances']/tbody/tr/td[5]").click()
+        	driver.find_element_by_id("more-actions-instances").click()
+        	driver.find_element_by_link_text("Terminate").click()
+        	driver.find_element_by_id("btn-instances-terminate-terminate").click()
+		print "Finished Test: Terminate Instance Basic"
+	except:
+		print "Failed Test: Terminate Instance Basic"
 	print 
 
 
     def test_ui_generate_keypair(self):
 	print "Started Test: Generate Keypair"
         driver = self.driver
-	print "Test: Go to the Page Keypair"
-        driver.find_element_by_id("dashboard-netsec-keypair").click()
-	print "Test: Generate New Keypair"
-        driver.find_element_by_id("table-keys-new").click()
-        driver.find_element_by_id("key-name").clear()
-        driver.find_element_by_id("key-name").send_keys("my-sel-gen-key-00")
-        # ERROR: Caught exception [ERROR: Unsupported command [typeKeys]]
-        driver.find_element_by_id("keys-add-btn").click()
-	print "Finished Test: Generate Keypair"
+	try:
+		print "Test: Go to the Page Keypair"
+		driver.find_element_by_id("dashboard-netsec-keypair").click()
+		print "Test: Generate New Keypair"
+		driver.find_element_by_id("table-keys-new").click()
+		driver.find_element_by_id("key-name").clear()
+		driver.find_element_by_id("key-name").send_keys("my-sel-gen-key-00")
+		# ERROR: Caught exception [ERROR: Unsupported command [typeKeys]]
+		driver.find_element_by_id("keys-add-btn").click()
+		print "Finished Test: Generate Keypair"
+	except:
+		print "Failed Test: Generate Keypair"
 	print
 
 
     def test_ui_delete_keypair(self):
 	print "Started Test: Delete Keypair"
         driver = self.driver
-	print "Test: Go to the Page Keypair"
-        driver.find_element_by_id("dashboard-netsec-keypair").click()
-	print "Test: Delete Keypair"
-        driver.find_element_by_xpath("//table[@id='keys']/tbody/tr/td[2]").click()
-        driver.find_element_by_id("more-actions-keys").click()
-        driver.find_element_by_link_text("Delete").click()
-        driver.find_element_by_id("btn-keys-delete-delete").click()
-	print "Finished Test: Delete Keypair"
+	try:
+		print "Test: Go to the Page Keypair"
+        	driver.find_element_by_id("dashboard-netsec-keypair").click()
+		print "Test: Delete Keypair"
+		driver.find_element_by_xpath("//table[@id='keys']/tbody/tr/td[2]").click()
+        	driver.find_element_by_id("more-actions-keys").click()
+        	driver.find_element_by_link_text("Delete").click()
+        	driver.find_element_by_id("btn-keys-delete-delete").click()
+		print "Finished Test: Delete Keypair"
+	except:
+		print "Failed Test: Delete Keypair"
 	print
 
     def test_ui_create_volume(self):
@@ -342,6 +354,7 @@ class lib_euca_ui_test(unittest.TestCase):
         # ERROR: Caught exception [ERROR: Unsupported command [typeKeys | id=volume-size | 2]]
         driver.find_element_by_id("volumes-add-btn").click()
  	print "Finished: Create New Volume"
+	print
 
     def test_ui_delete_volume(self):
 	print "Started Test: Delete Volume"
@@ -374,6 +387,7 @@ class lib_euca_ui_test(unittest.TestCase):
 	else: self.fail("time out")
 	driver.find_element_by_id("btn-volumes-delete-delete").click()
     	print "Finished: Delete Volume"
+	print
 
     def test_ui_create_snapshot_from_volume(self):
 	print "Started Test: Create Snapshot From Volume"
@@ -408,6 +422,7 @@ class lib_euca_ui_test(unittest.TestCase):
         driver.find_element_by_id("snapshot-create-description").send_keys("snapshot by selenium script")
         driver.find_element_by_id("snapshot-create-btn").click()
 	print "Finished: Create Snapshot From Volume"   
+	print
 
     def test_ui_delete_snapshot(self):
 	print "Started Test: Delete Snapshot"
@@ -445,6 +460,7 @@ class lib_euca_ui_test(unittest.TestCase):
         else: self.fail("time out")
         driver.find_element_by_id("btn-snapshots-delete-delete").click()
 	print "Finished: Delete Snapshot" 
+	print
 
     def test_ui_create_volume_from_snapshot(self):
 	print "Started Test: Create Volume From Snapshot"
@@ -476,6 +492,7 @@ class lib_euca_ui_test(unittest.TestCase):
         else: self.fail("time out")
         driver.find_element_by_id("volumes-add-btn").click()
 	print "Finished: Create Volume From Snapshot"
+	print
 
     def test_ui_create_security_group(self):
 	print "Started Test: Create Security Group"
@@ -587,6 +604,7 @@ class lib_euca_ui_test(unittest.TestCase):
         else: self.fail("time out")
         driver.find_element_by_id("sgroup-add-btn").click()
     	print "Finished: Create Security Group"
+	print
 
     def test_ui_delete_security_group(self):
 	print "Started Test: Delete Security Group"
@@ -624,6 +642,7 @@ class lib_euca_ui_test(unittest.TestCase):
         else: self.fail("time out")
         driver.find_element_by_id("btn-sgroups-delete-delete").click()
  	print "Finished: Delete Security Group"
+	print
 
     def test_ui_allocate_two_ip_addresses(self):
 	print "Started Test: Allocate Two IP Addresses"
@@ -655,6 +674,7 @@ class lib_euca_ui_test(unittest.TestCase):
         else: self.fail("time out")
         driver.find_element_by_id("eip-allocate-btn").click()
 	print "Finished: Allocate Two IP Addresses"
+	print
 
     def test_ui_release_ip_address(self):
 	print "Started Test: Release IP Address"
@@ -693,6 +713,7 @@ class lib_euca_ui_test(unittest.TestCase):
         else: self.fail("time out")
         driver.find_element_by_id("btn-eips-release-release").click()
 	print "Finished: Release IP Address" 
+	print
 
     def test_ui_view_page_get_dashboard_source(self):
 	print "Started Test: View Page Get Dashboard Source"
