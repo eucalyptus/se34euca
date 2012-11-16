@@ -139,6 +139,12 @@ class lib_euca_ui_test(unittest.TestCase):
     def test_ui_gotopage_keypairs(self):
 	print "Started Test: GotoPage Keypairs"
         driver = self.driver
+        for i in range(60):
+            try:
+                if self.is_element_present(By.ID, "euca-logo"): break
+            except: pass
+            time.sleep(1)
+        else: self.fail("time out")
         driver.find_element_by_id("euca-logo").click()
 	print "Test: Received the Page Title -> " + driver.title
         for i in range(60):
@@ -165,6 +171,12 @@ class lib_euca_ui_test(unittest.TestCase):
     def test_ui_gotopage_running(self):
 	print "Started Test: GotoPage Running"
         driver = self.driver
+        for i in range(60):
+            try:
+                if self.is_element_present(By.ID, "euca-logo"): break
+            except: pass
+            time.sleep(1)
+        else: self.fail("time out")
         driver.find_element_by_id("euca-logo").click()
 	print "Test: Received the Page Title -> " + driver.title
         for i in range(60):
@@ -191,6 +203,12 @@ class lib_euca_ui_test(unittest.TestCase):
     def test_ui_gotopage_security_groups(self):
 	print "Started Test: GotoPage Security Groups"
         driver = self.driver
+        for i in range(60):
+            try:
+                if self.is_element_present(By.ID, "euca-logo"): break
+            except: pass
+            time.sleep(1)
+        else: self.fail("time out")
         driver.find_element_by_id("euca-logo").click()
 	print "Test: Received the Page Title -> " + driver.title
         for i in range(60):
@@ -217,6 +235,12 @@ class lib_euca_ui_test(unittest.TestCase):
     def test_ui_gotopage_volumes(self):
 	print "Started Test: GotoPage Volumes"
         driver = self.driver
+        for i in range(60):
+            try:
+                if self.is_element_present(By.ID, "euca-logo"): break
+            except: pass
+            time.sleep(1)
+        else: self.fail("time out")
         driver.find_element_by_id("euca-logo").click()
 	print "Test: Received the Page Title -> " + driver.title
         for i in range(60):
@@ -265,6 +289,12 @@ class lib_euca_ui_test(unittest.TestCase):
     def test_ui_launch_instance_basic(self):
 	print "Started Test: Launch Instance Basic"
         driver = self.driver
+        for i in range(60):
+            try:
+                if self.is_element_present(By.ID, "euca-logo"): break
+            except: pass
+            time.sleep(1)
+        else: self.fail("time out")
 	try:
 		driver.find_element_by_link_text("Launch new instance").click()
 		print "Test: Clicking Through Default Options"
@@ -282,6 +312,12 @@ class lib_euca_ui_test(unittest.TestCase):
     def test_ui_terminate_instance_basic(self):
 	print "Started Test: Terminate Instance Basic"
         driver = self.driver
+        for i in range(60):
+            try:
+                if self.is_element_present(By.ID, "euca-logo"): break
+            except: pass
+            time.sleep(1)
+        else: self.fail("time out")
 	try:
 		print "Test: Go to the Page Running Instances"
 		driver.find_element_by_css_selector("div.status-readout").click()
@@ -299,6 +335,12 @@ class lib_euca_ui_test(unittest.TestCase):
     def test_ui_generate_keypair(self):
 	print "Started Test: Generate Keypair"
         driver = self.driver
+        for i in range(60):
+            try:
+                if self.is_element_present(By.ID, "euca-logo"): break
+            except: pass
+            time.sleep(1)
+        else: self.fail("time out")
 	try:
 		print "Test: Go to the Page Keypair"
 		driver.find_element_by_id("dashboard-netsec-keypair").click()
@@ -317,6 +359,12 @@ class lib_euca_ui_test(unittest.TestCase):
     def test_ui_delete_keypair(self):
 	print "Started Test: Delete Keypair"
         driver = self.driver
+        for i in range(60):
+            try:
+                if self.is_element_present(By.ID, "euca-logo"): break
+            except: pass
+            time.sleep(1)
+        else: self.fail("time out")
 	try:
 		print "Test: Go to the Page Keypair"
         	driver.find_element_by_id("dashboard-netsec-keypair").click()
@@ -334,6 +382,12 @@ class lib_euca_ui_test(unittest.TestCase):
 	print "Started Test: Create Volume"
         driver = self.driver
 	print "Test: Go to the Page Volume"
+        for i in range(60):
+            try:
+                if self.is_element_present(By.ID, "dashboard-storage-volume"): break
+            except: pass
+            time.sleep(1)
+        else: self.fail("time out")
         driver.find_element_by_id("dashboard-storage-volume").click()
         for i in range(60):
             try:
@@ -359,6 +413,12 @@ class lib_euca_ui_test(unittest.TestCase):
     def test_ui_delete_volume(self):
 	print "Started Test: Delete Volume"
 	driver = self.driver
+        for i in range(60):
+            try:
+                if self.is_element_present(By.ID, "dashboard-storage-volume"): break
+            except: pass
+            time.sleep(1)
+        else: self.fail("time out")
 	print "Test: Go to the Page Volume"
 	driver.find_element_by_id("dashboard-storage-volume").click()
 	driver.find_element_by_css_selector("td.checkbox-cell > input[type=\"checkbox\"]").click()
@@ -392,6 +452,12 @@ class lib_euca_ui_test(unittest.TestCase):
     def test_ui_create_snapshot_from_volume(self):
 	print "Started Test: Create Snapshot From Volume"
         driver = self.driver
+        for i in range(60):
+            try:
+                if self.is_element_present(By.ID, "euca-logo"): break
+            except: pass
+            time.sleep(1)
+        else: self.fail("time out")
 	print "Test: Go to the Page Volume"
         driver.find_element_by_css_selector("#dashboard-storage-volume > span").click()
         for i in range(60):
@@ -427,6 +493,12 @@ class lib_euca_ui_test(unittest.TestCase):
     def test_ui_delete_snapshot(self):
 	print "Started Test: Delete Snapshot"
         driver = self.driver
+        for i in range(60):
+            try:
+                if self.is_element_present(By.ID, "euca-logo"): break
+            except: pass
+            time.sleep(1)
+        else: self.fail("time out")
 	print "Test: Go to the Page Snapshot"
         driver.find_element_by_css_selector("#dashboard-storage-snapshot > span").click()
         for i in range(60):
@@ -465,6 +537,12 @@ class lib_euca_ui_test(unittest.TestCase):
     def test_ui_create_volume_from_snapshot(self):
 	print "Started Test: Create Volume From Snapshot"
         driver = self.driver
+        for i in range(60):
+            try:
+                if self.is_element_present(By.ID, "euca-logo"): break
+            except: pass
+            time.sleep(1)
+        else: self.fail("time out")
 	print "Test: Go to the Page Snapshot"
         driver.find_element_by_css_selector("#dashboard-storage-snapshot > span").click()
         for i in range(60):
@@ -497,6 +575,12 @@ class lib_euca_ui_test(unittest.TestCase):
     def test_ui_create_security_group(self):
 	print "Started Test: Create Security Group"
         driver = self.driver
+        for i in range(60):
+            try:
+                if self.is_element_present(By.ID, "euca-logo"): break
+            except: pass
+            time.sleep(1)
+        else: self.fail("time out")
 	print "Test: Go to the Page Security Group"
         driver.find_element_by_css_selector("#dashboard-netsec-sgroup > span").click()
         for i in range(60):
@@ -609,6 +693,12 @@ class lib_euca_ui_test(unittest.TestCase):
     def test_ui_delete_security_group(self):
 	print "Started Test: Delete Security Group"
         driver = self.driver
+        for i in range(60):
+            try:
+                if self.is_element_present(By.ID, "euca-logo"): break
+            except: pass
+            time.sleep(1)
+        else: self.fail("time out")
 	print "Test: Go to the Page Security Group"
         driver.find_element_by_css_selector("#dashboard-netsec-sgroup > span").click()
         for i in range(60):
@@ -647,6 +737,12 @@ class lib_euca_ui_test(unittest.TestCase):
     def test_ui_allocate_two_ip_addresses(self):
 	print "Started Test: Allocate Two IP Addresses"
         driver = self.driver
+        for i in range(60):
+            try:
+                if self.is_element_present(By.ID, "dashboard-netsec-eip"): break
+            except: pass
+            time.sleep(1)
+        else: self.fail("time out")
         print "Test: Go to the Page IP Address"
         driver.find_element_by_id("dashboard-netsec-eip").click()
         for i in range(60):
@@ -679,6 +775,12 @@ class lib_euca_ui_test(unittest.TestCase):
     def test_ui_release_ip_address(self):
 	print "Started Test: Release IP Address"
         driver = self.driver
+        for i in range(60):
+            try:
+                if self.is_element_present(By.ID, "euca-logo"): break
+            except: pass
+            time.sleep(1)
+        else: self.fail("time out")
         print "Test: Go to the Page IP Address"
         driver.find_element_by_css_selector("#dashboard-netsec-eip > span").click()
         for i in range(60):
@@ -719,6 +821,12 @@ class lib_euca_ui_test(unittest.TestCase):
 	print "Started Test: View Page Get Dashboard Source"
 	print
         driver = self.driver
+        for i in range(60):
+            try:
+                if self.is_element_present(By.ID, "euca-logo"): break
+            except: pass
+            time.sleep(1)
+        else: self.fail("time out")
 	running_instances = driver.find_element_by_css_selector("div.status-readout")
 	running_instances_text = running_instances.text
 	print "[DASHBOARD] Running Instances: " + running_instances_text
