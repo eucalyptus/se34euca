@@ -46,6 +46,7 @@ class testcase_view_page(lib_euca_ui_test):
 	self.test_ui_gotopage_running()
 	self.test_ui_gotopage_security_groups()
 	self.test_ui_gotopage_volumes()
+	self.test_ui_view_page_get_dashboard_source()
 	self.test_ui_logout()
 
     def view_all_page_in_loop(self):
@@ -56,6 +57,7 @@ class testcase_view_page(lib_euca_ui_test):
         	self.test_ui_gotopage_running()
         	self.test_ui_gotopage_security_groups()
         	self.test_ui_gotopage_volumes()
+		self.test_ui_view_page_get_dashboard_source()
 		time.sleep(5)
 
 if __name__ == "__main__":
