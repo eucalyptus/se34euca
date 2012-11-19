@@ -67,7 +67,7 @@ export DISPLAY=:0
 
 , where [testcase] is: 
 
-     [ check_login_and_logout, view_keypairs_page, view_running_page, view_volumes_page, view_secuirty_groups_page, view_all_page, get_dashboard_source ]
+     [ check_login_and_logout, view_keypairs_page, view_running_page, view_volumes_page, view_secuirty_groups_page, view_all_page, view_all_page_in_loop, get_dashboard_source ]
 
 Example.
 
@@ -82,6 +82,10 @@ export DISPLAY=:0
 
 <code>
 ./runtest_view_page.py -i 192.168.51.106 -p 8888 -a ui-test-acct-00 -u user00 -w mypassword1 -t get_dashboard_source
+
+<code>
+./runtest_view_page.py -i 192.168.51.131 -p 8888 -a ui-test-acct-00 -u user00 -w mypassword1 -t view_all_page_in_loop
+
 
 ### Instance Test
 
