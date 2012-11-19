@@ -53,11 +53,16 @@ class testcase_view_page(lib_euca_ui_test):
 	print "=== runTest: View All Page ==="
         self.test_ui_login()
 	while(1 is 1):
-        	self.test_ui_gotopage_keypairs()
-        	self.test_ui_gotopage_running()
-        	self.test_ui_gotopage_security_groups()
-        	self.test_ui_gotopage_volumes()
-		self.test_ui_view_page_get_dashboard_source()
+        	if( self.test_ui_gotopage_keypairs() is 1 ):
+			self.test_ui_login()
+        	if( self.test_ui_gotopage_running() is 1 ):
+			self.test_ui_login()
+        	if( self.test_ui_gotopage_security_groups() is 1 ):
+			self.test_ui_login()
+        	if( self.test_ui_gotopage_volumes() is 1 ):
+			self.test_ui_login()
+		if( self.test_ui_view_page_get_dashboard_source() is 1 ):
+			self.test_ui_login()
 		time.sleep(5)
 
 if __name__ == "__main__":

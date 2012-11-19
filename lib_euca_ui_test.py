@@ -146,7 +146,7 @@ class lib_euca_ui_test(unittest.TestCase):
             time.sleep(1)
         else:
 	    print "Failed Test: GotoPage Keypairs"
-            return
+            return 1
         driver.find_element_by_id("euca-logo").click()
 	print "Test: Received the Page Title -> " + driver.title
         for i in range(60):
@@ -156,7 +156,7 @@ class lib_euca_ui_test(unittest.TestCase):
             time.sleep(1)
         else:
 	    print "Failed Test: GotoPage Keypairs"
-	    return
+	    return 1
         try: self.assertTrue(self.is_element_present(By.ID, "dashboard-netsec-keypair"))
         except AssertionError as e: self.verificationErrors.append(str(e))
         driver.find_element_by_id("dashboard-netsec-keypair").click()
@@ -168,11 +168,12 @@ class lib_euca_ui_test(unittest.TestCase):
             time.sleep(1)
         else:
 	    print "Failed Test: GotoPage Keypairs"
-            return
+            return 1
         try: self.assertTrue(self.is_element_present(By.ID, "table-keys-new"))
         except AssertionError as e: self.verificationErrors.append(str(e))
 	print "Finished Test: GotoPage Keypairs"
 	print
+	return 0
 
     def test_ui_gotopage_running(self):
 	print "Started Test: GotoPage Running"
@@ -184,7 +185,7 @@ class lib_euca_ui_test(unittest.TestCase):
             time.sleep(1)
         else:
 	    print "Failed Test: GotoPage Running"
-            return
+            return 1
         driver.find_element_by_id("euca-logo").click()
 	print "Test: Received the Page Title -> " + driver.title
         for i in range(60):
@@ -194,7 +195,7 @@ class lib_euca_ui_test(unittest.TestCase):
             time.sleep(1)
         else:
 	    print "Failed Test: GotoPage Running"
-            return
+            return 1
         try: self.assertTrue(self.is_element_present(By.CSS_SELECTOR, "div.status-readout"))
         except AssertionError as e: self.verificationErrors.append(str(e))
         driver.find_element_by_css_selector("div.status-readout").click()
@@ -206,11 +207,12 @@ class lib_euca_ui_test(unittest.TestCase):
             time.sleep(1)
         else:
 	    print "Failed Test: GotoPage Running"
-            return
+            return 1
         try: self.assertTrue(self.is_element_present(By.ID, "table-instances-new"))
         except AssertionError as e: self.verificationErrors.append(str(e))
 	print "Finished Test: GotoPage Running"
 	print
+	return 0
 
     def test_ui_gotopage_security_groups(self):
 	print "Started Test: GotoPage Security Groups"
@@ -222,7 +224,7 @@ class lib_euca_ui_test(unittest.TestCase):
             time.sleep(1)
         else:
 	    print "Failed Test: GotoPage Secutiry Groups"
-            return
+            return 1
         driver.find_element_by_id("euca-logo").click()
 	print "Test: Received the Page Title -> " + driver.title
         for i in range(60):
@@ -232,7 +234,7 @@ class lib_euca_ui_test(unittest.TestCase):
             time.sleep(1)
         else:
 	    print "Failed Test: GotoPage Secutiry Groups"
-            return
+            return 1
         try: self.assertTrue(self.is_element_present(By.ID, "dashboard-netsec-sgroup"))
         except AssertionError as e: self.verificationErrors.append(str(e))
         driver.find_element_by_id("dashboard-netsec-sgroup").click()
@@ -244,11 +246,12 @@ class lib_euca_ui_test(unittest.TestCase):
             time.sleep(1)
         else:
 	    print "Failed Test: GotoPage Secutiry Groups"
-            return
+            return 1
         try: self.assertTrue(self.is_element_present(By.ID, "table-sgroups-new"))
         except AssertionError as e: self.verificationErrors.append(str(e))
 	print "Finished Test: GotoPage Security Groups"
-	print    
+	print
+	return 0
 
     def test_ui_gotopage_volumes(self):
 	print "Started Test: GotoPage Volumes"
@@ -260,7 +263,7 @@ class lib_euca_ui_test(unittest.TestCase):
             time.sleep(1)
         else:
 	    print "Failed Test: GotoPage Volumes"
-            return
+            return 1
         driver.find_element_by_id("euca-logo").click()
 	print "Test: Received the Page Title -> " + driver.title
         for i in range(60):
@@ -270,7 +273,7 @@ class lib_euca_ui_test(unittest.TestCase):
             time.sleep(1)
         else:
 	    print "Failed Test: GotoPage Volumes"
-            return
+            return 1
         try: self.assertTrue(self.is_element_present(By.ID, "dashboard-storage-volume"))
         except AssertionError as e: self.verificationErrors.append(str(e))
         driver.find_element_by_id("dashboard-storage-volume").click()
@@ -282,11 +285,12 @@ class lib_euca_ui_test(unittest.TestCase):
             time.sleep(1)
         else:
 	    print "Failed Test: GotoPage Volumes"
-            return
+            return 1
         try: self.assertTrue(self.is_element_present(By.ID, "table-volumes-new"))
         except AssertionError as e: self.verificationErrors.append(str(e))
 	print "Finished Test: GotoPage Volumes"
 	print 
+	return 0
 
     def test_ui_gotopage_dashboard(self):
 	print "Started Test: GotoPage Dashboard"
@@ -298,7 +302,7 @@ class lib_euca_ui_test(unittest.TestCase):
             time.sleep(1)
         else:
 	    print "Failed Test: GotoPage Dashboard"
-            return
+            return 1
 	driver.find_element_by_id("euca-logo").click()
 	print "Test: Received the Page Title -> " + driver.title
         for i in range(60):
@@ -308,11 +312,12 @@ class lib_euca_ui_test(unittest.TestCase):
             time.sleep(1)
         else:
 	    print "Failed Test: GotoPage Dashboard"
-            return
+            return 1
         try: self.assertTrue(self.is_element_present(By.LINK_TEXT, "Launch new instance"))
         except AssertionError as e: self.verificationErrors.append(str(e))
 	print "Finished Test: GotoPage Dashboard"
 	print
+	return 0
 
     def test_ui_launch_instance_basic(self):
 	print "Started Test: Launch Instance Basic"
@@ -856,7 +861,7 @@ class lib_euca_ui_test(unittest.TestCase):
             time.sleep(1)
         else:
             print "Failed Test: GotoPage Dashboard Source"
-            return
+            return 1
         driver.find_element_by_id("euca-logo").click()
         print "Test: Received the Page Title -> " + driver.title
         for i in range(60):
@@ -866,7 +871,7 @@ class lib_euca_ui_test(unittest.TestCase):
             time.sleep(1)
         else:
             print "Failed Test: GotoPage Dashboard Source"
-            return
+            return 1
 	running_instances = driver.find_element_by_css_selector("div.status-readout")
 	running_instances_text = running_instances.text
 	print "[DASHBOARD] Running Instances: " + running_instances_text
@@ -898,6 +903,7 @@ class lib_euca_ui_test(unittest.TestCase):
 	print
 	print "Finished Test: View Page Get Dashboard Source"
 	print
+	return 0
 
 if __name__ == "__main__":
     unittest.main()
