@@ -65,9 +65,10 @@ class lib_euca_ui_test(unittest.TestCase):
                 if self.is_element_present(By.ID, "login"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
-        try: self.assertTrue(self.is_element_present(By.ID, "login"))
-        except AssertionError as e: self.verificationErrors.append(str(e))
+        else:
+	    print "Failed Test: Login"
+	    raise
+	    return 1
 	print "Test: Received the Login Page"
         driver.find_element_by_id("account").clear()
         driver.find_element_by_id("account").send_keys(self.accountname)
@@ -82,11 +83,13 @@ class lib_euca_ui_test(unittest.TestCase):
                 if self.is_element_present(By.LINK_TEXT, "Launch new instance"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
-        try: self.assertTrue(self.is_element_present(By.LINK_TEXT, "Launch new instance"))
-        except AssertionError as e: self.verificationErrors.append(str(e))
+        else:
+	    print "Failed Test: Login"
+	    raise
+	    return 1
 	print "Finished Test: Login"
 	print
+	return 0
 
     def test_ui_logout(self):
 	print "Started Test: Logout"
@@ -96,7 +99,10 @@ class lib_euca_ui_test(unittest.TestCase):
                 if self.is_element_present(By.ID, "euca-logo"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Logout"
+	    raise
+	    return 1
 	driver.find_element_by_id("euca-logo").click()
 	print "Test: Received the Page Title -> " + driver.title
         for i in range(self.retry):
@@ -104,16 +110,20 @@ class lib_euca_ui_test(unittest.TestCase):
                 if self.is_element_present(By.LINK_TEXT, "Launch new instance"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
-        try: self.assertTrue(self.is_element_present(By.LINK_TEXT, "Launch new instance"))
-        except AssertionError as e: self.verificationErrors.append(str(e))
+        else:
+	    print "Failed Test: Logout"
+	    raise
+	    return 1
 	this_link = self.username + "@" + self.accountname
 	for i in range(self.retry):
             try:
                 if self.is_element_present(By.LINK_TEXT, this_link): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Logout"
+	    raise
+	    return 1
 	print "Test: Clicking User Account Menu " + this_link
         driver.find_element_by_link_text(this_link).click()
 #        driver.find_element_by_css_selector("body").click()
@@ -123,7 +133,10 @@ class lib_euca_ui_test(unittest.TestCase):
                 if self.is_element_present(By.LINK_TEXT, "Log out"): break
             except: pass
 	    time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Logout"
+            raise
+            return 1
 	print "Test: Clicking Log out"
 	driver.find_element_by_link_text("Log out").click()
 #        driver.find_element_by_css_selector("body").click()
@@ -133,11 +146,13 @@ class lib_euca_ui_test(unittest.TestCase):
                 if self.is_element_present(By.ID, "login"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
-        try: self.assertTrue(self.is_element_present(By.ID, "login"))
-        except AssertionError as e: self.verificationErrors.append(str(e))
+        else:
+	    print "Failed Test: Logout"
+            raise
+            return 1
 	print "Finished Test: Logout"
 	print
+	return 0
 
     def test_ui_gotopage_keypairs(self):
 	print "Started Test: GotoPage Keypairs"
@@ -391,48 +406,48 @@ class lib_euca_ui_test(unittest.TestCase):
             print "Failed Test: Launch Instance Basic"
             raise
             return 1
+	driver.find_element_by_link_text("Launch new instance").click()
+	print "Test: Clicking Through Default Options"
+#	driver.find_element_by_css_selector("tr.odd.selected-row").click()
+	for i in range(self.retry):
+		try:
+		    if self.is_element_present(By.ID, "launch-wizard-buttons-image-next"): break
+		except: pass
+		time.sleep(1)
+	else:
+		print "Failed Test: Launch Instance Basic"
+		raise
+		return 1
+	driver.find_element_by_id("launch-wizard-buttons-image-next").click()
+	for i in range(self.retry):
+		try:
+		    if self.is_element_present(By.ID, "launch-wizard-buttons-type-next"): break
+		except: pass
+		time.sleep(1)
+	else:   
+		print "Failed Test: Launch Instance Basic"
+		raise
+		return 1
+	driver.find_element_by_id("launch-wizard-buttons-type-next").click()
+	for i in range(self.retry):
+		try:
+		    if self.is_element_present(By.ID, "launch-wizard-buttons-security-launch"): break
+		except: pass
+		time.sleep(1)
+	else:   
+		print "Failed Test: Launch Instance Basic"
+		raise
+		return 1
+	print "Test: Launching an instance with the default setting"
 	try:
-		driver.find_element_by_link_text("Launch new instance").click()
-		print "Test: Clicking Through Default Options"
-	#	driver.find_element_by_css_selector("tr.odd.selected-row").click()
-		for i in range(self.retry):
-            		try:
-            		    if self.is_element_present(By.ID, "launch-wizard-buttons-image-next"): break
-            		except: pass
-            		time.sleep(1)
-        	else:
-            		print "Failed Test: Launch Instance Basic"
-             		raise
-            		return 1
-		driver.find_element_by_id("launch-wizard-buttons-image-next").click()
-		for i in range(self.retry):
-                        try:
-                            if self.is_element_present(By.ID, "launch-wizard-buttons-type-next"): break
-                        except: pass
-                        time.sleep(1)
-                else:   
-                        print "Failed Test: Launch Instance Basic"
-                        raise
-                        return 1
-		driver.find_element_by_id("launch-wizard-buttons-type-next").click()
-		for i in range(self.retry):
-                        try:
-                            if self.is_element_present(By.ID, "launch-wizard-buttons-security-launch"): break
-                        except: pass
-                        time.sleep(1)
-                else:   
-                        print "Failed Test: Launch Instance Basic"
-                        raise
-                        return 1
 		driver.find_element_by_id("launch-wizard-buttons-security-launch").click()
-		print "Test: Launched an instance with the default setting"
 	except:
 		print "Failed Test: Launch Instance Basic"
 		raise
 		return 1
 	print "Finished Test: Launch Instance Basic"
 	print 
-	return 0
+	return 0 
 
     def test_ui_terminate_instance_basic(self):
 	print "Started Test: Terminate Instance Basic"

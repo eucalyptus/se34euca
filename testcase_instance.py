@@ -17,6 +17,11 @@ class testcase_instance(lib_euca_ui_test):
 	self.test_ui_terminate_instance_basic()
 	self.test_ui_logout()
 
+    def terminate_instance_all(self):
+	print "=== runTest: Terminate Instance All ==="
+	self.test_ui_login()
+	self.test_ui_terminate_instance_all()
+	self.test_ui_logout()
 
 if __name__ == "__main__":
     unittest.main()

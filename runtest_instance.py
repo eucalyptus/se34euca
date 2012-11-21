@@ -25,7 +25,7 @@ def main():
 	parser.add_option("-a", "--account", dest="accountname", help="accountname")
 	parser.add_option("-u", "--user", dest="username", help="username")
 	parser.add_option("-w", "--password", dest="password", help="password")
-	parser.add_option("-t", "--testcase", dest="testcase", help="testcase: launch_instance_basic, terminate_instance_basic")
+	parser.add_option("-t", "--testcase", dest="testcase", help="testcase: launch_instance_basic, terminate_instance_basic, terminate_instance_all")
 	(options, args) = parser.parse_args()	
 
 	if options.ui_ip is not None:
