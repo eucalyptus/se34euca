@@ -13,11 +13,14 @@ class lib_euca_ui_test(unittest.TestCase):
     username = "admin"
     password = "password"
 
+    retry = 10
+
     def setUIInfo(self, ip, port):
 	self.ui_ip = ip
 	self.port = port
 	print "UI IP: " + ip
 	print "PORT: " + port
+	print
 
     def setUserInfo(self, accountname, username, password):
 	self.accountname = accountname
@@ -26,7 +29,7 @@ class lib_euca_ui_test(unittest.TestCase):
 	print "ACCOUNTNAME: " + accountname
 	print "USERNAME: " + username
 	print "PASSWORD: " + password
-
+	print
 
     def setUp(self):
 	print "=== setUp ==="
@@ -57,7 +60,7 @@ class lib_euca_ui_test(unittest.TestCase):
         driver = self.driver
         driver.get(self.base_url + "/")
 	print "Test: Received the Page Title -> " + driver.title
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "login"): break
             except: pass
@@ -74,7 +77,7 @@ class lib_euca_ui_test(unittest.TestCase):
         driver.find_element_by_id("password").send_keys(self.password)
         driver.find_element_by_name("login").click()
 	print "Test: Typed the User Info and Clicked the Login Button"
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.LINK_TEXT, "Launch new instance"): break
             except: pass
@@ -88,7 +91,7 @@ class lib_euca_ui_test(unittest.TestCase):
     def test_ui_logout(self):
 	print "Started Test: Logout"
         driver = self.driver
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "euca-logo"): break
             except: pass
@@ -96,7 +99,7 @@ class lib_euca_ui_test(unittest.TestCase):
         else: self.fail("time out")
 	driver.find_element_by_id("euca-logo").click()
 	print "Test: Received the Page Title -> " + driver.title
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.LINK_TEXT, "Launch new instance"): break
             except: pass
@@ -105,7 +108,7 @@ class lib_euca_ui_test(unittest.TestCase):
         try: self.assertTrue(self.is_element_present(By.LINK_TEXT, "Launch new instance"))
         except AssertionError as e: self.verificationErrors.append(str(e))
 	this_link = self.username + "@" + self.accountname
-	for i in range(60):
+	for i in range(self.retry):
             try:
                 if self.is_element_present(By.LINK_TEXT, this_link): break
             except: pass
@@ -115,7 +118,7 @@ class lib_euca_ui_test(unittest.TestCase):
         driver.find_element_by_link_text(this_link).click()
 #        driver.find_element_by_css_selector("body").click()
 	print "Test: Clicked User Account Menu " + this_link
-	for i in range(60):
+	for i in range(self.retry):
             try:
                 if self.is_element_present(By.LINK_TEXT, "Log out"): break
             except: pass
@@ -125,7 +128,7 @@ class lib_euca_ui_test(unittest.TestCase):
 	driver.find_element_by_link_text("Log out").click()
 #        driver.find_element_by_css_selector("body").click()
 	print "Test: Clicked the Logout Button"
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "login"): break
             except: pass
@@ -139,36 +142,39 @@ class lib_euca_ui_test(unittest.TestCase):
     def test_ui_gotopage_keypairs(self):
 	print "Started Test: GotoPage Keypairs"
         driver = self.driver
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "euca-logo"): break
             except: pass
             time.sleep(1)
         else:
 	    print "Failed Test: GotoPage Keypairs"
+	    raise
             return 1
         driver.find_element_by_id("euca-logo").click()
 	print "Test: Received the Page Title -> " + driver.title
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "dashboard-netsec-keypair"): break
             except: pass
             time.sleep(1)
         else:
 	    print "Failed Test: GotoPage Keypairs"
+	    raise
 	    return 1
         try: self.assertTrue(self.is_element_present(By.ID, "dashboard-netsec-keypair"))
         except AssertionError as e: self.verificationErrors.append(str(e))
         driver.find_element_by_id("dashboard-netsec-keypair").click()
 	print "Test: Clicked the GoToPage Button"
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "table-keys-new"): break
             except: pass
             time.sleep(1)
         else:
 	    print "Failed Test: GotoPage Keypairs"
-            return 1
+            raise
+	    return 1
         try: self.assertTrue(self.is_element_present(By.ID, "table-keys-new"))
         except AssertionError as e: self.verificationErrors.append(str(e))
 	print "Finished Test: GotoPage Keypairs"
@@ -178,36 +184,39 @@ class lib_euca_ui_test(unittest.TestCase):
     def test_ui_gotopage_running(self):
 	print "Started Test: GotoPage Running"
         driver = self.driver
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "euca-logo"): break
             except: pass
             time.sleep(1)
         else:
 	    print "Failed Test: GotoPage Running"
-            return 1
+            raise
+	    return 1
         driver.find_element_by_id("euca-logo").click()
 	print "Test: Received the Page Title -> " + driver.title
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.CSS_SELECTOR, "div.status-readout"): break
             except: pass
             time.sleep(1)
         else:
 	    print "Failed Test: GotoPage Running"
-            return 1
+            raise
+	    return 1
         try: self.assertTrue(self.is_element_present(By.CSS_SELECTOR, "div.status-readout"))
         except AssertionError as e: self.verificationErrors.append(str(e))
         driver.find_element_by_css_selector("div.status-readout").click()
 	print "Test: Clicked the GoToPage Button"
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "table-instances-new"): break
             except: pass
             time.sleep(1)
         else:
 	    print "Failed Test: GotoPage Running"
-            return 1
+            raise
+	    return 1
         try: self.assertTrue(self.is_element_present(By.ID, "table-instances-new"))
         except AssertionError as e: self.verificationErrors.append(str(e))
 	print "Finished Test: GotoPage Running"
@@ -217,36 +226,39 @@ class lib_euca_ui_test(unittest.TestCase):
     def test_ui_gotopage_security_groups(self):
 	print "Started Test: GotoPage Security Groups"
         driver = self.driver
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "euca-logo"): break
             except: pass
             time.sleep(1)
         else:
 	    print "Failed Test: GotoPage Secutiry Groups"
-            return 1
+            raise
+	    return 1
         driver.find_element_by_id("euca-logo").click()
 	print "Test: Received the Page Title -> " + driver.title
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "dashboard-netsec-sgroup"): break
             except: pass
             time.sleep(1)
         else:
 	    print "Failed Test: GotoPage Secutiry Groups"
-            return 1
+            raise
+	    return 1
         try: self.assertTrue(self.is_element_present(By.ID, "dashboard-netsec-sgroup"))
         except AssertionError as e: self.verificationErrors.append(str(e))
         driver.find_element_by_id("dashboard-netsec-sgroup").click()
 	print "Test: Clicked the GoToPage Button"
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "table-sgroups-new"): break
             except: pass
             time.sleep(1)
         else:
 	    print "Failed Test: GotoPage Secutiry Groups"
-            return 1
+            raise
+	    return 1
         try: self.assertTrue(self.is_element_present(By.ID, "table-sgroups-new"))
         except AssertionError as e: self.verificationErrors.append(str(e))
 	print "Finished Test: GotoPage Security Groups"
@@ -256,36 +268,39 @@ class lib_euca_ui_test(unittest.TestCase):
     def test_ui_gotopage_volumes(self):
 	print "Started Test: GotoPage Volumes"
         driver = self.driver
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "euca-logo"): break
             except: pass
             time.sleep(1)
         else:
 	    print "Failed Test: GotoPage Volumes"
-            return 1
+            raise
+	    return 1
         driver.find_element_by_id("euca-logo").click()
 	print "Test: Received the Page Title -> " + driver.title
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "dashboard-storage-volume"): break
             except: pass
             time.sleep(1)
         else:
 	    print "Failed Test: GotoPage Volumes"
-            return 1
+            raise
+	    return 1
         try: self.assertTrue(self.is_element_present(By.ID, "dashboard-storage-volume"))
         except AssertionError as e: self.verificationErrors.append(str(e))
         driver.find_element_by_id("dashboard-storage-volume").click()
 	print "Test: Clicked the GoToPage Button"
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "table-volumes-new"): break
             except: pass
             time.sleep(1)
         else:
 	    print "Failed Test: GotoPage Volumes"
-            return 1
+            raise
+	    return 1
         try: self.assertTrue(self.is_element_present(By.ID, "table-volumes-new"))
         except AssertionError as e: self.verificationErrors.append(str(e))
 	print "Finished Test: GotoPage Volumes"
@@ -295,24 +310,26 @@ class lib_euca_ui_test(unittest.TestCase):
     def test_ui_gotopage_dashboard(self):
 	print "Started Test: GotoPage Dashboard"
         driver = self.driver
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "euca-logo"): break
             except: pass
             time.sleep(1)
         else:
 	    print "Failed Test: GotoPage Dashboard"
-            return 1
+            raise
+	    return 1
 	driver.find_element_by_id("euca-logo").click()
 	print "Test: Received the Page Title -> " + driver.title
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.LINK_TEXT, "Launch new instance"): break
             except: pass
             time.sleep(1)
         else:
 	    print "Failed Test: GotoPage Dashboard"
-            return 1
+            raise
+	    return 1
         try: self.assertTrue(self.is_element_present(By.LINK_TEXT, "Launch new instance"))
         except AssertionError as e: self.verificationErrors.append(str(e))
 	print "Finished Test: GotoPage Dashboard"
@@ -322,35 +339,70 @@ class lib_euca_ui_test(unittest.TestCase):
     def test_ui_launch_instance_basic(self):
 	print "Started Test: Launch Instance Basic"
         driver = self.driver
-        for i in range(60):
+        for i in range(self.retry):
             try:
-                if self.is_element_present(By.ID, "euca-logo"): break
+                if self.is_element_present(By.LINK_TEXT, "Launch new instance"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+            print "Failed Test: Launch Instance Basic"
+            raise
+            return 1
 	try:
 		driver.find_element_by_link_text("Launch new instance").click()
 		print "Test: Clicking Through Default Options"
-		driver.find_element_by_css_selector("tr.odd.selected-row").click()
+	#	driver.find_element_by_css_selector("tr.odd.selected-row").click()
+		for i in range(self.retry):
+            		try:
+            		    if self.is_element_present(By.ID, "launch-wizard-buttons-image-next"): break
+            		except: pass
+            		time.sleep(1)
+        	else:
+            		print "Failed Test: Launch Instance Basic"
+             		raise
+            		return 1
 		driver.find_element_by_id("launch-wizard-buttons-image-next").click()
+		for i in range(self.retry):
+                        try:
+                            if self.is_element_present(By.ID, "launch-wizard-buttons-type-next"): break
+                        except: pass
+                        time.sleep(1)
+                else:   
+                        print "Failed Test: Launch Instance Basic"
+                        raise
+                        return 1
 		driver.find_element_by_id("launch-wizard-buttons-type-next").click()
+		for i in range(self.retry):
+                        try:
+                            if self.is_element_present(By.ID, "launch-wizard-buttons-security-launch"): break
+                        except: pass
+                        time.sleep(1)
+                else:   
+                        print "Failed Test: Launch Instance Basic"
+                        raise
+                        return 1
 		driver.find_element_by_id("launch-wizard-buttons-security-launch").click()
-		print "Test: Launched an Instance at its default setting"
-		print "Finished Test: Launch Instance Basic"
+		print "Test: Launched an instance with the default setting"
 	except:
 		print "Failed Test: Launch Instance Basic"
+		raise
+		return 1
+	print "Finished Test: Launch Instance Basic"
 	print 
-
+	return 0
 
     def test_ui_terminate_instance_basic(self):
 	print "Started Test: Terminate Instance Basic"
         driver = self.driver
-        for i in range(60):
+        for i in range(self.retry):
             try:
-                if self.is_element_present(By.ID, "euca-logo"): break
+                if self.is_element_present(By.LINK_TEXT, "Launch new instance"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Terminate Instance Basic"
+            raise
+            return 1
 	try:
 		print "Test: Go to the Page Running Instances"
 		driver.find_element_by_css_selector("div.status-readout").click()
@@ -359,21 +411,27 @@ class lib_euca_ui_test(unittest.TestCase):
         	driver.find_element_by_id("more-actions-instances").click()
         	driver.find_element_by_link_text("Terminate").click()
         	driver.find_element_by_id("btn-instances-terminate-terminate").click()
-		print "Finished Test: Terminate Instance Basic"
 	except:
 		print "Failed Test: Terminate Instance Basic"
-	print 
+		raise
+		return 1
+	print "Finished Test: Terminate Instance Basic"
+	print
+	return 0
 
 
     def test_ui_generate_keypair(self):
 	print "Started Test: Generate Keypair"
         driver = self.driver
-        for i in range(60):
+        for i in range(self.retry):
             try:
-                if self.is_element_present(By.ID, "euca-logo"): break
+                if self.is_element_present(By.LINK_TEXT, "Launch new instance"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Generate Keypair"
+            raise
+            return 1
 	try:
 		print "Test: Go to the Page Keypair"
 		driver.find_element_by_id("dashboard-netsec-keypair").click()
@@ -383,21 +441,27 @@ class lib_euca_ui_test(unittest.TestCase):
 		driver.find_element_by_id("key-name").send_keys("my-sel-gen-key-00")
 		# ERROR: Caught exception [ERROR: Unsupported command [typeKeys]]
 		driver.find_element_by_id("keys-add-btn").click()
-		print "Finished Test: Generate Keypair"
 	except:
 		print "Failed Test: Generate Keypair"
+		raise
+		return 1
+	print "Finished Test: Generate Keypair"
 	print
+	return 0
 
 
     def test_ui_delete_keypair(self):
 	print "Started Test: Delete Keypair"
         driver = self.driver
-        for i in range(60):
+        for i in range(self.retry):
             try:
-                if self.is_element_present(By.ID, "euca-logo"): break
+                if self.is_element_present(By.LINK_TEXT, "Launch new instance"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Delete Keypair"
+            raise
+            return 1
 	try:
 		print "Test: Go to the Page Keypair"
         	driver.find_element_by_id("dashboard-netsec-keypair").click()
@@ -406,501 +470,705 @@ class lib_euca_ui_test(unittest.TestCase):
         	driver.find_element_by_id("more-actions-keys").click()
         	driver.find_element_by_link_text("Delete").click()
         	driver.find_element_by_id("btn-keys-delete-delete").click()
-		print "Finished Test: Delete Keypair"
 	except:
 		print "Failed Test: Delete Keypair"
+		raise
+		return 1
+	print "Finished Test: Delete Keypair"
 	print
+	return 0
 
     def test_ui_create_volume(self):
 	print "Started Test: Create Volume"
         driver = self.driver
 	print "Test: Go to the Page Volume"
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "dashboard-storage-volume"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Create Volume"
+            raise
+            return 1
         driver.find_element_by_id("dashboard-storage-volume").click()
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "table-volumes-new"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Create Volume"
+            raise
+            return 1
 	print "Test: Create New Volume"
         driver.find_element_by_id("table-volumes-new").click()
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "volume-size"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
-        driver.find_element_by_id("volume-size").clear()
-        driver.find_element_by_id("volume-size").send_keys("2")
-        # ERROR: Caught exception [ERROR: Unsupported command [typeKeys | id=volume-size | 2]]
-        driver.find_element_by_id("volumes-add-btn").click()
- 	print "Finished: Create New Volume"
+        else:
+	    print "Failed Test: Create New Volume"
+            raise
+            return 1
+	try:
+            driver.find_element_by_id("volume-size").clear()
+            driver.find_element_by_id("volume-size").send_keys("2")
+            # ERROR: Caught exception [ERROR: Unsupported command [typeKeys | id=volume-size | 2]]
+            driver.find_element_by_id("volumes-add-btn").click()
+	except:
+	    print "Failed Test: Create New Volume"
+            raise
+            return 1
+	print "Finished: Create New Volume"
 	print
+	return 0
 
     def test_ui_delete_volume(self):
 	print "Started Test: Delete Volume"
 	driver = self.driver
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "dashboard-storage-volume"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Delete Volume"
+            raise
+            return 1
 	print "Test: Go to the Page Volume"
 	driver.find_element_by_id("dashboard-storage-volume").click()
 	driver.find_element_by_css_selector("td.checkbox-cell > input[type=\"checkbox\"]").click()
-	for i in range(60):
+	for i in range(self.retry):
 	    try:
 		if self.is_element_present(By.ID, "more-actions-volumes"): break
 	    except: pass
 	    time.sleep(1)
-	else: self.fail("time out")
+	else:
+	    print "Failed Test: Delete Volume"
+            raise
+            return 1
 	print "Test: Delete Volume"
 	driver.find_element_by_id("more-actions-volumes").click()
 #	driver.find_element_by_css_selector("body").click()
-	for i in range(60):
+	for i in range(self.retry):
 	    try:
 		if self.is_element_present(By.LINK_TEXT, "Delete"): break
 	    except: pass
 	    time.sleep(1)
-	else: self.fail("time out")
+	else:
+	    print "Failed Test: Delete Volume"
+            raise
+            return 1
 	driver.find_element_by_link_text("Delete").click()
 #	driver.find_element_by_css_selector("body").click()
-	for i in range(60):
+	for i in range(self.retry):
 	    try:
 		if self.is_element_present(By.ID, "btn-volumes-delete-delete"): break
 	    except: pass
 	    time.sleep(1)
-	else: self.fail("time out")
-	driver.find_element_by_id("btn-volumes-delete-delete").click()
-    	print "Finished: Delete Volume"
+	else:
+	    print "Failed Test: Delete Volume"
+            raise
+            return 1
+	try:
+	    driver.find_element_by_id("btn-volumes-delete-delete").click()
+	except:
+	    print "Failed Test: Delete Volume"
+            raise
+            return 1
+	print "Finished: Delete Volume"
 	print
+	return 0
 
     def test_ui_create_snapshot_from_volume(self):
 	print "Started Test: Create Snapshot From Volume"
         driver = self.driver
-        for i in range(60):
+        for i in range(self.retry):
             try:
-                if self.is_element_present(By.ID, "euca-logo"): break
+                if self.is_element_present(By.LINK_TEXT, "Launch new instance"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Create Snapshot From Volume"
+            raise
+            return 1
 	print "Test: Go to the Page Volume"
         driver.find_element_by_css_selector("#dashboard-storage-volume > span").click()
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "table-volumes-new"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Create Snapshot From Volume"
+            raise
+            return 1
         driver.find_element_by_css_selector("td.checkbox-cell > input[type=\"checkbox\"]").click()
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "more-actions-volumes"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Create Snapshot From Volume"
+            raise
+            return 1
 	print "Test: Create Snapshot From Volume"
         driver.find_element_by_id("more-actions-volumes").click()
 #        driver.find_element_by_css_selector("body").click()
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.LINK_TEXT, "Create snapshot from volume"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Create Snapshot From Volume"
+            raise
+            return 1
         driver.find_element_by_link_text("Create snapshot from volume").click()
 #        driver.find_element_by_css_selector("body").click()
-        driver.find_element_by_id("snapshot-create-description").clear()
-        driver.find_element_by_id("snapshot-create-description").send_keys("snapshot by selenium script")
-        driver.find_element_by_id("snapshot-create-btn").click()
+	try:
+            driver.find_element_by_id("snapshot-create-description").clear()
+            driver.find_element_by_id("snapshot-create-description").send_keys("snapshot by selenium script")
+            driver.find_element_by_id("snapshot-create-btn").click()
+	except:
+	    print "Failed Test: Create Snapshot From Volume"
+            raise
+            return 1
 	print "Finished: Create Snapshot From Volume"   
 	print
+	return 0
 
     def test_ui_delete_snapshot(self):
 	print "Started Test: Delete Snapshot"
         driver = self.driver
-        for i in range(60):
+        for i in range(self.retry):
             try:
-                if self.is_element_present(By.ID, "euca-logo"): break
+                if self.is_element_present(By.LINK_TEXT, "Launch new instance"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Delete Snapshot"
+            raise
+            return 1
 	print "Test: Go to the Page Snapshot"
         driver.find_element_by_css_selector("#dashboard-storage-snapshot > span").click()
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "table-snapshots-new"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Delete Snapshot"
+            raise
+            return 1
         driver.find_element_by_css_selector("td.checkbox-cell.sorting_1 > input[type=\"checkbox\"]").click()
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "more-actions-snapshots"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Delete Snapshot"
+            raise
+            return 1
         driver.find_element_by_id("more-actions-snapshots").click()
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.LINK_TEXT, "Delete"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Delete Snapshot"
+            raise
+            return 1
 	print "Test: Delete Snapshot"
         driver.find_element_by_link_text("Delete").click()
 #        driver.find_element_by_css_selector("body").click()
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "btn-snapshots-delete-delete"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
-        driver.find_element_by_id("btn-snapshots-delete-delete").click()
+        else:
+	    print "Failed Test: Delete Snapshot"
+            raise
+            return 1
+	try:
+            driver.find_element_by_id("btn-snapshots-delete-delete").click()
+	except:
+	    print "Failed Test: Delete Snapshot"
+            raise
+            return 1
 	print "Finished: Delete Snapshot" 
 	print
+	return 0
 
     def test_ui_create_volume_from_snapshot(self):
 	print "Started Test: Create Volume From Snapshot"
         driver = self.driver
-        for i in range(60):
+        for i in range(self.retry):
             try:
-                if self.is_element_present(By.ID, "euca-logo"): break
+                if self.is_element_present(By.LINK_TEXT, "Launch new instance"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Create Volume From Snapshot"
+            raise
+            return 1
 	print "Test: Go to the Page Snapshot"
         driver.find_element_by_css_selector("#dashboard-storage-snapshot > span").click()
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "table-snapshots-new"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Create Volume From Snapshot"
+            raise
+            return 1
         driver.find_element_by_css_selector("td.checkbox-cell.sorting_1 > input[type=\"checkbox\"]").click()
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "more-actions-snapshots"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Create Volume From Snapshot"
+            raise
+            return 1
 	print "Test: Create Volume From Snapshot"
         driver.find_element_by_id("more-actions-snapshots").click()
         driver.find_element_by_link_text("Create volume from snapshot").click()
 #        driver.find_element_by_css_selector("body").click()
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "volumes-add-btn"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
-        driver.find_element_by_id("volumes-add-btn").click()
+        else:
+	    print "Failed Test: Create Volume From Snapshot"
+            raise
+            return 1
+	try:
+            driver.find_element_by_id("volumes-add-btn").click()
+	except:
+	    print "Failed Test: Create Volume From Snapshot"
+            raise
+            return 1
 	print "Finished: Create Volume From Snapshot"
 	print
+	return 0
 
     def test_ui_create_security_group(self):
 	print "Started Test: Create Security Group"
         driver = self.driver
-        for i in range(60):
+        for i in range(self.retry):
             try:
-                if self.is_element_present(By.ID, "euca-logo"): break
+                if self.is_element_present(By.LINK_TEXT, "Launch new instance"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Create Security Group"
+            raise
+            return 1
 	print "Test: Go to the Page Security Group"
         driver.find_element_by_css_selector("#dashboard-netsec-sgroup > span").click()
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "table-sgroups-new"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Create Security Group"
+            raise
+            return 1
         driver.find_element_by_id("table-sgroups-new").click()
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "sgroup-name"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Create Security Group"
+            raise
+            return 1
 	print "Test: Create Security Group"
         driver.find_element_by_id("sgroup-name").clear()
         driver.find_element_by_id("sgroup-name").send_keys("mywebservice")
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "sgroup-description"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Create Security Group"
+            raise
+            return 1
         driver.find_element_by_id("sgroup-description").clear()
         driver.find_element_by_id("sgroup-description").send_keys("rules for my webservice")
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "sgroup-template"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Create Security Group"
+            raise
+            return 1
         Select(driver.find_element_by_id("sgroup-template")).select_by_visible_text("SSH (TCP port 22, for terminal access)")
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "allow-ip"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Create Security Group"
+            raise
+            return 1
         driver.find_element_by_id("allow-ip").clear()
         driver.find_element_by_id("allow-ip").send_keys("0.0.0.0/0")
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "sgroup-add-rule"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Create Security Group"
+            raise
+            return 1
         driver.find_element_by_id("sgroup-add-rule").click()
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "sgroup-template"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Create Security Group"
+            raise
+            return 1
         Select(driver.find_element_by_id("sgroup-template")).select_by_visible_text("HTTP (TCP port 80, for web servers)")
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "allow-ip"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Create Security Group"
+            raise
+            return 1
         driver.find_element_by_id("allow-ip").clear()
         driver.find_element_by_id("allow-ip").send_keys("0.0.0.0/0")
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "sgroup-add-rule"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Create Security Group"
+            raise
+            return 1
         driver.find_element_by_id("sgroup-add-rule").click()
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "sgroup-template"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Create Security Group"
+            raise
+            return 1
         Select(driver.find_element_by_id("sgroup-template")).select_by_visible_text("Custom ICMP")
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "sgroup-type"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Create Security Group"
+            raise
+            return 1
         Select(driver.find_element_by_id("sgroup-type")).select_by_visible_text("All")
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "allow-ip"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Create Security Group"
+            raise
+            return 1
         driver.find_element_by_id("allow-ip").clear()
         driver.find_element_by_id("allow-ip").send_keys("0.0.0.0/0")
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "sgroup-add-rule"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Create Security Group"
+            raise
+            return 1
         driver.find_element_by_id("sgroup-add-rule").click()
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "sgroup-add-btn"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
-        driver.find_element_by_id("sgroup-add-btn").click()
-    	print "Finished: Create Security Group"
+        else:
+	    print "Failed Test: Create Security Group"
+            raise
+            return 1
+	try:
+            driver.find_element_by_id("sgroup-add-btn").click()
+	except:
+	    print "Failed Test: Create Security Group"
+            raise
+            return 1
+	print "Finished: Create Security Group"
 	print
+	return 0
 
     def test_ui_delete_security_group(self):
 	print "Started Test: Delete Security Group"
         driver = self.driver
-        for i in range(60):
+        for i in range(self.retry):
             try:
-                if self.is_element_present(By.ID, "euca-logo"): break
+                if self.is_element_present(By.LINK_TEXT, "Launch new instance"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Delete Security Group"
+            raise
+            return 1
 	print "Test: Go to the Page Security Group"
         driver.find_element_by_css_selector("#dashboard-netsec-sgroup > span").click()
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "table-sgroups-new"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Delete Security Group"
+            raise
+            return 1
         driver.find_element_by_css_selector("td.checkbox-cell.sorting_1 > input[type=\"checkbox\"]").click()
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "more-actions-sgroups"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Delete Security Group"
+            raise
+            return 1
         driver.find_element_by_id("more-actions-sgroups").click()
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.LINK_TEXT, "Delete"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Delete Security Group"
+            raise
+            return 1
 	print "Test: Delete Security Group"
         driver.find_element_by_link_text("Delete").click()
 #        driver.find_element_by_css_selector("body").click()
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "btn-sgroups-delete-delete"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
-        driver.find_element_by_id("btn-sgroups-delete-delete").click()
- 	print "Finished: Delete Security Group"
+        else:
+	    print "Failed Test: Delete Security Group"
+            raise
+            return 1
+	try:
+            driver.find_element_by_id("btn-sgroups-delete-delete").click()
+	except:
+	    print "Failed Test: Delete Security Group"
+            raise
+            return 1
+	print "Finished: Delete Security Group"
 	print
+	return 0
 
     def test_ui_allocate_two_ip_addresses(self):
 	print "Started Test: Allocate Two IP Addresses"
         driver = self.driver
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "dashboard-netsec-eip"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Allocate Two IP Addresses"
+            raise
+            return 1
         print "Test: Go to the Page IP Address"
         driver.find_element_by_id("dashboard-netsec-eip").click()
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "table-eips-new"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Allocate Two IP Addresses"
+            raise
+            return 1
         driver.find_element_by_id("table-eips-new").click()
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "eip-allocate-count"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Allocate Two IP Addresses"
+            raise
+            return 1
 	print "Test: Allocate Two IP Addresses"
         driver.find_element_by_id("eip-allocate-count").clear()
         driver.find_element_by_id("eip-allocate-count").send_keys("2")
         # ERROR: Caught exception [ERROR: Unsupported command [typeKeys | id=eip-allocate-count | 2]]
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "eip-allocate-btn"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
-        driver.find_element_by_id("eip-allocate-btn").click()
+        else:
+	    print "Failed Test: Allocate Two IP Addresses"
+            raise
+            return 1
+	try:
+            driver.find_element_by_id("eip-allocate-btn").click()
+	except:
+	    print "Failed Test: Allocate Two IP Addresses"
+            raise
+            return 1
 	print "Finished: Allocate Two IP Addresses"
 	print
+	return 0
 
     def test_ui_release_ip_address(self):
 	print "Started Test: Release IP Address"
         driver = self.driver
-        for i in range(60):
+        for i in range(self.retry):
             try:
-                if self.is_element_present(By.ID, "euca-logo"): break
+                if self.is_element_present(By.LINK_TEXT, "Launch new instance"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Release Two IP Addresses"
+            raise
+            return 1
         print "Test: Go to the Page IP Address"
         driver.find_element_by_css_selector("#dashboard-netsec-eip > span").click()
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "table-eips-new"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Release Two IP Addresses"
+            raise
+            return 1
         driver.find_element_by_css_selector("td.checkbox-cell.sorting_1 > input[type=\"checkbox\"]").click()
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "more-actions-eips"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Release Two IP Addresses"
+            raise
+            return 1
         driver.find_element_by_id("more-actions-eips").click()
 #        driver.find_element_by_css_selector("body").click()
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.LINK_TEXT, "Release to cloud"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
+        else:
+	    print "Failed Test: Release Two IP Addresses"
+            raise
+            return 1
 	print "Test: Release IP Address"
         driver.find_element_by_link_text("Release to cloud").click()
 #        driver.find_element_by_css_selector("body").click()
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "btn-eips-release-release"): break
             except: pass
             time.sleep(1)
-        else: self.fail("time out")
-        driver.find_element_by_id("btn-eips-release-release").click()
+        else:
+	    print "Failed Test: Release Two IP Addresses"
+            raise
+            return 1
+	try:
+            driver.find_element_by_id("btn-eips-release-release").click()
+	except:
+	    print "Failed Test: Release Two IP Addresses"
+            raise
+            return 1
 	print "Finished: Release IP Address" 
 	print
+	return 0
 
     def test_ui_view_page_get_dashboard_source(self):
 	print "Started Test: View Page Get Dashboard Source"
 	print
         driver = self.driver
-	for i in range(60):
+	for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "euca-logo"): break
             except: pass
             time.sleep(1)
         else:
             print "Failed Test: GotoPage Dashboard Source"
+	    raise
             return 1
         driver.find_element_by_id("euca-logo").click()
         print "Test: Received the Page Title -> " + driver.title
-        for i in range(60):
+        for i in range(self.retry):
             try:
                 if self.is_element_present(By.LINK_TEXT, "Launch new instance"): break
             except: pass
             time.sleep(1)
         else:
             print "Failed Test: GotoPage Dashboard Source"
+            raise
+	    return 1
+	try:
+	    running_instances = driver.find_element_by_css_selector("div.status-readout")
+	    running_instances_text = running_instances.text
+	    print "[DASHBOARD] Running Instances: " + running_instances_text
+	    stopped_instances = driver.find_element_by_id("dashboard-instance-stopped")
+	    stopped_instances_text = stopped_instances.text
+	    print "[DASHBOARD] Stopped Instances: " + stopped_instances_text
+	    volumes = driver.find_element_by_id("dashboard-storage-volume")
+	    volumes_text = volumes.text
+	    print "[DASHBOARD] Volumes: " + volumes_text
+	    snapshots = driver.find_element_by_id("dashboard-storage-snapshot")
+	    snapshots_text = snapshots.text
+	    print "[DASHBOARD] Snapshots: " + snapshots_text
+	    sgroup = driver.find_element_by_id("dashboard-netsec-sgroup")
+	    sgroup_text = sgroup.text
+	    print "[DASHBOARD] Security Groups: " + sgroup_text
+	    keypairs = driver.find_element_by_id("dashboard-netsec-keypair")
+	    keypairs_text = keypairs.text
+	    print "[DASHBOARD] Keypairs: " + keypairs_text
+	    eip = driver.find_element_by_id("dashboard-netsec-eip")
+	    eip_text = eip.text
+	    print "[DASHBOARD] IP Addresses: " + eip_text
+	    print
+	except:
+	    print "Failed Test: GotoPage Dashboard Source"
+            raise
             return 1
-	running_instances = driver.find_element_by_css_selector("div.status-readout")
-	running_instances_text = running_instances.text
-	print "[DASHBOARD] Running Instances: " + running_instances_text
-
-	stopped_instances = driver.find_element_by_id("dashboard-instance-stopped")
-	stopped_instances_text = stopped_instances.text
-	print "[DASHBOARD] Stopped Instances: " + stopped_instances_text
-
-	volumes = driver.find_element_by_id("dashboard-storage-volume")
-	volumes_text = volumes.text
-	print "[DASHBOARD] Volumes: " + volumes_text
-
-	snapshots = driver.find_element_by_id("dashboard-storage-snapshot")
-	snapshots_text = snapshots.text
-	print "[DASHBOARD] Snapshots: " + snapshots_text
-
-	sgroup = driver.find_element_by_id("dashboard-netsec-sgroup")
-	sgroup_text = sgroup.text
-	print "[DASHBOARD] Security Groups: " + sgroup_text
-
-	keypairs = driver.find_element_by_id("dashboard-netsec-keypair")
-	keypairs_text = keypairs.text
-	print "[DASHBOARD] Keypairs: " + keypairs_text
-	
-	eip = driver.find_element_by_id("dashboard-netsec-eip")
-	eip_text = eip.text
-	print "[DASHBOARD] IP Addresses: " + eip_text
-
-	print
 	print "Finished Test: View Page Get Dashboard Source"
 	print
 	return 0
