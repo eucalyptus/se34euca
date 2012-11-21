@@ -45,6 +45,13 @@ class testcase_view_page(lib_euca_ui_test):
 	self.test_ui_gotopage_volumes()
 	self.test_ui_logout()
 
+    def view_images_page(self):
+	print "=== runTest: View Images Page ==="
+	print
+	self.test_ui_login()
+	self.test_ui_gotopage_images()
+	self.test_ui_logout()
+
     def view_all_page(self):
 	print "=== runTest: View All Page ==="
 	print
@@ -53,6 +60,7 @@ class testcase_view_page(lib_euca_ui_test):
 	self.test_ui_gotopage_running()
 	self.test_ui_gotopage_security_groups()
 	self.test_ui_gotopage_volumes()
+	self.test_ui_gotopage_images()
 	self.test_ui_view_page_get_dashboard_source()
 	self.test_ui_logout()
 
@@ -61,21 +69,22 @@ class testcase_view_page(lib_euca_ui_test):
         print
 	self.test_ui_login()
 	while True:
-        	try:
-			print "Test: view_all_page_in_loop - Click Through All Landing Pages"
-			print
-			self.test_ui_gotopage_keypairs()
-        		self.test_ui_gotopage_running()
-        		self.test_ui_gotopage_security_groups()
-        		self.test_ui_gotopage_volumes()
-			self.test_ui_view_page_get_dashboard_source()
-			print "Test: view_all_page_in_loop - Sleep 5 Sec"
-			print	
-			time.sleep(5)
-		except:
-			print "Test: view_all_page_in_loop - Catched Exception: Try to Log Back In"
-			print
-			self.test_ui_login()
+	    try:
+		print "Test: view_all_page_in_loop - Click Through All Landing Pages"
+		print
+		self.test_ui_gotopage_keypairs()
+		self.test_ui_gotopage_running()
+		self.test_ui_gotopage_security_groups()
+		self.test_ui_gotopage_volumes()
+		self.test_ui_gotopage_images()
+		self.test_ui_view_page_get_dashboard_source()
+		print "Test: view_all_page_in_loop - Sleep 5 Sec"
+		print	
+		time.sleep(5)
+	    except:
+		print "Test: view_all_page_in_loop - Catched Exception: Try to Log Back In"
+		print
+		self.test_ui_login()
 
 if __name__ == "__main__":
     unittest.main()

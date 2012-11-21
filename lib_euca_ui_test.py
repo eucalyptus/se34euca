@@ -13,7 +13,7 @@ class lib_euca_ui_test(unittest.TestCase):
     username = "admin"
     password = "password"
 
-    retry = 10
+    retry = 5
 
     def setUIInfo(self, ip, port):
 	self.ui_ip = ip
@@ -307,6 +307,49 @@ class lib_euca_ui_test(unittest.TestCase):
 	print 
 	return 0
 
+    def test_ui_gotopage_images(self):
+	print "Started Test: GotoPage Images"
+        driver = self.driver
+        for i in range(self.retry):
+            try:
+                if self.is_element_present(By.ID, "euca-logo"): break
+            except: pass
+            time.sleep(1)
+        else:
+	    print "Failed Test: GotoPage Images"
+            raise
+	    return 1
+        driver.find_element_by_id("euca-logo").click()
+	print "Test: Received the Page Title -> " + driver.title
+        for i in range(self.retry):
+            try:
+                if self.is_element_present(By.LINK_TEXT, "Images"): break
+            except: pass
+            time.sleep(1)
+        else:
+	    print "Failed Test: GotoPage Images"
+            raise
+	    return 1
+        driver.find_element_by_link_text("Images").click()
+	print "Test: Clicked the GotoPage Button"
+        for i in range(self.retry):
+            try:
+                if self.is_element_present(By.LINK_TEXT, "Refresh"): break
+            except: pass
+            time.sleep(1)
+        else:
+	    print "Failed Test: GotoPage Images"
+            raise
+	    return 1
+	try:
+	    driver.find_element_by_link_text("Refresh").click()
+	except:
+	    print "Failed Test: GotoPage Images"
+	    return 1
+	print "Finished Test: GotoPage Images"
+	print 
+	return 0
+
     def test_ui_gotopage_dashboard(self):
 	print "Started Test: GotoPage Dashboard"
         driver = self.driver
@@ -419,6 +462,43 @@ class lib_euca_ui_test(unittest.TestCase):
 	print
 	return 0
 
+    def test_ui_terminate_instance_all(self):
+	print "Started Test: Terminate Instance All"
+        driver = self.driver
+        for i in range(self.retry):
+            try:
+                if self.is_element_present(By.LINK_TEXT, "Launch new instance"): break
+            except: pass
+            time.sleep(1)
+        else:
+	    print "Failed Test: Terminate Instance Basic"
+            raise
+            return 1
+	try:
+		print "Test: Go to the Page Running Instances"
+		driver.find_element_by_css_selector("div.status-readout").click()
+		for i in range(self.retry):
+		    try:
+			if self.is_element_present(By.ID, "instances-check-all"): break
+		    except: pass
+		    time.sleep(1)
+		else:
+		    print "Failed Test: Terminate Instance All"
+		    raise
+		    return 1
+		print "Test: Terminate Instance All"
+        	driver.find_element_by_id("instances-check-all").click()
+        	driver.find_element_by_id("more-actions-instances").click()
+        	driver.find_element_by_link_text("Terminate").click()
+        	driver.find_element_by_id("btn-instances-terminate-terminate").click()
+	except:
+		print "Failed Test: Terminate Instance All"
+		raise
+		return 1
+	print "Finished Test: Terminate Instance All"
+	print
+	return 0
+
 
     def test_ui_generate_keypair(self):
 	print "Started Test: Generate Keypair"
@@ -475,6 +555,43 @@ class lib_euca_ui_test(unittest.TestCase):
 		raise
 		return 1
 	print "Finished Test: Delete Keypair"
+	print
+	return 0
+
+    def test_ui_delete_keypair_all(self):
+	print "Started Test: Delete Keypair All"
+        driver = self.driver
+        for i in range(self.retry):
+            try:
+                if self.is_element_present(By.LINK_TEXT, "Launch new instance"): break
+            except: pass
+            time.sleep(1)
+        else:
+	    print "Failed Test: Delete Keypair All"
+            raise
+            return 1
+	try:
+		print "Test: Go to the Page Keypair"
+        	driver.find_element_by_id("dashboard-netsec-keypair").click()
+		print "Test: Delete Keypair All"
+		for i in range(self.retry):
+		    try:
+			if self.is_element_present(By.ID, "keys-check-all"): break
+		    except: pass
+		    time.sleep(1)
+		else:
+		    print "Failed Test: Delete Keypair All"
+		    raise
+		    return 1
+		driver.find_element_by_id("keys-check-all").click()
+        	driver.find_element_by_id("more-actions-keys").click()
+        	driver.find_element_by_link_text("Delete").click()
+        	driver.find_element_by_id("btn-keys-delete-delete").click()
+	except:
+		print "Failed Test: Delete Keypair All"
+		raise
+		return 1
+	print "Finished Test: Delete Keypair All"
 	print
 	return 0
 
@@ -579,6 +696,72 @@ class lib_euca_ui_test(unittest.TestCase):
             raise
             return 1
 	print "Finished: Delete Volume"
+	print
+	return 0
+
+    def test_ui_delete_volume_all(self):
+	print "Started Test: Delete Volume All"
+	driver = self.driver
+        for i in range(self.retry):
+            try:
+                if self.is_element_present(By.ID, "dashboard-storage-volume"): break
+            except: pass
+            time.sleep(1)
+        else:
+	    print "Failed Test: Delete Volume All"
+            raise
+            return 1
+	print "Test: Go to the Page Volume"
+	driver.find_element_by_id("dashboard-storage-volume").click()
+	for i in range(self.retry):
+            try:
+                if self.is_element_present(By.ID, "volumes-check-all"): break
+            except: pass
+            time.sleep(1)
+        else:
+            print "Failed Test: Delete Volume All"
+            raise
+            return 1
+	driver.find_element_by_id("volumes-check-all").click()
+	for i in range(self.retry):
+	    try:
+		if self.is_element_present(By.ID, "more-actions-volumes"): break
+	    except: pass
+	    time.sleep(1)
+	else:
+	    print "Failed Test: Delete Volume All"
+            raise
+            return 1
+	print "Test: Delete Volume"
+	driver.find_element_by_id("more-actions-volumes").click()
+#	driver.find_element_by_css_selector("body").click()
+	for i in range(self.retry):
+	    try:
+		if self.is_element_present(By.LINK_TEXT, "Delete"): break
+	    except: pass
+	    time.sleep(1)
+	else:
+	    print "Failed Test: Delete Volume All"
+            raise
+            return 1
+	driver.find_element_by_link_text("Delete").click()
+#	driver.find_element_by_css_selector("body").click()
+	for i in range(self.retry):
+	    try:
+		if self.is_element_present(By.ID, "btn-volumes-delete-delete"): break
+	    except: pass
+	    time.sleep(1)
+	else:
+	    print "Failed Test: Delete Volume All"
+            raise
+            return 1
+	try:
+	    driver.find_element_by_id("btn-volumes-delete-delete").click()
+	except:
+	    print "Failed Test: Delete Volume All"
+            raise
+            return 1
+	print "Finished: Delete Volume All"
 	print
 	return 0
 
@@ -993,6 +1176,71 @@ class lib_euca_ui_test(unittest.TestCase):
             raise
             return 1
 	print "Finished: Delete Security Group"
+	print
+	return 0
+
+    def test_ui_delete_security_group_all(self):
+	print "Started Test: Delete Security Group All"
+        driver = self.driver
+        for i in range(self.retry):
+            try:
+                if self.is_element_present(By.LINK_TEXT, "Launch new instance"): break
+            except: pass
+            time.sleep(1)
+        else:
+	    print "Failed Test: Delete Security Group All"
+            raise
+            return 1
+	print "Test: Go to the Page Security Group"
+        driver.find_element_by_css_selector("#dashboard-netsec-sgroup > span").click()
+        for i in range(self.retry):
+            try:
+                if self.is_element_present(By.ID, "sgroups-check-all"): break
+            except: pass
+            time.sleep(1)
+        else:
+	    print "Failed Test: Delete Security Group All"
+            raise
+            return 1
+        driver.find_element_by_id("sgroups-check-all").click()
+        for i in range(self.retry):
+            try:
+                if self.is_element_present(By.ID, "more-actions-sgroups"): break
+            except: pass
+            time.sleep(1)
+        else:
+	    print "Failed Test: Delete Security Group All"
+            raise
+            return 1
+        driver.find_element_by_id("more-actions-sgroups").click()
+        for i in range(self.retry):
+            try:
+                if self.is_element_present(By.LINK_TEXT, "Delete"): break
+            except: pass
+            time.sleep(1)
+        else:
+	    print "Failed Test: Delete Security Group All"
+            raise
+            return 1
+	print "Test: Delete Security Group All"
+        driver.find_element_by_link_text("Delete").click()
+#        driver.find_element_by_css_selector("body").click()
+        for i in range(self.retry):
+            try:
+                if self.is_element_present(By.ID, "btn-sgroups-delete-delete"): break
+            except: pass
+            time.sleep(1)
+        else:
+	    print "Failed Test: Delete Security Group All"
+            raise
+            return 1
+	try:
+            driver.find_element_by_id("btn-sgroups-delete-delete").click()
+	except:
+	    print "Failed Test: Delete Security Group All"
+            raise
+            return 1
+	print "Finished: Delete Security Group All"
 	print
 	return 0
 
