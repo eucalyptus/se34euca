@@ -370,14 +370,14 @@ class lib_euca_ui_test(unittest.TestCase):
         driver = self.driver
         for i in range(self.retry):
             try:
-                if self.is_element_present(By.ID, "euca-logo"): break
+                if self.is_element_present(By.LINK_TEXT, "Dashboard"): break
             except: pass
             time.sleep(1)
         else:
 	    print "Failed Test: GotoPage Dashboard"
             raise
 	    return 1
-	driver.find_element_by_id("euca-logo").click()
+	driver.find_element_by_link_text("Dashboard").click()
 	print "Test: Received the Page Title -> " + driver.title
         for i in range(self.retry):
             try:
@@ -486,7 +486,7 @@ class lib_euca_ui_test(unittest.TestCase):
             except: pass
             time.sleep(1)
         else:
-	    print "Failed Test: Terminate Instance Basic"
+	    print "Failed Test: Terminate Instance All"
             raise
             return 1
 	try:
