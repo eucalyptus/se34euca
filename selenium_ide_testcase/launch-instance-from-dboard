@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://10.111.5.23:8888/" />
+<title>launch-instance-from-dboard</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">launch-instance-from-dboard</td></tr>
+</thead><tbody>
+<tr>
+	<td>click</td>
+	<td>link=Dashboard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Launch new instance</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=tr.odd.selected-row</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=launch-wizard-buttons-image-next</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=m1.small</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=launch-wizard-buttons-type-next</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=launch-wizard-buttons-security-launch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Dashboard</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
