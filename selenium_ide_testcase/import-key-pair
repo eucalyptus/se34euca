@@ -12,6 +12,11 @@
 <tr><td rowspan="1" colspan="3">import-key-pair</td></tr>
 </thead><tbody>
 <tr>
+	<td>setTimeout</td>
+	<td>60000</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>link=Dashboard</td>
 	<td></td>
@@ -57,8 +62,13 @@
 	<td>import-key</td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>xpath=(//button[@id='keys-add-btn'])[2]</td>
+	<td>waitForElementPresent</td>
+	<td>id=keys-add-btn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>id=keys-add-btn</td>
 	<td></td>
 </tr>
 <tr>

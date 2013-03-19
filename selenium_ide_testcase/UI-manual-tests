@@ -10,7 +10,7 @@
 <tr><td><b>Test Suite</b></td></tr>
 <tr><td><a href="import-key-pair">import-key-pair</a></td></tr>
 <tr><td><a href="chk-create-key-pair">chk-create-key-pair</a></td></tr>
-<tr><td><a href="chk-delete-keypair">delete-key-pair</a></td></tr>
+<tr><td><a href="delete-key-pair">delete-key-pair</a></td></tr>
 <tr><td><a href="chk-delete-key-pair">chk-delete-key-pair</a></td></tr>
 <tr><td><a href="create-key-pair">create-key-pair</a></td></tr>
 <tr><td><a href="chk-create-key-pair">chk-create-key-pair</a></td></tr>

@@ -27,6 +27,11 @@
 	<td>0 Key Pairs</td>
 </tr>
 <tr>
+	<td>assertText</td>
+	<td>css=#dashboard-netsec-keypair &gt; span</td>
+	<td>0</td>
+</tr>
+<tr>
 	<td>storeText</td>
 	<td>css=#dashboard-netsec-keypair &gt; span</td>
 	<td>key_pairs</td>

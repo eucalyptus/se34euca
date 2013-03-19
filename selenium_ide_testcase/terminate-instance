@@ -4,12 +4,12 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="https://10.111.5.23:8888/" />
-<title>create-key-pair</title>
+<title>terminate-instance</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">create-key-pair</td></tr>
+<tr><td rowspan="1" colspan="3">terminate-instance</td></tr>
 </thead><tbody>
 <tr>
 	<td>click</td>
@@ -18,92 +18,77 @@
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
-	<td>link=Network &amp; Security</td>
+	<td>css=div.status-readout &gt; span</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyElementPresent</td>
-	<td>link=Network &amp; Security</td>
+	<td>css=div.status-readout &gt; span</td>
 	<td></td>
 </tr>
 <tr>
+	<td>storeText</td>
+	<td>css=div.status-readout &gt; span</td>
+	<td>inst_before</td>
+</tr>
+<tr>
 	<td>click</td>
-	<td>link=Network &amp; Security</td>
+	<td>link=Instances</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
-	<td>link=Key Pairs</td>
-	<td></td>
+	<td>id=inst_state-selector</td>
+	<td>label=Running instances</td>
 </tr>
 <tr>
-	<td>verifyElementPresent</td>
-	<td>link=Key Pairs</td>
+	<td>select</td>
+	<td>id=inst_state-selector</td>
+	<td>label=Running instances</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.table-row-status.status-running</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>link=Key Pairs</td>
+	<td>css=td.checkbox-cell &gt; input[type=&quot;checkbox&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=more-actions-instances</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
-	<td>css=td.checkbox-cell.sorting_1 &gt; input[type=&quot;checkbox&quot;]</td>
+	<td>link=Terminate</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyElementPresent</td>
-	<td>css=td.checkbox-cell.sorting_1 &gt; input[type=&quot;checkbox&quot;]</td>
+	<td>link=Terminate</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>css=td.checkbox-cell.sorting_1 &gt; input[type=&quot;checkbox&quot;]</td>
+	<td>link=Terminate</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
-	<td>id=more-actions-keys</td>
+	<td>id=btn-instances-terminate-terminate</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyElementPresent</td>
-	<td>id=more-actions-keys</td>
+	<td>id=btn-instances-terminate-terminate</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=more-actions-keys</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>link=Delete</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>link=Delete</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=Delete</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>id=btn-keys-delete-delete</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>id=btn-keys-delete-delete</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=btn-keys-delete-delete</td>
+	<td>id=btn-instances-terminate-terminate</td>
 	<td></td>
 </tr>
 <tr>
@@ -111,6 +96,27 @@
 	<td>link=Dashboard</td>
 	<td></td>
 </tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div.status-readout &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.status-readout &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=div.status-readout &gt; span</td>
+	<td>inst_after</td>
+</tr>
+<tr>
+	<td>echo </td>
+	<td>Number of&nbsp;&nbsp;instances before/after: ${inst_before}/${inst_after}</td>
+	<td></td>
+</tr>
+
 </tbody></table>
 </body>
 </html>
