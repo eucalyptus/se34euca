@@ -4,12 +4,12 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="https://10.111.5.23:8888/" />
-<title>create-volume</title>
+<title>chk-create-volume</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">create-volume</td></tr>
+<tr><td rowspan="1" colspan="3">chk-create-volume</td></tr>
 </thead><tbody>
 <tr>
 	<td>click</td>
@@ -18,49 +18,30 @@
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
-	<td>link=Storage</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=Storage</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=Volumes</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>id=table-volumes-new</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=table-volumes-new</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=volume-size</td>
+	<td>id=dashboard-storage-volume</td>
 	<td>1</td>
 </tr>
 <tr>
-	<td>typeKeys</td>
-	<td>id=volume-size</td>
+	<td>verifyText</td>
+	<td>css=#dashboard-storage-volume &gt; span</td>
 	<td>1</td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>id=volumes-add-btn</td>
-	<td></td>
+	<td>storeText</td>
+	<td>css=#dashboard-storage-volume &gt; span</td>
+	<td>volumes</td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>link=Dashboard</td>
+	<td>storeText</td>
+	<td>css=#dashboard-netsec-keypair &gt; span</td>
+	<td>key_pairs</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Number of volumes expected/actual: 1/${volumes}</td>
 	<td></td>
 </tr>
+
 </tbody></table>
 </body>
 </html>

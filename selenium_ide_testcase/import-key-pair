@@ -17,6 +17,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForElementPresent</td>
+	<td>link=Network &amp; Security</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>link=Network &amp; Security</td>
 	<td></td>
@@ -27,29 +32,29 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForElementPresent</td>
+	<td>id=table-keys-extra</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>id=table-keys-extra</td>
 	<td></td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>xpath=(//input[@id='key-name'])[2]</td>
-	<td>import-key</td>
-</tr>
-<tr>
-	<td>typeKeys</td>
-	<td>xpath=(//input[@id='key-name'])[2]</td>
-	<td>import-key</td>
+	<td>id=key-import-contents</td>
+	<td>ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCgyUm4seo25FNQe/TQjxhIUKn684LXDLIRFeknHMRcyjqkxalafUJMgbStu9wguz7rWm/B66d6iHY4kf+KByFcyiqZnjZhUMrPvSGMSWXJW9srbNqugl8gxILM/y74lzZzA1fDjZHjvWwYRPRNa1gdA0K+29qUmx1iVkAlZk3lKTk5Ob3DZ94pXEJfuv0zt0BrfiPdjhe9Dp+BtJWfJAvq1J3N5SjdaSr/fbSFSrkpdTlV0EnQ4cx4ltmRBkhFoQXL9nggzm7OgRAGFc1O/6gRqBjserDbmDOLwOfqnynvALtBmuqHaLUk0CllPDlfliMcVZkRbEz1UBJS6OZENkBD alicehubenko@euca-prod-1-17.eucalyptus-systems.com</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=key-import-file</td>
-	<td>~/test-key/key.pub</td>
+	<td>xpath=(//input[@id='key-name'])[2]</td>
+	<td>import-key</td>
 </tr>
 <tr>
 	<td>typeKeys</td>
-	<td>id=key-import-file</td>
-	<td>~/test-key/key.pub</td>
+	<td>xpath=(//input[@id='key-name'])[2]</td>
+	<td>import-key</td>
 </tr>
 <tr>
 	<td>click</td>
