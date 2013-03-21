@@ -12,8 +12,23 @@
 <tr><td rowspan="1" colspan="3">launch-inst-from-instances</td></tr>
 </thead><tbody>
 <tr>
+	<td>setTimeout</td>
+	<td>60000</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>link=Dashboard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Instances</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Instances</td>
 	<td></td>
 </tr>
 <tr>
@@ -22,8 +37,28 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForElementPresent</td>
+	<td>id=table-instances-new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=table-instances-new</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>id=table-instances-new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=tr.odd.selected-row</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=tr.odd.selected-row</td>
 	<td></td>
 </tr>
 <tr>
@@ -32,13 +67,43 @@
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
+	<td>waitForElementPresent</td>
+	<td>id=launch-wizard-buttons-image-next</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
 	<td>id=launch-wizard-buttons-image-next</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
+	<td>id=launch-wizard-buttons-image-next</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
 	<td>link=m1.small</td>
+	<td>m1.small</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>link=m1.small</td>
+	<td>m1.small</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=m1.small</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=launch-wizard-buttons-type-next</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=launch-wizard-buttons-type-next</td>
 	<td></td>
 </tr>
 <tr>
@@ -47,13 +112,23 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>10000</td>
+	<td>waitForElementPresent</td>
+	<td>id=launch-wizard-buttons-security-launch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=launch-wizard-buttons-security-launch</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
 	<td>id=launch-wizard-buttons-security-launch</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div.table-row-status.status-pending</td>
 	<td></td>
 </tr>
 <tr>

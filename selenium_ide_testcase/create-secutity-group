@@ -17,8 +17,13 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>5000</td>
+	<td>waitForElementPresent</td>
+	<td>link=Network &amp; Security</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Network &amp; Security</td>
 	<td></td>
 </tr>
 <tr>
@@ -27,13 +32,38 @@
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
+	<td>waitForElementPresent</td>
+	<td>link=Security Groups</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
 	<td>link=Security Groups</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
+	<td>link=Security Groups</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
 	<td>id=table-sgroups-new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=table-sgroups-new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=table-sgroups-new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=sgroup-name</td>
 	<td></td>
 </tr>
 <tr>
@@ -62,9 +92,14 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>20000</td>
-	<td></td>
+	<td>waitForElementPresent</td>
+	<td>css=span[title=&quot;test&quot;]</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=span[title=&quot;test&quot;]</td>
+	<td>test</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -72,8 +107,13 @@
 	<td>test</td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>3000</td>
+	<td>waitForElementPresent</td>
+	<td>id=more-actions-sgroups</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=more-actions-sgroups</td>
 	<td></td>
 </tr>
 <tr>
@@ -82,14 +122,24 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>1000</td>
+	<td>waitForElementPresent</td>
+	<td>link=Manage rules</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Manage rules</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
 	<td>link=Manage rules</td>
 	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//select[@id='sgroup-template'])[2]</td>
+	<td>label=Custom TCP</td>
 </tr>
 <tr>
 	<td>select</td>
@@ -110,6 +160,11 @@
 	<td>click</td>
 	<td>xpath=(//a[contains(text(),'Add another rule')])[2]</td>
 	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//select[@id='sgroup-template'])[2]</td>
+	<td>label=Custom ICMP</td>
 </tr>
 <tr>
 	<td>select</td>

@@ -12,24 +12,19 @@
 <tr><td rowspan="1" colspan="3">chk-launch-inst-from-images</td></tr>
 </thead><tbody>
 <tr>
+	<td>setTimeout</td>
+	<td>60000</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>link=Dashboard</td>
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
+	<td>waitForText</td>
 	<td>css=div.status-readout &gt; span</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForNotText</td>
-	<td>css=div.status-readout &gt; span</td>
-	<td>0</td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>css=div.status-readout &gt; span</td>
-	<td></td>
+	<td>1</td>
 </tr>
 <tr>
 	<td>verifyText</td>
@@ -39,11 +34,11 @@
 <tr>
 	<td>storeText</td>
 	<td>css=div.status-readout &gt; span</td>
-	<td>instances</td>
+	<td>inst</td>
 </tr>
 <tr>
 	<td>echo</td>
-	<td>Number of running instances expected/actual: 1/${instances}</td>
+	<td>Number of instances expected/actual: 1/${inst}</td>
 	<td></td>
 </tr>
 <tr>

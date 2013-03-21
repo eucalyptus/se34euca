@@ -27,6 +27,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>verifyElementPresent</td>
+	<td>link=Network &amp; Security</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>link=Network &amp; Security</td>
 	<td></td>
@@ -38,6 +43,11 @@
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
+	<td>id=table-keys-extra</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
 	<td>id=table-keys-extra</td>
 	<td></td>
 </tr>
@@ -67,8 +77,18 @@
 	<td></td>
 </tr>
 <tr>
-	<td>clickAt</td>
+	<td>verifyElementPresent</td>
 	<td>id=keys-add-btn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=keys-add-btn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@id='keys-add-btn'])[2]</td>
 	<td></td>
 </tr>
 <tr>

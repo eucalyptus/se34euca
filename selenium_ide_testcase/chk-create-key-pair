@@ -22,17 +22,12 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForTextPresent</td>
-	<td>1</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
+	<td>waitForText</td>
 	<td>id=dashboard-netsec-keypair</td>
-	<td>Key Pairs</td>
+	<td>1 Key Pairs</td>
 </tr>
 <tr>
-	<td>assertText</td>
+	<td>verifyText</td>
 	<td>id=dashboard-netsec-keypair</td>
 	<td>1 Key Pairs</td>
 </tr>
@@ -40,11 +35,6 @@
 	<td>storeText</td>
 	<td>css=#dashboard-netsec-keypair &gt; span</td>
 	<td>key_pairs</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>id=dashboard-netsec-keypair</td>
-	<td>1 Key Pairs</td>
 </tr>
 <tr>
 	<td>echo</td>
