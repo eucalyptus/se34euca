@@ -12,8 +12,38 @@
 <tr><td rowspan="1" colspan="3">allocate-ip</td></tr>
 </thead><tbody>
 <tr>
+	<td>setTimeout</td>
+	<td>60000</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>link=Dashboard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=#dashboard-netsec-eip &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=#dashboard-netsec-eip &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=#dashboard-netsec-eip &gt; span</td>
+	<td>ip_before</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Network &amp; Security</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Network &amp; Security</td>
 	<td></td>
 </tr>
 <tr>
@@ -22,13 +52,38 @@
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
+	<td>waitForElementPresent</td>
+	<td>link=IP Addresses</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
 	<td>link=IP Addresses</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
+	<td>link=IP Addresses</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
 	<td>id=table-eips-new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=table-eips-new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=table-eips-new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=eip-allocate-count</td>
 	<td></td>
 </tr>
 <tr>
@@ -42,23 +97,28 @@
 	<td>1</td>
 </tr>
 <tr>
-	<td>click</td>
+	<td>waitForElementPresent</td>
+	<td>id=eip-allocate-btn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
 	<td>id=eip-allocate-btn</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
 	<td>id=eip-allocate-btn</td>
-	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>5000</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
 	<td>link=Dashboard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Check: ip-before: ${ip_before}</td>
 	<td></td>
 </tr>
 </tbody></table>

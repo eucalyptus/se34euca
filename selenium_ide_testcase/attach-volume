@@ -17,8 +17,13 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>10000</td>
+	<td>waitForElementPresent</td>
+	<td>link=Storage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Storage</td>
 	<td></td>
 </tr>
 <tr>
@@ -27,23 +32,23 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForElementPresent</td>
+	<td>link=Volumes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Volumes</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>link=Volumes</td>
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>10000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=vol_state-selector</td>
-	<td>label=Detached volumes</td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>15000</td>
+	<td>waitForElementPresent</td>
+	<td>//table[@id='volumes']/tbody/tr/td[2]</td>
 	<td></td>
 </tr>
 <tr>
@@ -52,9 +57,44 @@
 	<td>vol</td>
 </tr>
 <tr>
+	<td>waitForElementPresent</td>
+	<td>link=Instances</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Instances</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>link=Instances</td>
 	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=li.toggle-on &gt; ul &gt; li &gt; a</td>
+	<td>Instances</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=li.toggle-on &gt; ul &gt; li &gt; a</td>
+	<td>Instances</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li.toggle-on &gt; ul &gt; li &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=inst_state-selector</td>
+	<td>label=Running instances</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=inst_state-selector</td>
+	<td>label=Running instances</td>
 </tr>
 <tr>
 	<td>select</td>
@@ -62,8 +102,13 @@
 	<td>label=Running instances</td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>7000</td>
+	<td>waitForElementPresent</td>
+	<td>css=td.checkbox-cell &gt; input[type=&quot;checkbox&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=td.checkbox-cell &gt; input[type=&quot;checkbox&quot;]</td>
 	<td></td>
 </tr>
 <tr>
@@ -72,8 +117,28 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForElementPresent</td>
+	<td>id=more-actions-instances</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>id=more-actions-instances</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=more-actions-instances</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Attach volume</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Attach volume</td>
 	<td></td>
 </tr>
 <tr>
@@ -90,6 +155,16 @@
 	<td>typeKeys</td>
 	<td>xpath=(//input[@id='volume-attach-device-name'])[2]</td>
 	<td>/dev/sdf</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=volume-attach-btn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=volume-attach-btn</td>
+	<td></td>
 </tr>
 <tr>
 	<td>click</td>

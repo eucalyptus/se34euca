@@ -53,18 +53,18 @@
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
-	<td>link=m1.small</td>
-	<td></td>
+	<td>id=launch-instance-type-size</td>
+	<td>label=m1.small: 1 CPUs, 256 memory (MB), 5 disk (GB,root device)</td>
 </tr>
 <tr>
 	<td>verifyElementPresent</td>
-	<td>link=m1.small</td>
-	<td></td>
+	<td>id=launch-instance-type-size</td>
+	<td>label=m1.small: 1 CPUs, 256 memory (MB), 5 disk (GB,root device)</td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>link=m1.small</td>
-	<td></td>
+	<td>select</td>
+	<td>id=launch-instance-type-size</td>
+	<td>label=m1.small: 1 CPUs, 256 memory (MB), 5 disk (GB,root device)</td>
 </tr>
 <tr>
 	<td>waitForText</td>
@@ -108,7 +108,7 @@
 </tr>
 <tr>
 	<td>echo</td>
-	<td>Done ${note}</td>
+	<td>Done </td>
 	<td></td>
 </tr>
 </tbody></table>

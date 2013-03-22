@@ -11,7 +11,186 @@
 <thead>
 <tr><td rowspan="1" colspan="3">security-gr-add-rules</td></tr>
 </thead><tbody>
-
+<tr>
+	<td>setTimeout</td>
+	<td>60000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Dashboard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Network &amp; Security</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Network &amp; Security</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Network &amp; Security</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Security Groups</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Security Groups</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Security Groups</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=more-actions-sgroups</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=more-actions-sgroups</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=more-actions-sgroups</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>test</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=span[title=&quot;test&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span[title=&quot;test&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=more-actions-sgroups</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Manage rules</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Manage rules</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Manage rules</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//select[@id='sgroup-template'])[2]</td>
+	<td>label=Custom TCP</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>xpath=(//select[@id='sgroup-template'])[2]</td>
+	<td>label=Custom TCP</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@id='sgroup-ports'])[2]</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@id='allow-ip'])[2]</td>
+	<td>0.0.0.0/0</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Add another rule')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//select[@id='sgroup-template'])[2]</td>
+	<td>label=Custom ICMP</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>xpath=(//select[@id='sgroup-template'])[2]</td>
+	<td>label=Custom ICMP</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@id='allow-ip'])[2]</td>
+	<td>0.0.0.0/0</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@id='sgroup-add-btn'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Add another rule')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//select[@id='sgroup-template'])[2]</td>
+	<td>label=HTTP (TCP port 80, for web servers)</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>xpath=(//select[@id='sgroup-template'])[2]</td>
+	<td>label=HTTP (TCP port 80, for web servers)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@id='allow-ip'])[2]</td>
+	<td>0.0.0.0/0</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//a[contains(text(),'Add another rule')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>xpath=(//select[@id='sgroup-template'])[2]</td>
+	<td>label=SSH (TCP port 22, for terminal access)</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>xpath=(//select[@id='sgroup-template'])[2]</td>
+	<td>label=SSH (TCP port 22, for terminal access)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@id='allow-ip'])[2]</td>
+	<td>0.0.0.0/0</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@id='sgroup-add-btn'])[2]</td>
+	<td></td>
+</tr>
 </tbody></table>
 </body>
 </html>
