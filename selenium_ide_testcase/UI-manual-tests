@@ -17,6 +17,7 @@
 <tr><td><a href="create-volume">create-volume</a></td></tr>
 <tr><td><a href="chk-create-volume">chk-create-volume</a></td></tr>
 <tr><td><a href="delete-volume">delete-volume</a></td></tr>
+<tr><td><a href="delete-volume">delete-volume</a></td></tr>
 <tr><td><a href="chk-delete-volume">chk-delete-volume</a></td></tr>
 <tr><td><a href="create-volume">create-volume</a></td></tr>
 <tr><td><a href="launch-inst-from-images">launch-inst-from-images</a></td></tr>

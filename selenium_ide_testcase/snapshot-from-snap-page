@@ -62,6 +62,21 @@
 	<td>vol</td>
 </tr>
 <tr>
+	<td>echo</td>
+	<td>${vol}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//table[@id='volumes']/tbody/tr/td[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//table[@id='volumes']/tbody/tr/td[2]</td>
+	<td>vol</td>
+</tr>
+<tr>
 	<td>waitForElementPresent</td>
 	<td>link=Storage</td>
 	<td></td>
