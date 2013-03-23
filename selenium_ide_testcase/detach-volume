@@ -47,12 +47,12 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
+	<td>waitForText</td>
 	<td>css=div.table-row-status.status-available</td>
 	<td></td>
 </tr>
 <tr>
-	<td>verifyElementPresent</td>
+	<td>verifyText</td>
 	<td>css=div.table-row-status.status-available</td>
 	<td></td>
 </tr>

@@ -122,13 +122,8 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
+	<td>waitForText</td>
 	<td>css=div.table-row-status.status-pending</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=Dashboard</td>
 	<td></td>
 </tr>
 </tbody></table>
