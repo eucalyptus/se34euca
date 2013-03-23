@@ -17,9 +17,44 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForElementPresent</td>
+	<td>link=Instances</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Instances</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>link=Instances</td>
 	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=li.toggle-on &gt; ul &gt; li &gt; a</td>
+	<td>Instances</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=li.toggle-on &gt; ul &gt; li &gt; a</td>
+	<td>Instances</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li.toggle-on &gt; ul &gt; li &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=inst_state-selector</td>
+	<td>label=Running instances</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=inst_state-selector</td>
+	<td>label=Running instances</td>
 </tr>
 <tr>
 	<td>select</td>
@@ -27,8 +62,13 @@
 	<td>label=Running instances</td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>15000</td>
+	<td>waitForElementPresent</td>
+	<td>css=td.checkbox-cell &gt; input[type=&quot;checkbox&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=td.checkbox-cell &gt; input[type=&quot;checkbox&quot;]</td>
 	<td></td>
 </tr>
 <tr>
@@ -37,8 +77,28 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForElementPresent</td>
+	<td>id=more-actions-instances</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=more-actions-instances</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>id=more-actions-instances</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Launch more like this</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Launch more like this</td>
 	<td></td>
 </tr>
 <tr>
@@ -47,21 +107,25 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForElementPresent</td>
+	<td>id=btn-launch-more</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=btn-launch-more</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>id=btn-launch-more</td>
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>15000</td>
+	<td>waitForText</td>
+	<td>css=div.table-row-status.status-pending</td>
 	<td></td>
 </tr>
-<tr>
-	<td>click</td>
-	<td>link=Dashboard</td>
-	<td></td>
-</tr>
-
 </tbody></table>
 </body>
 </html>

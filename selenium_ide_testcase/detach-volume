@@ -17,8 +17,28 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForElementPresent</td>
+	<td>link=Storage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Storage</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>link=Storage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Volumes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Volumes</td>
 	<td></td>
 </tr>
 <tr>
@@ -27,13 +47,23 @@
 	<td></td>
 </tr>
 <tr>
-	<td>select</td>
-	<td>id=vol_state-selector</td>
-	<td>label=Attached volumes</td>
+	<td>waitForText</td>
+	<td>css=div.table-row-status.status-available</td>
+	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>20000</td>
+	<td>verifyText</td>
+	<td>css=div.table-row-status.status-available</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=td.checkbox-cell &gt; input[type=&quot;checkbox&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=td.checkbox-cell &gt; input[type=&quot;checkbox&quot;]</td>
 	<td></td>
 </tr>
 <tr>
@@ -42,8 +72,28 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForElementPresent</td>
+	<td>id=more-actions-volumes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=more-actions-volumes</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>id=more-actions-volumes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Detach from instance</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Detach from instance</td>
 	<td></td>
 </tr>
 <tr>
@@ -52,13 +102,18 @@
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
+	<td>waitForElementPresent</td>
+	<td>id=btn-volumes-detach-detach</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
 	<td>id=btn-volumes-detach-detach</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>link=Dashboard</td>
+	<td>id=btn-volumes-detach-detach</td>
 	<td></td>
 </tr>
 </tbody></table>

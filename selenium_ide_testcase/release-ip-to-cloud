@@ -12,9 +12,39 @@
 <tr><td rowspan="1" colspan="3">release-ip-to-cloud</td></tr>
 </thead><tbody>
 <tr>
+	<td>setTimeout</td>
+	<td>60000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Dashboard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=IP Addresses</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=IP Addresses</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>link=IP Addresses</td>
 	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=eip_state-selector</td>
+	<td>label=Unassigned addresses</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=eip_state-selector</td>
+	<td>label=Unassigned addresses</td>
 </tr>
 <tr>
 	<td>select</td>
@@ -22,8 +52,13 @@
 	<td>label=Unassigned addresses</td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>3000</td>
+	<td>waitForElementPresent</td>
+	<td>css=td.checkbox-cell.sorting_1 &gt; input[type=&quot;checkbox&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=td.checkbox-cell.sorting_1 &gt; input[type=&quot;checkbox&quot;]</td>
 	<td></td>
 </tr>
 <tr>
@@ -32,8 +67,28 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForElementPresent</td>
+	<td>id=more-actions-eips</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=more-actions-eips</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>id=more-actions-eips</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Release to cloud</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Release to cloud</td>
 	<td></td>
 </tr>
 <tr>
@@ -42,8 +97,13 @@
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>css=body</td>
+	<td>waitForElementPresent</td>
+	<td>id=btn-eips-release-release</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=btn-eips-release-release</td>
 	<td></td>
 </tr>
 <tr>
@@ -53,7 +113,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>link=Network &amp; Security</td>
+	<td>link=Dashboard</td>
 	<td></td>
 </tr>
 </tbody></table>

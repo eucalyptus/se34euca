@@ -4,13 +4,18 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="https://10.111.5.23:8888/" />
-<title>snapshot-from-snap-page</title>
+<title>delete-volume</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">snapshot-from-snap-page</td></tr>
+<tr><td rowspan="1" colspan="3">delete-volume</td></tr>
 </thead><tbody>
+<tr>
+	<td>setTimeout</td>
+	<td>60000</td>
+	<td></td>
+</tr>
 <tr>
 	<td>click</td>
 	<td>link=Dashboard</td>
@@ -18,147 +23,102 @@
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
-	<td>link=Storage</td>
+	<td>css=#dashboard-storage-volume &gt; span</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyElementPresent</td>
-	<td>link=Storage</td>
+	<td>css=#dashboard-storage-volume &gt; span</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>link=Storage</td>
+	<td>css=#dashboard-storage-volume &gt; span</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
-	<td>link=Volumes</td>
+	<td>css=div.table-row-status.status-available</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyElementPresent</td>
-	<td>link=Volumes</td>
+	<td>css=div.table-row-status.status-available</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=td.checkbox-cell &gt; input[type=&quot;checkbox&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=td.checkbox-cell &gt; input[type=&quot;checkbox&quot;]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>link=Volumes</td>
+	<td>css=td.checkbox-cell &gt; input[type=&quot;checkbox&quot;]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
-	<td>//table[@id='volumes']/tbody/tr/td[2]</td>
+	<td>id=more-actions-volumes</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyElementPresent</td>
-	<td>//table[@id='volumes']/tbody/tr/td[2]</td>
+	<td>id=more-actions-volumes</td>
 	<td></td>
 </tr>
 <tr>
-	<td>storeText</td>
-	<td>//table[@id='volumes']/tbody/tr/td[2]</td>
-	<td>vol</td>
+	<td>click</td>
+	<td>id=more-actions-volumes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Delete</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Delete</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Delete</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=btn-volumes-delete-delete</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=btn-volumes-delete-delete</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btn-volumes-delete-delete</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div.table-row-status.status-deleted</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.table-row-status.status-deleted</td>
+	<td></td>
 </tr>
 <tr>
 	<td>echo</td>
-	<td>${vol}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>link=Storage</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>link=Storage</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=Storage</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>link=Snapshots</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>link=Snapshots</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=Snapshots</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>id=table-snapshots-new</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>id=table-snapshots-new</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=table-snapshots-new</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=snapshot-create-volume-id</td>
-	<td>${vol}</td>
-</tr>
-<tr>
-	<td>typeKeys</td>
-	<td>id=snapshot-create-volume-id</td>
-	<td>${vol}</td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>id=snapshot-create-description</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>id=snapshot-create-description</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=snapshot-create-description</td>
-	<td>test</td>
-</tr>
-<tr>
-	<td>typeKeys</td>
-	<td>id=snapshot-create-description</td>
-	<td>test</td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>id=snapshot-create-btn</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>id=snapshot-create-btn</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=snapshot-create-btn</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>xpath=(//button[@id='snapshot-create-btn'])[2]</td>
+	<td>Done</td>
 	<td></td>
 </tr>
 </tbody></table>
