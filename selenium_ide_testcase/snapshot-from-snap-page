@@ -122,6 +122,11 @@
 	<td>${vol}</td>
 </tr>
 <tr>
+	<td>click</td>
+	<td>css=.ui-menu-item</td>
+	<td></td>
+</tr>
+<tr>
 	<td>waitForElementPresent</td>
 	<td>id=snapshot-create-description</td>
 	<td></td>
@@ -142,24 +147,19 @@
 	<td>test</td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
+	<td>assertText</td>
 	<td>id=snapshot-create-btn</td>
-	<td></td>
+	<td>Create</td>
 </tr>
 <tr>
-	<td>verifyElementPresent</td>
+	<td>verifyText</td>
 	<td>id=snapshot-create-btn</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=snapshot-create-btn</td>
-	<td></td>
+	<td>Create</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>xpath=(//button[@id='snapshot-create-btn'])[2]</td>
-	<td></td>
+	<td>id=snapshot-create-btn</td>
+	<td>Create</td>
 </tr>
 </tbody></table>
 </body>
