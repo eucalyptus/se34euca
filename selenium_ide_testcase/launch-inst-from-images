@@ -111,6 +111,11 @@
 	<td>Done </td>
 	<td></td>
 </tr>
+<tr>
+	<td>click</td>
+	<td>link=Dashboard</td>
+	<td></td>
+</tr>
 </tbody></table>
 </body>
 </html>

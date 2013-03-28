@@ -12,6 +12,11 @@
 <tr><td rowspan="1" colspan="3">launch-instance-from-dboard</td></tr>
 </thead><tbody>
 <tr>
+	<td>setTimeout</td>
+	<td>60000</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>link=Dashboard</td>
 	<td></td>
@@ -119,6 +124,11 @@
 <tr>
 	<td>echo</td>
 	<td>Done </td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Dashboard</td>
 	<td></td>
 </tr>
 </tbody></table>

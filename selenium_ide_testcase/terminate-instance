@@ -82,11 +82,6 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
-	<td>id=more-actions-instances</td>
-	<td></td>
-</tr>
-<tr>
 	<td>verifyElementPresent</td>
 	<td>id=more-actions-instances</td>
 	<td></td>
@@ -112,6 +107,16 @@
 	<td></td>
 </tr>
 <tr>
+	<td>select</td>
+	<td>id=inst_state-selector</td>
+	<td>label=Running instances</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=inst_state-selector</td>
+	<td>label=All instances</td>
+</tr>
+<tr>
 	<td>waitForElementPresent</td>
 	<td>id=btn-instances-terminate-terminate</td>
 	<td></td>
@@ -124,6 +129,21 @@
 <tr>
 	<td>click</td>
 	<td>id=btn-instances-terminate-terminate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.table-row-status.status-shuttingdown</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>terminate-instance Done</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Dashboard</td>
 	<td></td>
 </tr>
 </tbody></table>
