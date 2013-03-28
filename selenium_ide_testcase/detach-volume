@@ -12,6 +12,11 @@
 <tr><td rowspan="1" colspan="3">detach-volume</td></tr>
 </thead><tbody>
 <tr>
+	<td>setTimeout</td>
+	<td>120000</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>link=Dashboard</td>
 	<td></td>
@@ -48,27 +53,17 @@
 </tr>
 <tr>
 	<td>waitForText</td>
-	<td>css=div.table-row-status.status-available</td>
+	<td>css=div.table-row-status.status-in-use</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyText</td>
-	<td>css=div.table-row-status.status-available</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>css=td.checkbox-cell &gt; input[type=&quot;checkbox&quot;]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>css=td.checkbox-cell &gt; input[type=&quot;checkbox&quot;]</td>
+	<td>css=div.table-row-status.status-in-use</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>css=td.checkbox-cell &gt; input[type=&quot;checkbox&quot;]</td>
+	<td>css=div.table-row-status.status-in-use</td>
 	<td></td>
 </tr>
 <tr>
@@ -102,18 +97,18 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
+	<td>click</td>
 	<td>id=btn-volumes-detach-detach</td>
 	<td></td>
 </tr>
 <tr>
-	<td>verifyElementPresent</td>
-	<td>id=btn-volumes-detach-detach</td>
+	<td>echo</td>
+	<td>Done</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=btn-volumes-detach-detach</td>
+	<td>link=Dashboard</td>
 	<td></td>
 </tr>
 </tbody></table>

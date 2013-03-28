@@ -47,6 +47,21 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForText</td>
+	<td>css=div.table-row-status.status-available</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.table-row-status.status-available</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=th.narrow-cell.sorting</td>
+	<td></td>
+</tr>
+<tr>
 	<td>waitForElementPresent</td>
 	<td>//table[@id='volumes']/tbody/tr/td[2]</td>
 	<td></td>
@@ -169,6 +184,11 @@
 <tr>
 	<td>click</td>
 	<td>id=volume-attach-btn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@id='volume-attach-btn'])[2]</td>
 	<td></td>
 </tr>
 <tr>
