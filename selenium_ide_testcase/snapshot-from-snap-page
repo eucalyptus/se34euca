@@ -137,8 +137,18 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForElementPresent</td>
+	<td>//*[starts-with(@id, 'ui-id')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//*[starts-with(@id, 'ui-id')]</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
-	<td>//a[@class='ui-corner-all']</td>
+	<td>//*[starts-with(@id, 'ui-id')]</td>
 	<td></td>
 </tr>
 <tr>
