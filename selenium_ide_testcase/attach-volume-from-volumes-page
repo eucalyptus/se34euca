@@ -4,12 +4,12 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="https://10.111.5.23:8888/" />
-<title>delete</title>
+<title>attach-volume-from-volumes-page</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">delete</td></tr>
+<tr><td rowspan="1" colspan="3">attach-volume-from-volumes-page</td></tr>
 </thead><tbody>
 
 </tbody></table>
