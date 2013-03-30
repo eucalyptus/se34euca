@@ -188,7 +188,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>xpath=(//button[@id='volume-attach-btn'])[2]</td>
+	<td>//button[@id='volume-attach-btn']</td>
 	<td></td>
 </tr>
 <tr>

@@ -122,8 +122,33 @@
 	<td>${vol}</td>
 </tr>
 <tr>
+	<td>waitForElementPresent</td>
+	<td>css=.ui-menu-item</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.ui-menu-item</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>css=.ui-menu-item</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//*[starts-with(@id, 'ui-id')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//*[starts-with(@id, 'ui-id')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//*[starts-with(@id, 'ui-id')]</td>
 	<td></td>
 </tr>
 <tr>
