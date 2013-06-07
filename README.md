@@ -94,7 +94,7 @@ export DISPLAY=:0
 
 , where [testcase] is:
 
-	[ launch_instance_basic, terminate_instance_basic ]
+	[ launch_instance_basic, terminate_instance_basic, terminate_instance_all ]
 
 Example.
 
@@ -106,6 +106,10 @@ export DISPLAY=:0
 
 <code>
 ./runtest_instance.py -i 192.168.51.106 -p 8888 -a ui-test-acct-00 -u user00 -w mypassword1 -t terminate_instance_basic
+
+<code>
+./runtest_instance.py -i 192.168.51.158 -p 8888 -a ui-test-acct-00 -u user00 -w mypassword1 -t terminate_instance_all
+
 
 ### Keypair Test
 

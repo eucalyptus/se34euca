@@ -37,9 +37,12 @@ class testcase_simulate_user(lib_euca_ui_test):
     def simulate_user_case_00_in_loop(self):
 	sleep_time = 2
 	wait_time = 120
+        count = 0
 	print "=== runTest: Simulate User Case 00 in Loop ==="
 	self.test_ui_login()
 	while True:
+	    count += 1
+	    print "### TRIAL " + str(count) + " ###"
 	    try:
 		print "Test: Simulate User Case 00 in Loop"
 		print

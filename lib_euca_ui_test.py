@@ -126,7 +126,6 @@ class lib_euca_ui_test(unittest.TestCase):
 	    return 1
 	print "Test: Clicking User Account Menu " + this_link
         driver.find_element_by_link_text(this_link).click()
-#        driver.find_element_by_css_selector("body").click()
 	print "Test: Clicked User Account Menu " + this_link
 	for i in range(self.retry):
             try:
@@ -139,7 +138,6 @@ class lib_euca_ui_test(unittest.TestCase):
             return 1
 	print "Test: Clicking Log out"
 	driver.find_element_by_link_text("Log out").click()
-#        driver.find_element_by_css_selector("body").click()
 	print "Test: Clicked the Logout Button"
         for i in range(self.retry):
             try:
@@ -346,10 +344,10 @@ class lib_euca_ui_test(unittest.TestCase):
             raise
 	    return 1
         driver.find_element_by_link_text("Images").click()
-	print "Test: Clicked the GotoPage Button"
+	print "Test: Clicked the GotoPage Images"
         for i in range(self.retry):
             try:
-                if self.is_element_present(By.LINK_TEXT, "Refresh"): break
+                if self.is_element_present(By.LINK_TEXT, "More actions"): break
             except: pass
             time.sleep(1)
         else:
@@ -357,7 +355,7 @@ class lib_euca_ui_test(unittest.TestCase):
             raise
 	    return 1
 	try:
-	    driver.find_element_by_link_text("Refresh").click()
+	    driver.find_element_by_link_text("More actions").click()
 	except:
 	    print "Failed Test: GotoPage Images"
 	    return 1
@@ -403,46 +401,64 @@ class lib_euca_ui_test(unittest.TestCase):
             except: pass
             time.sleep(1)
         else:
-            print "Failed Test: Launch Instance Basic"
+            print "Failed Test: Could Not Locate LINK_TEXT -> Launch Instance Basic"
             raise
             return 1
+	print "Click: LINK_TEXT -> Launch new instance"
 	driver.find_element_by_link_text("Launch new instance").click()
-	print "Test: Clicking Through Default Options"
-#	driver.find_element_by_css_selector("tr.odd.selected-row").click()
+	print "Wait: CSS_SELECTOR -> div.image-name"
 	for i in range(self.retry):
 		try:
-		    if self.is_element_present(By.ID, "launch-wizard-buttons-image-next"): break
+		    if self.is_element_present(By.CSS_SELECTOR, "div.image-name"): break
 		except: pass
 		time.sleep(1)
 	else:
-		print "Failed Test: Launch Instance Basic"
+		print "Failed Test: Could Not Locate CSS_SELECTOR -> div.image-name"
 		raise
 		return 1
-	driver.find_element_by_id("launch-wizard-buttons-image-next").click()
+	print "Click: CSS_SELECTOR -> div.image-name"
+	driver.find_element_by_css_selector("div.image-name").click()
+	print "Wait: ID -> nextButton"
 	for i in range(self.retry):
 		try:
-		    if self.is_element_present(By.ID, "launch-wizard-buttons-type-next"): break
+		    if self.is_element_present(By.ID, "nextButton"): break
 		except: pass
 		time.sleep(1)
 	else:   
-		print "Failed Test: Launch Instance Basic"
+		print "Failed Test: Could Not Locate ID -> nextButton"
 		raise
 		return 1
-	driver.find_element_by_id("launch-wizard-buttons-type-next").click()
+	print "Click: ID -> nextButton" 
+	driver.find_element_by_id("nextButton").click()
+	print "Wait: ID -> launch-instance-type-num-instance"
 	for i in range(self.retry):
 		try:
-		    if self.is_element_present(By.ID, "launch-wizard-buttons-security-launch"): break
+		    if self.is_element_present(By.ID, "launch-instance-type-num-instance"): break
 		except: pass
 		time.sleep(1)
 	else:   
-		print "Failed Test: Launch Instance Basic"
+		print "Failed Test: Could Not Locate ID -> launch-instance-type-num-instance"
 		raise
 		return 1
-	print "Test: Launching an instance with the default setting"
+	print "Click: ID -> nextButton"
+	driver.find_element_by_id("nextButton").click()
+	print "Wait: ID -> launch-wizard-security-keypair-selector"
+	for i in range(self.retry):
+		try:
+		    if self.is_element_present(By.ID, "launch-wizard-security-keypair-selector"): break
+		except: pass
+		time.sleep(1)
+	else:   
+		print "Failed Test: Could Not Located ID -> launch-wizard-security-keypair-selector"
+		raise
+		return 1
+	print "Select: ID -> launch-wizard-security-keypair-selector, TEXT -> None (advanced option)"
+	Select(driver.find_element_by_id("launch-wizard-security-keypair-selector")).select_by_visible_text("None (advanced option)")
+	print "Click: ID -> finishButton"
 	try:
-		driver.find_element_by_id("launch-wizard-buttons-security-launch").click()
+		driver.find_element_by_id("finishButton").click()
 	except:
-		print "Failed Test: Launch Instance Basic"
+		print "Failed Test: Could Not Locate ID -> finishButton"
 		raise
 		return 1
 	print "Finished Test: Launch Instance Basic"
@@ -647,8 +663,8 @@ class lib_euca_ui_test(unittest.TestCase):
 	try:
             driver.find_element_by_id("volume-size").clear()
             driver.find_element_by_id("volume-size").send_keys("2")
-            # ERROR: Caught exception [ERROR: Unsupported command [typeKeys | id=volume-size | 2]]
-            driver.find_element_by_id("volumes-add-btn").click()
+            ##driver.find_element_by_id("volumes-add-btn").click()
+            driver.find_element_by_id("btn-volumes-delete-delete").click()
 	except:
 	    print "Failed Test: Create New Volume"
             raise
@@ -683,7 +699,6 @@ class lib_euca_ui_test(unittest.TestCase):
             return 1
 	print "Test: Delete Volume"
 	driver.find_element_by_id("more-actions-volumes").click()
-#	driver.find_element_by_css_selector("body").click()
 	for i in range(self.retry):
 	    try:
 		if self.is_element_present(By.LINK_TEXT, "Delete"): break
@@ -694,7 +709,6 @@ class lib_euca_ui_test(unittest.TestCase):
             raise
             return 1
 	driver.find_element_by_link_text("Delete").click()
-#	driver.find_element_by_css_selector("body").click()
 	for i in range(self.retry):
 	    try:
 		if self.is_element_present(By.ID, "btn-volumes-delete-delete"): break
@@ -749,7 +763,6 @@ class lib_euca_ui_test(unittest.TestCase):
             return 1
 	print "Test: Delete Volume"
 	driver.find_element_by_id("more-actions-volumes").click()
-#	driver.find_element_by_css_selector("body").click()
 	for i in range(self.retry):
 	    try:
 		if self.is_element_present(By.LINK_TEXT, "Delete"): break
@@ -760,7 +773,6 @@ class lib_euca_ui_test(unittest.TestCase):
             raise
             return 1
 	driver.find_element_by_link_text("Delete").click()
-#	driver.find_element_by_css_selector("body").click()
 	for i in range(self.retry):
 	    try:
 		if self.is_element_present(By.ID, "btn-volumes-delete-delete"): break
@@ -815,7 +827,6 @@ class lib_euca_ui_test(unittest.TestCase):
             return 1
 	print "Test: Create Snapshot From Volume"
         driver.find_element_by_id("more-actions-volumes").click()
-#        driver.find_element_by_css_selector("body").click()
         for i in range(self.retry):
             try:
                 if self.is_element_present(By.LINK_TEXT, "Create snapshot from volume"): break
@@ -826,11 +837,10 @@ class lib_euca_ui_test(unittest.TestCase):
             raise
             return 1
         driver.find_element_by_link_text("Create snapshot from volume").click()
-#        driver.find_element_by_css_selector("body").click()
 	try:
             driver.find_element_by_id("snapshot-create-description").clear()
             driver.find_element_by_id("snapshot-create-description").send_keys("snapshot by selenium script")
-            driver.find_element_by_id("snapshot-create-btn").click()
+            driver.find_element_by_id("btn-volumes-delete-delete").click()
 	except:
 	    print "Failed Test: Create Snapshot From Volume"
             raise
@@ -884,10 +894,9 @@ class lib_euca_ui_test(unittest.TestCase):
             return 1
 	print "Test: Delete Snapshot"
         driver.find_element_by_link_text("Delete").click()
-#        driver.find_element_by_css_selector("body").click()
         for i in range(self.retry):
             try:
-                if self.is_element_present(By.ID, "btn-snapshots-delete-delete"): break
+                if self.is_element_present(By.ID, "btn-volumes-delete-delete"): break
             except: pass
             time.sleep(1)
         else:
@@ -895,7 +904,7 @@ class lib_euca_ui_test(unittest.TestCase):
             raise
             return 1
 	try:
-            driver.find_element_by_id("btn-snapshots-delete-delete").click()
+            driver.find_element_by_id("btn-volumes-delete-delete").click()
 	except:
 	    print "Failed Test: Delete Snapshot"
             raise
@@ -940,10 +949,9 @@ class lib_euca_ui_test(unittest.TestCase):
 	print "Test: Create Volume From Snapshot"
         driver.find_element_by_id("more-actions-snapshots").click()
         driver.find_element_by_link_text("Create volume from snapshot").click()
-#        driver.find_element_by_css_selector("body").click()
         for i in range(self.retry):
             try:
-                if self.is_element_present(By.ID, "volumes-add-btn"): break
+                if self.is_element_present(By.ID, "btn-volumes-delete-delete"): break
             except: pass
             time.sleep(1)
         else:
@@ -951,7 +959,7 @@ class lib_euca_ui_test(unittest.TestCase):
             raise
             return 1
 	try:
-            driver.find_element_by_id("volumes-add-btn").click()
+            driver.find_element_by_id("btn-volumes-delete-delete").click()
 	except:
 	    print "Failed Test: Create Volume From Snapshot"
             raise
@@ -1006,7 +1014,7 @@ class lib_euca_ui_test(unittest.TestCase):
             raise
             return 1
         driver.find_element_by_id("sgroup-description").clear()
-        driver.find_element_by_id("sgroup-description").send_keys("rules for my webservice")
+        driver.find_element_by_id("sgroup-description").send_keys("rules for my webservice. Generated by Selenium")
         for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "sgroup-template"): break
@@ -1016,6 +1024,18 @@ class lib_euca_ui_test(unittest.TestCase):
 	    print "Failed Test: Create Security Group"
             raise
             return 1
+	print "Click: LINK_TEXT -> Rules"
+	driver.find_element_by_link_text("Rules").click()
+	for i in range(self.retry):
+            try:
+                if self.is_element_present(By.ID, "sgroup-template"): break
+            except: pass
+            time.sleep(1)
+        else:
+            print "Failed Test: Create Security Group"
+            raise
+            return 1
+	print "Select: ID -> sgroup-templete, TEXT -> SSH (TCP port 22, for terminal access)"
         Select(driver.find_element_by_id("sgroup-template")).select_by_visible_text("SSH (TCP port 22, for terminal access)")
         for i in range(self.retry):
             try:
@@ -1037,7 +1057,19 @@ class lib_euca_ui_test(unittest.TestCase):
 	    print "Failed Test: Create Security Group"
             raise
             return 1
+	print "Click: ID -> sgroup-add-rule"
         driver.find_element_by_id("sgroup-add-rule").click()
+	for i in range(self.retry):
+            try:
+                if self.is_element_present(By.ID, "sgroup-rule-number-0"): break
+            except: pass
+            time.sleep(1)
+        else:
+            print "Failed Test: Create Security Group"
+            raise
+            return 1
+	print "Rule 0: " + driver.find_element_by_css_selector("ul.sg-rules-list > li").text
+
         for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "sgroup-template"): break
@@ -1047,6 +1079,7 @@ class lib_euca_ui_test(unittest.TestCase):
 	    print "Failed Test: Create Security Group"
             raise
             return 1
+	print "Select: ID -> sgroup-templete, TEXT -> HTTP (TCP port 80, for web servers)"
         Select(driver.find_element_by_id("sgroup-template")).select_by_visible_text("HTTP (TCP port 80, for web servers)")
         for i in range(self.retry):
             try:
@@ -1068,7 +1101,19 @@ class lib_euca_ui_test(unittest.TestCase):
 	    print "Failed Test: Create Security Group"
             raise
             return 1
+	print "Click: ID -> sgroup-add-rule"
         driver.find_element_by_id("sgroup-add-rule").click()
+	for i in range(self.retry):
+            try:
+                if self.is_element_present(By.ID, "sgroup-rule-number-1"): break
+            except: pass
+            time.sleep(1)
+        else:
+            print "Failed Test: Create Security Group"
+            raise
+            return 1
+	print "Rule 1: " + driver.find_element_by_xpath("//div[@id='sgroup-rules-list']/ul/li[2]").text
+
         for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "sgroup-template"): break
@@ -1078,6 +1123,7 @@ class lib_euca_ui_test(unittest.TestCase):
 	    print "Failed Test: Create Security Group"
             raise
             return 1
+	print "Select: ID -> sgroup-templete, TEXT -> Custom ICMP"
         Select(driver.find_element_by_id("sgroup-template")).select_by_visible_text("Custom ICMP")
         for i in range(self.retry):
             try:
@@ -1088,6 +1134,7 @@ class lib_euca_ui_test(unittest.TestCase):
 	    print "Failed Test: Create Security Group"
             raise
             return 1
+	print "Select: ID -> sgroup-type. TEXT -> All"
         Select(driver.find_element_by_id("sgroup-type")).select_by_visible_text("All")
         for i in range(self.retry):
             try:
@@ -1109,7 +1156,19 @@ class lib_euca_ui_test(unittest.TestCase):
 	    print "Failed Test: Create Security Group"
             raise
             return 1
+	print "Click: ID -> sgroup-add-rule"
         driver.find_element_by_id("sgroup-add-rule").click()
+	for i in range(self.retry):
+            try:
+                if self.is_element_present(By.ID, "sgroup-rule-number-2"): break
+            except: pass
+            time.sleep(1)
+        else:
+            print "Failed Test: Create Security Group"
+            raise
+            return 1
+	print "Rule 2: " + driver.find_element_by_xpath("//div[@id='sgroup-rules-list']/ul/li[3]").text
+
         for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "sgroup-add-btn"): break
@@ -1119,6 +1178,7 @@ class lib_euca_ui_test(unittest.TestCase):
 	    print "Failed Test: Create Security Group"
             raise
             return 1
+	print "Click: ID -> sgroup-add-btn"
 	try:
             driver.find_element_by_id("sgroup-add-btn").click()
 	except:
@@ -1174,7 +1234,6 @@ class lib_euca_ui_test(unittest.TestCase):
             return 1
 	print "Test: Delete Security Group"
         driver.find_element_by_link_text("Delete").click()
-#        driver.find_element_by_css_selector("body").click()
         for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "btn-sgroups-delete-delete"): break
@@ -1239,7 +1298,6 @@ class lib_euca_ui_test(unittest.TestCase):
             return 1
 	print "Test: Delete Security Group All"
         driver.find_element_by_link_text("Delete").click()
-#        driver.find_element_by_css_selector("body").click()
         for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "btn-sgroups-delete-delete"): break
@@ -1295,7 +1353,6 @@ class lib_euca_ui_test(unittest.TestCase):
 	print "Test: Allocate Two IP Addresses"
         driver.find_element_by_id("eip-allocate-count").clear()
         driver.find_element_by_id("eip-allocate-count").send_keys("2")
-        # ERROR: Caught exception [ERROR: Unsupported command [typeKeys | id=eip-allocate-count | 2]]
         for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "eip-allocate-btn"): break
@@ -1349,7 +1406,6 @@ class lib_euca_ui_test(unittest.TestCase):
             raise
             return 1
         driver.find_element_by_id("more-actions-eips").click()
-#        driver.find_element_by_css_selector("body").click()
         for i in range(self.retry):
             try:
                 if self.is_element_present(By.LINK_TEXT, "Release to cloud"): break
@@ -1361,7 +1417,6 @@ class lib_euca_ui_test(unittest.TestCase):
             return 1
 	print "Test: Release IP Address"
         driver.find_element_by_link_text("Release to cloud").click()
-#        driver.find_element_by_css_selector("body").click()
         for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "btn-eips-release-release"): break
@@ -1405,6 +1460,7 @@ class lib_euca_ui_test(unittest.TestCase):
             print "Failed Test: GotoPage Dashboard Source"
             raise
 	    return 1
+	time.sleep(3)
 	try:
 	    running_instances = driver.find_element_by_css_selector("div.status-readout")
 	    running_instances_text = running_instances.text
