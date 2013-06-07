@@ -3,7 +3,7 @@
 import unittest, time, re
 from optparse import OptionParser
 from unittest import TestResult
-from testcase_keypair import *
+from se34euca.testcase.testcase_keypair import *
 
 def main():
 

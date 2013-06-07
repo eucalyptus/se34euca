@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://10.111.1.53:8888/" />
+<title>attach-volume</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">attach-volume</td></tr>
+</thead><tbody>
+<tr>
+	<td>click</td>
+	<td>link=Dashboard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Storage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Storage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Storage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Volumes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Volumes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Volumes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.table-row-status.status-available</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div.table-row-status.status-available</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=th.narrow-cell.sorting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//table[@id='volumes']/tbody/tr/td[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//table[@id='volumes']/tbody/tr/td[2]</td>
+	<td>vol</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Instances</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Instances</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Instances</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=li.toggle-on &gt; ul &gt; li &gt; a</td>
+	<td>Instances</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=li.toggle-on &gt; ul &gt; li &gt; a</td>
+	<td>Instances</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li.toggle-on &gt; ul &gt; li &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=inst_state-selector</td>
+	<td>label=Running instances</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=inst_state-selector</td>
+	<td>label=Running instances</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=inst_state-selector</td>
+	<td>label=Running instances</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=td.checkbox-cell &gt; input[type=&quot;checkbox&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=td.checkbox-cell &gt; input[type=&quot;checkbox&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=td.checkbox-cell &gt; input[type=&quot;checkbox&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=more-actions-instances</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=more-actions-instances</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=more-actions-instances</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Attach volume</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Attach volume</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Attach volume</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>xpath=(//input[@id='volume-attach-volume-id'])[2]</td>
+	<td>${vol}</td>
+</tr>
+<tr>
+	<td>typeKeys</td>
+	<td>xpath=(//input[@id='volume-attach-device-name'])[2]</td>
+	<td>/dev/sdf</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=volume-attach-btn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=volume-attach-btn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=volume-attach-btn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@id='volume-attach-btn']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Dashboard</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -39,7 +39,7 @@ sudo apt-get -y install git-core
 git clone git://github.com/eucalyptus/se34euca.git
 
 <code>
-cd ./se34euca/script/
+cd ./se34euca/etc/
 
 <code>
 ./installer_se34euca.py
