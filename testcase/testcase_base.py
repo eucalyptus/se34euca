@@ -3,7 +3,7 @@ from se34euca.lib.EucaUITester import *
 
 class testcase_base(unittest.TestCase):
 
-    eucaUITester = EucaUITester("NoOp")
+    eucaUITester = EucaUITester()
 
     def setUIInfo(self, ip, port):
 	self.eucaUITester.setUIInfo(ip, port)
