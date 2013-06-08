@@ -1,26 +1,24 @@
-from selenium import *
-import unittest, time, re
-from se34euca.lib.lib_euca_ui_test import *
+from se34euca.testcase.testcase_base import *
 
-class testcase_volume(lib_euca_ui_test):
+class testcase_volume(testcase_base):
 
     def create_volume(self):
 	print "=== runTest: Create Volume ==="
-	self.test_ui_login()
-	self.test_ui_create_volume()
-	self.test_ui_logout()
+	self.eucaUITester.test_ui_login()
+	self.eucaUITester.test_ui_create_volume()
+	self.eucaUITester.test_ui_logout()
 
     def delete_volume(self):
 	print "=== runTest: Delete Volume ==="
-	self.test_ui_login()
-	self.test_ui_delete_volume()
-	self.test_ui_logout()
+	self.eucaUITester.test_ui_login()
+	self.eucaUITester.test_ui_delete_volume()
+	self.eucaUITester.test_ui_logout()
 
     def create_snapshot_from_volume(self):
 	print "=== runTest: Create Snapshot From Volume ==="
-        self.test_ui_login()
-        self.test_ui_create_snapshot_from_volume()
-        self.test_ui_logout()
+        self.eucaUITester.test_ui_login()
+        self.eucaUITester.test_ui_create_snapshot_from_volume()
+        self.eucaUITester.test_ui_logout()
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,20 +1,18 @@
-from selenium import *
-import unittest, time, re
-from se34euca.lib.lib_euca_ui_test import *
+from se34euca.testcase.testcase_base import *
 
-class testcase_keypair(lib_euca_ui_test):
+class testcase_keypair(testcase_base):
 
     def generate_keypair(self):
 	print "=== runTest: Generate Keypair ==="
-	self.test_ui_login()
-	self.test_ui_generate_keypair()
-	self.test_ui_logout()
+	self.eucaUITester.test_ui_login()
+	self.eucaUITester.test_ui_generate_keypair()
+	self.eucaUITester.test_ui_logout()
 
     def delete_keypair(self):
 	print "=== runTest: Delete Keypair ==="
-	self.test_ui_login()
-	self.test_ui_delete_keypair()
-	self.test_ui_logout()
+	self.eucaUITester.test_ui_login()
+	self.eucaUITester.test_ui_delete_keypair()
+	self.eucaUITester.test_ui_logout()
 
 
 if __name__ == "__main__":

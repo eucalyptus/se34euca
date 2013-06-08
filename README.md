@@ -54,6 +54,7 @@ cd ..
 1 Run the command below on your console:
 
 <code>
+export PYTHONPATH=$PYTHONPATH:/root/ui-test
 export DISPLAY=:0
 </code>
 
