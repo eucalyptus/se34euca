@@ -13,13 +13,7 @@ class EucaUITestLib_IP_Address(EucaUITestLib_Base):
 	self.verify_element_by_id("eip-allocate-count")
 	print
 	print "Test: Allocate Two IP Addresses"
-	try:
-            self.driver.find_element_by_id("eip-allocate-count").clear()
-            self.driver.find_element_by_id("eip-allocate-count").send_keys("2")
-	except:
-            print "Failed Test: Allocate Two IP Addresses"
-            raise
-            return 1
+	self.set_keys_by_id("eip-allocate-count", "2")
 	self.click_element_by_id("eip-allocate-btn")
 	print
 	print "Finished: Allocate Two IP Addresses"

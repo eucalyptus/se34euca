@@ -21,6 +21,7 @@ class EucaUITestLib_Base(unittest.TestCase):
 
     def setSeleniumWebDriver(self, driver):
 	self.driver = driver
+	return 0
 
     def setSeleniumServerInfo(self, ip, port):
 	self.selenium_server_ip = ip
@@ -28,13 +29,15 @@ class EucaUITestLib_Base(unittest.TestCase):
 	print "SELENIUM SERVER IP: " + ip
 	print "SELENIUM SERVER PORT: " + port
 	print
+	return 0
 
     def setUIInfo(self, ip, port):
 	self.ui_ip = ip
 	self.port = port
-	print "UI IP: " + ip
-	print "PORT: " + port
+	print "EUCALYPTUS CONSOLE PROXY IP: " + ip
+	print "EUCALYPTUS CONSOLE PROXY PORT: " + port
 	print
+	return 0
 
     def setUserInfo(self, accountname, username, password):
 	self.accountname = accountname
@@ -44,14 +47,15 @@ class EucaUITestLib_Base(unittest.TestCase):
 	print "USERNAME: " + username
 	print "PASSWORD: " + password
 	print
+	return 0
 
     def setUp(self):
 	print
 	print "=== setUp ==="
 	this_ui = "https://" + self.ui_ip + ":" + self.port
 	this_selenium_server_url = "http://" + self.selenium_server_ip + ":" + self.selenium_server_port + "/wd/hub"
-	print "Selenium Server URL: " + this_selenium_server_url
-	print "Eucalyptus UI URL: " + this_ui
+	print "SELENIUM SERVER URL: " + this_selenium_server_url
+	print "EUCALYPTUS UI PROXY URL: " + this_ui
 	if self.selenium_server_ip is not "localhost":
 		self.driver = webdriver.Remote(this_selenium_server_url, webdriver.DesiredCapabilities.FIREFOX)
         else:
@@ -62,6 +66,7 @@ class EucaUITestLib_Base(unittest.TestCase):
 	print
 	print "Started Selenium Test Targeted at : " + self.base_url
 	print
+	return 0
 
     def tearDown(self):
 	print
@@ -70,7 +75,8 @@ class EucaUITestLib_Base(unittest.TestCase):
         self.assertEqual([], self.verificationErrors)
 	print
 	print "Finished Selenium Test Targeted at : " + self.base_url
-	print    
+	print
+	return 0 
 
     def is_element_present(self, how, what):
         try:
@@ -99,6 +105,7 @@ class EucaUITestLib_Base(unittest.TestCase):
 	print "Test: Typed the User Info and Clicked the Login Button"
 	self.click_element_by_name("login")
 	self.verify_element_by_link_text("Launch new instance")
+	print
 	print "Finished Test: Login"
 	print
 	return 0
@@ -204,7 +211,7 @@ class EucaUITestLib_Base(unittest.TestCase):
 	print "Found:: Element type: " + element_type + ", Element: " + element
 	return 0
 
-
+    # VERIFY CALLS
     def verify_element_by_link_text(self, element):
 	return self.check_if_element_present_by_type("LINK_TEXT", element)
 
@@ -220,7 +227,7 @@ class EucaUITestLib_Base(unittest.TestCase):
     def verify_element_by_name(self, element):
 	return self.check_if_element_present_by_type("NAME", element)
 
-
+    # CLICK CALLS
     def click_element_by_link_text(self, link_text):
 	if( self.check_if_element_present_by_type("LINK_TEXT", link_text) is not 0 ):
 	    return 1
@@ -256,63 +263,46 @@ class EucaUITestLib_Base(unittest.TestCase):
         self.driver.find_element_by_name(name).click()
 	return 0
 
+    # SET KEYS CALLS
+    def set_keys_by_link_text(self, link_text, keys):
+	if( self.check_if_element_present_by_type("LINK_TEXT", link_text) is not 0 ):
+            return 1
+        print "Set: Element Type: LINK_TEXT, Element: "+ link_text + ", Keys: " + keys
+	self.driver.find_element_by_link_text(link_text).clear()
+	self.driver.find_element_by_link_text(link_text).send_keys(keys)
+	return 0
 
-    def set_keys_by_element_id(self,element_id, type_keys):
+    def set_keys_by_id(self, this_id, keys):
+	if( self.check_if_element_present_by_type("ID", this_id) is not 0 ):
+            return 1
+        print "Set: Element Type: ID, Element: "+ this_id + ", Keys: " + keys
+	self.driver.find_element_by_id(this_id).clear()
+	self.driver.find_element_by_id(this_id).send_keys(keys)
+	return 0
 
-        driver = self.driver
-        wait_in_secs=self.wait_in_secs
-        print "==============find_el_by_id " +element_id + " and_send_keys " + type_keys + " START================="
+    def set_keys_by_css_selector(self, css_selector, keys):
+	if( self.check_if_element_present_by_type("CSS_SELECTOR", css_selector) is not 0 ):
+            return 1
+        print "Set: Element Type: CSS_SELECTOR, Element: "+ css_selector + ", Keys: " + keys
+	self.driver.find_element_by_css_selector(this_id).clear()
+	self.driver.find_element_by_css_selector(this_id).send_keys(keys)
+	return 0
 
-        for i in range(wait_in_secs):
-            try:
-                print "Test: Verifying element present by id: " + element_id
-                if self.is_element_present(By.ID, element_id): break
-            except: pass
-            time.sleep(1)
-        else: self.fail("time out")
-        driver.find_element_by_id(element_id).clear()
-        print "Test: Trying to click element by id: " + element_id + " and send keys " +type_keys
-        driver.find_element_by_id(element_id).send_keys(type_keys)
-        print "Test: Sent keys " + type_keys
-        print "==============find_el_by_id " +element_id + " and_send_keys " + type_keys + " DONE=================="
+    def set_keys_by_xpath(self, xpath, keys):
+	if( self.check_if_element_present_by_type("XPATH", xpath) is not 0 ):
+            return 1
+        print "Set: Element Type: XPATH, Element: "+ xpath + ", Keys: " + keys
+	self.driver.find_element_by_xpath(xpath).clear()
+	self.driver.find_element_by_xpath(xpath).send_keys(keys)
+	return 0
 
-    def set_keys_by_css(self, element_css, text):
-
-        driver = self.driver
-        wait_in_secs=self.wait_in_secs
-        print "==============find_el_by_css " +element_css+ " and_send_text " + text + " START================="
-
-        for i in range(wait_in_secs):
-            try:
-                print "Test: Verifying element present by css: " + element_css
-                if self.is_element_present(By.CSS_SELECTOR, element_css): break
-            except: pass
-            time.sleep(1)
-        else: self.fail("time out")
-        driver.find_element_by_css_selector (element_css).clear()
-        print "Test: Trying to click element by css: " + element_css + " and send keys " +text
-        driver.find_element_by_css_selector(element_css).send_keys(text)
-        print "Test: Sent keys " + text
-        print "==============find_el_by_id " +element_css + " and_send_keys " + text + " DONE=================="
-
-
-    def set_keys_by_xpath(self, element_xpath, text):
-        driver = self.driver
-        wait_in_secs=self.wait_in_secs
-
-        for i in range(wait_in_secs):
-            try:
-                print "Test: Verifying element present by xpath: " + element_xpath
-                if self.is_element_present(By.XPATH, element_xpath): break
-            except: pass
-            time.sleep(1)
-        else: self.fail("time out")
-
-        try: self.assertTrue(self.is_element_present(By.XPATH, element_xpath))
-        except AssertionError as e: self.verificationErrors.append(str(e))
-        driver.find_element_by_xpath(element_xpath).clear()
-        driver.find_element_by_xpath(element_xpath).send_keys(text)
-        print "Test: Typed: "+text+ " in the xpath location " + element_xpath
+    def set_keys_by_name(self, name, keys):
+	if( self.check_if_element_present_by_type("NAME", name) is not 0 ):
+            return 1
+        print "Set: Element Type: NAME, Element: "+ name + ", Keys: " + keys
+	self.driver.find_element_by_name(name).clear()
+	self.driver.find_element_by_name(name).send_keys(keys)
+	return 0
 
 
     def get_value_by_css(self, element_css, what_is_it):

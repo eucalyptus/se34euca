@@ -27,13 +27,7 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
 	print "Test: Create New Volume"
 	self.click_element_by_id("table-volumes-new")
 	self.verify_element_by_id("volume-size")
-	try:
-            self.driver.find_element_by_id("volume-size").clear()
-            self.driver.find_element_by_id("volume-size").send_keys("2")
-	except:
-	    print "Failed Test: Create New Volume"
-            raise
-            return 1
+	self.set_keys_by_id("volume-size", "2")
 	self.click_element_by_id("btn-volumes-delete-delete")
 	print
 	print "Finished: Create New Volume"
@@ -87,13 +81,7 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
 	print "Test: Create Snapshot From Volume"
         self.click_element_by_id("more-actions-volumes")
         self.click_element_by_link_text("Create snapshot from volume")
-	try:
-            self.driver.find_element_by_id("snapshot-create-description").clear()
-            self.driver.find_element_by_id("snapshot-create-description").send_keys("snapshot by selenium script")
-	except:
-	    print "Failed Test: Create Snapshot From Volume"
-            raise
-            return 1
+	self.set_keys_by_id("snapshot-create-description", "Snapshot by Selenium Script")
 	self.click_element_by_id("btn-volumes-delete-delete")
 	print
 	print "Finished: Create Snapshot From Volume"   

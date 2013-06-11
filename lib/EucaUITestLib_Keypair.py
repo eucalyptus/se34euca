@@ -28,13 +28,7 @@ class EucaUITestLib_Keypair(EucaUITestLib_Base):
 	self.click_element_by_id("table-keys-new")
 	print
 	print "Test: Generate New Keypair"
-	try:
-		self.driver.find_element_by_id("key-name").clear()
-		self.driver.find_element_by_id("key-name").send_keys("my-sel-gen-key-00")
-	except:
-		print "Failed Test: Generate Keypair"
-		raise
-		return 1
+	self.set_keys_by_id("key-name", "my-sel-gen-key-00")
 	self.click_element_by_id("keys-add-btn")
 	print
 	print "Finished Test: Generate Keypair"
