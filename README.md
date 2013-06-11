@@ -3,9 +3,26 @@ se34euca
 
 Selenium 34 Eucalyptus -- Eucalyptus User Console Test Framework Based on Selenium
 
-### CLASS
+### TEST LIB CLASS
 <pre>
-lib_euca_ui_test.py  		- Main Library for Exported Selenium Scripts
+EucaUITestLib_Base.py
+EucaUITestLib_Image.py
+EucaUITestLib_Instance.py
+EucaUITestLib_IP_Address.py
+EucaUITestLib_Keypair.py
+EucaUITestLib_Security_Group.py
+EucaUITestLib_Snapshot.py
+EucaUITestLib_Volume.py
+</pre>
+
+### TEST LIB CONTAINER CLASS
+<pre>
+EucaUITester.py
+</pre>
+
+### TEST CASE CLASS
+<pre>
+testcase_base.py
 testcase_view_page.py 		- Test Cases for Viewing Pages
 testcase_instance.py 		- Test Cases for Instance
 testcase_keypair.py		- Test Cases for Keypair
@@ -73,13 +90,16 @@ export DISPLAY=:0
 Example.
 
 <code>
+export PYTHONPATH=$PYTHONPATH:/root/ui-test
+
+<code>
 export DISPLAY=:0
 
 <code>
 ./runtest_view_page.py -i 192.168.51.131 -p 8888 -a ui-test-acct-00 -u user00 -w mypassword1 -t view_all_page
 
 <code>
-./runtest_view_page.py -i 192.168.51.131 -p 8888 -a ui-test-acct-03 -u admin -w mypassword6 -t view_keypairs_page
+./runtest_view_page.py -i 192.168.51.131 -p 8888 -a ui-test-acct-00 -u user00 -w mypassword1 -t view_keypairs_page
 
 <code>
 ./runtest_view_page.py -i 192.168.51.106 -p 8888 -a ui-test-acct-00 -u user00 -w mypassword1 -t get_dashboard_source
@@ -98,6 +118,9 @@ export DISPLAY=:0
 	[ launch_instance_basic, terminate_instance_basic, terminate_instance_all ]
 
 Example.
+
+<code>
+export PYTHONPATH=$PYTHONPATH:/root/ui-test
 
 <code>
 export DISPLAY=:0
@@ -124,6 +147,9 @@ export DISPLAY=:0
 Example.
 
 <code>
+export PYTHONPATH=$PYTHONPATH:/root/ui-test
+
+<code>
 export DISPLAY=:0
 
 <code>
@@ -131,6 +157,9 @@ export DISPLAY=:0
 
 <code>
 ./runtest_keypair.py -i 192.168.51.106 -p 8888 -a ui-test-acct-00 -u user00 -w mypassword1 -t delete_keypair
+
+<code>
+./runtest_keypair.py -i 192.168.51.106 -p 8888 -a ui-test-acct-00 -u user00 -w mypassword1 -t delete_keypair_all
 
 ### Volume Test
 
@@ -142,6 +171,9 @@ export DISPLAY=:0
         [ create_volume, delete_volume, create_snapshot_from_volume ]
 
 Example.
+
+<code>
+export PYTHONPATH=$PYTHONPATH:/root/ui-test
 
 <code>
 export DISPLAY=:0
@@ -167,6 +199,9 @@ export DISPLAY=:0
 Example.
 
 <code>
+export PYTHONPATH=$PYTHONPATH:/root/ui-test
+
+<code>
 export DISPLAY=:0
 
 <code>
@@ -187,6 +222,9 @@ export DISPLAY=:0
 Example.
 
 <code>
+export PYTHONPATH=$PYTHONPATH:/root/ui-test
+
+<code>
 export DISPLAY=:0
 
 <code>
@@ -194,6 +232,9 @@ export DISPLAY=:0
 
 <code>
 ./runtest_security_group.py -i 192.168.51.106 -p 8888 -a ui-test-acct-00 -u user00 -w mypassword1 -t delete_security_group
+
+<code>
+./runtest_security_group.py -i 192.168.51.106 -p 8888 -a ui-test-acct-00 -u user00 -w mypassword1 -t delete_security_group_all
 
 ### IP Address Test
 
@@ -205,6 +246,9 @@ export DISPLAY=:0
         [ allocate_two_ip_addresses, release_ip_address ]
 
 Example.
+
+<code>
+export PYTHONPATH=$PYTHONPATH:/root/ui-test
 
 <code>
 export DISPLAY=:0
@@ -227,11 +271,16 @@ export DISPLAY=:0
 Example.
 
 <code>
+export PYTHONPATH=$PYTHONPATH:/root/ui-test
+
+<code>
 export DISPLAY=:0
 
 <code>
 ./runtest_simulate_user.py -i 192.168.51.106 -p 8888 -a ui-test-acct-00 -u user00 -w mypassword1 -t simulate_user_case_00
 
+<code>
+./runtest_simulate_user.py -i 192.168.51.106 -p 8888 -a ui-test-acct-00 -u user00 -w mypassword1 -t simulate_user_case_00_in_loop
 
 ## Contact
 
@@ -240,5 +289,10 @@ Please contact developers for any questions or suggestions:
 Kyo Lee
 
 kyo.lee@eucalyptus.com
+
+Alice
+
+alice@eucalyptus.com
+
 
 
