@@ -72,8 +72,9 @@ cd ..
 
 <code>
 export PYTHONPATH=$PYTHONPATH:/root/ui-test
+
+<code>
 export DISPLAY=:0
-</code>
 
 2 Have the Account, User and its Password Populated.
   * Se34Euca scripts do not automatically create a user for testing.
