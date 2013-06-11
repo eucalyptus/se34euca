@@ -14,6 +14,12 @@ class testcase_volume(testcase_base):
 	self.eucaUITester.volume.test_ui_delete_volume()
 	self.eucaUITester.base.test_ui_logout()
 
+    def delete_volume_all(self):
+	print "=== runTest: Delete Volume All ==="
+	self.eucaUITester.base.test_ui_login()
+	self.eucaUITester.volume.test_ui_delete_volume_all()
+	self.eucaUITester.base.test_ui_logout()
+    
     def create_snapshot_from_volume(self):
 	print "=== runTest: Create Snapshot From Volume ==="
         self.eucaUITester.base.test_ui_login()

@@ -67,7 +67,9 @@ class EucaUITester():
 	print
 
     def tearDown(self):
+	print
 	print "========== Terminating EucaUITester =========="
+	print
 	self.base.tearDown()
 	print    
 
