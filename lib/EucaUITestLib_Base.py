@@ -332,6 +332,43 @@ class EucaUITestLib_Base(unittest.TestCase):
         return self.driver.find_element_by_name(name).text
 
 
+    # SELECT TEXT CALLS
+    def select_text_by_link_text(self, link_text, visible_text):
+	if( self.check_if_element_present_by_type("LINK_TEXT", link_text) is not 0 ):
+	    return 1
+        print "Select: Element Type: LINK_TEXT, Element: "+ link_text + ", Text: " + visible_text
+        Select(self.driver.find_element_by_link_text(link_text)).select_by_visible_text(visible_text)
+	return 0
+
+    def select_text_by_id(self, this_id, visible_text):
+	if( self.check_if_element_present_by_type("ID", this_id) is not 0 ):
+	    return 1
+        print "Select: Element Type: ID, Element: "+ this_id + ", Text: " + visible_text
+        Select(self.driver.find_element_by_id(this_id)).select_by_visible_text(visible_text)
+	return 0
+
+    def select_text_by_css_selector(self, css_selector, visible_text):
+	if( self.check_if_element_present_by_type("CSS_SELECTOR", css_selector) is not 0 ):
+	    return 1
+        print "Select: Element Type: CSS_SELECTOR, Element: "+ css_selector + ", Text: " + visible_text
+        Select(self.driver.find_element_by_css_selector(css_selector)).select_by_visible_text(visible_text)
+	return 0
+
+    def select_text_by_xpath(self, xpath, visible_text):
+	if( self.check_if_element_present_by_type("XPATH", xpath) is not 0 ):
+	    return 1
+        print "Select: Element Type: XPATH, Element: "+ xpath + ", Text: " + visible_text
+        Select(self.driver.find_element_by_xpath(xpath)).select_by_visible_text(visible_text)
+	return 0
+    
+    def select_text_by_name(self, name, visible_text):
+	if( self.check_if_element_present_by_type("NAME", name) is not 0 ):
+	    return 1
+        print "Select: Element Type: NAME, Element: "+ name + ", Text: " + visible_text
+        Select(self.driver.find_element_by_name(name)).select_by_visible_text(visible_text)
+	return 0
+
+
 if __name__ == "__main__":
     unittest.main()
 

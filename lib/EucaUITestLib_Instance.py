@@ -31,10 +31,8 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
 	self.verify_element_by_id("launch-instance-type-num-instance")
 	print "Click: ID -> nextButton"
 	self.click_element_by_id("nextButton")
-	print "Wait: ID -> launch-wizard-security-keypair-selector"
-	self.verify_element_by_id("launch-wizard-security-keypair-selector")
 	print "Select: ID -> launch-wizard-security-keypair-selector, TEXT -> None (advanced option)"
-	Select(self.driver.find_element_by_id("launch-wizard-security-keypair-selector")).select_by_visible_text("None (advanced option)")
+	self.select_text_by_id("launch-wizard-security-keypair-selector", "None (advanced option)")
 	print "Click: ID -> finishButton"
 	self.click_element_by_id("finishButton")
 	print
