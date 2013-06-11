@@ -91,17 +91,7 @@ class EucaUITestLib_IP_Address(EucaUITestLib_Base):
             raise
             return 1
         driver.find_element_by_id("more-actions-eips").click()
-        for i in range(self.retry):
-            try:
-                if self.is_element_present(By.LINK_TEXT, "Release to cloud"): break
-            except: pass
-            time.sleep(1)
-        else:
-	    print "Failed Test: Release Two IP Addresses"
-            raise
-            return 1
-	print "Test: Release IP Address"
-        driver.find_element_by_link_text("Release to cloud").click()
+	self.click_element_by_link_text("Release to cloud")
         for i in range(self.retry):
             try:
                 if self.is_element_present(By.ID, "btn-eips-release-release"): break

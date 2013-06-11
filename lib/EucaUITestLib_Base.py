@@ -258,6 +258,170 @@ class EucaUITestLib_Base(unittest.TestCase):
 	print
 	return 0
 
+
+    def check_if_element_present_by_type(self, element_type, element):
+
+	this_element_type = ""
+	if( element_type is "LINK_TEXT" ):
+	    this_element_type = By.LINK_TEXT
+	elif( element_type is "ID" ):
+	    this_element_type = By.ID
+	elif( element_type is "CSS_SELECTOR" ):
+	    this_element_type = By.CSS_SELECTOR
+	elif( element_type is "XPATH" ):
+	    this_element_type = By.XPATH
+
+	for i in range(self.retry):
+            print "Wait On:: Trial: " + str(i)  + " Element Type: " + element_type + ", Element: " + element
+            try:
+                if self.is_element_present(this_element_type, element):
+		    break
+            except:
+		pass
+            time.sleep(1)
+
+        try:
+            self.assertTrue(self.is_element_present(this_element_type, element))
+        except AssertionError as e:
+	    self.verificationErrors.append(str(e))
+	    print "TEST FAILED::: Wait On:: Element Type: " + element_type + ", Element: " + element
+	    raise
+	    return 1
+
+	print "Found:: Element type: " + element_type + ", Element: " + element
+	return 0
+
+
+    def verify_element_by_link_text(self, element):
+	return self.check_if_element_present_by_type("LINK_TEXT", element)
+
+    def verify_element_by_id(self, element):
+	return self.check_if_element_present_by_type("ID", element)
+
+    def verify_element_by_css_selector(self, element):
+	return self.check_if_element_present_by_type("CSS_SELECTOR", element)
+
+    def verify_element_by_xpath(self, element):
+	return self.check_if_element_present_by_type("XPATH", element)
+
+
+    def click_element_by_link_text(self, link_text):
+	if( self.check_if_element_present_by_type("LINK_TEXT", link_text) is not 0 ):
+	    return 1
+        print "Click: Element Type: LINK_TEXT, Element: "+ link_text
+        self.driver.find_element_by_link_text(link_text).click()
+	return 0
+
+    def click_element_by_id(self, this_id):
+	if( self.check_if_element_present_by_type("ID", this_id) is not 0 ):
+	    return 1
+        print "Click: Element Type: ID, Element: "+ this_id
+        self.driver.find_element_by_id(this_id).click()
+	return 0
+
+    def click_element_by_css_selector(self, css_selector):
+	if( self.check_if_element_present_by_type("CSS_SELECTOR", css_selector) is not 0 ):
+	    return 1
+        print "Click: Element Type: CSS_SELECTOR, Element: "+ css_selector
+        self.driver.find_element_by_css_selector(css_selector).click()
+	return 0
+
+    def click_element_by_xpath(self, xpath):
+	if( self.check_if_element_present_by_type("XPATH", xpath) is not 0 ):
+	    return 1
+        print "Click: Element Type: XPATH, Element: "+ xpath
+        self.driver.find_element_by_xpath(xpath).click()
+	return 0
+
+
+    def set_keys_by_element_id(self,element_id, type_keys):
+
+        driver = self.driver
+        wait_in_secs=self.wait_in_secs
+        print "==============find_el_by_id " +element_id + " and_send_keys " + type_keys + " START================="
+
+        for i in range(wait_in_secs):
+            try:
+                print "Test: Verifying element present by id: " + element_id
+                if self.is_element_present(By.ID, element_id): break
+            except: pass
+            time.sleep(1)
+        else: self.fail("time out")
+        driver.find_element_by_id(element_id).clear()
+        print "Test: Trying to click element by id: " + element_id + " and send keys " +type_keys
+        driver.find_element_by_id(element_id).send_keys(type_keys)
+        print "Test: Sent keys " + type_keys
+        print "==============find_el_by_id " +element_id + " and_send_keys " + type_keys + " DONE=================="
+
+    def set_keys_by_css(self, element_css, text):
+
+        driver = self.driver
+        wait_in_secs=self.wait_in_secs
+        print "==============find_el_by_css " +element_css+ " and_send_text " + text + " START================="
+
+        for i in range(wait_in_secs):
+            try:
+                print "Test: Verifying element present by css: " + element_css
+                if self.is_element_present(By.CSS_SELECTOR, element_css): break
+            except: pass
+            time.sleep(1)
+        else: self.fail("time out")
+        driver.find_element_by_css_selector (element_css).clear()
+        print "Test: Trying to click element by css: " + element_css + " and send keys " +text
+        driver.find_element_by_css_selector(element_css).send_keys(text)
+        print "Test: Sent keys " + text
+        print "==============find_el_by_id " +element_css + " and_send_keys " + text + " DONE=================="
+
+
+    def set_keys_by_xpath(self, element_xpath, text):
+        driver = self.driver
+        wait_in_secs=self.wait_in_secs
+
+        for i in range(wait_in_secs):
+            try:
+                print "Test: Verifying element present by xpath: " + element_xpath
+                if self.is_element_present(By.XPATH, element_xpath): break
+            except: pass
+            time.sleep(1)
+        else: self.fail("time out")
+
+        try: self.assertTrue(self.is_element_present(By.XPATH, element_xpath))
+        except AssertionError as e: self.verificationErrors.append(str(e))
+        driver.find_element_by_xpath(element_xpath).clear()
+        driver.find_element_by_xpath(element_xpath).send_keys(text)
+        print "Test: Typed: "+text+ " in the xpath location " + element_xpath
+
+
+    def get_value_by_css(self, element_css, what_is_it):
+        '''
+        element_css is the css path to the element the value of which we are interested in
+        what_is_it is a short description of the element for the log; i.e. number of running instances
+        saves the value of the desired element into self.save_value
+
+        '''
+        driver = self.driver
+        wait_in_secs=self.wait_in_secs
+
+        print "==============copy_value_into_var "+ what_is_it+ " by_css " + element_css + " START================="
+
+        for i in range(wait_in_secs):
+            try:
+                print "Test: Verifying element present by css: " + element_css
+                if self.is_element_present(By.CSS_SELECTOR, element_css): break
+            except: pass
+            time.sleep(1)
+        else: self.fail("time out")
+        print "Test: Assert element present by css: " + element_css
+        try: self.assertTrue(self.is_element_present(By.CSS_SELECTOR, element_css))
+        except AssertionError as e: self.verificationErrors.append(str(e))
+        self.save_value = driver.find_element_by_css_selector(element_css).text
+        while self.save_value == "":
+            self.save_value = driver.find_element_by_css_selector(element_css).text
+        print "Test: saved value for " + what_is_it + " " + self.save_value
+
+        print "==============copy_value_into_var "+ what_is_it + " by_css " + element_css + " DONE================="
+
+
 if __name__ == "__main__":
     unittest.main()
 
