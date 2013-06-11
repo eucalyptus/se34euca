@@ -5,6 +5,9 @@ class testcase_base(unittest.TestCase):
 
     eucaUITester = EucaUITester()
 
+    def setSeleniumServerInfo(self, ip, port):
+	self.eucaUITester.setSeleniumServerInfo(ip, port)
+
     def setUIInfo(self, ip, port):
 	self.eucaUITester.setUIInfo(ip, port)
 
