@@ -13,8 +13,8 @@ class EucaUITestLib_Base(unittest.TestCase):
     accountname = "eucalyptus"
     username = "admin"
     password = "password"
-
     retry = 5
+
 
     def NoOp(self):
 	return 0
@@ -95,12 +95,9 @@ class EucaUITestLib_Base(unittest.TestCase):
 	self.verify_element_by_id("login")
 	print
 	print "Test: Received the Login Page"
-        self.driver.find_element_by_id("account").clear()
-        self.driver.find_element_by_id("account").send_keys(self.accountname)
-        self.driver.find_element_by_id("username").clear()
-        self.driver.find_element_by_id("username").send_keys(self.username)
-        self.driver.find_element_by_id("password").clear()
-        self.driver.find_element_by_id("password").send_keys(self.password)
+	self.set_keys_by_id("account", self.accountname)
+        self.set_keys_by_id("username", self.username)
+        self.set_keys_by_id("password", self.password)
 	print
 	print "Test: Typed the User Info and Clicked the Login Button"
 	self.click_element_by_name("login")
@@ -141,7 +138,6 @@ class EucaUITestLib_Base(unittest.TestCase):
 	print
 	return 0
 
-
     def test_ui_view_page_get_dashboard_source(self):
 	print
 	print "Started Test: View Page Get Dashboard Source"
@@ -150,33 +146,29 @@ class EucaUITestLib_Base(unittest.TestCase):
         print
 	print "Test: Received the Page Title -> " + self.driver.title
 	self.verify_element_by_link_text("Launch new instance")
-	time.sleep(3)
-	try:
-	    running_instances = self.driver.find_element_by_css_selector("div.status-readout")
-	    print "[DASHBOARD] Running Instances: " + running_instances.text
-	    stopped_instances = self.driver.find_element_by_id("dashboard-instance-stopped")
-	    print "[DASHBOARD] Stopped Instances: " + stopped_instances.text
-	    volumes = self.driver.find_element_by_id("dashboard-storage-volume")
-	    print "[DASHBOARD] Volumes: " + volumes.text
-	    snapshots = self.driver.find_element_by_id("dashboard-storage-snapshot")
-	    print "[DASHBOARD] Snapshots: " + snapshots.text
-	    sgroup = self.driver.find_element_by_id("dashboard-netsec-sgroup")
-	    print "[DASHBOARD] Security Groups: " + sgroup.text
-	    keypairs = self.driver.find_element_by_id("dashboard-netsec-keypair")
-	    print "[DASHBOARD] Keypairs: " + keypairs.text
-	    eip = self.driver.find_element_by_id("dashboard-netsec-eip")
-	    print "[DASHBOARD] IP Addresses: " + eip.text
-	    print
-	except:
-	    print "Failed Test: GotoPage Dashboard Source"
-            raise
-            return 1
+	time.sleep(3)	
+	running_instance_count = self.get_text_by_css_selector("div.status-readout").split("\n")[0]
+	stopped_instance_count = self.get_text_by_id("dashboard-instance-stopped").split("\n")[0]
+	volume_count = self.get_text_by_id("dashboard-storage-volume").split("\n")[0]
+	snapshot_count = self.get_text_by_id("dashboard-storage-snapshot").split("\n")[0]
+	sgroup_count = self.get_text_by_id("dashboard-netsec-sgroup").split("\n")[0]
+	keypair_count = self.get_text_by_id("dashboard-netsec-keypair").split("\n")[0]
+	eip_count = self.get_text_by_id("dashboard-netsec-eip").split("\n")[0]
+	print
+	print "[DASHBOARD] Running Instances: " + running_instance_count
+	print "[DASHBOARD] Stopped Instances: " + stopped_instance_count
+	print "[DASHBOARD] Volumes: " + volume_count
+	print "[DASHBOARD] Snapshots: " + snapshot_count
+	print "[DASHBOARD] Security Groups: " + sgroup_count
+	print "[DASHBOARD] Keypairs: " + keypair_count
+	print "[DASHBOARD] IP Addresses: " + eip_count
 	print
 	print "Finished Test: View Page Get Dashboard Source"
 	print
 	return 0
 
 
+    # VERIFY ELEMENT BY TYPE
     def check_if_element_present_by_type(self, element_type, element):
 
 	this_element_type = ""
@@ -211,6 +203,7 @@ class EucaUITestLib_Base(unittest.TestCase):
 	print "Found:: Element type: " + element_type + ", Element: " + element
 	return 0
 
+
     # VERIFY CALLS
     def verify_element_by_link_text(self, element):
 	return self.check_if_element_present_by_type("LINK_TEXT", element)
@@ -226,6 +219,7 @@ class EucaUITestLib_Base(unittest.TestCase):
     
     def verify_element_by_name(self, element):
 	return self.check_if_element_present_by_type("NAME", element)
+
 
     # CLICK CALLS
     def click_element_by_link_text(self, link_text):
@@ -262,6 +256,7 @@ class EucaUITestLib_Base(unittest.TestCase):
         print "Click: Element Type: NAME, Element: "+ name
         self.driver.find_element_by_name(name).click()
 	return 0
+
 
     # SET KEYS CALLS
     def set_keys_by_link_text(self, link_text, keys):
@@ -305,34 +300,36 @@ class EucaUITestLib_Base(unittest.TestCase):
 	return 0
 
 
-    def get_value_by_css(self, element_css, what_is_it):
-        '''
-        element_css is the css path to the element the value of which we are interested in
-        what_is_it is a short description of the element for the log; i.e. number of running instances
-        saves the value of the desired element into self.save_value
+    # GET TEXT CALLS
+    def get_text_by_link_text(self, link_text):
+	if( self.check_if_element_present_by_type("LINK_TEXT", link_text) is not 0 ):
+	    return 1
+        print "Get Text: Element Type: LINK_TEXT, Element: "+ link_text
+        return self.driver.find_element_by_link_text(link_text).text
 
-        '''
-        driver = self.driver
-        wait_in_secs=self.wait_in_secs
+    def get_text_by_id(self, this_id):
+	if( self.check_if_element_present_by_type("ID", this_id) is not 0 ):
+	    return 1
+        print "Get Text: Element Type: ID, Element: "+ this_id
+        return self.driver.find_element_by_id(this_id).text
 
-        print "==============copy_value_into_var "+ what_is_it+ " by_css " + element_css + " START================="
+    def get_text_by_css_selector(self, css_selector):
+	if( self.check_if_element_present_by_type("CSS_SELECTOR", css_selector) is not 0 ):
+	    return 1
+        print "Get Text: Element Type: CSS_SELECTOR, Element: "+ css_selector
+        return self.driver.find_element_by_css_selector(css_selector).text
 
-        for i in range(wait_in_secs):
-            try:
-                print "Test: Verifying element present by css: " + element_css
-                if self.is_element_present(By.CSS_SELECTOR, element_css): break
-            except: pass
-            time.sleep(1)
-        else: self.fail("time out")
-        print "Test: Assert element present by css: " + element_css
-        try: self.assertTrue(self.is_element_present(By.CSS_SELECTOR, element_css))
-        except AssertionError as e: self.verificationErrors.append(str(e))
-        self.save_value = driver.find_element_by_css_selector(element_css).text
-        while self.save_value == "":
-            self.save_value = driver.find_element_by_css_selector(element_css).text
-        print "Test: saved value for " + what_is_it + " " + self.save_value
-
-        print "==============copy_value_into_var "+ what_is_it + " by_css " + element_css + " DONE================="
+    def get_text_by_xpath(self, xpath):
+	if( self.check_if_element_present_by_type("XPATH", xpath) is not 0 ):
+	    return 1
+        print "Get Text: Element Type: XPATH, Element: "+ xpath
+        return self.driver.find_element_by_xpath(xpath).text
+    
+    def get_text_by_name(self, name):
+	if( self.check_if_element_present_by_type("NAME", name) is not 0 ):
+	    return 1
+        print "Click: Element Type: NAME, Element: "+ name
+        return self.driver.find_element_by_name(name).text
 
 
 if __name__ == "__main__":

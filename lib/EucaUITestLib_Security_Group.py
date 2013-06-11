@@ -40,7 +40,7 @@ class EucaUITestLib_Security_Group(EucaUITestLib_Base):
 	print "Click: ID -> sgroup-add-rule"
 	self.click_element_by_id("sgroup-add-rule")
 	self.verify_element_by_id("sgroup-rule-number-0")
-	print "Rule 0: " + self.driver.find_element_by_css_selector("ul.sg-rules-list > li").text
+	print "Rule 0: " + self.get_text_by_css_selector("ul.sg-rules-list > li")
 	self.verify_element_by_id("sgroup-template")
 	print "Select: ID -> sgroup-templete, TEXT -> HTTP (TCP port 80, for web servers)"
         Select(self.driver.find_element_by_id("sgroup-template")).select_by_visible_text("HTTP (TCP port 80, for web servers)")
@@ -49,7 +49,7 @@ class EucaUITestLib_Security_Group(EucaUITestLib_Base):
 	print "Click: ID -> sgroup-add-rule"
         self.click_element_by_id("sgroup-add-rule")
 	self.verify_element_by_id("sgroup-rule-number-1")
-	print "Rule 1: " + self.driver.find_element_by_xpath("//div[@id='sgroup-rules-list']/ul/li[2]").text
+	print "Rule 1: " + self.get_text_by_xpath("//div[@id='sgroup-rules-list']/ul/li[2]")
 	self.verify_element_by_id("sgroup-template")
 	print "Select: ID -> sgroup-templete, TEXT -> Custom ICMP"
         Select(self.driver.find_element_by_id("sgroup-template")).select_by_visible_text("Custom ICMP")
@@ -60,7 +60,7 @@ class EucaUITestLib_Security_Group(EucaUITestLib_Base):
         print "Click: ID -> sgroup-add-rule"
         self.click_element_by_id("sgroup-add-rule")
 	self.verify_element_by_id("sgroup-rule-number-2")
-	print "Rule 2: " + self.driver.find_element_by_xpath("//div[@id='sgroup-rules-list']/ul/li[3]").text
+	print "Rule 2: " + self.get_text_by_xpath("//div[@id='sgroup-rules-list']/ul/li[3]")
 	self.click_element_by_id("sgroup-add-btn")
 	print
 	print "Finished: Create Security Group"
