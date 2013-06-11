@@ -56,15 +56,18 @@ class EucaUITestLib_Base(unittest.TestCase):
 	this_selenium_server_url = "http://" + self.selenium_server_ip + ":" + self.selenium_server_port + "/wd/hub"
 	print "SELENIUM SERVER URL: " + this_selenium_server_url
 	print "EUCALYPTUS UI PROXY URL: " + this_ui
+	print
 	if self.selenium_server_ip is not "localhost":
+		print "SET REMOTE WEBDRIVER AT: " + this_selenium_server_url 
 		self.driver = webdriver.Remote(this_selenium_server_url, webdriver.DesiredCapabilities.FIREFOX)
         else:
+		print "SET LOCAL WEBDRIVER"
 		self.driver = webdriver.Firefox()
         self.driver.implicitly_wait(30)
         self.base_url = this_ui
         self.verificationErrors = []
 	print
-	print "Started Selenium Test Targeted at : " + self.base_url
+	print "STARTED SELENIUM TEST ON EUCALYPTUS AT: " + self.base_url
 	print
 	return 0
 
@@ -74,7 +77,7 @@ class EucaUITestLib_Base(unittest.TestCase):
 	self.driver.quit()
         self.assertEqual([], self.verificationErrors)
 	print
-	print "Finished Selenium Test Targeted at : " + self.base_url
+	print "FINISHED SELENIUM TEST ON EUCALYPTUS AT: " + self.base_url
 	print
 	return 0 
 

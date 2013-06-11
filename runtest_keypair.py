@@ -62,6 +62,7 @@ def main():
 	print
 	print "### SETUP"
 	print "TESTCASE: " + testcase
+	print
 	ui.setSeleniumServerInfo(selenium_server_ip, selenium_server_port)
 	ui.setUIInfo(ui_ip, port)
 	ui.setUserInfo(accountname, username, password)
