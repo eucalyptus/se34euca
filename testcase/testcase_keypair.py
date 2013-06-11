@@ -14,6 +14,11 @@ class testcase_keypair(testcase_base):
 	self.eucaUITester.keypair.test_ui_delete_keypair()
 	self.eucaUITester.base.test_ui_logout()
 
+    def delete_keypair_all(self):
+	print "=== runTest: Delete Keypair All ==="
+	self.eucaUITester.base.test_ui_login()
+	self.eucaUITester.keypair.test_ui_delete_keypair_all()
+	self.eucaUITester.base.test_ui_logout()
 
 if __name__ == "__main__":
     unittest.main()
