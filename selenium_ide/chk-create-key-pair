@@ -13,7 +13,12 @@
 </thead><tbody>
 <tr>
 	<td>setTimeout</td>
-	<td>60000</td>
+	<td>120000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Dashboard</td>
 	<td></td>
 </tr>
 <tr>
@@ -33,7 +38,7 @@
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>css=#dashboard-netsec-keypair &gt; span</td>
+	<td>id=dashboard-netsec-keypair</td>
 	<td>key_pairs</td>
 </tr>
 <tr>

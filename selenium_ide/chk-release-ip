@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://10.111.5.23:8888/" />
+<title>chk-release-ip</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">chk-release-ip</td></tr>
+</thead><tbody>
+<tr>
+	<td>setTimeout</td>
+	<td>60000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Dashboard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=dashboard-netsec-eip</td>
+	<td>0 IP Addresses</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=dashboard-netsec-eip</td>
+	<td>0 IP Addresses</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=#dashboard-netsec-eip &gt; span</td>
+	<td>ip_addr</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Number of ip addresses expected/actual: 0/${ip_addr}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Dashboard</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

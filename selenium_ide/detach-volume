@@ -37,7 +37,7 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
+	<td>waitForVisible</td>
 	<td>link=Volumes</td>
 	<td></td>
 </tr>
@@ -67,7 +67,7 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
+	<td>waitForVisible</td>
 	<td>id=more-actions-volumes</td>
 	<td></td>
 </tr>
@@ -82,7 +82,7 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
+	<td>waitForVisible</td>
 	<td>link=Detach from instance</td>
 	<td></td>
 </tr>
@@ -97,9 +97,14 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForVisible</td>
+	<td>id=btn-volumes-delete-delete</td>
+	<td>Yes, detach</td>
+</tr>
+<tr>
 	<td>click</td>
-	<td>id=btn-volumes-detach-detach</td>
-	<td></td>
+	<td>id=btn-volumes-delete-delete</td>
+	<td>Yes, detach</td>
 </tr>
 <tr>
 	<td>echo</td>

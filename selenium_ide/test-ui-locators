@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://10.111.1.61:8888/" />
+<title>test-ui-locators</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">test-ui-locators</td></tr>
+</thead><tbody>
+<tr>
+	<td>verifyText</td>
+	<td>css=#dashboard-netsec-eip &gt; span</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=dashboard-netsec-eip </td>
+	<td>0 IP Addresses</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#dashboard-netsec-keypair &gt; span</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=dashboard-netsec-keypair</td>
+	<td>0 Key Pairs</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=dashboard-netsec-sgroup</td>
+	<td>1 Security Groups</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#dashboard-storage-snapshot &gt; span</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=dashboard-storage-snapshot </td>
+	<td>0 Snapshots</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#dashboard-storage-volume &gt; span</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=dashboard-storage-volume</td>
+	<td>0 Volumes</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#dashboard-instance-stopped &gt; div.status-readout &gt; span</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#dashboard-instance-stopped &gt; div.status-readout &gt; span</td>
+	<td>0 </td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=dashboard-instance-stopped </td>
+	<td>0 Stopped</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=#dashboard-instance-running &gt;&nbsp;&nbsp;div.status-readout &gt; span</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=dashboard-instance-running </td>
+	<td>1 Running</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ui-id-282</td>
+	<td>Attachment</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>xpath=(//a[contains(text(),'?')])[2]</td>
+	<td>exact:?</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=exact:?</td>
+	<td>exact:?</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link = exact:?</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://10.111.5.23:8888/" />
+<title>create-snapshot-register-as-inst</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">create-snapshot-register-as-inst</td></tr>
+</thead><tbody>
+<tr>
+	<td>setTimeout</td>
+	<td>150000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Dashboard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Storage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Storage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Storage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Volumes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Volumes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Volumes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=td.checkbox-cell &gt; input[type=&quot;checkbox&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=td.checkbox-cell &gt; input[type=&quot;checkbox&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=td.checkbox-cell &gt; input[type=&quot;checkbox&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=more-actions-volumes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=more-actions-volumes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=more-actions-volumes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Create snapshot from volume</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Create snapshot from volume</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Create snapshot from volume</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=snapshot-create-name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=snapshot-create-name</td>
+	<td>test-snap</td>
+</tr>
+<tr>
+	<td>typeKeys</td>
+	<td>id=snapshot-create-name</td>
+	<td>test-snap</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=btn-volumes-delete-delete</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=btn-volumes-delete-delete</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btn-volumes-delete-delete</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Storage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>link=Storage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Storage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Storage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Snapshots</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>link=Snapshots</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Snapshots</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=test-snap</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div.table-row-status.status-completed</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.table-row-status.status-completed</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=test-snap</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=test-snap</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=test-snap</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='tabs-1']/ul[2]/li[2]/div[2]</td>
+	<td>vol_id</td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//div[@id='tabs-1']/ul[2]/li[2]/div[2]</td>
+	<td>vol_id</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//div[@id='tabs-1']/ul[2]/li[2]/div[2]</td>
+	<td>vol_id</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${vol_id}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=test-snap</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='snapshots']/tbody/tr/td[5]</td>
+	<td>${vol_id}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=more-actions-snapshots</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=body..no_search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Register as image</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=body..no_search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=#snapshot-euca-dialog-wrapper &gt; #snapshot-register-dialog &gt; div.dialog-inner-content &gt; div.form-row &gt; #snapshot-register-image-name</td>
+	<td>myimage</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btn-volumes-delete-delete</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Images</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//table[@id='images']/tbody/tr/td[3]</td>
+	<td>myimage</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Dashboard</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

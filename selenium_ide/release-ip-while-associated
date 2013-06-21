@@ -17,7 +17,7 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
+	<td>waitForVisible</td>
 	<td>link=Network &amp; Security</td>
 	<td></td>
 </tr>
@@ -32,7 +32,7 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
+	<td>waitForVisible</td>
 	<td>link=IP Addresses</td>
 	<td></td>
 </tr>
@@ -47,33 +47,48 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
-	<td>id=eip_state-selector</td>
-	<td>label=Assigned addresses</td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>id=eip_state-selector</td>
-	<td>label=Assigned addresses</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=eip_state-selector</td>
-	<td>label=Assigned addresses</td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>css=td.checkbox-cell.sorting_1 &gt; input[type=&quot;checkbox&quot;]</td>
+	<td>waitForVisible</td>
+	<td>//table[@id='eips']/thead/tr/th[3]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyElementPresent</td>
-	<td>css=td.checkbox-cell.sorting_1 &gt; input[type=&quot;checkbox&quot;]</td>
+	<td>//table[@id='eips']/thead/tr/th[3]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>css=td.checkbox-cell.sorting_1 &gt; input[type=&quot;checkbox&quot;]</td>
+	<td>//table[@id='eips']/thead/tr/th[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//table[@id='eips']/thead/tr/th[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//table[@id='eips']/thead/tr/th[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='eips']/thead/tr/th[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>css=td.checkbox-cell &gt; input[type=&quot;checkbox&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=td.checkbox-cell &gt; input[type=&quot;checkbox&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=td.checkbox-cell &gt; input[type=&quot;checkbox&quot;]</td>
 	<td></td>
 </tr>
 <tr>
@@ -92,7 +107,7 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
+	<td>waitForVisible</td>
 	<td>link=Release to cloud</td>
 	<td></td>
 </tr>
@@ -107,7 +122,7 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
+	<td>waitForVisible</td>
 	<td>id=btn-eips-release-release</td>
 	<td></td>
 </tr>

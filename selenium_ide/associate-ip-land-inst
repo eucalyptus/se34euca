@@ -53,21 +53,6 @@
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
-	<td>id=eip_state-selector</td>
-	<td>label=Unassigned addresses</td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>id=eip_state-selector</td>
-	<td>label=Unassigned addresses</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=eip_state-selector</td>
-	<td>label=Unassigned addresses</td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
 	<td>//table[@id='eips']/tbody/tr/td[2]</td>
 	<td></td>
 </tr>
@@ -82,6 +67,11 @@
 	<td>my_ip</td>
 </tr>
 <tr>
+	<td>echo</td>
+	<td>${my_ip}</td>
+	<td></td>
+</tr>
+<tr>
 	<td>waitForElementPresent</td>
 	<td>link=Instances</td>
 	<td></td>
@@ -97,48 +87,13 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForText</td>
-	<td>css=li.toggle-on &gt; ul &gt; li &gt; a</td>
-	<td>Instances</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=li.toggle-on &gt; ul &gt; li &gt; a</td>
-	<td>Instances</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=li.toggle-on &gt; ul &gt; li &gt; a</td>
-	<td></td>
-</tr>
-<tr>
 	<td>waitForElementPresent</td>
-	<td>id=inst_state-selector</td>
-	<td>label=Running instances</td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>id=inst_state-selector</td>
-	<td>label=Running instances</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=inst_state-selector</td>
-	<td>label=Running instances</td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>css=td.checkbox-cell &gt; input[type=&quot;checkbox&quot;]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>css=td.checkbox-cell &gt; input[type=&quot;checkbox&quot;]</td>
+	<td>css=div.table-row-status.status-running</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>css=td.checkbox-cell &gt; input[type=&quot;checkbox&quot;]</td>
+	<td>css=div.table-row-status.status-running</td>
 	<td></td>
 </tr>
 <tr>
@@ -158,6 +113,11 @@
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
+	<td>link=Associate IP address</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
 	<td>link=Associate IP address</td>
 	<td></td>
 </tr>
@@ -212,6 +172,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForVisible</td>
+	<td>id=eip-associate-btn</td>
+	<td></td>
+</tr>
+<tr>
 	<td>verifyElementPresent</td>
 	<td>id=eip-associate-btn</td>
 	<td></td>
@@ -219,11 +184,6 @@
 <tr>
 	<td>click</td>
 	<td>id=eip-associate-btn</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>xpath=(//button[@id='eip-associate-btn'])</td>
 	<td></td>
 </tr>
 <tr>

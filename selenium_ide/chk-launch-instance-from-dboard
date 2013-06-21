@@ -24,12 +24,12 @@
 <tr>
 	<td>waitForText</td>
 	<td>css=div.status-readout &gt; span</td>
-	<td>1</td>
+	<td>2</td>
 </tr>
 <tr>
 	<td>verifyText</td>
 	<td>css=div.status-readout &gt; span</td>
-	<td>1</td>
+	<td>2</td>
 </tr>
 <tr>
 	<td>storeText</td>
