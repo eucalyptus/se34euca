@@ -42,6 +42,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>click</td>
+	<td>css=li.toggle-on &gt; ul &gt; li &gt; a</td>
+	<td></td>
+</tr>
+<tr>
 	<td>waitForElementPresent</td>
 	<td>link=myinst</td>
 	<td></td>
@@ -141,7 +146,6 @@
 	<td>Verifyling ${inst_id} not present: ${inst1}</td>
 	<td></td>
 </tr>
-
 </tbody></table>
 </body>
 </html>

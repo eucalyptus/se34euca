@@ -80,7 +80,6 @@
 <tr><td><a href="chk-delete-volume">chk-delete-volume</a></td></tr>
 <tr><td><a href="chk-terminate-instance">chk-terminate-instance</a></td></tr>
 <tr><td><a href="chk-release-ip">chk-release-ip</a></td></tr>
-<tr><td><a href="test-ui-locators">test-ui-locators</a></td></tr>
 </tbody></table>
 </body>
 </html>

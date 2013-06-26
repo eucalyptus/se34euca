@@ -38,7 +38,7 @@
 </tr>
 <tr>
 	<td>echo</td>
-	<td>Number of IP Addreses expected/actual: 2/${IPs}</td>
+	<td>Number of IP Addreses expected/actual: 1/${IPs}</td>
 	<td></td>
 </tr>
 <tr>

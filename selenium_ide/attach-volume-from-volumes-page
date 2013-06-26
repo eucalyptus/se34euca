@@ -22,6 +22,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>click</td>
+	<td>css=li.toggle-on &gt; ul &gt; li &gt; a</td>
+	<td></td>
+</tr>
+<tr>
 	<td>waitForVisible</td>
 	<td>link=myinst</td>
 	<td></td>
