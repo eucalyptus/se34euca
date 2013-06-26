@@ -101,6 +101,31 @@
 	<td>link = exact:?</td>
 	<td></td>
 </tr>
+<tr>
+	<td>click</td>
+	<td>id=instances-terminate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Terminate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=volumes-attach_volume</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Associate with instance</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=eips-associate</td>
+	<td></td>
+</tr>
 </tbody></table>
 </body>
 </html>

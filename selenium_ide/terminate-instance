@@ -32,6 +32,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>link=Instances</td>
 	<td></td>
@@ -94,11 +99,6 @@
 <tr>
 	<td>click</td>
 	<td>id=btn-instances-terminate-terminate</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForVisible</td>
-	<td>css=div.table-row-status.status-terminated</td>
 	<td></td>
 </tr>
 </tbody></table>
