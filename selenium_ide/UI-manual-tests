@@ -16,6 +16,7 @@
 <tr><td><a href="chk-allocate-ip-1">chk-allocate-ip-1</a></td></tr>
 <tr><td><a href="allocate-ip">allocate-ip</a></td></tr>
 <tr><td><a href="chk-allocate-ip">chk-allocate-ip</a></td></tr>
+<tr><td><a href="release-ip-to-cloud">release-ip-to-cloud</a></td></tr>
 <tr><td><a href="create-key-pair">create-key-pair</a></td></tr>
 <tr><td><a href="chk-create-key-pair">chk-create-key-pair</a></td></tr>
 <tr><td><a href="create-volume">create-volume</a></td></tr>
@@ -49,7 +50,6 @@
 <tr><td><a href="snapshot-from-volume">snapshot-from-volume</a></td></tr>
 <tr><td><a href="detach-volume">detach-volume</a></td></tr>
 <tr><td><a href="release-ip-while-associated">release-ip-while-associated</a></td></tr>
-<tr><td><a href="release-ip-to-cloud">release-ip-to-cloud</a></td></tr>
 <tr><td><a href="chk-launch-instance-from-dboard">chk-launch-instance-from-dboard</a></td></tr>
 <tr><td><a href="delete-all-inatances">delete-all-inatances</a></td></tr>
 <tr><td><a href="chk-terminate-instance">chk-terminate-instance</a></td></tr>
