@@ -21,6 +21,7 @@ class EucaUITestLib_Keypair(EucaUITestLib_Base):
     def test_ui_generate_keypair(self):
         print
         print "Started Test: Generate Keypair"
+        self.click_element_by_link_text(link_text="Dashboard")
         self.verify_element_by_link_text("Launch new instance")
         self.click_element_by_id("dashboard-netsec-keypair")
         print
@@ -45,6 +46,7 @@ class EucaUITestLib_Keypair(EucaUITestLib_Base):
     def test_ui_import_keypair(self):
         print
         print "Started Test: Import Keypair"
+        self.click_element_by_link_text(link_text="Dashboard")
         self.verify_element_by_link_text("Launch new instance")
         self.click_element_by_id("dashboard-netsec-keypair")
         print
@@ -67,9 +69,24 @@ class EucaUITestLib_Keypair(EucaUITestLib_Base):
         print
         return 0
 
+    def test_ui_check_keypair_count(self,keys_count):
+        print
+        print "Started Test: Check Keypair Count"
+        self.click_element_by_link_text("Dashboard")
+        self.verify_element_by_link_text("Launch new instance")
+        print "Verifying that Keypair Count on Dashboard is "+keys_count
+        self.verify_text_displayed_by_css("#dashboard-netsec-keypair > span",keys_count)
+        print
+        print "Finished Test: Check Keypair Count"
+        print
+        return 0
+
+
+
     def test_ui_delete_keypair(self):
         print
         print "Started Test: Delete Keypair"
+        self.click_element_by_link_text(link_text="Dashboard")
         self.verify_element_by_link_text("Launch new instance")
         self.click_element_by_id("dashboard-netsec-keypair")
         print

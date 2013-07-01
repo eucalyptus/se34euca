@@ -34,6 +34,33 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         print
         return 0
 
+    def test_ui_create_volume_name_v(self):
+        print
+        print "Started Test: Create Volume Named v"
+        print
+        print "Test: Go to the Page Volume"
+        self.click_element_by_link_text("Dashboard")
+        self.click_element_by_link_text("Storage")
+        self.click_element_by_link_text("Volumes")
+        print
+        print "Test: Create New Volume"
+        self.click_element_by_id("table-volumes-new")
+        self.verify_element_by_id("volume-name")
+        self.set_keys_by_id("volume-name","v")
+        self.verify_element_by_id("volume-size")
+        self.set_keys_by_id("volume-size", "1")
+        self.click_element_by_id("btn-volumes-delete-delete")
+        #Verifying on Volumes Landing Page that volume Named v was created
+        print
+        print "Verification"
+        self.click_element_by_link_text(link_text="Dashboard")
+        self.click_element_by_id("dashboard-storage-volume")
+        self.verify_element_by_link_text("v")
+        print
+        print "Finished: Create New Volume"
+        print
+        return 0
+
     def test_ui_delete_volume(self):
         print
         print "Started Test: Delete Volume"

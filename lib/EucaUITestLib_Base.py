@@ -195,11 +195,13 @@ class EucaUITestLib_Base(unittest.TestCase):
         for i in range(self.retry):
             print "Wait On:: Trial: " + str(i)  + " Element Type: " + element_type + ", Element: " + element
             try:
-                if self.is_element_present(this_element_type, element): break
+                if self.is_element_present(this_element_type, element):
+                    break
+                    print "Found element present"
             except: pass
             time.sleep(1)
-        #else:
-        #    self.fail("timed out after "+`self.retry`+" seconds")
+       # else:
+       #     self.fail("timed out after "+`self.retry`+" seconds")
 
         try:
             self.assertTrue(self.is_element_present(this_element_type, element))
@@ -231,23 +233,40 @@ class EucaUITestLib_Base(unittest.TestCase):
 
     #VERIFY TEXT DISPLAYED
 
-    def verify_text_displayed_by_id(self,element_id,text):
-        print("Verifying text " +text+" displayed at ID "+element_id)
+    def verify_text_displayed_by_id(self,element_id,element_text):
+        #print("Verifying text " +element_text+" displayed at ID "+element_id)
         for i in range(self.retry):
+            print "Wait On:: Trial: " + str(i)  +("Verifying text " +element_text+" displayed at ID "+element_id)
             try:
-                if text == self.driver.find_element_by_id(element_id).text:
-                    break
+                if element_text == self.driver.find_element_by_id(element_id).text:
                     print"Found text"
+                    break
             except: pass
             time.sleep(1)
         else: self.fail("time out")
-        try: self.assertEqual(text, self.driver.find_element_by_id(element_id).text)
+        try: self.assertEqual(element_text, self.driver.find_element_by_id(element_id).text)
         except AssertionError as e: self.verificationErrors.append(str(e))
 
         displayed_text = self.driver.find_element_by_id(element_id).text
         print("Text displayed at ID "+element_id +" is " +displayed_text)
 
 
+    def verify_text_displayed_by_css(self,element_css,element_text):
+        #print("Verifying text " +element_text+" displayed at ID "+element_css)
+        for i in range(self.retry):
+            print "Wait On:: Trial: " + str(i)  +("Verifying text " +element_text+" displayed at ID "+element_css)
+            try:
+                if element_text == self.driver.find_element_by_css_selector(element_css).text:
+                    print"Found text"
+                    break
+            except: pass
+            time.sleep(1)
+        else: self.fail("time out")
+        try: self.assertEqual(element_text, self.driver.find_element_by_css_selector(element_css).text)
+        except AssertionError as e: self.verificationErrors.append(str(e))
+
+        displayed_text = self.driver.find_element_by_css_selector(element_css).text
+        print("Text displayed at ID "+element_css +" is " +displayed_text)
 
 
     # CLICK CALLS

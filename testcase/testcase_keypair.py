@@ -2,6 +2,7 @@ from se34euca.testcase.testcase_base import *
 
 class testcase_keypair(testcase_base):
 
+
     def generate_keypair(self):
         print "=== runTest: Generate Keypair ==="
         self.eucaUITester.base.test_ui_login()
@@ -12,6 +13,12 @@ class testcase_keypair(testcase_base):
         print "=== runTest: Generate Keypair ==="
         self.eucaUITester.base.test_ui_login()
         self.eucaUITester.keypair.test_ui_import_keypair()
+        self.eucaUITester.base.test_ui_logout()
+
+    def check_keypair_count(self):
+        print "=== runTest: Delete Keypair ==="
+        self.eucaUITester.base.test_ui_login()
+        self.eucaUITester.keypair.test_ui_check_keypair_count(self.keys_count)
         self.eucaUITester.base.test_ui_logout()
 
     def delete_keypair(self):

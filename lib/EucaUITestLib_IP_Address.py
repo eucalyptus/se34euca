@@ -5,6 +5,8 @@ class EucaUITestLib_IP_Address(EucaUITestLib_Base):
     def test_ui_allocate_two_ip_addresses(self):
         print
         print "Started Test: Allocate Two IP Addresses"
+        self.click_element_by_link_text(link_text="Dashboard")
+        self.verify_element_by_link_text("Launch new instance")
         self.verify_element_by_id("dashboard-netsec-eip")
         print
         print "Test: Go to the Page IP Address"
@@ -20,9 +22,42 @@ class EucaUITestLib_IP_Address(EucaUITestLib_Base):
         print
         return 0
 
+    def test_ui_allocate_ip_address(self):
+        print
+        print "Started Test: Allocate IP Address"
+        self.click_element_by_link_text(link_text="Dashboard")
+        self.verify_element_by_link_text("Launch new instance")
+        self.verify_element_by_id("dashboard-netsec-eip")
+        print
+        print "Test: Go to the Page IP Address"
+        self.click_element_by_id("dashboard-netsec-eip")
+        self.click_element_by_id("table-eips-new")
+        self.verify_element_by_id("eip-allocate-count")
+        print
+        print "Test: Allocate IP Address"
+        self.set_keys_by_id("eip-allocate-count", "1")
+        self.click_element_by_id("eip-allocate-btn")
+        print
+        print "Finished: Allocate Two IP Addresses"
+        print
+        return 0
+
+    def test_ui_check_ip_address_count(self,ip_count):
+        print
+        print "Started Test: Check IP Address Count"
+        self.click_element_by_link_text("Dashboard")
+        self.verify_element_by_link_text("Launch new instance")
+        print "Verifying that IP Address Count on Dashboard is "+ip_count
+        self.verify_text_displayed_by_css("#dashboard-netsec-eip > span",ip_count)
+        print
+        print "Finished Test: IP Address Count"
+        print
+        return 0
+
     def test_ui_release_ip_address(self):
         print
         print "Started Test: Release IP Address"
+        self.click_element_by_link_text(link_text="Dashboard")
         self.verify_element_by_link_text("Launch new instance")
         print
         print "Test: Go to the Page IP Address"
