@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://10.111.1.61:8888/" />
+<title>add_tags_to_volume</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">add_tags_to_volume</td></tr>
+</thead><tbody>
+<tr>
+	<td>click</td>
+	<td>link=Dashboard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Storage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Volumes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=div.table-row-status.status-available</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=v</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=td.checkbox-cell &gt; input[type=&quot;checkbox&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=more-actions-volumes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=body..no_search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Manage tags</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.focus-here</td>
+	<td>group</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input[title=&quot;Type the value of this tag&quot;]</td>
+	<td>Devops</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.icon_add.enabled</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.focus-here</td>
+	<td>color</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input[title=&quot;Type the value of this tag&quot;]</td>
+	<td>Blue</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.icon_add.enabled</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.focus-here</td>
+	<td>function</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input[title=&quot;Type the value of this tag&quot;]</td>
+	<td>Data-store</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.icon_add.enabled</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tbody[4]/tr/td[3]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//tbody[4]/tr[2]/td[2]/input</td>
+	<td>Datastore</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tbody[4]/tr[2]/td[3]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>xpath=(//button[@id='btn-volumes-delete-delete'])[2]</td>
+	<td>Cancel</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=btn-volumes-delete-delete</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Tags</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@id='tabs-2']/div/table/tbody/tr[4]/td/span</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

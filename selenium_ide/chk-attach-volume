@@ -12,6 +12,11 @@
 <tr><td rowspan="1" colspan="3">chk-attach-volume</td></tr>
 </thead><tbody>
 <tr>
+	<td>setTimeout</td>
+	<td>120000</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>link=Dashboard</td>
 	<td></td>
@@ -32,23 +37,13 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForText</td>
+	<td>waitForElementPresent</td>
 	<td>css=div.table-row-status.status-in-use</td>
 	<td></td>
 </tr>
 <tr>
-	<td>verifyText</td>
+	<td>verifyElementPresent</td>
 	<td>css=div.table-row-status.status-in-use</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>css=div.table-row-status.status-in-use</td>
-	<td>inuse</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>Number of attached volumes expected/actual: 1/${inuse}</td>
 	<td></td>
 </tr>
 <tr>
@@ -56,7 +51,6 @@
 	<td>chk-attach-volume Done</td>
 	<td></td>
 </tr>
-
 </tbody></table>
 </body>
 </html>

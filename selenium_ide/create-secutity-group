@@ -92,23 +92,28 @@
 	<td>test</td>
 </tr>
 <tr>
+	<td>waitForElementPresent</td>
+	<td>id=sgroup-add-btn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=sgroup-add-btn</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>id=sgroup-add-btn</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
-	<td>css=span[title=&quot;test&quot;]</td>
+	<td>css=span:contains(&quot;test&quot;)</td>
 	<td>test</td>
 </tr>
 <tr>
 	<td>verifyElementPresent</td>
-	<td>css=span[title=&quot;test&quot;]</td>
-	<td>test</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=span[title=&quot;test&quot;]</td>
+	<td>css=span:contains(&quot;test&quot;)</td>
 	<td>test</td>
 </tr>
 <tr>

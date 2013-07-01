@@ -13,7 +13,7 @@
 </thead><tbody>
 <tr>
 	<td>setTimeout</td>
-	<td>60000</td>
+	<td>50000</td>
 	<td></td>
 </tr>
 <tr>
@@ -22,7 +22,22 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
+	<td>waitForVisible</td>
+	<td>link=Network &amp; Security</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Network &amp; Security</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Network &amp; Security</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
 	<td>link=IP Addresses</td>
 	<td></td>
 </tr>
@@ -37,37 +52,22 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
-	<td>id=eip_state-selector</td>
-	<td>label=Unassigned addresses</td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>id=eip_state-selector</td>
-	<td>label=Unassigned addresses</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=eip_state-selector</td>
-	<td>label=Unassigned addresses</td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>css=td.checkbox-cell.sorting_1 &gt; input[type=&quot;checkbox&quot;]</td>
+	<td>waitForVisible</td>
+	<td>id=eips-check-all</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyElementPresent</td>
-	<td>css=td.checkbox-cell.sorting_1 &gt; input[type=&quot;checkbox&quot;]</td>
+	<td>id=eips-check-all</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>css=td.checkbox-cell.sorting_1 &gt; input[type=&quot;checkbox&quot;]</td>
+	<td>id=eips-check-all</td>
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
+	<td>waitForVisible</td>
 	<td>id=more-actions-eips</td>
 	<td></td>
 </tr>
@@ -82,7 +82,7 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
+	<td>waitForVisible</td>
 	<td>link=Release to cloud</td>
 	<td></td>
 </tr>
@@ -97,7 +97,7 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
+	<td>waitForVisible</td>
 	<td>id=btn-eips-release-release</td>
 	<td></td>
 </tr>

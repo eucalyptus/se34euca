@@ -93,23 +93,33 @@
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
-	<td>id=sgroup-template</td>
-	<td>label=SSH (TCP port 22, for terminal access)</td>
+	<td>link=Rules</td>
+	<td></td>
 </tr>
 <tr>
 	<td>verifyElementPresent</td>
-	<td>id=sgroup-template</td>
-	<td>label=SSH (TCP port 22, for terminal access)</td>
+	<td>link=Rules</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Rules</td>
+	<td></td>
 </tr>
 <tr>
 	<td>select</td>
 	<td>id=sgroup-template</td>
-	<td>label=SSH (TCP port 22, for terminal access)</td>
+	<td>label=Custom TCP</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=allow-ip</td>
-	<td>0.0.0.0/0</td>
+	<td>id=sgroup-ports</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=sgroup-ip-check</td>
+	<td></td>
 </tr>
 <tr>
 	<td>click</td>
@@ -117,19 +127,9 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
-	<td>id=sgroup-template</td>
-	<td>label=SSH (TCP port 22, for terminal access)</td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>id=sgroup-template</td>
-	<td>label=SSH (TCP port 22, for terminal access)</td>
-</tr>
-<tr>
 	<td>select</td>
 	<td>id=sgroup-template</td>
-	<td>label=SSH (TCP port 22, for terminal access)</td>
+	<td>label=Custom ICMP</td>
 </tr>
 <tr>
 	<td>type</td>
@@ -137,8 +137,13 @@
 	<td>0.0.0.0/0</td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>id=sgroup-add-rule</td>
+	<td>waitForElementPresent</td>
+	<td>id=sgroup-add-btn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=sgroup-add-btn</td>
 	<td></td>
 </tr>
 <tr>
@@ -147,26 +152,10 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
-	<td>css=span[title=&quot;test&quot;]</td>
-	<td>test</td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>css=span[title=&quot;test&quot;]</td>
-	<td>test</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=span[title=&quot;test&quot;]</td>
-	<td>test</td>
-</tr>
-<tr>
 	<td>click</td>
 	<td>link=Dashboard</td>
 	<td></td>
 </tr>
-
 </tbody></table>
 </body>
 </html>

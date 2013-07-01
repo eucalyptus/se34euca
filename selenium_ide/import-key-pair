@@ -13,7 +13,12 @@
 </thead><tbody>
 <tr>
 	<td>setTimeout</td>
-	<td>60000</td>
+	<td>120000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Dashboard</td>
 	<td></td>
 </tr>
 <tr>
@@ -67,6 +72,11 @@
 	<td>import-key</td>
 </tr>
 <tr>
+	<td>type</td>
+	<td>xpath=(//input[@id='key-name'])[2]</td>
+	<td>import-key</td>
+</tr>
+<tr>
 	<td>typeKeys</td>
 	<td>xpath=(//input[@id='key-name'])[2]</td>
 	<td>import-key</td>
@@ -83,17 +93,12 @@
 </tr>
 <tr>
 	<td>click</td>
+	<td>css=button:contains(&quot;Import&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
 	<td>id=keys-add-btn</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only.ui-state-focus</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>xpath=(//button[@id='keys-add-btn'])[2]</td>
 	<td></td>
 </tr>
 <tr>
