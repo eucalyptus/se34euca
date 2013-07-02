@@ -50,6 +50,23 @@ runtest_simulate_user.py
 ### ON UBUNTU LINUX
 
 <code>
+sudo yum -y install git
+
+<code>
+git clone git://github.com/eucalyptus/se34euca.git
+
+<code>
+cd ./se34euca/etc/
+
+<code>
+./installer_se34euca_centos.py
+
+<code>
+cd ..
+
+### ON UBUNTU LINUX
+
+<code>
 sudo apt-get -y install git-core
 
 <code>
@@ -59,7 +76,7 @@ git clone git://github.com/eucalyptus/se34euca.git
 cd ./se34euca/etc/
 
 <code>
-./installer_se34euca.py
+./installer_se34euca_ubuntu.py
 
 <code>
 cd ..
