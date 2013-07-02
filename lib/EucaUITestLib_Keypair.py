@@ -33,7 +33,7 @@ class EucaUITestLib_Keypair(EucaUITestLib_Base):
         self.click_element_by_id("keys-add-btn")
         print"Test: Verification"
         #Verifying on Key Pairs landing page by key pair name that key pair is present
-        self.click_element_by_link_text(link_text="Dashboard")
+        self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
         self.click_element_by_id("dashboard-netsec-keypair")
         self.verify_element_by_css_selector('span[title="my-sel-gen-key-00"]')

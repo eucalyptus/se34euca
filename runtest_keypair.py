@@ -17,6 +17,7 @@ def main():
     accountname = "eucalyptus"
     username = "admin"
     password = "password"
+    count="1" #dashboard item count for check_keypair_count test
 
     print "=============================="
     print "TEST KEYPAIR"
@@ -60,7 +61,7 @@ def main():
     testresult = TestResult()
 
     ui = testcase_keypair(testcase)
-    ui.setKeys_count("3")
+    ui.setKeys_count(count)
 
 
     print

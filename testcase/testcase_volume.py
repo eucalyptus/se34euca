@@ -33,6 +33,19 @@ class testcase_volume(testcase_base):
         self.eucaUITester.volume.test_ui_create_snapshot_from_volume()
         self.eucaUITester.base.test_ui_logout()
 
+    def create_snapshot_from_volume_name_testsnap(self):
+        print "=== runTest: Create Snapshot From Volume and Name it testsnap ==="
+        self.eucaUITester.base.test_ui_login()
+        self.eucaUITester.volume.test_ui_create_snapshot_from_volume_name_testsnap()
+        self.eucaUITester.base.test_ui_logout()
+
+    def attach_volume(self):
+        print "=== runTest: Delete Volume ==="
+        self.eucaUITester.base.test_ui_login()
+        self.eucaUITester.volume.test_ui_attach_volume()
+        self.eucaUITester.base.test_ui_logout()
+
+
 if __name__ == "__main__":
     unittest.main()
 
