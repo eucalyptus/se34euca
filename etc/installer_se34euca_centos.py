@@ -60,7 +60,7 @@ def main():
 	cmd = "sudo nohup java -jar /root/selenium-server/selenium-server-standalone-2.32.0.jar > /root/selenium-server/sel-server.out 2> /root/selenium-server/sel-server.err &"
 	run_cmd(cmd)
 
-	cmd = "sudo dbus-uuidgen > /var/lib/dbus/machine-id"
+	cmd = "dbus-uuidgen | sudo tee -a /var/lib/dbus/machine-id"
         run_cmd(cmd)
 
 	print
