@@ -48,15 +48,16 @@ def main():
 	cmd = "sudo mkdir -p /root/selenium-server"
         run_cmd(cmd)
 
-	wget_cmd = "sudo wget http://selenium.googlecode.com/files/selenium-server-standalone-2.32.0.jar"
-	cmd = "cd /root/selenium-server/; " + wget_cmd
+	cmd = "wget http://selenium.googlecode.com/files/selenium-server-standalone-2.32.0.jar"
 	run_cmd(cmd)
 
-	cmd = "sudo Xvfb :0 -ac 2> /dev/null &"
+	cmd = "sudo mv ./selenium-server-standalone-2.32.0.jar /root/selenium-server/."
 	run_cmd(cmd)
 
-	run_selenium = "sudo nohup java -jar selenium-server-standalone-2.32.0.jar &"
-	cmd = "cd /root/selenium-server/; " + run_selenium
+	cmd = "Xvfb :0 -ac 2> /dev/null &"
+	run_cmd(cmd)
+
+	cmd = "sudo nohup java -jar /root/selenium-server/selenium-server-standalone-2.32.0.jar > /root/selenium-server/sel-server.out 2> /root/selenium-server/sel-server.err &"
 	run_cmd(cmd)
 
 	cmd = "sudo dbus-uuidgen > /var/lib/dbus/machine-id"
