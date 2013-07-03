@@ -36,7 +36,7 @@
 <tr><td><a href="terminate-instance">terminate-instance</a></td></tr>
 <tr><td><a href="chk-terminate-instance">chk-terminate-instance</a></td></tr>
 <tr><td><a href="launch-inst-from-instances">launch-inst-from-instances</a></td></tr>
-<tr><td><a href="create-secutity-group">create-secutity-group</a></td></tr>
+<tr><td><a href="create-security-group">create-security-group</a></td></tr>
 <tr><td><a href="chk-create-secutity-group">chk-create-secutity-group</a></td></tr>
 <tr><td><a href="security-gr-add-rules">security-gr-add-rules</a></td></tr>
 <tr><td><a href="chk-security-gr-add-rules">chk-security-gr-add-rules</a></td></tr>
@@ -73,10 +73,10 @@
 <tr><td><a href="chk-delete-security-group">chk-delete-security-group</a></td></tr>
 <tr><td><a href="chk-attach-volume">chk-attach-volume</a></td></tr>
 <tr><td><a href="delete-snapshots-all">delete-snapshots-all</a></td></tr>
-<tr><td><a href="create-snapshot-register-as-inst">create-snapshot-register-as-inst</a></td></tr>
+<tr><td><a href="create-snapshot-register-as-image">create-snapshot-register-as-image</a></td></tr>
 <tr><td><a href="delete-snapshots-all">delete-snapshots-all</a></td></tr>
 <tr><td><a href="detach-volume-inst-page">detach-volume-inst-page</a></td></tr>
-<tr><td><a href="delete-all-inatances">delete-all-inatances</a></td></tr>
+<tr><td><a href="terminate-all-instances">terminate-all-instances</a></td></tr>
 <tr><td><a href="chk-terminate-instance">chk-terminate-instance</a></td></tr>
 <tr><td><a href="delete-volumes-all">delete-volumes-all</a></td></tr>
 <tr><td><a href="release-ip-to-cloud">release-ip-to-cloud</a></td></tr>

@@ -2,6 +2,7 @@ from se34euca.testcase.testcase_base import *
 
 class testcase_keypair(testcase_base):
 
+
     def generate_keypair(self):
         print "=== runTest: Generate Keypair ==="
         self.eucaUITester.base.test_ui_login()

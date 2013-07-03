@@ -20,6 +20,13 @@ class testcase_instance(testcase_base):
         self.eucaUITester.instance.test_ui_terminate_instance_all()
         self.eucaUITester.base.test_ui_logout()
 
+    def launch_instance_name_testinstance(self):
+        print "=== runTest: Launch Instance Named testinstance ==="
+        self.eucaUITester.base.test_ui_login()
+        self.eucaUITester.instance.test_ui_launch_instance_given_instance_name("testinstance")
+        self.eucaUITester.base.test_ui_logout()
+
+
 if __name__ == "__main__":
     unittest.main()
 

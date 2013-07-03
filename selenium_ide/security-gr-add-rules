@@ -52,21 +52,6 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
-	<td>id=more-actions-sgroups</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>id=more-actions-sgroups</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=more-actions-sgroups</td>
-	<td></td>
-</tr>
-<tr>
 	<td>waitForTextPresent</td>
 	<td>test</td>
 	<td></td>
