@@ -23,7 +23,7 @@ class testcase_instance(testcase_base):
     def launch_instance_name_testinstance(self):
         print "=== runTest: Launch Instance Named testinstance ==="
         self.eucaUITester.base.test_ui_login()
-        self.eucaUITester.instance.test_ui_launch_instance_name_testinstance()
+        self.eucaUITester.instance.test_ui_launch_instance_given_instance_name("testinstance")
         self.eucaUITester.base.test_ui_logout()
 
 

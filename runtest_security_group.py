@@ -29,7 +29,7 @@ def main():
 	parser.add_option("-a", "--account", dest="accountname", help="accountname")
 	parser.add_option("-u", "--user", dest="username", help="username")
 	parser.add_option("-w", "--password", dest="password", help="password")
-	parser.add_option("-t", "--testcase", dest="testcase", help="testcase: create_security_group, delete_security_group")
+	parser.add_option("-t", "--testcase", dest="testcase", help="testcase: create_security_group, create_empty_security_group, add_rules_to_security_group, delete_security_group, delete_security_group_all")
 	(options, args) = parser.parse_args()
 
 	if options.selenium_server_ip is not None:

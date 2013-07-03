@@ -2,30 +2,10 @@ from se34euca.lib.EucaUITestLib_Base import *
 
 class EucaUITestLib_IP_Address(EucaUITestLib_Base):
 
-    def test_ui_allocate_two_ip_addresses(self):
+    def test_ui_allocate_ip_address(self, ip_count):
         print
-        print "Started Test: Allocate Two IP Addresses"
-        self.click_element_by_link_text(link_text="Dashboard")
-        self.verify_element_by_link_text("Launch new instance")
-        self.verify_element_by_id("dashboard-netsec-eip")
-        print
-        print "Test: Go to the Page IP Address"
-        self.click_element_by_id("dashboard-netsec-eip")
-        self.click_element_by_id("table-eips-new")
-        self.verify_element_by_id("eip-allocate-count")
-        print
-        print "Test: Allocate Two IP Addresses"
-        self.set_keys_by_id("eip-allocate-count", "2")
-        self.click_element_by_id("eip-allocate-btn")
-        print
-        print "Finished: Allocate Two IP Addresses"
-        print
-        return 0
-
-    def test_ui_allocate_ip_address(self):
-        print
-        print "Started Test: Allocate IP Address"
-        self.click_element_by_link_text(link_text="Dashboard")
+        print "Started Test: Allocate IP Address: IP_COUNT " + str(ip_count)
+        self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
         self.verify_element_by_id("dashboard-netsec-eip")
         print
@@ -35,14 +15,14 @@ class EucaUITestLib_IP_Address(EucaUITestLib_Base):
         self.verify_element_by_id("eip-allocate-count")
         print
         print "Test: Allocate IP Address"
-        self.set_keys_by_id("eip-allocate-count", "1")
+        self.set_keys_by_id("eip-allocate-count", str(ip_count))
         self.click_element_by_id("eip-allocate-btn")
         print
-        print "Finished: Allocate Two IP Addresses"
+        print "Finished: Allocate IP Addresses"
         print
         return 0
 
-    def test_ui_check_ip_address_count(self,ip_count):
+    def test_ui_check_ip_address_count(self, ip_count):
         print
         print "Started Test: Check IP Address Count"
         self.click_element_by_link_text("Dashboard")
@@ -57,7 +37,7 @@ class EucaUITestLib_IP_Address(EucaUITestLib_Base):
     def test_ui_release_ip_address(self):
         print
         print "Started Test: Release IP Address"
-        self.click_element_by_link_text(link_text="Dashboard")
+        self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
         print
         print "Test: Go to the Page IP Address"

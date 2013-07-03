@@ -20,6 +20,7 @@ class EucaUITestLib_Security_Group(EucaUITestLib_Base):
     def test_ui_create_security_group(self):
         print
         print "Started Test: Create Security Group"
+        self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
         print
         print "Test: Go to the Page Security Group"
@@ -60,9 +61,56 @@ class EucaUITestLib_Security_Group(EucaUITestLib_Base):
         print
         return 0
 
+
+    def test_ui_create_empty_security_group(self):
+        print
+        print "Started Test: Create Security Group"
+        self.click_element_by_link_text("Dashboard")
+        self.verify_element_by_link_text("Launch new instance")
+        print
+        print "Test: Go to the Page Security Group"
+        self.click_element_by_css_selector("#dashboard-netsec-sgroup > span")
+        self.click_element_by_id("table-sgroups-new")
+        print
+        print "Test: Create Security Group"
+        self.set_keys_by_id("sgroup-name", "mywebservice")
+        self.set_keys_by_id("sgroup-description", "test")
+        self.click_element_by_id("sgroup-add-btn")
+        print
+        print "Finished: Create Security Group"
+        print
+        return 0
+
+
+    def test_ui_add_rules_to_security_group(self):
+        print
+        print "Started Test: Add rules to a Security Group"
+        self.click_element_by_link_text("Dashboard")
+        self.verify_element_by_link_text("Launch new instance")
+        print
+        print "Test: Go to the Page Security Group"
+        self.click_element_by_link_text("Network & Security")
+        self.click_element_by_link_text("Security Groups")
+        print"Test: Checkbox the security group"
+        self.click_element_by_css_selector('span[title="test"]')
+        print "Test: Add rules"
+        self.click_element_by_id("more-actions-sgroups")
+        self.click_element_by_link_text("Manage rules")
+        print "Adding TCP rule"
+        #self.select_text_by_id("sgroup-template", "SSH (TCP port 22, for terminal access)")
+        self.select_text_by_css_selector("div.content-sections-wrapper > div.rules.content-section > div.form-row > #sgroup-template","SSH (TCP port 22, for terminal access)")
+        self.set_keys_by_id("allow-ip", "0.0.0.0/0")
+        self.click_element_by_id("sgroup-add-btn")
+        print
+        print "Finished: Create Security Group"
+        print
+        return 0
+
+
     def test_ui_delete_security_group(self):
         print
         print "Started Test: Delete Security Group"
+        self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
         print
         print "Test: Go to the Page Security Group"
@@ -82,6 +130,7 @@ class EucaUITestLib_Security_Group(EucaUITestLib_Base):
     def test_ui_delete_security_group_all(self):
         print
         print "Started Test: Delete Security Group All"
+        self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
         print
         print "Test: Go to the Page Security Group"

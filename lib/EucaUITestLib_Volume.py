@@ -34,9 +34,9 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         print
         return 0
 
-    def test_ui_create_volume_name_v(self):
+    def test_ui_create_volume_given_volume_name(self, volume_name):
         print
-        print "Started Test: Create Volume Named v"
+        print "Started Test: Create Volume Given Volume Name: " + str(volume_name)
         print
         print "Test: Go to the Page Volume"
         self.click_element_by_link_text("Dashboard")
@@ -45,7 +45,7 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         print
         print "Test: Create New Volume"
         self.click_element_by_id("table-volumes-new")
-        self.set_keys_by_id("volume-name","v")
+        self.set_keys_by_id("volume-name",str(volume_name))
         self.set_keys_by_id("volume-size", "1")
         self.click_element_by_id("btn-volumes-delete-delete")
         #Verifying on Volumes Landing Page that volume Named v was created
@@ -53,9 +53,9 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         print "Verification"
         self.click_element_by_link_text(link_text="Dashboard")
         self.click_element_by_id("dashboard-storage-volume")
-        self.verify_element_by_link_text("v")
+        self.verify_element_by_link_text(str(volume_name))
         print
-        print "Finished: Create New Volume"
+        print "Finished: Create New Volume Given Volume Name"
         print
         return 0
 
@@ -113,9 +113,9 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         print
         return 0
 
-    def test_ui_create_snapshot_from_volume_name_testsnap(self):
+    def test_ui_create_snapshot_from_volume_given_snapshot_name(self, snapshot_name):
         print
-        print "Started Test: Create Snapshot From Volume Name testsnap"
+        print "Started Test: Create Snapshot From Volume Given Snapshot Name: " + str(snapshot_name)
         self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
         print
@@ -128,19 +128,17 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         print "Test: Create Snapshot From Volume"
         self.click_element_by_id("more-actions-volumes")
         self.click_element_by_link_text("Create snapshot from volume")
-        self.set_keys_by_id("snapshot-create-name", "testsnap")
+        self.set_keys_by_id("snapshot-create-name", str(snapshot_name))
         self.set_keys_by_id("snapshot-create-description", "Snapshot by Selenium Script")
         self.click_element_by_id("btn-volumes-delete-delete")
-        #Verifying on Snapshots Landing Page that snapshot Named testsnap was created
+        #Verifying on Snapshots Landing Page that snapshot Named "snapshot_name" was created
         print
         print "Verification"
         self.click_element_by_link_text(link_text="Dashboard")
         self.click_element_by_id("dashboard-storage-snapshot")
-        self.verify_element_by_link_text("testsnap")
+        self.verify_element_by_link_text(str(snapshot_name))
         print
-
-        print
-        print "Finished: Create Snapshot From Volume"
+        print "Finished: Create Snapshot From Volume Given Snapshot Name"
         print
         return 0
 

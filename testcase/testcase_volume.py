@@ -11,7 +11,7 @@ class testcase_volume(testcase_base):
     def create_volume_name_v(self):
         print "=== runTest: Create Volume Named v ==="
         self.eucaUITester.base.test_ui_login()
-        self.eucaUITester.volume.test_ui_create_volume_name_v()
+        self.eucaUITester.volume.test_ui_create_volume_given_volume_name("v")
         self.eucaUITester.base.test_ui_logout()
 
 
@@ -36,7 +36,7 @@ class testcase_volume(testcase_base):
     def create_snapshot_from_volume_name_testsnap(self):
         print "=== runTest: Create Snapshot From Volume and Name it testsnap ==="
         self.eucaUITester.base.test_ui_login()
-        self.eucaUITester.volume.test_ui_create_snapshot_from_volume_name_testsnap()
+        self.eucaUITester.volume.test_ui_create_snapshot_from_volume_given_snapshot_name("testsnap")
         self.eucaUITester.base.test_ui_logout()
 
     def attach_volume(self):

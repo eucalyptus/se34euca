@@ -197,7 +197,6 @@ class EucaUITestLib_Base(unittest.TestCase):
             try:
                 if self.is_element_present(this_element_type, element):
                     break
-                    print "Found element present"
             except: pass
             time.sleep(1)
        # else:
@@ -233,7 +232,7 @@ class EucaUITestLib_Base(unittest.TestCase):
 
     #VERIFY TEXT DISPLAYED
 
-    def verify_text_displayed_by_id(self,element_id,element_text):
+    def verify_text_displayed_by_id(self, element_id, element_text):
         #print("Verifying text " +element_text+" displayed at ID "+element_id)
         for i in range(self.retry):
             print "Wait On:: Trial: " + str(i)  +("Verifying text " +element_text+" displayed at ID "+element_id)

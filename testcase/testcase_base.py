@@ -5,12 +5,6 @@ class testcase_base(unittest.TestCase):
 
     eucaUITester = EucaUITester()
 
-    def setKeys_count(self, keys_count):
-        self.keys_count=keys_count
-
-    def setIP_address_count(self, ip_count):
-        self.ip_count=ip_count
-
     def setSeleniumServerInfo(self, ip, port):
         self.eucaUITester.setSeleniumServerInfo(ip, port)
 

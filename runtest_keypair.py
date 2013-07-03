@@ -17,7 +17,6 @@ def main():
     accountname = "eucalyptus"
     username = "admin"
     password = "password"
-    count="1" #dashboard item count for check_keypair_count test
 
     print "=============================="
     print "TEST KEYPAIR"
@@ -31,7 +30,7 @@ def main():
     parser.add_option("-a", "--account", dest="accountname", help="accountname")
     parser.add_option("-u", "--user", dest="username", help="username")
     parser.add_option("-w", "--password", dest="password", help="password")
-    parser.add_option("-t", "--testcase", dest="testcase", help="testcase: generate_keypair, delete_keypair, import_keypair, check_keypair_count")
+    parser.add_option("-t", "--testcase", dest="testcase", help="testcase: generate_keypair, delete_keypair, import_keypair")
     (options, args) = parser.parse_args()
 
     if options.selenium_server_ip is not None:
@@ -61,8 +60,6 @@ def main():
     testresult = TestResult()
 
     ui = testcase_keypair(testcase)
-    ui.setKeys_count(count)
-
 
     print
     print "### SETUP"

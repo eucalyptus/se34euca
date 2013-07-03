@@ -42,10 +42,10 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
 
 
 
-    def test_ui_launch_instance_name_testinstance(self):
+    def test_ui_launch_instance_given_instance_name(self, instance_name):
 
         print
-        print "Started Test: Launch Instance Named testinstance"
+        print "Started Test: Launch Instance Given Instance Name: " + str(instance_name)
         print
         print "Click: LINK_TEXT -> Launch new instance"
         self.click_element_by_link_text("Launch new instance")
@@ -55,7 +55,7 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         self.click_element_by_id("nextButton")
         print "Wait: ID -> launch-instance-type-num-instance"
         self.verify_element_by_id("launch-instance-type-num-instance")
-        self.set_keys_by_id("launch-instance-names", "testinstance")
+        self.set_keys_by_id("launch-instance-names", str(instance_name))
         print "Click: ID -> nextButton"
         self.click_element_by_id("nextButton")
         print "Select: ID -> launch-wizard-security-keypair-selector, TEXT -> None (advanced option)"

@@ -29,7 +29,7 @@ def main():
     parser.add_option("-a", "--account", dest="accountname", help="accountname")
     parser.add_option("-u", "--user", dest="username", help="username")
     parser.add_option("-w", "--password", dest="password", help="password")
-    parser.add_option("-t", "--testcase", dest="testcase", help="testcase: allocate_two_ip_addresses, allocate_ip_address, check_ip_address_count, release_ip_address")
+    parser.add_option("-t", "--testcase", dest="testcase", help="testcase: allocate_two_ip_addresses, allocate_ip_address, release_ip_address")
     (options, args) = parser.parse_args()
 
     if options.selenium_server_ip is not None:
@@ -58,7 +58,6 @@ def main():
 
     testresult = TestResult()
     ui = testcase_ip_address(testcase)
-    ui.setIP_address_count("1")
 
     print
     print "### SETUP"
