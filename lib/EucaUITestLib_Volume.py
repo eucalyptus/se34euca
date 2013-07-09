@@ -28,7 +28,7 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         self.click_element_by_id("table-volumes-new")
         self.verify_element_by_id("volume-size")
         self.set_keys_by_id("volume-size", "2")
-        self.click_element_by_id("btn-volumes-delete-delete")
+        self.click_element_by_id("button-dialog-createvolume-save")
         print
         print "Finished: Create New Volume"
         print
@@ -47,7 +47,7 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         self.click_element_by_id("table-volumes-new")
         self.set_keys_by_id("volume-name",str(volume_name))
         self.set_keys_by_id("volume-size", "1")
-        self.click_element_by_id("btn-volumes-delete-delete")
+        self.click_element_by_id("button-dialog-createvolume-save")
         #Verifying on Volumes Landing Page that volume Named v was created
         print
         print "Verification"
@@ -70,7 +70,7 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         print "Test: Delete Volume"
         self.click_element_by_id("more-actions-volumes")
         self.click_element_by_link_text("Delete")
-        self.click_element_by_id("btn-volumes-delete-delete")
+        self.click_element_by_id("button-dialog-deletevolume-delete")
         print
         print "Finished: Delete Volume"
         print
@@ -87,7 +87,7 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         print "Test: Delete Volume"
         self.click_element_by_id("more-actions-volumes")
         self.click_element_by_link_text("Delete")
-        self.click_element_by_id("btn-volumes-delete-delete")
+        self.click_element_by_id("button-dialog-deletevolume-delete")
         print
         print "Finished: Delete Volume All"
         print

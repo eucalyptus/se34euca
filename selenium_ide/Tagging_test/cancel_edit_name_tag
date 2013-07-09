@@ -63,10 +63,9 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>xpath=(//button[@id='btn-volumes-delete-delete'])[2]</td>
+	<td>id=button-dialog-edittags-cancel</td>
 	<td></td>
 </tr>
-
 </tbody></table>
 </body>
 </html>
