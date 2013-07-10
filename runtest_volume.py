@@ -84,7 +84,7 @@ def main():
     print "=============================="
     print "END OF TEST : VOLUME"
     print "=============================="
-
+    exit(len(testresult.failures))
 
 if __name__ == "__main__":
     main()
