@@ -58,6 +58,8 @@ def main():
 	print
 	print "*** BE SURE TO RUN BELOW COMMAND FIRST:"
 	print
+	print "export PYTHONPATH=$PYTHONPATH:/home/vagrant/se34euca"
+	print
 	print "export DISPLAY=:0"
 	print 
 
