@@ -100,6 +100,8 @@ export PYTHONPATH=$PYTHONPATH:/root/ui-test/se34euca
 <code>
 export DISPLAY=:0
 
+  * Or, add the 2 lines above to the file .bash_profile in your home directory.
+
 2 Have the Account, User and its Password Populated.
   * Se34Euca scripts do not automatically create a user for testing.
 
