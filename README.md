@@ -5,6 +5,7 @@ Selenium 34 Eucalyptus -- Eucalyptus User Console Test Framework Based on Seleni
 
 ### TEST LIB CLASS
 Directory: ./se34euca/lib/
+
 Description: These classes hold the implementation of operations and interactions on the UI via Selenium Web-Driver
 <pre>
 EucaUITestLib_Base.py
@@ -19,6 +20,7 @@ EucaUITestLib_Volume.py
 
 ### TEST LIB CONTAINER CLASS
 Directory: ./se34euca/lib/
+
 Description: This container class initializes the instances of the TEST LIB classes above
 <pre>
 EucaUITester.py
@@ -26,6 +28,7 @@ EucaUITester.py
 
 ### TEST CASE CLASS
 Directory: ./se34euca/testcase/
+
 Description: These classes arranges various operations in the TEST LIB classes to simulate specific user behaviors
 <pre>
 testcase_base.py
@@ -41,6 +44,7 @@ testcase_simulate_user.py	- Test Cases for Simulate User
 
 ### EXECUTABLE
 Directory: ./se34euca/
+
 Description: Executables to run testcases, categorized by cloud resource groups
 <pre>
 runtest_view_page.py
