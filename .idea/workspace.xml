@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db54d159-8d46-438b-9b63-855329dbc419" name="Default" comment="Fixed issues for upstream merge.">
+    <list default="true" id="db54d159-8d46-438b-9b63-855329dbc419" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtest_volume.py" afterPath="$PROJECT_DIR$/runtest_volume.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="1b4313d3-a15d-4ff3-83ce-a871b53f274e" name="New changelist" comment="" />
     <ignored path="se34euca.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1373497182802" ignored="false" />
+    <file path="/Dummy.txt" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1373497197563" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/openapi.jar!/standardSchemas/XMLSchema.xsd" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372409376303" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/openapi.jar!/standardSchemas/catalog.xsd" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372409376303" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/openapi.jar!/standardSchemas/xinclude.xsd" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372409376303" ignored="false" />
@@ -34,7 +35,7 @@
     <file path="/testcase_UI_manual_tests.py" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1373320198607" ignored="false" />
     <file path="/EucaUITestLib_Volume.py" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372887852299" ignored="false" />
     <file path="/testcase_volume.py" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1373495848841" ignored="false" />
-    <file path="/runtest_volume.py" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1373497145977" ignored="false" />
+    <file path="/runtest_volume.py" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1373497354011" ignored="false" />
     <file path="$USER_HOME$/Library/Application Support/Adium 2.0/Users/Default/Logs/IRC.alice_h/hobana.freenode.net/hobana.freenode.net (2013-07-01T13.40.34-0700).chatlog/hobana.freenode.net (2013-07-01T13.40.34-0700).xml" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372711297717" ignored="false" />
     <file path="$USER_HOME$/Library/Application Support/Adium 2.0/Users/Default/Logs/IRC.alice_h/#eucalyptus-ui/#eucalyptus-ui (2013-07-01T13.40.41-0700).chatlog/#eucalyptus-ui (2013-07-01T13.40.41-0700).xml" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372787110739" ignored="false" />
     <file path="$USER_HOME$/Library/Application Support/Adium 2.0/Users/Default/Logs/IRC.alice_h/#eucalyptus-devel/#eucalyptus-devel (2013-07-01T13.40.40-0700).chatlog/#eucalyptus-devel (2013-07-01T13.40.40-0700).xml" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372711297717" ignored="false" />
@@ -81,7 +82,7 @@
       <file leaf-file-name="runtest_volume.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/runtest_volume.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="59" selection-start="2822" selection-end="2822" vertical-scroll-proportion="0.60048425">
+            <state line="86" column="57" selection-start="2820" selection-end="2820" vertical-scroll-proportion="0.60048425">
               <folding>
                 <element signature="e#19#44#0" expanded="true" />
               </folding>
@@ -861,7 +862,11 @@
       <created>1373497180232</created>
       <updated>1373497180232</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Fixed issues for upstream merge.">
+      <created>1373497208674</created>
+      <updated>1373497208684</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1089,7 +1094,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/runtest_volume.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="59" selection-start="2822" selection-end="2822" vertical-scroll-proportion="0.60048425">
+        <state line="86" column="57" selection-start="2820" selection-end="2820" vertical-scroll-proportion="0.60048425">
           <folding>
             <element signature="e#19#44#0" expanded="true" />
           </folding>
