@@ -5,7 +5,7 @@ from selenium.common.exceptions import NoSuchElementException
 import unittest, time, re
 
 class UICheckException(Exception):
-    def __init__(message):
+    def __init__(self, message):
         raise Exception(message)
 
 class EucaUITestLib_Base(unittest.TestCase):
@@ -202,7 +202,7 @@ class EucaUITestLib_Base(unittest.TestCase):
                 if self.is_element_present(this_element_type, element):
                     break
             except: pass
-            raise UICheckException(self,"Time out")
+            #raise UICheckException("Time out")
             time.sleep(1)
        # else:
        #     self.fail("timed out after "+`self.retry`+" seconds")
@@ -276,7 +276,7 @@ class EucaUITestLib_Base(unittest.TestCase):
     # CLICK CALLS
     def click_element_by_link_text(self, link_text):
         if( self.check_if_element_present_by_type("LINK_TEXT", link_text) is not 0 ):
-            raise UICheckException("Element by link text not present: "  + link_text)
+            raise UICheckException("Element by link text not present: " + link_text)
         print "Click: Element Type: LINK_TEXT, Element: "+ link_text
         self.driver.find_element_by_link_text(link_text).click()
         return 0
