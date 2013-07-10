@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db54d159-8d46-438b-9b63-855329dbc419" name="Default" comment="Fixed issues for upstream merge.">
+    <list default="true" id="db54d159-8d46-438b-9b63-855329dbc419" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/EucaUITestLib_Base.py" afterPath="$PROJECT_DIR$/lib/EucaUITestLib_Base.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/EucaUITestLib_Volume.py" afterPath="$PROJECT_DIR$/lib/EucaUITestLib_Volume.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/selenium_ide/attach-volume-from-inst-page" afterPath="$PROJECT_DIR$/selenium_ide/attach-volume-from-inst-page" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/selenium_ide/detach-volume" afterPath="$PROJECT_DIR$/selenium_ide/detach-volume" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/selenium_ide/snapshot-from-volume" afterPath="$PROJECT_DIR$/selenium_ide/snapshot-from-volume" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="1b4313d3-a15d-4ff3-83ce-a871b53f274e" name="New changelist" comment="" />
     <ignored path="se34euca.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1373404303381" ignored="false" />
+    <file path="/Dummy.txt" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1373425859765" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/openapi.jar!/standardSchemas/XMLSchema.xsd" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372409376303" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/openapi.jar!/standardSchemas/catalog.xsd" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372409376303" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/openapi.jar!/standardSchemas/xinclude.xsd" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372409376303" ignored="false" />
@@ -22,7 +18,7 @@
     <file path="$USER_HOME$/Library/Application Support/Adium 2.0/Users/Default/Logs/IRC.alice_h/#eucalyptus-meeting/#eucalyptus-meeting (2013-06-28T09.34.31-0700).chatlog/#eucalyptus-meeting (2013-06-28T09.34.31-0700).xml" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372517453617" ignored="false" />
     <file path="$USER_HOME$/Library/Application Support/Adium 2.0/Users/Default/libpurple/accounts.xml" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372816529886" ignored="false" />
     <file path="$USER_HOME$/Library/Application Support/Adium 2.0/Users/Default/Logs/IRC.alice_h/#eucalyptus-devel/#eucalyptus-devel (2013-06-28T09.34.31-0700).chatlog/#eucalyptus-devel (2013-06-28T09.34.31-0700).xml" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372517453617" ignored="false" />
-    <file path="/EucaUITestLib_Base.py" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1373422798394" ignored="false" />
+    <file path="/EucaUITestLib_Base.py" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1373425977614" ignored="false" />
     <file path="/EucaUITestLib_Image.py" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372453811600" ignored="false" />
     <file path="$USER_HOME$/Library/Application Support/Adium 2.0/Users/Default/libpurple/blist.xml" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372711243272" ignored="false" />
     <file path="/runtest_keypair.py" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372727696384" ignored="false" />
@@ -151,7 +147,7 @@
       <file leaf-file-name="EucaUITestLib_Base.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/EucaUITestLib_Base.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="13" selection-start="561" selection-end="561" vertical-scroll-proportion="0.8794788">
+            <state line="204" column="40" selection-start="7300" selection-end="7300" vertical-scroll-proportion="0.63517916">
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -844,7 +840,11 @@
       <created>1372888358028</created>
       <updated>1372888358028</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fixed issues for upstream merge.">
+      <created>1373425862115</created>
+      <updated>1373425862115</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1070,7 +1070,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/EucaUITestLib_Base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="13" selection-start="561" selection-end="561" vertical-scroll-proportion="0.8794788">
+        <state line="204" column="40" selection-start="7300" selection-end="7300" vertical-scroll-proportion="0.63517916">
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>

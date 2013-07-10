@@ -202,7 +202,7 @@ class EucaUITestLib_Base(unittest.TestCase):
                 if self.is_element_present(this_element_type, element):
                     break
             except: pass
-            raise UICheckException("Time out")
+            raise UICheckException(self,"Time out")
             time.sleep(1)
        # else:
        #     self.fail("timed out after "+`self.retry`+" seconds")
