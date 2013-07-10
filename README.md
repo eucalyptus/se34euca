@@ -88,7 +88,10 @@ cd ..
 1 Run the command below on your console:
 
 <code>
-export PYTHONPATH=$PYTHONPATH:/root/ui-test
+cd ./se34euca
+
+<code>
+export PYTHONPATH=$PYTHONPATH:/root/ui-test/se34euca
 
 <code>
 export DISPLAY=:0
@@ -108,7 +111,7 @@ export DISPLAY=:0
 Example.
 
 <code>
-export PYTHONPATH=$PYTHONPATH:/root/ui-test
+export PYTHONPATH=$PYTHONPATH:/root/ui-test/se34euca
 
 <code>
 export DISPLAY=:0
@@ -138,7 +141,7 @@ export DISPLAY=:0
 Example.
 
 <code>
-export PYTHONPATH=$PYTHONPATH:/root/ui-test
+export PYTHONPATH=$PYTHONPATH:/root/ui-test/se34euca
 
 <code>
 export DISPLAY=:0
@@ -165,7 +168,7 @@ export DISPLAY=:0
 Example.
 
 <code>
-export PYTHONPATH=$PYTHONPATH:/root/ui-test
+export PYTHONPATH=$PYTHONPATH:/root/ui-test/se34euca
 
 <code>
 export DISPLAY=:0
@@ -191,7 +194,7 @@ export DISPLAY=:0
 Example.
 
 <code>
-export PYTHONPATH=$PYTHONPATH:/root/ui-test
+export PYTHONPATH=$PYTHONPATH:/root/ui-test/se34euca
 
 <code>
 export DISPLAY=:0
@@ -217,7 +220,7 @@ export DISPLAY=:0
 Example.
 
 <code>
-export PYTHONPATH=$PYTHONPATH:/root/ui-test
+export PYTHONPATH=$PYTHONPATH:/root/ui-test/se34euca
 
 <code>
 export DISPLAY=:0
@@ -240,7 +243,7 @@ export DISPLAY=:0
 Example.
 
 <code>
-export PYTHONPATH=$PYTHONPATH:/root/ui-test
+export PYTHONPATH=$PYTHONPATH:/root/ui-test/se34euca
 
 <code>
 export DISPLAY=:0
@@ -266,7 +269,7 @@ export DISPLAY=:0
 Example.
 
 <code>
-export PYTHONPATH=$PYTHONPATH:/root/ui-test
+export PYTHONPATH=$PYTHONPATH:/root/ui-test/se34euca
 
 <code>
 export DISPLAY=:0
@@ -289,7 +292,7 @@ export DISPLAY=:0
 Example.
 
 <code>
-export PYTHONPATH=$PYTHONPATH:/root/ui-test
+export PYTHONPATH=$PYTHONPATH:/root/ui-test/se34euca
 
 <code>
 export DISPLAY=:0
