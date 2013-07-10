@@ -4,6 +4,7 @@ se34euca
 Selenium 34 Eucalyptus -- Eucalyptus User Console Test Framework Based on Selenium
 
 ### TEST LIB CLASS
+Directory: ./se34euca/lib
 <pre>
 EucaUITestLib_Base.py
 EucaUITestLib_Image.py
@@ -16,11 +17,13 @@ EucaUITestLib_Volume.py
 </pre>
 
 ### TEST LIB CONTAINER CLASS
+Directory: ./se34euca/lib
 <pre>
 EucaUITester.py
 </pre>
 
 ### TEST CASE CLASS
+Directory: ./se34euca/testcase
 <pre>
 testcase_base.py
 testcase_view_page.py 		- Test Cases for Viewing Pages
@@ -34,6 +37,7 @@ testcase_simulate_user.py	- Test Cases for Simulate User
 </pre>
 
 ### EXECUTABLE
+Directory: ./se34euca
 <pre>
 runtest_view_page.py
 runtest_instance.py
