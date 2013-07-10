@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db54d159-8d46-438b-9b63-855329dbc419" name="Default" comment="">
+    <list default="true" id="db54d159-8d46-438b-9b63-855329dbc419" name="Default" comment="Fixed issues for upstream merge.">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/EucaUITestLib_Base.py" afterPath="$PROJECT_DIR$/lib/EucaUITestLib_Base.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/EucaUITestLib_Volume.py" afterPath="$PROJECT_DIR$/lib/EucaUITestLib_Volume.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/selenium_ide/create-volume" afterPath="$PROJECT_DIR$/selenium_ide/create-volume" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testcase/testcase_UI_manual_tests.py" afterPath="$PROJECT_DIR$/testcase/testcase_UI_manual_tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/selenium_ide/attach-volume-from-inst-page" afterPath="$PROJECT_DIR$/selenium_ide/attach-volume-from-inst-page" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/selenium_ide/detach-volume" afterPath="$PROJECT_DIR$/selenium_ide/detach-volume" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/selenium_ide/snapshot-from-volume" afterPath="$PROJECT_DIR$/selenium_ide/snapshot-from-volume" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="1b4313d3-a15d-4ff3-83ce-a871b53f274e" name="New changelist" comment="" />
     <ignored path="se34euca.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372888355624" ignored="false" />
+    <file path="/Dummy.txt" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1373404303381" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/openapi.jar!/standardSchemas/XMLSchema.xsd" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372409376303" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/openapi.jar!/standardSchemas/catalog.xsd" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372409376303" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/openapi.jar!/standardSchemas/xinclude.xsd" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372409376303" ignored="false" />
@@ -19,7 +22,7 @@
     <file path="$USER_HOME$/Library/Application Support/Adium 2.0/Users/Default/Logs/IRC.alice_h/#eucalyptus-meeting/#eucalyptus-meeting (2013-06-28T09.34.31-0700).chatlog/#eucalyptus-meeting (2013-06-28T09.34.31-0700).xml" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372517453617" ignored="false" />
     <file path="$USER_HOME$/Library/Application Support/Adium 2.0/Users/Default/libpurple/accounts.xml" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372816529886" ignored="false" />
     <file path="$USER_HOME$/Library/Application Support/Adium 2.0/Users/Default/Logs/IRC.alice_h/#eucalyptus-devel/#eucalyptus-devel (2013-06-28T09.34.31-0700).chatlog/#eucalyptus-devel (2013-06-28T09.34.31-0700).xml" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372517453617" ignored="false" />
-    <file path="/EucaUITestLib_Base.py" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372711898365" ignored="false" />
+    <file path="/EucaUITestLib_Base.py" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1373422798394" ignored="false" />
     <file path="/EucaUITestLib_Image.py" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372453811600" ignored="false" />
     <file path="$USER_HOME$/Library/Application Support/Adium 2.0/Users/Default/libpurple/blist.xml" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372711243272" ignored="false" />
     <file path="/runtest_keypair.py" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372727696384" ignored="false" />
@@ -71,10 +74,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="EucaUITestLib_Volume.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="EucaUITestLib_Volume.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/EucaUITestLib_Volume.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="67" selection-start="2777" selection-end="2777" vertical-scroll-proportion="-0.3409091">
+            <state line="83" column="24" selection-start="3051" selection-end="3051" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -145,11 +148,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testcase_keypair.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testcase/testcase_keypair.py">
+      <file leaf-file-name="EucaUITestLib_Base.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/EucaUITestLib_Base.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="47" selection-start="560" selection-end="560" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="19" column="13" selection-start="561" selection-end="561" vertical-scroll-proportion="0.8794788">
+              <folding>
+                <element signature="e#0#30#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -190,7 +195,6 @@
         <option value="$PROJECT_DIR$/testcase/testcase_security_group.py" />
         <option value="$PROJECT_DIR$/selenium_ide/README.md" />
         <option value="$PROJECT_DIR$/lib/EucaUITestLib_Security_Group.py" />
-        <option value="$PROJECT_DIR$/lib/EucaUITestLib_Base.py" />
         <option value="$PROJECT_DIR$/lib/EucaUITestLib_IP_Address.py" />
         <option value="$PROJECT_DIR$/lib/EucaUITestLib_Keypair.py" />
         <option value="$PROJECT_DIR$/testcase/testcase_base.py" />
@@ -203,14 +207,15 @@
         <option value="$PROJECT_DIR$/testcase/testcase_volume.py" />
         <option value="$PROJECT_DIR$/testcase/testcase_UI_manual_tests.py" />
         <option value="$PROJECT_DIR$/lib/EucaUITestLib_Volume.py" />
+        <option value="$PROJECT_DIR$/lib/EucaUITestLib_Base.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="38" />
-    <option name="y" value="101" />
+    <option name="x" value="28" />
+    <option name="y" value="22" />
     <option name="width" value="1246" />
-    <option name="height" value="715" />
+    <option name="height" value="714" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -353,7 +358,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
+    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PythonSdkConfigurable" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
@@ -729,7 +734,7 @@
       <module name="se34euca" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/runtest_volume.py" />
-      <option name="PARAMETERS" value="-s 10.111.4.114 -i 10.111.1.127 -a ui-test-acct-00 -u user00 -w mypassword1 -t create_volume" />
+      <option name="PARAMETERS" value="-s 10.111.4.114 -i 10.111.1.127 -a ui-test-acct-00 -u user00 -w mypassword1 -t create_snapshot_from_volume" />
       <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PyDebugRunner" />
@@ -863,20 +868,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="38" y="101" width="1246" height="715" extended-state="0" />
+    <frame x="28" y="22" width="1246" height="714" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977304" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918397" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32804233" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24878444" sideWeight="0.67081606" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977778" sideWeight="0.6575875" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29416665" sideWeight="0.66386557" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29416665" sideWeight="0.6632997" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.51510066" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39972338" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33613446" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33670035" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24902724" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -956,15 +961,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/EucaUITestLib_Base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="273" column="20" selection-start="10309" selection-end="10309" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testcase/testcase_simulate_user.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -1023,13 +1019,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/EucaUITestLib_Instance.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="70" selection-start="2385" selection-end="2385" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testcase/testcase_volume.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="46" selection-start="703" selection-end="703" vertical-scroll-proportion="0.0">
@@ -1065,10 +1054,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/EucaUITestLib_Instance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="70" selection-start="2385" selection-end="2385" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/EucaUITestLib_Volume.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="67" selection-start="2777" selection-end="2777" vertical-scroll-proportion="-0.3409091">
+        <state line="83" column="24" selection-start="3051" selection-end="3051" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/EucaUITestLib_Base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="13" selection-start="561" selection-end="561" vertical-scroll-proportion="0.8794788">
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
