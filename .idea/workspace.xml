@@ -8,7 +8,7 @@
     <list id="1b4313d3-a15d-4ff3-83ce-a871b53f274e" name="New changelist" comment="" />
     <ignored path="se34euca.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1373491604089" ignored="false" />
+    <file path="/Dummy.txt" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1373496251035" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/openapi.jar!/standardSchemas/XMLSchema.xsd" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372409376303" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/openapi.jar!/standardSchemas/catalog.xsd" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372409376303" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/openapi.jar!/standardSchemas/xinclude.xsd" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372409376303" ignored="false" />
@@ -35,7 +35,7 @@
     <file path="/testcase_UI_manual_tests.py" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1373320198607" ignored="false" />
     <file path="/EucaUITestLib_Volume.py" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372887852299" ignored="false" />
     <file path="/testcase_volume.py" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1373495848841" ignored="false" />
-    <file path="/runtest_volume.py" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1373496212310" ignored="false" />
+    <file path="/runtest_volume.py" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1373497145977" ignored="false" />
     <file path="$USER_HOME$/Library/Application Support/Adium 2.0/Users/Default/Logs/IRC.alice_h/hobana.freenode.net/hobana.freenode.net (2013-07-01T13.40.34-0700).chatlog/hobana.freenode.net (2013-07-01T13.40.34-0700).xml" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372711297717" ignored="false" />
     <file path="$USER_HOME$/Library/Application Support/Adium 2.0/Users/Default/Logs/IRC.alice_h/#eucalyptus-ui/#eucalyptus-ui (2013-07-01T13.40.41-0700).chatlog/#eucalyptus-ui (2013-07-01T13.40.41-0700).xml" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372787110739" ignored="false" />
     <file path="$USER_HOME$/Library/Application Support/Adium 2.0/Users/Default/Logs/IRC.alice_h/#eucalyptus-devel/#eucalyptus-devel (2013-07-01T13.40.40-0700).chatlog/#eucalyptus-devel (2013-07-01T13.40.40-0700).xml" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372711297717" ignored="false" />
@@ -82,7 +82,7 @@
       <file leaf-file-name="runtest_volume.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/runtest_volume.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="10" selection-start="2836" selection-end="2836" vertical-scroll-proportion="0.7094431">
+            <state line="86" column="59" selection-start="2822" selection-end="2822" vertical-scroll-proportion="0.60048425">
               <folding>
                 <element signature="e#19#44#0" expanded="true" />
               </folding>
@@ -854,7 +854,11 @@
       <created>1373491608043</created>
       <updated>1373491608043</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fixed issues for upstream merge.">
+      <created>1373496254439</created>
+      <updated>1373496254439</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -879,7 +883,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="22" width="1246" height="714" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918397" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -887,7 +891,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24878444" sideWeight="0.67081606" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977778" sideWeight="0.6575875" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29416665" sideWeight="0.8030303" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29416665" sideWeight="0.8030303" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.51510066" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39972338" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1082,7 +1086,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/runtest_volume.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="10" selection-start="2836" selection-end="2836" vertical-scroll-proportion="0.7094431">
+        <state line="86" column="59" selection-start="2822" selection-end="2822" vertical-scroll-proportion="0.60048425">
           <folding>
             <element signature="e#19#44#0" expanded="true" />
           </folding>
