@@ -57,6 +57,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>mouseDown</td>
+	<td>//td[2]</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>css=div.icon_delete.tag-control</td>
 	<td></td>
@@ -68,7 +73,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=btn-volumes-delete-delete</td>
+	<td>id=button-dialog-edittags-save</td>
 	<td></td>
 </tr>
 <tr>

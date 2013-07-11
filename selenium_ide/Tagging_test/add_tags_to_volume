@@ -117,13 +117,8 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForText</td>
-	<td>xpath=(//button[@id='btn-volumes-delete-delete'])[2]</td>
-	<td>Cancel</td>
-</tr>
-<tr>
 	<td>click</td>
-	<td>id=btn-volumes-delete-delete</td>
+	<td>id=button-dialog-edittags-save</td>
 	<td></td>
 </tr>
 <tr>

@@ -43,6 +43,31 @@ class EucaUITestLib_Keypair(EucaUITestLib_Base):
         print
         return 0
 
+    def test_ui_generate_keypair_name_demokey(self):
+        print
+        print "Started Test: Generate Keypair"
+        self.click_element_by_link_text("Dashboard")
+        self.verify_element_by_link_text("Launch new instance")
+        self.click_element_by_id("dashboard-netsec-keypair")
+        print
+        print "Test: Clicked the GoToPage Button"
+        self.click_element_by_id("table-keys-new")
+        print
+        print "Test: Generate New Keypair"
+        self.set_keys_by_id("key-name", "demokey")
+        self.click_element_by_id("keys-add-btn")
+        print"Test: Verification"
+        #Verifying on Key Pairs landing page by key pair name that key pair is present
+        self.click_element_by_link_text("Dashboard")
+        self.click_element_by_link_text("Network & Security")
+        self.click_element_by_link_text("Key Pairs")
+        self.verify_element_by_css_selector('span[title="demokey"]')
+        print
+        print
+        print "Finished Test: Generate Keypair"
+        print
+        return 0
+
     def test_ui_import_keypair(self):
         print
         print "Started Test: Import Keypair"

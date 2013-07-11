@@ -98,12 +98,12 @@
 </tr>
 <tr>
 	<td>waitForVisible</td>
-	<td>id=btn-volumes-delete-delete</td>
+	<td>id=button-dialog-detachvolume-detach</td>
 	<td>Yes, detach</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=btn-volumes-delete-delete</td>
+	<td>id=button-dialog-detachvolume-detach</td>
 	<td>Yes, detach</td>
 </tr>
 <tr>

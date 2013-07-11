@@ -16,7 +16,7 @@ class EucaUITester():
     accountname = "eucalyptus"
     username = "admin"
     password = "password"
-    retry = 5
+    retry = 120
 
     def setSeleniumServerInfo(self, ip, port):
         self.selenium_server_ip = ip

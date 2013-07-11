@@ -27,6 +27,13 @@ class testcase_keypair(testcase_base):
         self.eucaUITester.keypair.test_ui_delete_keypair_all()
         self.eucaUITester.base.test_ui_logout()
 
+    def create_keypair_demokey(self):
+        print "=== runTest: Create Keypair named demokey ==="
+        self.eucaUITester.base.test_ui_login()
+        self.eucaUITester.keypair.test_ui_generate_keypair_name_demokey()
+        self.eucaUITester.base.test_ui_logout()
+
+
 if __name__ == "__main__":
     unittest.main()
 

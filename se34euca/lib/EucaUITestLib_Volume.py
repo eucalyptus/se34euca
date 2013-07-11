@@ -28,7 +28,14 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         self.click_element_by_id("table-volumes-new")
         self.verify_element_by_id("volume-size")
         self.set_keys_by_id("volume-size", "2")
-        self.click_element_by_id("btn-volumes-delete-delete")
+        self.click_element_by_id("button-dialog-createvolume-save")
+        print "Verification"
+        self.click_element_by_link_text(link_text="Dashboard")
+        self.click_element_by_id("dashboard-storage-volume")
+        self.verify_element_by_link_text()
+        print
+        print "Finished: Create New Volume Given Volume Name"
+        print
         print
         print "Finished: Create New Volume"
         print
@@ -47,7 +54,7 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         self.click_element_by_id("table-volumes-new")
         self.set_keys_by_id("volume-name",str(volume_name))
         self.set_keys_by_id("volume-size", "1")
-        self.click_element_by_id("btn-volumes-delete-delete")
+        self.click_element_by_id("button-dialog-createvolume-save")
         #Verifying on Volumes Landing Page that volume Named v was created
         print
         print "Verification"
@@ -70,7 +77,7 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         print "Test: Delete Volume"
         self.click_element_by_id("more-actions-volumes")
         self.click_element_by_link_text("Delete")
-        self.click_element_by_id("btn-volumes-delete-delete")
+        self.click_element_by_id("button-dialog-deletevolume-delete")
         print
         print "Finished: Delete Volume"
         print
@@ -87,7 +94,7 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         print "Test: Delete Volume"
         self.click_element_by_id("more-actions-volumes")
         self.click_element_by_link_text("Delete")
-        self.click_element_by_id("btn-volumes-delete-delete")
+        self.click_element_by_id("button-dialog-deletevolume-delete")
         print
         print "Finished: Delete Volume All"
         print
@@ -107,7 +114,7 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         self.click_element_by_id("more-actions-volumes")
         self.click_element_by_link_text("Create snapshot from volume")
         self.set_keys_by_id("snapshot-create-description", "Snapshot by Selenium Script")
-        self.click_element_by_id("btn-volumes-delete-delete")
+        self.click_element_by_id("button-dialog-createsnapshot-save")
         print
         print "Finished: Create Snapshot From Volume"
         print
@@ -163,7 +170,7 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         self.set_keys_by_css_selector("#volumes-attach-dialog-wrapper > #volumes-attach-dialog > div.dialog-inner-content > div.form-row > #volume-attach-instance-id",instance_id)
         self.set_keys_by_id("volume-attach-device-name", "/dev/sdf")
         self.click_element_by_id("volumes-attach-dialog")
-        self.click_element_by_id("btn-volumes-delete-delete")
+        self.click_element_by_id("button-dialog-attachvolume-save")
         print
         print "Verification"
         self.click_element_by_link_text(link_text="Dashboard")
