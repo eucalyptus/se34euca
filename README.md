@@ -3,7 +3,7 @@ se34euca
 
 Selenium 34 Eucalyptus -- Eucalyptus User Console Test Framework Based on Selenium
 
-[Guidelines for Contributing Testcases](https://github.com/eucalyptus/se34euca/wiki/Guidelines-to-contributing-to-se34euca-project)
+[Guidelines for Contributing to se34euca project](https://github.com/eucalyptus/se34euca/wiki/Guidelines-to-contributing-to-se34euca-project)
 
 ### TEST LIB CLASS
 Directory: ./se34euca/lib/
