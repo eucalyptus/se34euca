@@ -86,7 +86,7 @@ def main():
     print "=============================="
     print "END OF TEST : KEYPAIR"
     print "=============================="
-
+    exit(len(testresult.failures) + len(testresult.errors))
 
 if __name__ == "__main__":
     main()
