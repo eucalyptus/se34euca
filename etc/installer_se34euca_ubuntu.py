@@ -39,14 +39,14 @@ def main():
 	cmd = "mkdir -p /root/selenium-server"
         run_cmd(cmd)
 
-	wget_cmd = "wget http://selenium.googlecode.com/files/selenium-server-standalone-2.25.0.jar"
+	wget_cmd = "wget http://selenium.googlecode.com/files/selenium-server-standalone-2.32.0.jar"
 	cmd = "cd /root/selenium-server/; " + wget_cmd
 	run_cmd(cmd)
 
 	cmd = "Xvfb :0 -ac 2> /dev/null &"
 	run_cmd(cmd)
 
-	run_selenium = "nohup java -jar selenium-server-standalone-2.25.0.jar &"
+	run_selenium = "nohup java -jar selenium-server-standalone-2.32.0.jar &"
 	cmd = "cd /root/selenium-server/; " + run_selenium
 	run_cmd(cmd)
 
@@ -57,6 +57,8 @@ def main():
 	print "TO DO:"
 	print
 	print "*** BE SURE TO RUN BELOW COMMAND FIRST:"
+	print
+	print "export PYTHONPATH=$PYTHONPATH:/home/vagrant/se34euca"
 	print
 	print "export DISPLAY=:0"
 	print 

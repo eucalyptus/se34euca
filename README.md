@@ -3,7 +3,12 @@ se34euca
 
 Selenium 34 Eucalyptus -- Eucalyptus User Console Test Framework Based on Selenium
 
+[Guidelines for contributing to se34euca project](https://github.com/eucalyptus/se34euca/wiki/Guidelines-to-contributing-to-se34euca-project)
+
 ### TEST LIB CLASS
+Directory: ./se34euca/lib/
+
+Description: These classes hold the implementation of operations and interactions on the UI via Selenium Web-Driver
 <pre>
 EucaUITestLib_Base.py
 EucaUITestLib_Image.py
@@ -16,11 +21,17 @@ EucaUITestLib_Volume.py
 </pre>
 
 ### TEST LIB CONTAINER CLASS
+Directory: ./se34euca/lib/
+
+Description: This container class initializes the instances of the TEST LIB classes above
 <pre>
 EucaUITester.py
 </pre>
 
 ### TEST CASE CLASS
+Directory: ./se34euca/testcase/
+
+Description: These classes arranges various operations in the TEST LIB classes to simulate specific user behaviors
 <pre>
 testcase_base.py
 testcase_view_page.py 		- Test Cases for Viewing Pages
@@ -34,6 +45,9 @@ testcase_simulate_user.py	- Test Cases for Simulate User
 </pre>
 
 ### EXECUTABLE
+Directory: ./se34euca/
+
+Description: Executables to run testcases, categorized by cloud resource groups
 <pre>
 runtest_view_page.py
 runtest_instance.py
@@ -47,7 +61,24 @@ runtest_simulate_user.py
 
 ## INSTALLATION GUIDE
 
-### ON UBUNTU LINUX
+### ON CENTOS 6 LINUX OS
+
+<code>
+sudo yum -y install git
+
+<code>
+git clone git://github.com/eucalyptus/se34euca.git
+
+<code>
+cd ./se34euca/etc/
+
+<code>
+./installer_se34euca_centos.py
+
+<code>
+cd ..
+
+### ON UBUNTU LINUX OS
 
 <code>
 sudo apt-get -y install git-core
@@ -59,7 +90,7 @@ git clone git://github.com/eucalyptus/se34euca.git
 cd ./se34euca/etc/
 
 <code>
-./installer_se34euca.py
+./installer_se34euca_ubuntu.py
 
 <code>
 cd ..
@@ -71,10 +102,15 @@ cd ..
 1 Run the command below on your console:
 
 <code>
-export PYTHONPATH=$PYTHONPATH:/root/ui-test
+cd ./se34euca
+
+<code>
+export PYTHONPATH=$PYTHONPATH:/root/ui-test/se34euca
 
 <code>
 export DISPLAY=:0
+
+  * Or, add the 2 lines above to the file .bash_profile in your home directory.
 
 2 Have the Account, User and its Password Populated.
   * Se34Euca scripts do not automatically create a user for testing.
@@ -91,7 +127,7 @@ export DISPLAY=:0
 Example.
 
 <code>
-export PYTHONPATH=$PYTHONPATH:/root/ui-test
+export PYTHONPATH=$PYTHONPATH:/root/ui-test/se34euca
 
 <code>
 export DISPLAY=:0
@@ -121,7 +157,7 @@ export DISPLAY=:0
 Example.
 
 <code>
-export PYTHONPATH=$PYTHONPATH:/root/ui-test
+export PYTHONPATH=$PYTHONPATH:/root/ui-test/se34euca
 
 <code>
 export DISPLAY=:0
@@ -148,7 +184,7 @@ export DISPLAY=:0
 Example.
 
 <code>
-export PYTHONPATH=$PYTHONPATH:/root/ui-test
+export PYTHONPATH=$PYTHONPATH:/root/ui-test/se34euca
 
 <code>
 export DISPLAY=:0
@@ -174,7 +210,7 @@ export DISPLAY=:0
 Example.
 
 <code>
-export PYTHONPATH=$PYTHONPATH:/root/ui-test
+export PYTHONPATH=$PYTHONPATH:/root/ui-test/se34euca
 
 <code>
 export DISPLAY=:0
@@ -200,7 +236,7 @@ export DISPLAY=:0
 Example.
 
 <code>
-export PYTHONPATH=$PYTHONPATH:/root/ui-test
+export PYTHONPATH=$PYTHONPATH:/root/ui-test/se34euca
 
 <code>
 export DISPLAY=:0
@@ -223,7 +259,7 @@ export DISPLAY=:0
 Example.
 
 <code>
-export PYTHONPATH=$PYTHONPATH:/root/ui-test
+export PYTHONPATH=$PYTHONPATH:/root/ui-test/se34euca
 
 <code>
 export DISPLAY=:0
@@ -249,7 +285,7 @@ export DISPLAY=:0
 Example.
 
 <code>
-export PYTHONPATH=$PYTHONPATH:/root/ui-test
+export PYTHONPATH=$PYTHONPATH:/root/ui-test/se34euca
 
 <code>
 export DISPLAY=:0
@@ -272,7 +308,7 @@ export DISPLAY=:0
 Example.
 
 <code>
-export PYTHONPATH=$PYTHONPATH:/root/ui-test
+export PYTHONPATH=$PYTHONPATH:/root/ui-test/se34euca
 
 <code>
 export DISPLAY=:0
