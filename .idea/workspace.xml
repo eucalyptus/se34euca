@@ -2,43 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db54d159-8d46-438b-9b63-855329dbc419" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/EucaUITestLib_Base.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/EucaUITestLib_IP_Address.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/EucaUITestLib_Image.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/EucaUITestLib_Instance.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/EucaUITestLib_Keypair.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/EucaUITestLib_Security_Group.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/EucaUITestLib_Snapshot.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/EucaUITestLib_Volume.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/EucaUITester.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtest_UI_manual_tests.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtest_instance.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtest_ip_address.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtest_keypair.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtest_security_group.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtest_simulate_user.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtest_snapshot.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtest_view_page.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtest_volume.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/testcase/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/testcase/testcase_UI_manual_tests.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/testcase/testcase_base.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/testcase/testcase_instance.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/testcase/testcase_ip_address.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/testcase/testcase_keypair.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/testcase/testcase_security_group.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/testcase/testcase_simulate_user.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/testcase/testcase_snapshot.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/testcase/testcase_view_page.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/testcase/testcase_volume.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="1b4313d3-a15d-4ff3-83ce-a871b53f274e" name="New changelist" comment="" />
     <ignored path="se34euca.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1373506112187" ignored="false" />
+    <file path="/Dummy.txt" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1373578095871" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/openapi.jar!/standardSchemas/XMLSchema.xsd" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372409376303" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/openapi.jar!/standardSchemas/catalog.xsd" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372409376303" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/openapi.jar!/standardSchemas/xinclude.xsd" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372409376303" ignored="false" />
@@ -797,7 +766,11 @@
       <created>1373506114266</created>
       <updated>1373506114266</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Fixed issues for upstream merge.">
+      <created>1373578100098</created>
+      <updated>1373578100098</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
