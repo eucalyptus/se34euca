@@ -107,6 +107,27 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         print "Click: ID -> nextButton"
         self.click_element_by_id("finishButton")
 
+    def test_ui_launch_more_like_this(self):
+        print
+        print "Started Test: Launch More Like This Instance"
+        print
+        print "Click: LINK_TEXT -> Dashboard"
+        self.click_element_by_link_text("Dashboard")
+        print "Click: LINK_TEXT -> Instances"
+        self.click_element_by_link_text("Instances")
+        print "Click: CSS_SELECTOR -> li.toggle-on > ul > li > a"
+        self.click_element_by_css_selector("li.toggle-on > ul > li > a")
+        print 'Click: CSS_SELECTOR -> td.checkbox-cell > input[type="checkbox"]'
+        self.click_element_by_css_selector('td.checkbox-cell > input[type="checkbox"]')
+        print"Click: ID -> more-actions-instances"
+        self.click_element_by_id("more-actions-instances")
+        print "Click: LINK_TEXT -> Launch more like this"
+        self.click_element_by_link_text("Launch more like this")
+        print "Select: ID -> launch-more-num-instance, TEXT -> 1"
+        self.set_keys_by_id("launch-more-num-instance","1")
+        print "Click: ID -> btn-launch-more"
+        self.click_element_by_id("btn-launch-more")
+
     def test_ui_terminate_instance_basic(self):
         print
         print "Started Test: Terminate Instance Basic"

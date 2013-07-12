@@ -32,6 +32,12 @@ class testcase_instance(testcase_base):
         self.eucaUITester.instance.test_ui_launch_instance_from_instances_lp()
         self.eucaUITester.base.test_ui_logout()
 
+    def launch_more_like_this(self):
+        print "=== runTest: Launch More Instances Like This ==="
+        self.eucaUITester.base.test_ui_login()
+        self.eucaUITester.instance.test_ui_launch_more_like_this()
+        self.eucaUITester.base.test_ui_logout()
+
 
     def launch_instance_name_testinstance(self):
         print "=== runTest: Launch Instance Named testinstance ==="
