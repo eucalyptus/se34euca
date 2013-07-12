@@ -67,6 +67,46 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         print
         return 0
 
+    def test_ui_launch_instance_from_images_lp(self):
+        print
+        print "Started Test: Launch Instance from Images Landing Page"
+        print
+        print "Click: LINK_TEXT -> Dashboard"
+        self.click_element_by_link_text("Dashboard")
+        print "Click: LINK_TEXT -> Images"
+        self.click_element_by_link_text("Images")
+        print "Click: LINK_TEXT -> Launch instance"
+        self.click_element_by_link_text("Launch instance")
+        print "Click: ID -> nextButton"
+        self.click_element_by_id("nextButton")
+        print "Select: ID -> launch-wizard-security-keypair-selector, TEXT -> my-sel-gen-key-00"
+        self.select_text_by_id("launch-wizard-security-keypair-selector", "my-sel-gen-key-00")
+        print "Click: ID -> nextButton"
+        self.click_element_by_id("finishButton")
+
+    def test_ui_launch_instance_from_instances_lp(self):
+        print
+        print "Started Test: Launch Instance from Instances Landing Page"
+        print
+        print "Click: LINK_TEXT -> Dashboard"
+        self.click_element_by_link_text("Dashboard")
+        print "Click: LINK_TEXT -> Instances"
+        self.click_element_by_link_text("Instances")
+        print "Click: CSS_SELECTOR -> li.toggle-on > ul > li > a"
+        self.click_element_by_css_selector("li.toggle-on > ul > li > a")
+        print "Click: ID -> table-instances-new"
+        self.click_element_by_id("table-instances-new")
+        print "Click: CSS_SELECTOR -> div.image-name"
+        self.click_element_by_css_selector("div.image-name")
+        print "Click: ID -> nextButton"
+        self.click_element_by_id("nextButton")
+        print "Click: ID -> nextButton"
+        self.click_element_by_id("nextButton")
+        print "Select: ID -> launch-wizard-security-keypair-selector, TEXT -> my-sel-gen-key-00"
+        self.select_text_by_id("launch-wizard-security-keypair-selector", "my-sel-gen-key-00")
+        print "Click: ID -> nextButton"
+        self.click_element_by_id("finishButton")
+
     def test_ui_terminate_instance_basic(self):
         print
         print "Started Test: Terminate Instance Basic"

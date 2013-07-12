@@ -20,6 +20,19 @@ class testcase_instance(testcase_base):
         self.eucaUITester.instance.test_ui_terminate_instance_all()
         self.eucaUITester.base.test_ui_logout()
 
+    def launch_instance_from_images_lp(self):
+        print "=== runTest: Launch Instance from Images Landing Page ==="
+        self.eucaUITester.base.test_ui_login()
+        self.eucaUITester.instance.test_ui_launch_instance_from_images_lp()
+        self.eucaUITester.base.test_ui_logout()
+
+    def launch_instance_from_instances_lp(self):
+        print "=== runTest: Launch Instance from Instances Landing Page ==="
+        self.eucaUITester.base.test_ui_login()
+        self.eucaUITester.instance.test_ui_launch_instance_from_instances_lp()
+        self.eucaUITester.base.test_ui_logout()
+
+
     def launch_instance_name_testinstance(self):
         print "=== runTest: Launch Instance Named testinstance ==="
         self.eucaUITester.base.test_ui_login()
