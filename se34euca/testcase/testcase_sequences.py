@@ -31,6 +31,13 @@ class testcase_sequences(testcase_base):
         self.eucaUITester.instance.test_ui_check_running_instances_count("2")
         self.eucaUITester.base.test_ui_logout()
 
+    def keypair_operations(self):
+        sleep_time=5
+        print "=== runTest: Keypair Operations ==="
+        self.eucaUITester.keypair.test_ui_generate_keypair()
+        time.sleep(sleep_time)
+
+
 
 if __name__ == "__main__":
     unittest.main()
