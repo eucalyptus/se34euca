@@ -1,6 +1,6 @@
 from se34euca.testcase.testcase_base import *
 
-class testcase_sequence(testcase_base):
+class testcase_sequences(testcase_base):
 
     def instance_operations(self):
         print "=== runTest: Instance Operations ==="
