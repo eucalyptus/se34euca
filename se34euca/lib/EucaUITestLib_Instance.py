@@ -164,6 +164,22 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         print
         return 0
 
+    def test_ui_associate_ip_from_inst_lp(self):
+        '''
+        Picks a running instance from Instances Landing Page
+        and using dialog from Instance Landing Page associates to it the first unassigned IP from the list on IP address Landing Page.
+        '''
+        self.click_element_by_link_text("Dashboard")
+        self.click_element_by_link_text("Network & Security")
+        self.click_element_by_link_text("IP Addresses")
+        self.click_element_by_css_selector('a:contains("Assignment")')
+        self.click_element_by_css_selector('a:contains("Unassigned")')
+        available_ip=self.get_text_by_xpath("//table[@id='eips']/tbody/tr/td[2]").text
+        self.click_element_by_link_text("Instances")
+        self.click_element_by_css_selector("li.toggle-on > ul > li > a")
+        self.click_element_by_css_selector("div.table-row-status.status-running")
+        self.click_element_by_id("more-actions-instances")
+        self.click_element_by_link_text("Associate IP address")
 
 if __name__ == "__main__":
     unittest.main()

@@ -32,7 +32,6 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         print "Verification"
         self.click_element_by_link_text(link_text="Dashboard")
         self.click_element_by_id("dashboard-storage-volume")
-        self.verify_element_by_link_text()
         print
         print "Finished: Create New Volume Given Volume Name"
         print
