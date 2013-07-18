@@ -21,6 +21,8 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         print
         print "Started Test: Launch Instance Basic"
         print
+        print "Click: LINK_TEXT -> Dashboard"
+        self.click_element_by_link_text("Dashboard")
         print "Click: LINK_TEXT -> Launch new instance"
         self.click_element_by_link_text("Launch new instance")
         print "Click: CSS_SELECTOR -> div.image-name"
@@ -47,6 +49,8 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         print
         print "Started Test: Launch Instance Given Instance Name: " + str(instance_name)
         print
+        print "Click: LINK_TEXT -> Dashboard"
+        self.click_element_by_link_text("Dashboard")
         print "Click: LINK_TEXT -> Launch new instance"
         self.click_element_by_link_text("Launch new instance")
         print "Click: CSS_SELECTOR -> div.image-name"
@@ -123,8 +127,8 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         self.click_element_by_id("more-actions-instances")
         print "Click: LINK_TEXT -> Launch more like this"
         self.click_element_by_link_text("Launch more like this")
-        print "Select: ID -> launch-more-num-instance, TEXT -> 1"
-        self.set_keys_by_id("launch-more-num-instance","1")
+        #print "Select: ID -> launch-more-num-instance, TEXT -> 1"
+        #self.set_keys_by_id("launch-more-num-instance","1")
         print "Click: ID -> btn-launch-more"
         self.click_element_by_id("btn-launch-more")
 
@@ -155,7 +159,9 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         print "Test: Go to the Page Running Instances"
         self.click_element_by_css_selector("div.status-readout")
         print "Test: Terminate an Instance All"
+        time.sleep(1)
         self.click_element_by_id("instances-check-all")
+        time.sleep(1)
         self.click_element_by_id("more-actions-instances")
         self.click_element_by_link_text("Terminate")
         self.click_element_by_id("btn-instances-terminate-terminate")
