@@ -146,6 +146,18 @@ class EucaUITestLib_Security_Group(EucaUITestLib_Base):
         print
         return 0
 
+    def test_ui_check_security_group_count(self, sg_count):
+        print
+        print "Started Test: Check Security Group Count"
+        self.click_element_by_link_text("Dashboard")
+        self.verify_element_by_link_text("Launch new instance")
+        print "Verifying that Security Group Count on Dashboard is "+sg_count
+        self.verify_text_displayed_by_css("#dashboard-netsec-sgroup > span",sg_count)
+        print
+        print "Finished Test: Check Security Group Count"
+        print
+        return 0
+
 
 if __name__ == "__main__":
     unittest.main()

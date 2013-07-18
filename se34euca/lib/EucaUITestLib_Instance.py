@@ -181,6 +181,18 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         self.click_element_by_id("more-actions-instances")
         self.click_element_by_link_text("Associate IP address")
 
+    def test_ui_check_running_instances_count(self, running_instances_count):
+        print
+        print "Started Test: Check Running Instances Count"
+        self.click_element_by_link_text("Dashboard")
+        self.verify_element_by_link_text("Launch new instance")
+        print "Verifying that Running Instances Count on Dashboard is "+running_instances_count
+        self.verify_text_displayed_by_css("div.status-readout > span",running_instances_count)
+        print
+        print "Finished Test: Check Running Instances Count"
+        print
+        return 0
+
 if __name__ == "__main__":
     unittest.main()
 

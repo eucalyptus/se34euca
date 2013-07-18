@@ -40,6 +40,18 @@ class EucaUITestLib_Snapshot(EucaUITestLib_Base):
         print
         return 0
 
+    def test_ui_check_snapshot_count(self, snapshot_count):
+        print
+        print "Started Test: Check Snapshot Count"
+        self.click_element_by_link_text("Dashboard")
+        self.verify_element_by_link_text("Launch new instance")
+        print "Verifying that Snapshot Count on Dashboard is "+snapshot_count
+        self.verify_text_displayed_by_css("#dashboard-storage-snapshot > span",snapshot_count)
+        print
+        print "Finished Test: Check Snapshot Count"
+        print
+        return 0
+
 if __name__ == "__main__":
     unittest.main()
 
