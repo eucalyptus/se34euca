@@ -32,7 +32,6 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         print "Verification"
         self.click_element_by_link_text(link_text="Dashboard")
         self.click_element_by_id("dashboard-storage-volume")
-        self.verify_element_by_link_text()
         print
         print "Finished: Create New Volume Given Volume Name"
         print
@@ -179,7 +178,17 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         print
 
 
-
+    def test_ui_check_volume_count(self, volumes_count):
+        print
+        print "Started Test: Check Volume Count"
+        self.click_element_by_link_text("Dashboard")
+        self.verify_element_by_link_text("Launch new instance")
+        print "Verifying that Volumes Count on Dashboard is "+volumes_count
+        self.verify_text_displayed_by_css("#dashboard-storage-volume > span",volumes_count)
+        print
+        print "Finished Test: Check Volume Count"
+        print
+        return 0
 
 if __name__ == "__main__":
     unittest.main()
