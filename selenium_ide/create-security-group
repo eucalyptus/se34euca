@@ -74,12 +74,12 @@
 <tr>
 	<td>type</td>
 	<td>id=sgroup-name</td>
-	<td>test-group1</td>
+	<td>testgroup1</td>
 </tr>
 <tr>
 	<td>typeKeys</td>
 	<td>id=sgroup-name</td>
-	<td>test-group1</td>
+	<td>testgroup1</td>
 </tr>
 <tr>
 	<td>type</td>

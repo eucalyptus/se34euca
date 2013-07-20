@@ -113,17 +113,17 @@
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
-	<td>id=btn-volumes-delete-delete</td>
+	<td>id=button-dialog-createsnapshot-save</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyElementPresent</td>
-	<td>id=btn-volumes-delete-delete</td>
+	<td>id=button-dialog-createsnapshot-save</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=btn-volumes-delete-delete</td>
+	<td>id=button-dialog-createsnapshot-save</td>
 	<td></td>
 </tr>
 <tr>
@@ -248,7 +248,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=btn-volumes-delete-delete</td>
+	<td>id=button-dialog-registersnapshot-save</td>
 	<td></td>
 </tr>
 <tr>

@@ -47,12 +47,12 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
+	<td>verifyElementPresent</td>
 	<td>id=more-actions-snapshots</td>
 	<td></td>
 </tr>
 <tr>
-	<td>verifyElementPresent</td>
+	<td>waitForElementPresent</td>
 	<td>id=more-actions-snapshots</td>
 	<td></td>
 </tr>
@@ -62,7 +62,7 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
+	<td>waitForVisible</td>
 	<td>link=Delete</td>
 	<td></td>
 </tr>
@@ -78,17 +78,17 @@
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
-	<td>id=btn-volumes-delete-delete</td>
+	<td>id=button-dialog-deletesnapshot-delete</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyElementPresent</td>
-	<td>id=btn-volumes-delete-delete</td>
+	<td>id=button-dialog-deletesnapshot-delete</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=btn-volumes-delete-delete</td>
+	<td>id=button-dialog-deletesnapshot-delete</td>
 	<td></td>
 </tr>
 <tr>
