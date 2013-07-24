@@ -5,17 +5,17 @@ class testcase_sequences(testcase_base):
     sleep_time=5
 
     def instance_operations(self):
-        sleep_time=25
+        sleep_time=40
         print "=== runTest: Instance Operations ==="
         self.eucaUITester.base.test_ui_login()
         self.eucaUITester.instance.test_ui_launch_instance_basic()
         time.sleep(sleep_time)
         self.eucaUITester.instance.test_ui_check_running_instances_count("1")
         time.sleep(sleep_time)
-        #self.eucaUITester.instance.test_ui_launch_more_like_this()
-        #time.sleep(sleep_time)
-        #self.eucaUITester.instance.test_ui_check_running_instances_count("2")
-        #time.sleep(sleep_time)
+        self.eucaUITester.instance.test_ui_launch_more_like_this()
+        time.sleep(sleep_time)
+        self.eucaUITester.instance.test_ui_check_running_instances_count("2")
+        time.sleep(sleep_time)
         self.eucaUITester.instance.test_ui_terminate_instance_all()
         time.sleep(sleep_time)
         self.eucaUITester.instance.test_ui_check_running_instances_count("0")
