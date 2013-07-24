@@ -6,23 +6,16 @@ class EucaUITestLib_Admin_Console(EucaUITestLib_Base):
         print
         print "Started Test: Create Accounts and Users via Admin Console"
         self.click_element_by_xpath("//div[2]/div[2]/div/div/div/div/div/div[2]")
-        self.verify_element_by_link_text("New account")
+        self.click_element_by_link_text("New account")
         self.set_keys_by_css_selector("input.gwt-TextBox","aaacct")
-
-
-
-
-        self.verify_element_by_id("dashboard-netsec-eip")
+        self.set_keys_by_css_selector("input.gwt-PasswordTextBox","foobar")
+        self.set_keys_by_xpath("(//input[@type='password'])[2]","foobar")
+        self.verify_element_by_link_text("OK")
+        self.click_element_by_css_selector("th.GCOJGB3BCH.GCOJGB3BAI")
+        self.click_element_by_xpath("//div[3]/div/div/div/table/tbody/tr/td[2]")
+        self.click_element_by_link_text("Delete accounts")
+        self.click_element_by_link_text("OK")
         print
-        print "Test: Go to the Page IP Address"
-        self.click_element_by_id("dashboard-netsec-eip")
-        self.click_element_by_id("table-eips-new")
-        self.verify_element_by_id("eip-allocate-count")
-        print
-        print "Test: Allocate IP Address"
-        self.set_keys_by_id("eip-allocate-count", str(ip_count))
-        self.click_element_by_id("eip-allocate-btn")
-        print
-        print "Finished: Allocate IP Addresses"
+        print "Finished Test: Create Accounts and Users via Admin Console"
         print
         return 0

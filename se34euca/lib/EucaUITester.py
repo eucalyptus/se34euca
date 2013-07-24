@@ -1,3 +1,4 @@
+from se34euca.lib.EucaUITestLib_Admin_Console import *
 from se34euca.lib.EucaUITestLib_Base import *
 from se34euca.lib.EucaUITestLib_Image import *
 from se34euca.lib.EucaUITestLib_Instance import *
@@ -51,6 +52,8 @@ class EucaUITester():
         self.base.setUp()
         self.image = EucaUITestLib_Image("NoOp")
         self.image.setSeleniumWebDriver(self.base.driver)
+        self.admin_console = EucaUITestLib_Admin_Console("NoOp")
+        self.admin_console.setSeleniumWebDriver(self.base.driver)
         self.instance = EucaUITestLib_Instance("NoOp")
         self.instance.setSeleniumWebDriver(self.base.driver)
         self.ip_address = EucaUITestLib_IP_Address("NoOp")
