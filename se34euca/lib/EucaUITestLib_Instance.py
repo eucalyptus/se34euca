@@ -122,7 +122,9 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         print "Click: CSS_SELECTOR -> li.toggle-on > ul > li > a"
         self.click_element_by_css_selector("li.toggle-on > ul > li > a")
         print 'Click: CSS_SELECTOR -> td.checkbox-cell > input[type="checkbox"]'
+        time.sleep(5)
         self.click_element_by_css_selector('td.checkbox-cell > input[type="checkbox"]')
+        time.sleep(5)
         print"Click: ID -> more-actions-instances"
         self.click_element_by_id("more-actions-instances")
         print "Click: LINK_TEXT -> Launch more like this"
@@ -159,9 +161,9 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         print "Test: Go to the Page Running Instances"
         self.click_element_by_css_selector("div.status-readout")
         print "Test: Terminate an Instance All"
-        time.sleep(1)
+        time.sleep(5)
         self.click_element_by_id("instances-check-all")
-        time.sleep(1)
+        time.sleep(5)
         self.click_element_by_id("more-actions-instances")
         self.click_element_by_link_text("Terminate")
         self.click_element_by_id("btn-instances-terminate-terminate")

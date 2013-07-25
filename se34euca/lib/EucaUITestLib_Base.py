@@ -114,6 +114,28 @@ class EucaUITestLib_Base(unittest.TestCase):
         print
         return 0
 
+
+    def test_ui_admin_console_login(self):
+        print
+        print "Started Test: Admin Console Login"
+        self.driver.get(self.base_url + "/")
+        print
+        print "Test: Received the Page Title -> " + self.driver.title
+        self.verify_element_by_id("loginForm")
+        print
+        print "Test: Received the Login Page"
+        self.set_keys_by_id("accountName", self.accountname)
+        self.set_keys_by_id("userName", self.username)
+        self.set_keys_by_id("password", self.password)
+        print
+        print "Test: Typed the User Info and Clicked the Login Button"
+        self.click_element_by_css_selector('input[type="submit"]')
+        self.verify_element_by_link_text(str(self.username)+"@"+str(self.accountname))
+        print
+        print "Finished Test: Admin Console Login"
+        print
+        return 0
+
     def test_ui_logout(self):
         print
         print "Started Test: Logout"
@@ -126,9 +148,25 @@ class EucaUITestLib_Base(unittest.TestCase):
         self.click_element_by_link_text(this_link)
         print "Test: Clicked the Logout Button"
         self.click_element_by_link_text("Log out")
-        self.verify_element_by_id("login")
+        self.verify_element_by_id("loginForm")
         print
         print "Finished Test: Logout"
+        print
+        return 0
+
+    def test_ui_admin_console_logout(self):
+        print
+        print "Started Test: Admin Console Logout"
+        print "Test: Received the Page Title -> " + self.driver.title
+        self.verify_element_by_link_text(str(self.username)+"@"+str(self.accountname))
+        this_link = self.username + "@" + self.accountname
+        print "Test: Clicked User Account Menu " + this_link
+        self.click_element_by_link_text(this_link)
+        print "Test: Clicked the Logout Button"
+        self.click_element_by_link_text("Sign out")
+        self.verify_element_by_id("logoImage")
+        print
+        print "Finished Test: Admin Console Logout"
         print
         return 0
 
