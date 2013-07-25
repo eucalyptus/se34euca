@@ -30,7 +30,7 @@ class EucaUITestLib_Admin_Console(EucaUITestLib_Base):
         self.click_element_by_xpath("//tr[2]/td[2]/div")
         self.click_element_by_link_text("Add policy")
         print "Test: Input policy name"
-        self.set_keys_by_xpath("(//input[@type='text'])[9]","AllowAll")
+        self.set_keys_by_xpath("(//input[@type='text'])[9]","allowall")
         print "Test: Input policy"
         self.set_keys_by_css_selector("textarea.gwt-TextArea",'{\n "Statement": [\n  {\n  "Action": "ec2:*",\n  "Effect": "Allow",\n  "Resource": "*"\n  },\n  {\n "Action": "s3:*",\n "Effect": "Allow",\n "Resource": "*"\n }\n ]\n }')
         self.click_element_by_link_text("OK")
