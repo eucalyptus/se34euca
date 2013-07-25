@@ -41,6 +41,8 @@ class EucaUITestLib_Admin_Console(EucaUITestLib_Base):
         print
         print "Started Test: Create then Delete Account via Admin Console"
         for i in range (1, number_of_accounts):
+            print
+            print "Test: Creating Account No" + str(i)
             self.click_element_by_xpath("//div[2]/div[2]/div/div/div/div/div/div[2]")
             self.click_element_by_link_text("New account")
             time.sleep(3)
@@ -49,9 +51,11 @@ class EucaUITestLib_Admin_Console(EucaUITestLib_Base):
             self.set_keys_by_css_selector("input.gwt-PasswordTextBox","foobar")
             self.set_keys_by_xpath("(//input[@type='password'])[2]","foobar")
             self.click_element_by_link_text("OK")
+        time.sleep(10)
+        self.click_element_by_css_selector("th.GCOJGB3BCH.GCOJGB3BAI")
         for i in range (1, number_of_accounts):
+            print "Test: Deleting Account No" + str(i)
             time.sleep(3)
-            self.click_element_by_css_selector("th.GCOJGB3BCH.GCOJGB3BAI")
             time.sleep(3)
             self.click_element_by_xpath("//div[3]/div/div/div/table/tbody/tr/td[2]")
             time.sleep(3)
