@@ -11,5 +11,5 @@ class testcase_admin_console(testcase_base):
     def create_then_delete_accounts_via_admin_console(self):
         print "=== runTest: Create then Delete Accounts via Admin Console ==="
         self.eucaUITester.base.test_ui_admin_console_login()
-        self.eucaUITester.admin_console.test_ui_create_then_delete_accounts_via_admin_console(10)
+        self.eucaUITester.admin_console.test_ui_create_then_delete_accounts_via_admin_console(11)
         self.eucaUITester.base.test_ui_admin_console_logout()
