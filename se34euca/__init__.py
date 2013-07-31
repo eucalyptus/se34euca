@@ -2,12 +2,10 @@
 import unittest, time, re
 from optparse import OptionParser
 from unittest import TestResult
-from se34euca.testcase.testcase_snapshot import *
 
 class TestRunner(object):
     testcase = None
     testclass = None
-    testcases = ''
 
     def __init__(self):
         self.selenium_server_ip = "localhost"
@@ -17,6 +15,10 @@ class TestRunner(object):
         self.accountname = "eucalyptus"
         self.username = "admin"
         self.password = "password"
+        self.testcases = ""
+        for key in self.testclass.__dict__:
+            if hasattr(self.testclass.__dict__[key], "__call__"):
+                self.testcases += key+' '
 	
         parser = OptionParser()
         parser.add_option("-s", "--sel_server_ip", dest="selenium_server_ip", help="selenium server ip")
