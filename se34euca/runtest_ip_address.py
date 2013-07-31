@@ -5,7 +5,7 @@ from se34euca.testcase.testcase_ip_address import testcase_ip_address
 
 class IpAddress(se34euca.TestRunner):
     # default test case, if no provided
-    testcase = "check_ip_address_count"
+    testcase = "allocate_ip_address"
 
     # class to use for running tests
     testclass = testcase_ip_address
