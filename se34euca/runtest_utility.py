@@ -3,11 +3,15 @@
 import unittest, time, re
 from optparse import OptionParser
 from unittest import TestResult
-from se34euca.testcase.testcase_snapshot import *
+from se34euca.testcase.testcase_utility import *
 
 def main():
 
-    testcase = "delete_snapshot"
+    """
+
+
+    """
+    testcase = "change_password"
 
     selenium_server_ip = "localhost"
     selenium_server_port = "4444"
@@ -29,7 +33,7 @@ def main():
     parser.add_option("-a", "--account", dest="accountname", help="accountname")
     parser.add_option("-u", "--user", dest="username", help="username")
     parser.add_option("-w", "--password", dest="password", help="password")
-    parser.add_option("-t", "--testcase", dest="testcase", help="testcase: delete_snapshot, create_volume_from_snapshot")
+    parser.add_option("-t", "--testcase", dest="testcase", help="testcase: change_password")
     (options, args) = parser.parse_args()
 
     if options.selenium_server_ip is not None:
@@ -57,7 +61,7 @@ def main():
         testcase = options.testcase
 
     testresult = TestResult()
-    ui = testcase_snapshot(testcase)
+    ui = testcase_utility(testcase)
 
     print
     print "### SETUP"
