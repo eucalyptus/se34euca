@@ -18,7 +18,7 @@ class EucaUITestLib_Utility(EucaUITestLib_Base):
         self.set_keys_by_xpath("(//input[@id='newpwd'])[2]", new_password)
         self.set_keys_by_xpath("(//input[@id='confirmpwd'])[2]",new_password)
         time.sleep(1)
-        self.click_element_by_id( "change-pwd")
+        self.click_element_by_id("change-pwd")
         try_again = 0
         while (self.is_element_present(By.LINK_TEXT, "There was a problem with your request")) and try_again < 3:
             print "Try " + `try_again` + " to change password"

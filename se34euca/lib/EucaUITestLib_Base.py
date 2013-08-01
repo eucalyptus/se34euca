@@ -148,7 +148,7 @@ class EucaUITestLib_Base(unittest.TestCase):
         self.click_element_by_link_text(this_link)
         print "Test: Clicked the Logout Button"
         self.click_element_by_link_text("Log out")
-        self.verify_element_by_id("loginForm")
+        self.verify_element_by_id("login")
         print
         print "Finished Test: Logout"
         print

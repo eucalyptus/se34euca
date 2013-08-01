@@ -5,6 +5,8 @@ Selenium 34 Eucalyptus -- Eucalyptus User Console Test Framework Based on Seleni
 
 [Guidelines for contributing to se34euca project](https://github.com/eucalyptus/se34euca/wiki/Guidelines-to-contributing-to-se34euca-project)
 
+[UI testing video: demo and discussion] (https://s3-us-west-1.amazonaws.com/eutester-ui-selenium-demo/UI+Tests+Description%2C+Python+and+Selenium+IDE+Overview+and+Demo+7-11-13+6.31+PM.mov)
+
 ### TEST LIB CLASS
 Directory: ./se34euca/lib/
 
