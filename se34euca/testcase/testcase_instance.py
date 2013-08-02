@@ -45,6 +45,12 @@ class testcase_instance(testcase_base):
         self.eucaUITester.instance.test_ui_launch_instance_given_instance_name("testinstance")
         self.eucaUITester.base.test_ui_logout()
 
+    def associate_ip_from_inst_lp(self):
+        print "=== runTest: Associate IP from Instances Landing Page ==="
+        self.eucaUITester.base.test_ui_login()
+        self.eucaUITester.instance.test_ui_associate_ip_from_inst_lp()
+        self.eucaUITester.base.test_ui_logout()
+
 
 if __name__ == "__main__":
     unittest.main()

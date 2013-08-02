@@ -1,4 +1,5 @@
 from se34euca.lib.EucaUITestLib_Base import *
+import time
 
 class EucaUITestLib_Instance(EucaUITestLib_Base):
 
@@ -174,20 +175,35 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
 
     def test_ui_associate_ip_from_inst_lp(self):
         '''
+        Requires a running instance and an available ip.
+
         Picks a running instance from Instances Landing Page
         and using dialog from Instance Landing Page associates to it the first unassigned IP from the list on IP address Landing Page.
         '''
         self.click_element_by_link_text("Dashboard")
         self.click_element_by_link_text("Network & Security")
         self.click_element_by_link_text("IP Addresses")
-        self.click_element_by_css_selector('a:contains("Assignment")')
-        self.click_element_by_css_selector('a:contains("Unassigned")')
-        available_ip=self.get_text_by_xpath("//table[@id='eips']/tbody/tr/td[2]").text
+        self.click_element_by_css_selector("div.VS-search-inner")
+        self.click_element_by_link_text("Assignment")
+        self.click_element_by_link_text("Unassigned")
+        available_ip=self.get_text_by_xpath("//table[@id='eips']/tbody/tr/td[2]")
         self.click_element_by_link_text("Instances")
         self.click_element_by_css_selector("li.toggle-on > ul > li > a")
         self.click_element_by_css_selector("div.table-row-status.status-running")
         self.click_element_by_id("more-actions-instances")
         self.click_element_by_link_text("Associate IP address")
+        self.set_keys_by_xpath("(//input[@id='associate-selected-value'])[2]",available_ip)
+        self.click_element_by_link_text(available_ip)
+        self.click_element_by_id("eip-associate-btn")
+        self.click_element_by_link_text("Network & Security")
+        self.click_element_by_link_text("IP Addresses")
+        print "Test: Verifying " + str(available_ip) + " is in assigned state."
+        self.click_element_by_css_selector("div.VS-search-inner")
+        self.click_element_by_link_text("Assignment")
+        self.click_element_by_link_text("Assigned")
+        self.verify_element_by_link_text(available_ip)
+
+
 
     def test_ui_check_running_instances_count(self, running_instances_count):
         print
