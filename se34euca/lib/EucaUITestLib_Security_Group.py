@@ -98,8 +98,6 @@ class EucaUITestLib_Security_Group(EucaUITestLib_Base):
         self.click_element_by_id("more-actions-sgroups")
         self.click_element_by_link_text("Manage rules")
         print "Adding TCP rule"
-        time.sleep(10)
-        #self.select_text_by_id("sgroup-template", "SSH (TCP port 22, for terminal access)")
         self.select_text_by_css_selector("div.content-sections-wrapper > div.rules.content-section > div.form-row > #sgroup-template","SSH (TCP port 22, for terminal access)")
         time.sleep(10)
         self.set_keys_by_css_selector("div.content-sections-wrapper > div.rules.content-section > #sgroup-more-rules > div.form-row.sg-inline-options > #allow-ip", "0.0.0.0/0")
