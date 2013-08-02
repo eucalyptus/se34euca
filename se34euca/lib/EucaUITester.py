@@ -7,6 +7,7 @@ from se34euca.lib.EucaUITestLib_Keypair import *
 from se34euca.lib.EucaUITestLib_Security_Group import *
 from se34euca.lib.EucaUITestLib_Snapshot import *
 from se34euca.lib.EucaUITestLib_Volume import *
+from se34euca.lib.EucaUITestLib_Utility import *
 
 class EucaUITester():
 
@@ -66,6 +67,9 @@ class EucaUITester():
         self.snapshot.setSeleniumWebDriver(self.base.driver)
         self.volume = EucaUITestLib_Volume("NoOp")
         self.volume.setSeleniumWebDriver(self.base.driver)
+        self.utility = EucaUITestLib_Utility("NoOp")
+        self.utility.setSeleniumWebDriver(self.base.driver)
+        self.utility.setUserInfo(self.accountname, self.username, self.password)
         print
 
     def tearDown(self):
