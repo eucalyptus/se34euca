@@ -403,6 +403,7 @@ class EucaUITestLib_Base(unittest.TestCase):
         print "Get Text: Element Type: ID, Element: "+ this_id
         return self.driver.find_element_by_id(this_id).text
 
+
     def get_text_by_css_selector(self, css_selector):
         if( self.check_if_element_present_by_type("CSS_SELECTOR", css_selector) is not 0 ):
             raise UICheckException("Element by css selector not present:" + css_selector)
