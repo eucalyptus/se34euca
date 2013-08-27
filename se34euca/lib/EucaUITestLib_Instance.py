@@ -39,6 +39,22 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         print "Click: ID -> finishButton"
         self.click_element_by_id("finishButton")
         print
+        print "Test: Verifying there is a Running Instance"
+        print
+        self.click_element_by_link_text("Dashboard")
+        self.verify_element_by_link_text("Launch new instance")
+        print "Verifying that Running Instances Count on Dashboard is > 0"
+        num_running_instances = self.get_text_by_css_selector("div.status-readout > span")
+        print "Number of running instances"+num_running_instances
+
+        for t in range(1, 120, 1):
+            print "Test: Try "+ str(t) + " Number of running instances: " + num_running_instances
+            print
+            time.sleep(1)
+            num_running_instances = self.get_text_by_css_selector("div.status-readout > span")
+            if num_running_instances >0:
+                break
+        print
         print "Finished Test: Launch Instance Basic"
         print
         return 0
@@ -203,7 +219,70 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         self.click_element_by_link_text("Assigned")
         self.verify_element_by_link_text(available_ip)
 
+    def test_ui_associate_ip_from_ip_lp(self):
+        '''
+        Requires a running instance named "testinstance"  and an available ip.
 
+        Picks an available IP from IP Landing Page
+        and using dialog from IP Landing Page associates an instance to the available IP.
+        '''
+        self.click_element_by_link_text("Dashboard")
+        self.click_element_by_link_text("Instances")
+        self.click_element_by_css_selector("li.toggle-on > ul > li > a")
+        self.click_element_by_link_text("testinstance")
+        available_instance_id=self.get_text_by_xpath("//div[@id='tabs-1']/ul/li[2]/div[2]").text
+        self.click_element_by_link_text("Network & Security")
+        self.click_element_by_link_text("IP Addresses")
+        self.click_element_by_css_selector('td.checkbox-cell > input[type="checkbox"]')
+        self.click_element_by_id("more-actions-eips")
+        self.click_element_by_link_text("Associate with instance")
+        self.set_keys_by_id("associate-selected-value",available_instance_id)
+        self.click_element_by_css_selector("a:contains('myinst')")
+        self.click_element_by_id("eip-associate-btn")
+
+
+
+    def test_ui_disassociate_ip_from_inst_lp(self):
+        '''
+        Requires an only running instance with associated ip.
+
+        Picks a running instance from Instances Landing Page
+        and using dialog from Instance Landing Page disassociates assigned IP.
+        '''
+        # To get ID of an instance that has an IP associated to it
+        #self.click_element_by_link_text("Dashboard")
+        #self.click_element_by_link_text("Network & Security")
+        #self.click_element_by_link_text("IP Addresses")
+        #self.click_element_by_css_selector("th.wrap-content.sorting")
+        #self.click_element_by_css_selector("th.wrap-content.sorting")
+        #associated_instance_id=self.get_text_by_id("eips.1.2").text
+
+        self.click_element_by_link_text("Dashboard")
+        self.click_element_by_link_text("Instances")
+        self.click_element_by_css_selector("li.toggle-on > ul > li > a")
+        self.click_element_by_css_selector("div.table-row-status.status-running")
+        self.click_element_by_link_text("More actions")
+        self.click_element_by_link_text("Disassociate IP address")
+        self.click_element_by_id("btn-eip-disassociate-disassociate")
+
+    def test_ui_disassociate_ip_from_ip_lp(self):
+        '''
+        Requires a running instance with associated ip.
+
+        Picks a running instance from IP Landing Page
+        and using dialog from IP Landing Page disassociates from instance.
+        '''
+
+        self.click_element_by_link_text("Dashboard")
+        self.click_element_by_link_text("Network & Security")
+        self.click_element_by_link_text("IP Addresses")
+        self.click_element_by_xpath("//table[@id='eips']/thead/tr/th[3]")
+        self.click_element_by_css_selector("th.sorting_asc")
+        associated_ip_address=self.get_text_by_css_selector("td..sorting_1").text
+        self.click_element_by_css_selector("td..sorting_1")
+        self.click_element_by_id("more-actions-eips")
+        self.click_element_by_link_text("Disassociate from instance")
+        self.click_element_by_id("btn-eip-disassociate-disassociate")
 
     def test_ui_check_running_instances_count(self, running_instances_count):
         print
@@ -216,6 +295,7 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         print "Finished Test: Check Running Instances Count"
         print
         return 0
+
 
 if __name__ == "__main__":
     unittest.main()

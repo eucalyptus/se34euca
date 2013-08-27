@@ -45,10 +45,40 @@ class testcase_instance(testcase_base):
         self.eucaUITester.instance.test_ui_launch_instance_given_instance_name("testinstance")
         self.eucaUITester.base.test_ui_logout()
 
+    def launch_and_terminate_instance(self):
+        print "=== runTest: Launch and Terminate Instance ==="
+        pause=5 #length of pause in seconds
+        self.eucaUITester.base.test_ui_login()
+        self.eucaUITester.instance.test_ui_launch_instance_basic()
+        time.sleep(pause)
+        self.eucaUITester.instance.test_ui_terminate_instance_basic()
+        self.eucaUITester.base.test_ui_logout()
+        time.sleep(pause)
+
     def associate_ip_from_inst_lp(self):
         print "=== runTest: Associate IP from Instances Landing Page ==="
         self.eucaUITester.base.test_ui_login()
         self.eucaUITester.instance.test_ui_associate_ip_from_inst_lp()
+        self.eucaUITester.base.test_ui_logout()
+
+    def disassociate_ip_from_inst_lp(self):
+        print "=== runTest: Disassociate IP from Instances Landing Page ==="
+        self.eucaUITester.base.test_ui_login()
+        self.eucaUITester.instance.test_ui_disassociate_ip_from_inst_lp()
+        self.eucaUITester.base.test_ui_logout()
+
+
+    def associate_ip_from_ip_lp(self):
+        print "=== runTest: Associate IP from IP Landing Page ==="
+        self.eucaUITester.base.test_ui_login()
+        self.eucaUITester.instance.test_ui_associate_ip_from_ip_lp()
+        self.eucaUITester.base.test_ui_logout()
+
+
+    def disassociate_ip_from_ip_lp(self):
+        print "=== runTest: Associate IP from IP Landing Page ==="
+        self.eucaUITester.base.test_ui_login()
+        self.eucaUITester.instance.test_ui_disassociate_ip_from_ip_lp()
         self.eucaUITester.base.test_ui_logout()
 
 
