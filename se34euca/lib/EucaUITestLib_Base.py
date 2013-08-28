@@ -17,7 +17,7 @@ class EucaUITestLib_Base(unittest.TestCase):
     accountname = "eucalyptus"
     username = "admin"
     password = "password"
-    retry = 180 #waiting time in seconds for element to be present on page
+    retry = 400 #waiting time in seconds for element to be present on page
 
 
     def NoOp(self):
