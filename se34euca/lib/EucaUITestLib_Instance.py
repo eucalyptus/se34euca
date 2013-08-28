@@ -160,7 +160,8 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         print "Test: Go to the Page Running Instances"
         self.click_element_by_css_selector("div.status-readout")
         print "Test: Terminate an Instance"
-        self.click_element_by_xpath("//table[@id='instances']/tbody/tr/td[5]")
+        self.click_element_by_css_selector("div.table-row-status.status-running")
+        #self.click_element_by_xpath("//table[@id='instances']/tbody/tr/td[5]")
         self.click_element_by_id("more-actions-instances")
         self.click_element_by_link_text("Terminate")
         self.click_element_by_id("btn-instances-terminate-terminate")
