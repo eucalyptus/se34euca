@@ -47,13 +47,15 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         num_running_instances = self.get_text_by_css_selector("div.status-readout > span")
         print "Number of running instances"+num_running_instances
 
-        for t in range(1, 120, 1):
-            print "Test: Try "+ str(t) + " Number of running instances: " + num_running_instances
+        for t in range(1, 60):
+            print "Test: Trial number "+ str(t) + ". Number of running instances: " + num_running_instances
             print
             time.sleep(1)
             num_running_instances = self.get_text_by_css_selector("div.status-readout > span")
-            if num_running_instances >0:
-                break
+            if str(num_running_instances) != str(0) :
+
+                    print "Test: BREAK. Number of running instances "+num_running_instances
+                    break
         print
         print "Finished Test: Launch Instance Basic"
         print
