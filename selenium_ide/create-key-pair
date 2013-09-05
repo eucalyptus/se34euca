@@ -73,22 +73,22 @@
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
-	<td>id=key-name</td>
+	<td>id=key-add-name</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyElementPresent</td>
-	<td>id=key-name</td>
+	<td>id=key-add-name</td>
 	<td></td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=key-name</td>
+	<td>id=key-add-name</td>
 	<td>key-pair1</td>
 </tr>
 <tr>
 	<td>typeKeys</td>
-	<td>id=key-name</td>
+	<td>id=key-add-name</td>
 	<td>key-pair1</td>
 </tr>
 <tr>

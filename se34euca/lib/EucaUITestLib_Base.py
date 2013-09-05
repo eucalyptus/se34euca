@@ -2,13 +2,19 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
+
+
 import unittest, time, re
+
+
 
 class UICheckException(Exception):
     def __init__(self, message):
         raise Exception(message)
 
 class EucaUITestLib_Base(unittest.TestCase):
+
+
 
     selenium_server_ip = "localhost"
     selenium_server_port = "4444"
@@ -257,6 +263,34 @@ class EucaUITestLib_Base(unittest.TestCase):
         return 0
 
 
+    # VERIFY ELEMENT NOT PRESENT
+
+    def verify_element_not_present_by_type(self, element_type, element):
+
+        print "Test: Verifying element not present by type."
+
+        this_element_type = ""
+        if( element_type is "LINK_TEXT" ):
+            this_element_type = By.LINK_TEXT
+        elif( element_type is "ID" ):
+            this_element_type = By.ID
+        elif( element_type is "CSS_SELECTOR" ):
+            this_element_type = By.CSS_SELECTOR
+        elif( element_type is "XPATH" ):
+            this_element_type = By.XPATH
+        elif( element_type is "NAME" ):
+            this_element_type = By.NAME
+
+        for i in range(self.retry):
+            print "Test:: Verify not present. Trial: " + str(i) + " Element Type: " + element_type + ", Element: " + element
+            if self.is_element_present(this_element_type, element) == True:
+                print "Test:: Verified not present.  Element Type: " + element_type + ", Element: " + element
+                break
+            else:
+                print "Test:: FAILED Verify not present. Element Type: " + element_type + ", Element: " + element
+
+
+
     # VERIFY CALLS
     def verify_element_by_link_text(self, element):
         return self.check_if_element_present_by_type("LINK_TEXT", element)
@@ -272,6 +306,7 @@ class EucaUITestLib_Base(unittest.TestCase):
     
     def verify_element_by_name(self, element):
         return self.check_if_element_present_by_type("NAME", element)
+
 
     #VERIFY TEXT DISPLAYED
 
@@ -309,6 +344,8 @@ class EucaUITestLib_Base(unittest.TestCase):
 
         displayed_text = self.driver.find_element_by_css_selector(element_css).text
         print("Text displayed at ID "+element_css +" is " +displayed_text)
+
+
 
 
     # CLICK CALLS

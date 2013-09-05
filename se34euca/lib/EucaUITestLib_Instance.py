@@ -1,6 +1,9 @@
 from se34euca.lib.EucaUITestLib_Base import *
 import time
 
+
+
+
 class EucaUITestLib_Instance(EucaUITestLib_Base):
 
     def test_ui_gotopage_running(self):

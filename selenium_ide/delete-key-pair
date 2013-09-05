@@ -63,12 +63,12 @@
 </tr>
 <tr>
 	<td>waitForVisible</td>
-	<td>css=td.checkbox-cell.sorting_1 &gt; input[type=&quot;checkbox&quot;]</td>
+	<td>css=#keys_wrapper &gt; #keys.1.0</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyElementPresent</td>
-	<td>css=td.checkbox-cell.sorting_1 &gt; input[type=&quot;checkbox&quot;]</td>
+	<td>css=#keys_wrapper &gt; #keys.1.0</td>
 	<td></td>
 </tr>
 <tr>

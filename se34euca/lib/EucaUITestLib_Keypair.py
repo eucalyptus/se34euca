@@ -43,7 +43,7 @@ class EucaUITestLib_Keypair(EucaUITestLib_Base):
         print
         return 0
 
-    def test_ui_generate_keypair_name_demokey(self):
+    def test_ui_generate_keypair_given_name(self,keypair_name):
         print
         print "Started Test: Generate Keypair"
         self.click_element_by_link_text("Dashboard")
@@ -54,14 +54,14 @@ class EucaUITestLib_Keypair(EucaUITestLib_Base):
         self.click_element_by_id("table-keys-new")
         print
         print "Test: Generate New Keypair"
-        self.set_keys_by_id("key-name", "demokey")
+        self.set_keys_by_id("key-name", keypair_name)
         self.click_element_by_id("keys-add-btn")
         print"Test: Verification"
         #Verifying on Key Pairs landing page by key pair name that key pair is present
         self.click_element_by_link_text("Dashboard")
         self.click_element_by_link_text("Network & Security")
         self.click_element_by_link_text("Key Pairs")
-        self.verify_element_by_css_selector('span[title="demokey"]')
+        self.verify_element_by_css_selector('span[title="'+keypair_name+'"]')
         print
         print
         print "Finished Test: Generate Keypair"
@@ -122,6 +122,26 @@ class EucaUITestLib_Keypair(EucaUITestLib_Base):
         print "Test: Delete Keypair"
         self.click_element_by_link_text("Delete")
         self.click_element_by_id("btn-keys-delete-delete")
+        print
+        print "Finished Test: Delete Keypair"
+        print
+        return 0
+
+    def test_ui_delete_keypair_given_name(self,keypair_name):
+        print
+        print "Started Test: Delete Keypair Given Name"
+        self.click_element_by_link_text("Dashboard")
+        self.verify_element_by_link_text("Launch new instance")
+        self.click_element_by_id("dashboard-netsec-keypair")
+        print
+        print "Test: Clicked the GoToPage Button"
+        self.click_element_by_css_selector('span[title="'+keypair_name+'"]')
+        self.click_element_by_id("more-actions-keys")
+        print
+        print "Test: Delete Keypair"
+        self.click_element_by_link_text("Delete")
+        self.click_element_by_id("btn-keys-delete-delete")
+        self.verify_element_not_present_by_type("CSS_SELECTOR",'span[title="'+keypair_name+'"]')
         print
         print "Finished Test: Delete Keypair"
         print
