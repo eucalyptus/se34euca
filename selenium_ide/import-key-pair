@@ -73,12 +73,12 @@
 </tr>
 <tr>
 	<td>type</td>
-	<td>css=#keys-import-dialog &gt; div.dialog-inner-content &gt; div.form-row &gt; #key-name</td>
+	<td>id=key-import-name</td>
 	<td>import-key</td>
 </tr>
 <tr>
 	<td>typeKeys</td>
-	<td>css=#keys-import-dialog &gt; div.dialog-inner-content &gt; div.form-row &gt; #key-name</td>
+	<td>id=key-import-name</td>
 	<td>import-key</td>
 </tr>
 <tr>

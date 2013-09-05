@@ -42,16 +42,6 @@
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>css=th.sorting_desc</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=th.sorting_asc</td>
-	<td></td>
-</tr>
-<tr>
 	<td>waitForElementPresent</td>
 	<td>css=td.checkbox-cell &gt; input[type=&quot;checkbox&quot;]</td>
 	<td></td>

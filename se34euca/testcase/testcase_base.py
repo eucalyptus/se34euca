@@ -1,7 +1,10 @@
 import unittest, time, re
 from se34euca.lib.EucaUITester import *
+from eucaops import Eucaops
 
 class testcase_base(unittest.TestCase):
+
+    #eutester = UI_Eutester()
 
     eucaUITester = EucaUITester()
 
@@ -16,6 +19,7 @@ class testcase_base(unittest.TestCase):
 
     def setUp(self):
         self.eucaUITester.setUp()
+        self.eutester = Eucaops(config_file='/Users/alicehubenko/2b_tested.lst', password='foobar')
 
     def tearDown(self):
         self.eucaUITester.tearDown()

@@ -8,6 +8,7 @@ from se34euca.lib.EucaUITestLib_Security_Group import *
 from se34euca.lib.EucaUITestLib_Snapshot import *
 from se34euca.lib.EucaUITestLib_Volume import *
 from se34euca.lib.EucaUITestLib_Utility import *
+#from se34euca.lib.UI_Eutester import *
 
 class EucaUITester():
 
@@ -19,6 +20,7 @@ class EucaUITester():
     username = "admin"
     password = "password"
     retry = 120
+    config_file='/Users/alicehubenko/2b_tested.lst'
 
     def setSeleniumServerInfo(self, ip, port):
         self.selenium_server_ip = ip
@@ -70,6 +72,8 @@ class EucaUITester():
         self.utility = EucaUITestLib_Utility("NoOp")
         self.utility.setSeleniumWebDriver(self.base.driver)
         self.utility.setUserInfo(self.accountname, self.username, self.password)
+        self.admin_console = EucaUITestLib_Admin_Console("NoOp")
+        #self.eutester = UI_Eutester("NoOp")
         print
 
     def tearDown(self):
