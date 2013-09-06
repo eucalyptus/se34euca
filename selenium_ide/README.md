@@ -1,28 +1,32 @@
-Descrition of all Selenium IDE tests in alphabetical order.
+##Descrition of all Selenium IDE tests in alphabetical order.
+
+<pre>
+testcase_base.py
+testcase_view_page.py 		- Test Cases for Viewing Pages
+testcase_instance.py 		- Test Cases for Instance
+testcase_keypair.py		- Test Cases for Keypair
+testcase_volume.py		- Test Cases for Volume
+testcase_snapshot.py		- Test Cases for Snapshot
+testcase_security_group.py	- Test Cases for Security Group
+testcase_ip_address.py		- Test Cases for IP Address
+testcase_simulate_user.py	- Test Cases for Simulate User
+</pre>
 
 
-allocate-ip
+<pre>
 
-Dashboard -> Network & security -> Allocate IP -> Allocate 1 IP
+allocate-ip       - Dashboard -> Network & security -> Allocate IP -> Allocate 1 IP
 
-associate-ip-land-inst
+associate-ip-land-inst       - Dashboard -> Instances -> Associate IP to an instance
 
-Dashboard -> Instances -> Associate IP to an instance
+associate-ip-land-ip      - Dashboard -> Network & security -> IP Addresses -> Associate IP to instance
 
-associate-ip-land-ip
+attach-volume-from-inst-page     - Dashboard -> Instances -> Attach volume to instance
 
-Dashboard -> Network & security -> IP Addresses -> Associate IP to instance
-
-attach-volume-from-inst-page
-
-Dashboard -> Instances -> Attach volume to instance
-
-attach-volume-from-volumes-page
+attach-volume-from-volumes-page     - Dashboard -> Volumes -> Attach volume to instance
 
 
-chk-allocate-ip
-
-Verifies IP count on Dashboard is 2
+chk-allocate-ip      - Verifies IP count on Dashboard is 2
 
 chk-allocate-ip-1
 
@@ -85,4 +89,4 @@ snapshot-from-volume
 snapshot-to-volume
 terminate-instance
 
-
+</pre>
