@@ -21,11 +21,24 @@ attach-volume-from-volumes-page
 
 
 chk-allocate-ip
+
+Verifies IP count on Dashboard is 2
+
 chk-allocate-ip-1
-chk-associate-ip-land-ip
+
+Verifies IP count on Dashboard is 1
+
 chk-attach-volume
+
+Verifies there is a volume with state "Attached" on Volumes Landing Page
+
 chk-create-key-pair
+
+Verifies Key Pair count on Dashboard is 1
+
 chk-create-secutity-group
+
+
 chk-create-volume
 chk-create-volume-v
 chk-delete-key-pair
