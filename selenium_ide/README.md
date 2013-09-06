@@ -14,20 +14,18 @@ chk-allocate-ip  - Verifies IP count on Dashboard is 2
 
 chk-allocate-ip-1  - Verifies IP count on Dashboard is 1
 
-chk-attach-volume
+chk-attach-volume - Verifies there is a volume with state "Attached" on Volumes Landing Page
 
-Verifies there is a volume with state "Attached" on Volumes Landing Page
+chk-create-key-pair - Verifies Key Pair count on Dashboard is 1
 
-chk-create-key-pair
+chk-create-secutity-group - Verifies Security Group count on Dashboard is 1
 
-Verifies Key Pair count on Dashboard is 1
+chk-create-volume - Verifies Volume count on Dashboard is 1
 
-chk-create-secutity-group
+chk-create-volume-v - Verifies there is a volume named v on Volumes landing page and Volume count on Dashboard is 1
 
+chk-delete-key-pair - Verifies Key Pair count on Dashboard is 0
 
-chk-create-volume
-chk-create-volume-v
-chk-delete-key-pair
 chk-delete-security-group
 chk-delete-volume
 chk-disas-ip-land-inst
