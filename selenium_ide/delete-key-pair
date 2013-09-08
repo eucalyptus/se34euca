@@ -72,7 +72,17 @@
 	<td></td>
 </tr>
 <tr>
+	<td>assertVisible</td>
+	<td>id=import-key</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
+	<td>id=import-key</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyChecked</td>
 	<td>id=import-key</td>
 	<td></td>
 </tr>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <title>Test Suite</title>
+</head>
+<body>
+<table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
+<tr><td><b>Test Suite</b></td></tr>
+<tr><td><a href="terminate-all-instances">terminate-all-instances</a></td></tr>
+<tr><td><a href="chk-terminate-instance">chk-terminate-instance</a></td></tr>
+<tr><td><a href="launch-inst-name-myinst">launch-inst-name-myinst</a></td></tr>
+<tr><td><a href="chk-launch-myinst">chk-launch-myinst</a></td></tr>
+<tr><td><a href="allocate-ip">allocate-ip</a></td></tr>
+<tr><td><a href="chk-allocate-ip-1">chk-allocate-ip-1</a></td></tr>
+<tr><td><a href="associate-ip-land-ip">associate-ip-land-ip</a></td></tr>
+<tr><td><a href="disassociate-ip-land-instances">disassociate-ip-land-instances</a></td></tr>
+<tr><td><a href="chk-disas-ip-land-inst">chk-disas-ip-land-inst</a></td></tr>
+<tr><td><a href="snapshot-to-volume">snapshot-to-volume</a></td></tr>
+<tr><td><a href="associate-ip-land-ip">associate-ip-land-ip</a></td></tr>
+<tr><td><a href="disassociate-ip-land-ip">disassociate-ip-land-ip</a></td></tr>
+<tr><td><a href="create-sec-group-with-rules">create-sec-group-with-rules</a></td></tr>
+<tr><td><a href="delete-key-pair">delete-key-pair</a></td></tr>
+<tr><td><a href="chk-delete-key-pair">chk-delete-key-pair</a></td></tr>
+<tr><td><a href="delete-security-group">delete-security-group</a></td></tr>
+<tr><td><a href="attach-volume-from-volumes-page">attach-volume-from-volumes-page</a></td></tr>
+<tr><td><a href="chk-delete-security-group">chk-delete-security-group</a></td></tr>
+<tr><td><a href="chk-attach-volume">chk-attach-volume</a></td></tr>
+<tr><td><a href="delete-snapshots-all">delete-snapshots-all</a></td></tr>
+<tr><td><a href="create-snapshot-register-as-image">create-snapshot-register-as-image</a></td></tr>
+<tr><td><a href="delete-snapshots-all">delete-snapshots-all</a></td></tr>
+<tr><td><a href="detach-volume-inst-page">detach-volume-inst-page</a></td></tr>
+<tr><td><a href="terminate-all-instances">terminate-all-instances</a></td></tr>
+<tr><td><a href="chk-terminate-instance">chk-terminate-instance</a></td></tr>
+<tr><td><a href="delete-volumes-all">delete-volumes-all</a></td></tr>
+<tr><td><a href="release-ip-to-cloud">release-ip-to-cloud</a></td></tr>
+<tr><td><a href="chk-delete-volume">chk-delete-volume</a></td></tr>
+<tr><td><a href="chk-release-ip">chk-release-ip</a></td></tr>
+</tbody></table>
+</body>
+</html>

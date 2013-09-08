@@ -1,0 +1,22 @@
+EUCA_KEY_DIR=$(cd $(dirname ${BASH_SOURCE:-$0}); pwd -P)
+export EC2_URL=http://10.111.5.62:8773/services/Eucalyptus
+export S3_URL=http://10.111.5.62:8773/services/Walrus
+export EUARE_URL=http://10.111.5.62:8773/services/Euare
+export TOKEN_URL=http://10.111.5.62:8773/services/Tokens
+export AWS_AUTO_SCALING_URL=http://10.111.5.62:8773/services/AutoScaling
+export AWS_CLOUDWATCH_URL=http://10.111.5.62:8773/services/CloudWatch
+echo WARN:  Load Balancing service URL is not configured. >&2
+export EUSTORE_URL=http://emis.eucalyptus.com/
+export EC2_PRIVATE_KEY=${EUCA_KEY_DIR}/euca2-admin-fcc0d275-pk.pem
+export EC2_CERT=${EUCA_KEY_DIR}/euca2-admin-fcc0d275-cert.pem
+export EC2_JVM_ARGS=-Djavax.net.ssl.trustStore=${EUCA_KEY_DIR}/jssecacerts
+export EUCALYPTUS_CERT=${EUCA_KEY_DIR}/cloud-cert.pem
+export EC2_ACCOUNT_NUMBER='154272787752'
+export EC2_ACCESS_KEY='6EOCULZRQBZWAAY4RXWJ1'
+export EC2_SECRET_KEY='KIXchY0DJ7O2IqQi8J0MXTEIlMjOxFwajjsANJVs'
+export AWS_ACCESS_KEY='6EOCULZRQBZWAAY4RXWJ1'
+export AWS_SECRET_KEY='KIXchY0DJ7O2IqQi8J0MXTEIlMjOxFwajjsANJVs'
+export AWS_CREDENTIAL_FILE=${EUCA_KEY_DIR}/iamrc
+export EC2_USER_ID='154272787752'
+alias ec2-bundle-image="ec2-bundle-image --cert ${EC2_CERT} --privatekey ${EC2_PRIVATE_KEY} --user ${EC2_ACCOUNT_NUMBER} --ec2cert ${EUCALYPTUS_CERT}"
+alias ec2-upload-bundle="ec2-upload-bundle -a ${EC2_ACCESS_KEY} -s ${EC2_SECRET_KEY} --url ${S3_URL}"
