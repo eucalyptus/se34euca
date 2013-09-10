@@ -104,7 +104,7 @@
 <tr>
 	<td>select</td>
 	<td>id=volume-add-az-selector</td>
-	<td>label=cluster01</td>
+	<td>label=PARTI00</td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
