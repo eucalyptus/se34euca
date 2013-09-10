@@ -8,8 +8,11 @@
 <body>
 <table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
 <tr><td><b>Test Suite</b></td></tr>
-<tr><td><a href="terminate-all-instances">terminate-all-instances</a></td></tr>
-<tr><td><a href="chk-terminate-instance">chk-terminate-instance</a></td></tr>
+<tr><td><a href="create-volume-v">create-volume-v</a></td></tr>
+<tr><td><a href="create-key-pair">create-key-pair</a></td></tr>
+<tr><td><a href="chk-create-key-pair">chk-create-key-pair</a></td></tr>
+<tr><td><a href="chk-create-volume-v">chk-create-volume-v</a></td></tr>
+<tr><td><a href="snapshot-from-volume">snapshot-from-volume</a></td></tr>
 <tr><td><a href="launch-inst-name-myinst">launch-inst-name-myinst</a></td></tr>
 <tr><td><a href="chk-launch-myinst">chk-launch-myinst</a></td></tr>
 <tr><td><a href="allocate-ip">allocate-ip</a></td></tr>

@@ -185,10 +185,13 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         self.click_element_by_css_selector("div.status-readout")
         print "Test: Terminate an Instance All"
         time.sleep(5)
+        print "Test: checkmark the 'all' box"
         self.click_element_by_id("instances-check-all")
         time.sleep(5)
+        print "Test: click the 'More actions' button"
         self.click_element_by_id("more-actions-instances")
         self.click_element_by_link_text("Terminate")
+        print "Test: click the 'Terminate' button"
         self.click_element_by_id("btn-instances-terminate-terminate")
         print
         print "Finished Test: Terminate Instance All"
@@ -299,8 +302,7 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         self.verify_text_displayed_by_css("div.status-readout > span",running_instances_count)
         print
         print "Finished Test: Check Running Instances Count"
-        print
-        return 0
+
 
 
 if __name__ == "__main__":

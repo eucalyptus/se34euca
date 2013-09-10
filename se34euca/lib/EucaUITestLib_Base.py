@@ -23,8 +23,8 @@ class EucaUITestLib_Base(unittest.TestCase):
     accountname = "eucalyptus"
     username = "admin"
     password = "password"
-    retry = 400 #waiting time in seconds for element to be present on page
-
+    retry = 120 #waiting time in seconds for element to be present on page
+    trials = 30 #trial number for verify not present methods
 
     def NoOp(self):
         return 0
@@ -263,35 +263,94 @@ class EucaUITestLib_Base(unittest.TestCase):
         return 0
 
 
-    # VERIFY ELEMENT NOT PRESENT
+# VERIFY ELEMENT NOT PRESENT
 
-    def verify_element_not_present_by_type(self, element_type, element):
 
-        print "Test: Verifying element not present by type."
+    #Experimental:
+
+    def verify_element_not_present(self, element_type, element):
 
         this_element_type = ""
-        if( element_type is "LINK_TEXT" ):
+        if element_type is "LINK_TEXT" :
             this_element_type = By.LINK_TEXT
-        elif( element_type is "ID" ):
+        elif element_type is "ID" :
             this_element_type = By.ID
-        elif( element_type is "CSS_SELECTOR" ):
+        elif element_type is "CSS_SELECTOR" :
             this_element_type = By.CSS_SELECTOR
-        elif( element_type is "XPATH" ):
+        elif element_type is "XPATH" :
             this_element_type = By.XPATH
-        elif( element_type is "NAME" ):
+        elif element_type is "NAME" :
             this_element_type = By.NAME
 
-        for i in range(self.retry):
-            print "Test:: Verify not present. Trial: " + str(i) + " Element Type: " + element_type + ", Element: " + element
-            if self.is_element_present(this_element_type, element) == True:
-                print "Test:: Verified not present.  Element Type: " + element_type + ", Element: " + element
+        for i in range (1, self.trials,1):
+
+            try:
+                self.driver.find_element(this_element_type, element)
+                print "Still seeing " + element + "..."
+                #return False
+
+            except NoSuchElementException:
+                print "Verified " + element + " not present"
+                return True
                 break
+
+
+
+
+
+
+
+#VERIFY TEXT NOT PRESENT
+
+    def verify_text_not_present_by_css(self, locator, text):
+        print"Verifying that text displayed at " + locator + " does not match " + text
+        for i in range(1,self.trials,1):
+            if self.get_text_by_css_selector(locator) != text:
+                print "Verified " + self.get_text_by_css_selector(locator) + " does not match " + text
+                return True
+                break
+
             else:
-                print "Test:: FAILED Verify not present. Element Type: " + element_type + ", Element: " + element
+                print
+                print "Trial " + str(i) + " :"
 
+    def verify_text_not_present_by_id(self, locator, text):
+        print"Verifying that text displayed at " + locator + " does not match " + text
+        for i in range(1,self.trials,1):
+            if self.get_text_by_id(locator) != text:
+                print "Verified " + self.get_text_by_id(locator) + " does not match " + text
+                return True
+                break
 
+            else:
+                print
+                print "Trial " + str(i) + " :"
 
-    # VERIFY CALLS
+    def verify_text_not_present_by_name(self, locator, text):
+        print"Verifying that text displayed at " + locator + " does not match " + text
+        for i in range(1,self.trials,1):
+            if self.get_text_by_name(locator) != text:
+                print "Verified " + self.get_text_by_name(locator) + " does not match " + text
+                return True
+                break
+
+            else:
+                print
+                print "Trial " + str(i) + " :"
+
+    def verify_text_not_present_by_xpath(self, locator, text):
+        print"Verifying that text displayed at " + locator + " does not match " + text
+        for i in range(1,self.trials,1):
+            if self.get_text_by_xpath(locator) != text:
+                print "Verified " + self.get_text_by_xpath(locator) + " does not match " + text
+                return True
+                break
+
+            else:
+                print
+                print "Trial " + str(i) + " :"
+
+# VERIFY CALLS
     def verify_element_by_link_text(self, element):
         return self.check_if_element_present_by_type("LINK_TEXT", element)
 
@@ -303,7 +362,7 @@ class EucaUITestLib_Base(unittest.TestCase):
 
     def verify_element_by_xpath(self, element):
         return self.check_if_element_present_by_type("XPATH", element)
-    
+
     def verify_element_by_name(self, element):
         return self.check_if_element_present_by_type("NAME", element)
 
@@ -376,7 +435,7 @@ class EucaUITestLib_Base(unittest.TestCase):
         print "Click: Element Type: XPATH, Element: "+ xpath
         self.driver.find_element_by_xpath(xpath).click()
         return 0
-    
+
     def click_element_by_name(self, name):
         if( self.check_if_element_present_by_type("NAME", name) is not 0 ):
             raise UICheckException("Element by name not present: " +name)
@@ -452,15 +511,14 @@ class EucaUITestLib_Base(unittest.TestCase):
             raise UICheckException("Element by xpath not present: " +xpath)
         print "Get Text: Element Type: XPATH, Element: "+ xpath
         return self.driver.find_element_by_xpath(xpath).text
-    
+
     def get_text_by_name(self, name):
         if( self.check_if_element_present_by_type("NAME", name) is not 0 ):
             raise UICheckException("Element by name not present: " + name)
         print "Click: Element Type: NAME, Element: "+ name
         return self.driver.find_element_by_name(name).text
 
-
-    # SELECT TEXT CALLS
+# SELECT TEXT CALLS
     def select_text_by_link_text(self, link_text, visible_text):
         if( self.check_if_element_present_by_type("LINK_TEXT", link_text) is not 0 ):
             raise UICheckException("Element by link text not present: " + link_text)
@@ -488,7 +546,7 @@ class EucaUITestLib_Base(unittest.TestCase):
         print "Select: Element Type: XPATH, Element: "+ xpath + ", Text: " + visible_text
         Select(self.driver.find_element_by_xpath(xpath)).select_by_visible_text(visible_text)
         return 0
-    
+
     def select_text_by_name(self, name, visible_text):
         if(self.check_if_element_present_by_type("NAME", name) is not 0 ):
             raise UICheckException("Element by name not present: " + name)
