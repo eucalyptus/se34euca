@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://euca-jerry.brainfood.com/" />
+<title>launch-inst-test-type-validation</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">launch-inst-test-type-validation</td></tr>
+</thead><tbody>
+<tr>
+	<td>setTimeout</td>
+	<td>130000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Dashboard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Dashboard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Dashboard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Instances</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Instances</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Instances</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=li.toggle-on &gt; ul &gt; li &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=table-instances-new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=table-instances-new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=table-instances-new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=div.image-name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=div.image-name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.image-name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=nextButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=nextButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=nextButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=launch-instance-type-num-instance</td>
+	<td>xyz</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=nextButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div.field-error</td>
+	<td>*</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=launch-instance-type-num-instance</td>
+	<td>1-3</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=launch-instance-names</td>
+	<td>Moe, Larry</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=nextButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div.field-error</td>
+	<td>*</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=launch-instance-names</td>
+	<td>Moe, Larry, Curly</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=nextButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div.field-error</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=wizardClosed-1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=launch-instance-type-num-instance</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=launch-instance-names</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=nextButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div.field-error</td>
+	<td>*</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=launch-instance-type-num-instance</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=launch-instance-names</td>
+	<td>Moe, Larry</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=nextButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div.field-error</td>
+	<td>*</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=launch-instance-names</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=nextButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div.field-error</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Done</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Dashboard</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

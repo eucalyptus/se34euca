@@ -47,6 +47,16 @@
 	<td></td>
 </tr>
 <tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeElementPresent</td>
+	<td>xpath=(//button[@id='eip-associate-btn'])[2]</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>link=IP Addresses</td>
 	<td></td>

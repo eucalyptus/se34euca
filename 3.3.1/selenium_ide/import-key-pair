@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://10.111.5.23:8888/" />
+<title>import-key-pair</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">import-key-pair</td></tr>
+</thead><tbody>
+<tr>
+	<td>setTimeout</td>
+	<td>120000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Dashboard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Dashboard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Network &amp; Security</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Network &amp; Security</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Network &amp; Security</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Key Pairs</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=table-keys-extra</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=table-keys-extra</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=table-keys-extra</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=key-import-contents</td>
+	<td>ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCgyUm4seo25FNQe/TQjxhIUKn684LXDLIRFeknHMRcyjqkxalafUJMgbStu9wguz7rWm/B66d6iHY4kf+KByFcyiqZnjZhUMrPvSGMSWXJW9srbNqugl8gxILM/y74lzZzA1fDjZHjvWwYRPRNa1gdA0K+29qUmx1iVkAlZk3lKTk5Ob3DZ94pXEJfuv0zt0BrfiPdjhe9Dp+BtJWfJAvq1J3N5SjdaSr/fbSFSrkpdTlV0EnQ4cx4ltmRBkhFoQXL9nggzm7OgRAGFc1O/6gRqBjserDbmDOLwOfqnynvALtBmuqHaLUk0CllPDlfliMcVZkRbEz1UBJS6OZENkBD alicehubenko@euca-prod-1-17.eucalyptus-systems.com</td>
+</tr>
+<tr>
+	<td>typeKeys</td>
+	<td>id=key-import-contents</td>
+	<td>ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCgyUm4seo25FNQe/TQjxhIUKn684LXDLIRFeknHMRcyjqkxalafUJMgbStu9wguz7rWm/B66d6iHY4kf+KByFcyiqZnjZhUMrPvSGMSWXJW9srbNqugl8gxILM/y74lzZzA1fDjZHjvWwYRPRNa1gdA0K+29qUmx1iVkAlZk3lKTk5Ob3DZ94pXEJfuv0zt0BrfiPdjhe9Dp+BtJWfJAvq1J3N5SjdaSr/fbSFSrkpdTlV0EnQ4cx4ltmRBkhFoQXL9nggzm7OgRAGFc1O/6gRqBjserDbmDOLwOfqnynvALtBmuqHaLUk0CllPDlfliMcVZkRbEz1UBJS6OZENkBD alicehubenko@euca-prod-1-17.eucalyptus-systems.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=#keys-import-dialog &gt; div.dialog-inner-content &gt; div.form-row &gt; #key-name</td>
+	<td>import-key</td>
+</tr>
+<tr>
+	<td>typeKeys</td>
+	<td>css=#keys-import-dialog &gt; div.dialog-inner-content &gt; div.form-row &gt; #key-name</td>
+	<td>import-key</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=keys-add-btn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=keys-add-btn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button:contains(&quot;Import&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=keys-add-btn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Dashboard</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

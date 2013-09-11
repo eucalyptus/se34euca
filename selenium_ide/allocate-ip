@@ -72,7 +72,7 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
+	<td>waitForVisible</td>
 	<td>id=table-eips-new</td>
 	<td></td>
 </tr>

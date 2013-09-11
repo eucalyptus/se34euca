@@ -63,17 +63,17 @@
 </tr>
 <tr>
 	<td>waitForVisible</td>
-	<td>id=import-key</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>id=import-key</td>
+	<td>id=key-pair1</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=import-key</td>
+	<td>id=key-pair1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyChecked</td>
+	<td>id=key-pair1</td>
 	<td></td>
 </tr>
 <tr>

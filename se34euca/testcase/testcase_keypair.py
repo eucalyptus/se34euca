@@ -8,12 +8,12 @@ class testcase_keypair(testcase_base):
         print "=== runTest: Generate Keypair ==="
         self.eucaUITester.base.test_ui_login()
         self.eucaUITester.keypair.test_ui_generate_keypair()
-        print "EUTESTER!!!"
-        print
+        #print "EUTESTER!!!"
+        #print
         #print "THis is stdin:" + str(sys.stdin) + ", stderr: " + str(sys.stderr) +", stdout:" + str(sys.stdout)
-        emi=self.eutester.get_emi()
-        print emi
-
+        #emi=self.eutester.get_emi()
+        #print emi
+        #print
         self.eucaUITester.base.test_ui_logout()
 
     def import_keypair(self):

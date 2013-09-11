@@ -32,6 +32,14 @@ class testcase_simulate_user(testcase_base):
         self.eucaUITester.keypair.test_ui_delete_keypair_all()
         self.eucaUITester.base.test_ui_view_page_get_dashboard_source()
 
+    def user_clean_up(self):
+        sleep_time = 2
+        wait_time = 120
+        count = 0
+        self.eucaUITester.instance.test_ui_terminate_instance_all()
+        self.eucaUITester.snapshot.test_ui_delete_snapshot()
+
+
     def simulate_user_case_00_in_loop(self):
         sleep_time = 2
         wait_time = 120

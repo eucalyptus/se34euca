@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://10.111.1.51:8888/" />
+<title>create-launch-config-basic</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">create-launch-config-basic</td></tr>
+</thead><tbody>
+<tr>
+	<td>click</td>
+	<td>id=resource-menu-dashboard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//span[@id=':2u']/b</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=exact:https://eucalyptus.atlassian.net/browse/EUCA-7498?page=com.atlassian.jira.plugin.system.issuetabpanels:all-tabpanel</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPopUp</td>
+	<td>_blank</td>
+	<td>30000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Log In</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//h1[@id='summary-val']/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=summary</td>
+	<td>When enough resources are created to fill an additional page, the &quot;Go to next page&quot; arrow does not turn green</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.aui-button.submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#comment-tabpanel &gt; strong</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.gallery &gt; img</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=fancybox-close</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=resource-menuitem-scaling</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Launch configurations</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=table-launchconfig-new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//table[@id='launch-images']/tbody/tr/td/div/div[2]/span[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=nextButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>id=launch-instance-names</td>
+	<td>Test-Launch-Config-1</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=nextButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=launch-wizard-security-keypair-selector</td>
+	<td>label=None (advanced option)</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=launch-wizard-buttons-security-advanced-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=finishButton</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

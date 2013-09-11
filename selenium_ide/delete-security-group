@@ -52,18 +52,13 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForText</td>
-	<td>css=span:contains(&quot;test&quot;)</td>
-	<td>test</td>
-</tr>
-<tr>
 	<td>waitForVisible</td>
-	<td>css=span:contains(&quot;test&quot;)</td>
+	<td>css=td:contains(&quot;test&quot;)</td>
 	<td>test</td>
 </tr>
 <tr>
 	<td>verifyElementPresent</td>
-	<td>css=span:contains(&quot;test&quot;)</td>
+	<td>css=td:contains(&quot;test&quot;)</td>
 	<td>test</td>
 </tr>
 <tr>
@@ -73,18 +68,8 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>css=span:contains(&quot;test&quot;)</td>
+	<td>css=td:contains(&quot;test&quot;)</td>
 	<td>test</td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>css=tr.even &gt; td.checkbox-cell.sorting_1 &gt; input[type=&quot;checkbox&quot;]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyChecked</td>
-	<td>css=tr.even &gt; td.checkbox-cell.sorting_1 &gt; input[type=&quot;checkbox&quot;]</td>
-	<td></td>
 </tr>
 <tr>
 	<td>waitForVisible</td>

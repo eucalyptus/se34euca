@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <title>Test Suite</title>
+</head>
+<body>
+<table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
+<tr><td><b>Test Suite</b></td></tr>
+<tr><td><a href="import-key-pair">import-key-pair</a></td></tr>
+<tr><td><a href="chk-create-key-pair">chk-create-key-pair</a></td></tr>
+<tr><td><a href="delete-key-pair">delete-key-pair</a></td></tr>
+<tr><td><a href="chk-delete-key-pair">chk-delete-key-pair</a></td></tr>
+<tr><td><a href="allocate-ip">allocate-ip</a></td></tr>
+<tr><td><a href="chk-allocate-ip-1">chk-allocate-ip-1</a></td></tr>
+<tr><td><a href="allocate-ip">allocate-ip</a></td></tr>
+<tr><td><a href="chk-allocate-ip">chk-allocate-ip</a></td></tr>
+<tr><td><a href="release-ip-to-cloud">release-ip-to-cloud</a></td></tr>
+<tr><td><a href="create-key-pair">create-key-pair</a></td></tr>
+<tr><td><a href="chk-create-key-pair">chk-create-key-pair</a></td></tr>
+<tr><td><a href="create-volume">create-volume</a></td></tr>
+<tr><td><a href="launch-inst-from-images">launch-inst-from-images</a></td></tr>
+<tr><td><a href="chk-launch-inst-from-images">chk-launch-inst-from-images</a></td></tr>
+<tr><td><a href="chk-create-volume">chk-create-volume</a></td></tr>
+<tr><td><a href="delete-volume">delete-volume</a></td></tr>
+<tr><td><a href="chk-delete-volume">chk-delete-volume</a></td></tr>
+<tr><td><a href="create-volume-v">create-volume-v</a></td></tr>
+<tr><td><a href="chk-create-volume-v">chk-create-volume-v</a></td></tr>
+<tr><td><a href="attach-volume-from-inst-page">attach-volume-from-inst-page</a></td></tr>
+<tr><td><a href="chk-attach-volume">chk-attach-volume</a></td></tr>
+<tr><td><a href="launch-more-like-this">launch-more-like-this</a></td></tr>
+<tr><td><a href="chk-launch-more-like-this">chk-launch-more-like-this</a></td></tr>
+<tr><td><a href="terminate-all-instances">terminate-all-instances</a></td></tr>
+<tr><td><a href="chk-terminate-instance">chk-terminate-instance</a></td></tr>
+<tr><td><a href="delete-volume">delete-volume</a></td></tr>
+<tr><td><a href="chk-delete-volume">chk-delete-volume</a></td></tr>
+<tr><td><a href="delete-key-pair">delete-key-pair</a></td></tr>
+<tr><td><a href="chk-delete-key-pair">chk-delete-key-pair</a></td></tr>
+</tbody></table>
+</body>
+</html>
