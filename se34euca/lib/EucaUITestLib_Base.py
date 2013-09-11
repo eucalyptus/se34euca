@@ -62,7 +62,8 @@ class EucaUITestLib_Base(unittest.TestCase):
     def setUp(self):
         print
         print "=== setUp ==="
-        this_ui = "https://" + self.ui_ip + ":" + self.port
+        #this_ui = "https://" + self.ui_ip + ":" + self.port
+        this_ui = "http://" + self.ui_ip + ":" + self.port
         this_selenium_server_url = "http://" + self.selenium_server_ip + ":" + self.selenium_server_port + "/wd/hub"
         print "SELENIUM SERVER URL: " + this_selenium_server_url
         print "EUCALYPTUS UI PROXY URL: " + this_ui
@@ -105,7 +106,7 @@ class EucaUITestLib_Base(unittest.TestCase):
         self.driver.get(self.base_url + "/")
         print
         print "Test: Received the Page Title -> " + self.driver.title
-        self.verify_element_by_id("login")
+        self.verify_element_by_id("euca-logo")
         print
         print "Test: Received the Login Page"
         self.set_keys_by_id("account", self.accountname)

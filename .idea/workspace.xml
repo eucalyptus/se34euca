@@ -3,19 +3,26 @@
   <component name="ChangeListManager">
     <list default="true" id="db54d159-8d46-438b-9b63-855329dbc419" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/se34euca/lib/EucaUITestLib_Base.py" afterPath="$PROJECT_DIR$/se34euca/lib/EucaUITestLib_Base.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/se34euca/lib/EucaUITestLib_Instance.py" afterPath="$PROJECT_DIR$/se34euca/lib/EucaUITestLib_Instance.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/se34euca/lib/EucaUITestLib_Snapshot.py" afterPath="$PROJECT_DIR$/se34euca/lib/EucaUITestLib_Snapshot.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3.3.1/selenium_ide/UI-manual-tests-part-3" afterPath="$PROJECT_DIR$/3.3.1/selenium_ide/UI-manual-tests-part-3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/se34euca/testcase/testcase_instance.py" afterPath="$PROJECT_DIR$/se34euca/testcase/testcase_instance.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/se34euca/testcase/testcase_simulate_user.py" afterPath="$PROJECT_DIR$/se34euca/testcase/testcase_simulate_user.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/se34euca/testcase/testcase_snapshot.py" afterPath="$PROJECT_DIR$/se34euca/testcase/testcase_snapshot.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/se34euca/lib/EucaUITester.py" afterPath="$PROJECT_DIR$/se34euca/lib/EucaUITester.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/selenium_ide/UI-manual-tests" afterPath="$PROJECT_DIR$/selenium_ide/UI-manual-tests" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/selenium_ide/associate-ip-land-inst" afterPath="$PROJECT_DIR$/selenium_ide/associate-ip-land-inst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/selenium_ide/chk-launch-instance-from-dboard" afterPath="$PROJECT_DIR$/selenium_ide/chk-launch-instance-from-dboard" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/selenium_ide/delete-key-pair" afterPath="$PROJECT_DIR$/selenium_ide/delete-key-pair" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/selenium_ide/delete-security-group" afterPath="$PROJECT_DIR$/selenium_ide/delete-security-group" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/selenium_ide/disassociate-ip-land-instances" afterPath="$PROJECT_DIR$/selenium_ide/disassociate-ip-land-instances" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/selenium_ide/disassociate-ip-land-ip" afterPath="$PROJECT_DIR$/selenium_ide/disassociate-ip-land-ip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/selenium_ide/security-gr-add-rules" afterPath="$PROJECT_DIR$/selenium_ide/security-gr-add-rules" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/se34euca/testcase/testcase_base.py" afterPath="$PROJECT_DIR$/se34euca/testcase/testcase_base.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/se34euca/testcase/testcase_keypair.py" afterPath="$PROJECT_DIR$/se34euca/testcase/testcase_keypair.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/se34euca/testcase/testcase_sequences.py" afterPath="$PROJECT_DIR$/se34euca/testcase/testcase_sequences.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="1b4313d3-a15d-4ff3-83ce-a871b53f274e" name="New changelist" comment="" />
     <list id="936fba54-748b-4117-9085-f6a62e4c1462" name="Failed commit: Default" comment="Added test for Admin Console." />
     <ignored path="se34euca.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1378807492816" ignored="false" />
+    <file path="/Dummy.txt" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1378818437558" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/openapi.jar!/standardSchemas/XMLSchema.xsd" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372409376303" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/openapi.jar!/standardSchemas/catalog.xsd" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372409376303" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/openapi.jar!/standardSchemas/xinclude.xsd" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372409376303" ignored="false" />
@@ -25,7 +32,7 @@
     <file path="$USER_HOME$/Library/Application Support/Adium 2.0/Users/Default/Logs/IRC.alice_h/#eucalyptus-meeting/#eucalyptus-meeting (2013-06-28T09.34.31-0700).chatlog/#eucalyptus-meeting (2013-06-28T09.34.31-0700).xml" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372517453617" ignored="false" />
     <file path="$USER_HOME$/Library/Application Support/Adium 2.0/Users/Default/libpurple/accounts.xml" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1377805528497" ignored="false" />
     <file path="$USER_HOME$/Library/Application Support/Adium 2.0/Users/Default/Logs/IRC.alice_h/#eucalyptus-devel/#eucalyptus-devel (2013-06-28T09.34.31-0700).chatlog/#eucalyptus-devel (2013-06-28T09.34.31-0700).xml" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372517453617" ignored="false" />
-    <file path="/EucaUITestLib_Base.py" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1378818161663" ignored="false" />
+    <file path="/EucaUITestLib_Base.py" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1378871348033" ignored="false" />
     <file path="/EucaUITestLib_Image.py" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1373598456982" ignored="false" />
     <file path="$USER_HOME$/Library/Application Support/Adium 2.0/Users/Default/libpurple/blist.xml" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1377722206958" ignored="false" />
     <file path="/runtest_keypair.py" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372727696384" ignored="false" />
@@ -33,9 +40,9 @@
     <file path="$USER_HOME$/Library/Application Support/PyCharm20/availables.xml" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1377718671067" ignored="false" />
     <file path="/utrunner.py" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372524102063" ignored="false" />
     <file path="/EucaUITestLib_Keypair.py" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1377895697593" ignored="false" />
-    <file path="/testcase_keypair.py" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1378497861561" ignored="false" />
+    <file path="/testcase_keypair.py" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1378870915875" ignored="false" />
     <file path="/runtest_UI_manual_tests.py" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372665788223" ignored="false" />
-    <file path="/testcase_base.py" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1377987816631" ignored="false" />
+    <file path="/testcase_base.py" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1378870763775" ignored="false" />
     <file path="/runtest_ip_address.py" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372664273558" ignored="false" />
     <file path="/EucaUITestLib_IP_Address.py" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372886614150" ignored="false" />
     <file path="/testcase_ip_address.py" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372887301578" ignored="false" />
@@ -122,7 +129,7 @@
       <file leaf-file-name="EucaUITester.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/se34euca/lib/EucaUITester.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="39" selection-start="503" selection-end="541" vertical-scroll-proportion="0.0">
+            <state line="74" column="64" selection-start="3114" selection-end="3114" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -131,25 +138,27 @@
       <file leaf-file-name="testcase_base.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/se34euca/testcase/testcase_base.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0">
+            <state line="2" column="1" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EucaUITestLib_Utility.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/se34euca/lib/EucaUITestLib_Utility.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testcase_simulate_user.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/se34euca/testcase/testcase_simulate_user.py">
+      <file leaf-file-name="EucaUITestLib_Volume.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/se34euca/lib/EucaUITestLib_Volume.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="17" selection-start="1817" selection-end="1817" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EucaUITestLib_Snapshot.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/se34euca/lib/EucaUITestLib_Snapshot.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="13" selection-start="1885" selection-end="1885" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -158,34 +167,27 @@
       <file leaf-file-name="EucaUITestLib_Base.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/se34euca/lib/EucaUITestLib_Base.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="30" selection-start="510" selection-end="510" vertical-scroll-proportion="0.5825243">
+            <state line="65" column="24" selection-start="1760" selection-end="1760" vertical-scroll-proportion="0.5507559">
+              <folding>
+                <element signature="e#0#30#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="testcase_sequences.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/se34euca/testcase/testcase_sequences.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="21" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testcase_snapshot.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/se34euca/testcase/testcase_snapshot.py">
+      <file leaf-file-name="testcase_admin_console.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/se34euca/testcase/testcase_admin_console.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="46" selection-start="456" selection-end="456" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EucaUITestLib_Instance.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/se34euca/lib/EucaUITestLib_Instance.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="312" column="0" selection-start="14377" selection-end="14377" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UI_Eutester.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/se34euca/lib/UI_Eutester.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="56" selection-start="283" selection-end="283" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -194,8 +196,28 @@
       <file leaf-file-name="testcase_instance.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/se34euca/testcase/testcase_instance.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="748" selection-end="748" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="testcase_ip_address.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/se34euca/testcase/testcase_ip_address.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="testcase_keypair.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/se34euca/testcase/testcase_keypair.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="46" selection-start="1194" selection-end="1194" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -224,30 +246,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/se34euca/lib/EucaUI_eutester_integration.py" />
         <option value="$PROJECT_DIR$/se34euca/lib/EucaUITestLib_Keypair.py" />
         <option value="$USER_HOME$/eutester/eutester/sshconnection.py" />
         <option value="$PROJECT_DIR$/se34euca/lib/Eutester.py" />
         <option value="$PROJECT_DIR$/se34euca/Eutester.py" />
         <option value="$PROJECT_DIR$/se34euca/UI_Eutester.py" />
-        <option value="$PROJECT_DIR$/se34euca/lib/EucaUITester.py" />
-        <option value="$PROJECT_DIR$/se34euca/testcase/testcase_base.py" />
-        <option value="$PROJECT_DIR$/se34euca/testcase/testcase_keypair.py" />
         <option value="$PROJECT_DIR$/se34euca/testcase/testcase_simulate_user.py" />
         <option value="$PROJECT_DIR$/se34euca/testcase/testcase_instance.py" />
         <option value="$PROJECT_DIR$/se34euca/lib/EucaUITestLib_Instance.py" />
         <option value="$PROJECT_DIR$/se34euca/testcase/testcase_snapshot.py" />
         <option value="$PROJECT_DIR$/se34euca/lib/UI_Eutester.py" />
+        <option value="$PROJECT_DIR$/se34euca/testcase/testcase_sequences.py" />
+        <option value="$PROJECT_DIR$/se34euca/testcase/testcase_base.py" />
         <option value="$PROJECT_DIR$/se34euca/lib/EucaUITestLib_Snapshot.py" />
+        <option value="$PROJECT_DIR$/se34euca/testcase/testcase_keypair.py" />
+        <option value="$PROJECT_DIR$/se34euca/lib/EucaUITester.py" />
         <option value="$PROJECT_DIR$/se34euca/lib/EucaUITestLib_Base.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="708" />
-    <option name="y" value="28" />
+    <option name="x" value="648" />
+    <option name="y" value="78" />
     <option name="width" value="1209" />
-    <option name="height" value="926" />
+    <option name="height" value="830" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -713,8 +735,8 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="se34euca" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/se34euca/runtest_snapshot.py" />
-      <option name="PARAMETERS" value="-s 10.111.4.125 -i 10.111.5.7 -p 8888 -a ui-test-acct-00 -u user00 -w mypassword1 -t delete_all_snapshots" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/se34euca/runtest_sequences.py" />
+      <option name="PARAMETERS" value="-s 10.111.4.125 -i 10.111.1.51 -p 8888 -a ui-test-acct-00 -u user00 -w mypassword1 -t keypair_operations" />
       <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PyDebugRunner" />
@@ -988,7 +1010,11 @@
       <created>1378412948264</created>
       <updated>1378412948264</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Added methods verify_element_not_present and verify_text_not_present_by_">
+      <created>1378818440116</created>
+      <updated>1378818440116</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">
@@ -1012,7 +1038,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="708" y="28" width="1209" height="926" extended-state="0" />
+    <frame x="648" y="78" width="1209" height="830" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918397" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1020,11 +1046,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277311" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2477314" sideWeight="0.70756304" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1711092" sideWeight="0.45420793" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1711092" sideWeight="0.57042253" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5141431" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1711092" sideWeight="0.14727722" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1711092" sideWeight="0.18450704" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.292437" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39851484" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24366197" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2479062" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1078,7 +1104,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Increased timeouts to 5 minutes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added methods verify_element_not_present and verify_text_not_present_by_" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1107,6 +1133,7 @@
     <MESSAGE value="Added test &quot;Associate IP from Instances Landing Page&quot;" />
     <MESSAGE value="Added test launch_and_terminate_instance." />
     <MESSAGE value="Increased timeouts to 5 minutes." />
+    <MESSAGE value="Added methods verify_element_not_present and verify_text_not_present_by_" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1124,105 +1151,123 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/se34euca/__init__.py">
+    <entry file="file://$PROJECT_DIR$/se34euca/lib/EucaUITestLib_Image.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/se34euca-env/lib/python2.7/site-packages/boto/ec2/connection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2270" column="0" selection-start="90216" selection-end="90216" vertical-scroll-proportion="6.551724" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/eutester/eucaops/ec2ops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="0" selection-start="5497" selection-end="5497" vertical-scroll-proportion="0.28735632">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/se34euca-env/lib/python2.7/site-packages/boto/connection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1064" column="0" selection-start="43363" selection-end="43363" vertical-scroll-proportion="0.28832117" />
-      </provider>
-    </entry>
-    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/socket.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="446" column="0" selection-start="16104" selection-end="16104" vertical-scroll-proportion="-6.281022" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/se34euca/testcase/testcase_keypair.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="126" selection-end="126" vertical-scroll-proportion="0.06521739" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/se34euca/lib/EucaUITestLib_Instance.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="312" column="0" selection-start="14377" selection-end="14377" vertical-scroll-proportion="0.0">
+        <state line="27" column="0" selection-start="749" selection-end="749" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/se34euca/testcase/testcase_instance.py">
+    <entry file="file://$PROJECT_DIR$/se34euca/lib/EucaUITestLib_IP_Address.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="748" selection-end="748" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/se34euca/testcase/testcase_simulate_user.py">
+    <entry file="file://$PROJECT_DIR$/se34euca/lib/EucaUITestLib_Keypair.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="17" selection-start="1817" selection-end="1817" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/se34euca/testcase/testcase_snapshot.py">
+    <entry file="file://$PROJECT_DIR$/se34euca/lib/EucaUITestLib_Security_Group.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="46" selection-start="456" selection-end="456" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/se34euca/lib/EucaUITestLib_Snapshot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="0" selection-start="1961" selection-end="1961" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/se34euca/lib/EucaUITestLib_Utility.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/se34euca/lib/EucaUITestLib_Volume.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/se34euca/testcase/testcase_sequences.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="21" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/se34euca/testcase/testcase_admin_console.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/se34euca/testcase/testcase_base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0">
+        <state line="2" column="1" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/se34euca/testcase/testcase_instance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/se34euca/lib/UI_Eutester.py">
+    <entry file="file://$PROJECT_DIR$/se34euca/testcase/testcase_ip_address.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="56" selection-start="283" selection-end="283" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/se34euca-env/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py">
+    <entry file="file://$PROJECT_DIR$/se34euca/testcase/testcase_keypair.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="638" column="0" selection-start="19724" selection-end="19724" vertical-scroll-proportion="0.029354207">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/se34euca/lib/EucaUITestLib_Snapshot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="13" selection-start="1885" selection-end="1885" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="32" column="46" selection-start="1194" selection-end="1194" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/se34euca/lib/EucaUITester.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="39" selection-start="503" selection-end="541" vertical-scroll-proportion="0.0">
+        <state line="74" column="64" selection-start="3114" selection-end="3114" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/se34euca/lib/EucaUITestLib_Base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="30" selection-start="510" selection-end="510" vertical-scroll-proportion="0.5825243">
-          <folding />
+        <state line="65" column="24" selection-start="1760" selection-end="1760" vertical-scroll-proportion="0.5507559">
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

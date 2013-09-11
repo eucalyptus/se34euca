@@ -10,7 +10,7 @@
 <tr><td><b>Test Suite</b></td></tr>
 <tr><td><a href="import-key-pair">import-key-pair</a></td></tr>
 <tr><td><a href="chk-create-key-pair">chk-create-key-pair</a></td></tr>
-<tr><td><a href="delete-key-pair">delete-key-pair</a></td></tr>
+<tr><td><a href="delete-imported-key-pair">delete-imported-key-pair</a></td></tr>
 <tr><td><a href="chk-delete-key-pair">chk-delete-key-pair</a></td></tr>
 <tr><td><a href="allocate-ip">allocate-ip</a></td></tr>
 <tr><td><a href="chk-allocate-ip-1">chk-allocate-ip-1</a></td></tr>
@@ -74,6 +74,7 @@
 <tr><td><a href="chk-attach-volume">chk-attach-volume</a></td></tr>
 <tr><td><a href="delete-snapshots-all">delete-snapshots-all</a></td></tr>
 <tr><td><a href="create-snapshot-register-as-image">create-snapshot-register-as-image</a></td></tr>
+<tr><td><a href="AutoScaling/chk-register-snapshot-as-image">chk-register-snapshot-as-image</a></td></tr>
 <tr><td><a href="delete-snapshots-all">delete-snapshots-all</a></td></tr>
 <tr><td><a href="detach-volume-inst-page">detach-volume-inst-page</a></td></tr>
 <tr><td><a href="terminate-all-instances">terminate-all-instances</a></td></tr>

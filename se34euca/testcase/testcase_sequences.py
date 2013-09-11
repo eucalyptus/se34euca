@@ -27,13 +27,16 @@ class testcase_sequences(testcase_base):
         self.eucaUITester.instance.test_ui_launch_instance_from_images_lp()
         time.sleep(sleep_time)
         self.eucaUITester.instance.test_ui_check_running_instances_count("2")
+        time.sleep(sleep_time)
+        self.eucaUITester.instance.test_ui_terminate_instance_all()
+        time.sleep(sleep_time)
         self.eucaUITester.base.test_ui_logout()
 
     def keypair_operations(self):
         sleep_time=60
         print "=== runTest: Keypair Operations ==="
         self.eucaUITester.base.test_ui_login()
-        self.eucaUITester.keypair.test_ui_generate_keypair()
+        self.eucaUITester.keypair.test_ui_import_keypair()
         time.sleep(sleep_time)
         self.eucaUITester.keypair.test_ui_check_keypair_count("1")
         time.sleep(sleep_time)
@@ -41,9 +44,6 @@ class testcase_sequences(testcase_base):
         time.sleep(sleep_time)
         self.eucaUITester.keypair.test_ui_check_keypair_count("0")
         time.sleep(sleep_time)
-        self.eucaUITester.keypair.test_ui_import_keypair()
-        time.sleep(sleep_time)
-        self.eucaUITester.keypair.test_ui_check_keypair_count("1")
         self.eucaUITester.base.test_ui_logout()
 if __name__ == "__main__":
     unittest.main()

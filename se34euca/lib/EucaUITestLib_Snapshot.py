@@ -46,8 +46,7 @@ class EucaUITestLib_Snapshot(EucaUITestLib_Base):
         self.test_ui_gotopage_dashboard()
         print
         print "Test: Verify that snapshot count is not zero on Dashboard:"
-        #print "Test: refresh Dashboard"
-        #self.driver.refresh()
+
         if self.verify_text_not_present_by_css("#dashboard-storage-snapshot > span", "0"):
             print "Test: Verified number of snapshots on dashboard is non-zero: "
             print

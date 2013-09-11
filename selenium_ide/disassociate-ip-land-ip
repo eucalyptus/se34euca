@@ -58,32 +58,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>//table[@id='eips']/thead/tr/th[3]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=th.sorting_asc</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>css=td..sorting_1</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>css=td..sorting_1</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>css=td..sorting_1</td>
-	<td>inst1</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=td..sorting_1</td>
+	<td>css=td:contains('myinst')</td>
 	<td></td>
 </tr>
 <tr>

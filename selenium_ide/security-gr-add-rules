@@ -52,24 +52,9 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForTextPresent</td>
-	<td>test</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>css=span:contains(&quot;test&quot;)</td>
-	<td>test</td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>css=span:contains(&quot;test&quot;)</td>
-	<td>test</td>
-</tr>
-<tr>
 	<td>click</td>
-	<td>css=span:contains(&quot;test&quot;)</td>
-	<td>test</td>
+	<td>css=td:contains(&quot;test&quot;)</td>
+	<td></td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>

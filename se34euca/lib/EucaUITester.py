@@ -73,7 +73,6 @@ class EucaUITester():
         self.utility.setSeleniumWebDriver(self.base.driver)
         self.utility.setUserInfo(self.accountname, self.username, self.password)
         self.admin_console = EucaUITestLib_Admin_Console("NoOp")
-        #self.eutester = UI_Eutester("NoOp")
         print
 
     def tearDown(self):
