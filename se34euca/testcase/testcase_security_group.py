@@ -17,7 +17,7 @@ class testcase_security_group(testcase_base):
     def add_rules_to_security_group(self):
         print "=== runTest: Add Rules to Security Group ==="
         self.eucaUITester.base.test_ui_login()
-        self.eucaUITester.security_group.test_ui_add_rules_to_security_group()
+        self.eucaUITester.security_group.test_ui_add_rules_to_security_group("test")
         self.eucaUITester.base.test_ui_logout()
 
     def delete_security_group(self):

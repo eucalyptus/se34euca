@@ -23,8 +23,8 @@ class EucaUITestLib_Base(unittest.TestCase):
     accountname = "eucalyptus"
     username = "admin"
     password = "password"
-    retry = 120 #waiting time in seconds for element to be present on page
-    trials = 30 #trial number for verify not present methods
+    retry = 400 #waiting time in seconds for element to be present on page
+    trials = 120 #trial number for verify not present methods
 
     def NoOp(self):
         return 0
@@ -106,7 +106,7 @@ class EucaUITestLib_Base(unittest.TestCase):
         self.driver.get(self.base_url + "/")
         print
         print "Test: Received the Page Title -> " + self.driver.title
-        self.verify_element_by_id("euca-logo")
+        self.verify_element_by_id("password-help")
         print
         print "Test: Received the Login Page"
         self.set_keys_by_id("account", self.accountname)
@@ -155,7 +155,7 @@ class EucaUITestLib_Base(unittest.TestCase):
         self.click_element_by_link_text(this_link)
         print "Test: Clicked the Logout Button"
         self.click_element_by_link_text("Log out")
-        self.verify_element_by_id("login")
+        self.verify_element_by_id("password-help")
         print
         print "Finished Test: Logout"
         print
@@ -408,7 +408,7 @@ class EucaUITestLib_Base(unittest.TestCase):
 
 
 
-    # CLICK CALLS
+#CLICK CALLS
     def click_element_by_link_text(self, link_text):
         if( self.check_if_element_present_by_type("LINK_TEXT", link_text) is not 0 ):
             raise UICheckException("Element by link text not present: " + link_text)
@@ -445,7 +445,7 @@ class EucaUITestLib_Base(unittest.TestCase):
         return 0
 
 
-    # SET KEYS CALLS
+#SET KEYS CALLS
     def set_keys_by_link_text(self, link_text, keys):
         if( self.check_if_element_present_by_type("LINK_TEXT", link_text) is not 0 ):
             raise UICheckException("Element by link text not present:" + link_text)
@@ -487,7 +487,7 @@ class EucaUITestLib_Base(unittest.TestCase):
         return 0
 
 
-    # GET TEXT CALLS
+#GET TEXT CALLS
     def get_text_by_link_text(self, link_text):
         if( self.check_if_element_present_by_type("LINK_TEXT", link_text) is not 0 ):
             raise UICheckException("Element by link text not present:" +link_text)
