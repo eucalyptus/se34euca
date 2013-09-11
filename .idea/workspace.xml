@@ -2,18 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db54d159-8d46-438b-9b63-855329dbc419" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/se34euca/lib/EucaUITestLib_Base.py" afterPath="$PROJECT_DIR$/se34euca/lib/EucaUITestLib_Base.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/se34euca/lib/EucaUITestLib_Keypair.py" afterPath="$PROJECT_DIR$/se34euca/lib/EucaUITestLib_Keypair.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/se34euca/lib/EucaUITestLib_Security_Group.py" afterPath="$PROJECT_DIR$/se34euca/lib/EucaUITestLib_Security_Group.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/se34euca/testcase/testcase_security_group.py" afterPath="$PROJECT_DIR$/se34euca/testcase/testcase_security_group.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/se34euca/testcase/testcase_sequences.py" afterPath="$PROJECT_DIR$/se34euca/testcase/testcase_sequences.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="1b4313d3-a15d-4ff3-83ce-a871b53f274e" name="New changelist" comment="" />
     <list id="936fba54-748b-4117-9085-f6a62e4c1462" name="Failed commit: Default" comment="Added test for Admin Console." />
     <ignored path="se34euca.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1378871592237" ignored="false" />
+    <file path="/Dummy.txt" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1378884971716" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/openapi.jar!/standardSchemas/XMLSchema.xsd" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372409376303" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/openapi.jar!/standardSchemas/catalog.xsd" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372409376303" ignored="false" />
     <file path="$APPLICATION_HOME_DIR$/lib/openapi.jar!/standardSchemas/xinclude.xsd" changelist="db54d159-8d46-438b-9b63-855329dbc419" time="1372409376303" ignored="false" />
@@ -151,7 +146,7 @@
       <file leaf-file-name="testcase_sequences.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/se34euca/testcase/testcase_sequences.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="76" selection-start="2920" selection-end="2920" vertical-scroll-proportion="0.64285713">
+            <state line="64" column="76" selection-start="2920" selection-end="2920" vertical-scroll-proportion="1.5">
               <folding />
             </state>
           </provider>
@@ -993,7 +988,11 @@
       <created>1378871595611</created>
       <updated>1378871595611</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Added sequences keypair_operations and security_group_operations.">
+      <created>1378884974700</created>
+      <updated>1378884974700</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -1083,7 +1082,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commented out the eutester integration part. Introduced changes to test cases to work with 3.4 code." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added sequences keypair_operations and security_group_operations." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1114,6 +1113,7 @@
     <MESSAGE value="Increased timeouts to 5 minutes." />
     <MESSAGE value="Added methods verify_element_not_present and verify_text_not_present_by_" />
     <MESSAGE value="Commented out the eutester integration part. Introduced changes to test cases to work with 3.4 code." />
+    <MESSAGE value="Added sequences keypair_operations and security_group_operations." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1246,7 +1246,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/se34euca/testcase/testcase_sequences.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="76" selection-start="2920" selection-end="2920" vertical-scroll-proportion="0.64285713">
+        <state line="64" column="76" selection-start="2920" selection-end="2920" vertical-scroll-proportion="1.5">
           <folding />
         </state>
       </provider>
