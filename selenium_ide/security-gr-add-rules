@@ -147,11 +147,6 @@
 	<td>0.0.0.0/0</td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>xpath=(//button[@id='sgroup-add-btn'])[2]</td>
-	<td></td>
-</tr>
-<tr>
 	<td>waitForElementPresent</td>
 	<td>xpath=(//a[contains(text(),'Add another rule')])[2]</td>
 	<td></td>
