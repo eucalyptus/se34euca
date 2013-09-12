@@ -17,11 +17,6 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>40</td>
-	<td></td>
-</tr>
-<tr>
 	<td>waitForVisible</td>
 	<td>link=Dashboard</td>
 	<td></td>
