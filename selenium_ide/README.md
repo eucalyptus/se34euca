@@ -44,11 +44,11 @@ chk-launch-more-like-this -- Verifies running instance count on Dashboard is 2
 
 chk-launch-myinst -- Verifies that instance named "myinst" shows up on Instances Landing Page filtered by running instances
 
-chk-release-ip -- Verifies IP address count on Dashboard is 0
+chk-release-ip -- Verifies that IP address count on Dashboard is 0
 
-chk-security-gr-add-rules
+chk-security-gr-add-rules -- Opens security group expando and prints protocol #4
 
-chk-terminate-instance
+chk-terminate-instance -- Verifies that running instance count on Dashboard is 0
 
 chk-terminate-instance-1
 
