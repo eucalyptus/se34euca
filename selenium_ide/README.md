@@ -9,13 +9,15 @@ associate-ip-land-ip -- Dashboard -> Network & security -> IP Addresses -> Assoc
 
 attach-volume-from-inst-page -- Dashboard -> Instances -> Attach volume to instance
 
-attach-volume-from-volumes-page
+attach-volume-from-volumes-page -- Dashboard -> Storage -> Volumes -> Attach volume to instance
 
 
-chk-allocate-ip
-chk-allocate-ip-1
-chk-associate-ip-land-ip
-chk-attach-volume
+chk-allocate-ip -- Verifies IP address count on Dashboard is 2
+
+chk-allocate-ip-1 -- Verifies IP address count on Dashboard is 1
+
+chk-attach-volume -- Verifies there is a volume in "attached" state on Volumes Landing Page
+
 chk-create-key-pair
 chk-create-secutity-group
 chk-create-volume
