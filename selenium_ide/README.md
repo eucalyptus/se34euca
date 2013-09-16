@@ -100,14 +100,14 @@ release-ip-to-cloud -- Dashboard -> Network & security -> IP Addresses -> Releas
 
 release-ip-while-associated -- Dashboard -> Network & security -> IP Addresses -> Release IP to cloud while associated to instance
 
-security-gr-add-rules
+security-gr-add-rules -- Dashboard -> Network & security -> Modify Security group -> Add SSH, HTTP, and ICMP rules
 
-snapshot-from-snap-page
+snapshot-from-snap-page -- Dashboard -> Snapshots -> Create new snaposhot
 
-snapshot-from-volume
+snapshot-from-volume -- Dashboard -> Storage -> Volumes -> Create snapshot from volume
 
-snapshot-to-volume
+snapshot-to-volume -- Dashboard -> Storage -> Snapshots -> Create volume from snapshot
 
-terminate-instance
+terminate-instance -- Dashboard -> Instances -> Terminate instance
 
 
