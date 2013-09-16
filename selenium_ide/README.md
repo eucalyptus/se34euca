@@ -54,11 +54,11 @@ chk-terminate-instance-1 -- Verifies that running instance count on Dashboard is
 
 create-key-pair -- Dashboard -> Network & security -> Key pairs -> Create new key pair
 
-create-sec-group-with-rules
+create-sec-group-with-rules -- Dashboard -> Network & security -> Create new security group -> Group created -> Create with SSH, HTTP, and ICMP rules enabled
 
-create-secutity-group
+create-secutity-group -- Dashboard -> Network & security -> Create new security group -> Group created -> Create an empty group
 
-create-snapshot-register-as-inst
+create-snapshot-register-as-inst -- Dashboard -> Storage -> Snapshots -> Create Snapshot ->  Create Image from snapshot
 
 create-volume
 create-volume-v
