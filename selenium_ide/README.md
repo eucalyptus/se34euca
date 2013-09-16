@@ -32,16 +32,24 @@ chk-delete-security-group -- Verifies security count on Dashboard is 1
 
 chk-delete-volume -- Verifies volume count on Dashboard is 0
 
-chk-disas-ip-land-inst
+chk-disas-ip-land-inst -- Prints instance id of instance that was associated and what is visible on IP addresses landing page at the monemt for comparison.
 
-chk-launch-inst-from-images
-chk-launch-inst-from-instances
-chk-launch-instance-from-dboard
-chk-launch-more-like-this
-chk-launch-myinst
-chk-release-ip
+chk-launch-inst-from-images -- Verifies running instance count on Dashboard is 1
+
+chk-launch-inst-from-instances -- Verifies running instance count on Dashboard is 1
+
+chk-launch-instance-from-dboard -- Verifies running instance count on Dashboard is 2
+
+chk-launch-more-like-this -- Verifies running instance count on Dashboard is 2
+
+chk-launch-myinst -- Verifies that instance named "myinst" shows up on Instances Landing Page filtered by running instances
+
+chk-release-ip -- Verifies IP address count on Dashboard is 0
+
 chk-security-gr-add-rules
+
 chk-terminate-instance
+
 chk-terminate-instance-1
 
 create-key-pair
