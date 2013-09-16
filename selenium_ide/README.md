@@ -70,13 +70,13 @@ delete-key-pair -- Dashboard -> Network & security -> Key pairs -> Delete a key 
 
 delete-security-group -- Dashboard -> Network & security -> Delete a security group 
 
-delete-snapshots-all
+delete-snapshots-all -- Dashboard -> Storage -> Snapshots -> Delete all snapshots
 
-delete-volume
+delete-volume -- Dashboard -> Storage -> Volumes -> Delete volume
 
-delete-volumes-all
+delete-volumes-all -- Dashboard -> Storage -> Volumes -> Delete all volumes
 
-detach-volume
+detach-volume -- Dashboard -> Storage -> Volumes -> Detach volume
 
 detach-volume-inst-page
 
