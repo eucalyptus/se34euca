@@ -50,7 +50,7 @@ chk-security-gr-add-rules -- Opens security group expando and prints protocol #4
 
 chk-terminate-instance -- Verifies that running instance count on Dashboard is 0
 
-chk-terminate-instance-1
+chk-terminate-instance-1 -- Verifies that running instance count on Dashboard is 1
 
 create-key-pair -- Dashboard -> Network & security -> Key pairs -> Create new key pair
 
