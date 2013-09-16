@@ -1,21 +1,13 @@
 Descrition of all Selenium IDE tests in alphabetical order.
 
 
-allocate-ip
+allocate-ip -- Dashboard -> Network & security -> Allocate IP -> Allocate 1 IP
 
-Dashboard -> Network & security -> Allocate IP -> Allocate 1 IP
+associate-ip-land-inst -- Dashboard -> Instances -> Associate IP to an instance
 
-associate-ip-land-inst
+associate-ip-land-ip -- Dashboard -> Network & security -> IP Addresses -> Associate IP to instance
 
-Dashboard -> Instances -> Associate IP to an instance
-
-associate-ip-land-ip
-
-Dashboard -> Network & security -> IP Addresses -> Associate IP to instance
-
-attach-volume-from-inst-page
-
-Dashboard -> Instances -> Attach volume to instance
+attach-volume-from-inst-page -- Dashboard -> Instances -> Attach volume to instance
 
 attach-volume-from-volumes-page
 
