@@ -75,22 +75,39 @@ delete-snapshots-all
 delete-volume
 
 delete-volumes-all
+
 detach-volume
+
 detach-volume-inst-page
+
 disassociate-ip-land-instances
+
 disassociate-ip-land-ip
+
 import-key-pair
+
 launch-inst-from-images
+
 launch-inst-from-instances
+
 launch-inst-name-myinst
+
 launch-instance-from-dboard
+
 launch-more-like-this
+
 release-ip-to-cloud
+
 release-ip-while-associated
+
 security-gr-add-rules
+
 snapshot-from-snap-page
+
 snapshot-from-volume
+
 snapshot-to-volume
+
 terminate-instance
 
 
