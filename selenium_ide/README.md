@@ -28,9 +28,12 @@ chk-create-volume-v -- Verifies that there is a volume named "v" on volumes land
 
 chk-delete-key-pair -- Verifies key pair count on Dashboard is 0
 
-chk-delete-security-group
-chk-delete-volume
+chk-delete-security-group -- Verifies security count on Dashboard is 1
+
+chk-delete-volume -- Verifies volume count on Dashboard is 0
+
 chk-disas-ip-land-inst
+
 chk-launch-inst-from-images
 chk-launch-inst-from-instances
 chk-launch-instance-from-dboard
