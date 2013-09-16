@@ -66,10 +66,14 @@ create-volume-v -- Dashboard -> Storage -> Volumes -> Create volume named v
 
 delete-all-instances -- Dashboard -> Instances -> Terminate all instances
 
-delete-key-pair
-delete-security-group
+delete-key-pair -- Dashboard -> Network & security -> Key pairs -> Delete a key pair
+
+delete-security-group -- Dashboard -> Network & security -> Delete a security group 
+
 delete-snapshots-all
+
 delete-volume
+
 delete-volumes-all
 detach-volume
 detach-volume-inst-page
