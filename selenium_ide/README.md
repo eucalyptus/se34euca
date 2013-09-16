@@ -88,17 +88,17 @@ import-key-pair -- Dashboard -> Network & security -> Import keypair
 
 launch-inst-from-images -- Dashboard -> Images -> Launch instance
 
-launch-inst-from-instances
+launch-inst-from-instances -- Dashboard -> Instances -> Launch instance
 
-launch-inst-name-myinst
+launch-inst-name-myinst  -- Dashboard ->  Launch instance, name it "myinst"
 
-launch-instance-from-dboard
+launch-instance-from-dboard -- Dashboard -> Launch instance
 
-launch-more-like-this
+launch-more-like-this -- Dashboard -> Instances -> Launch more like this one
 
-release-ip-to-cloud
+release-ip-to-cloud -- Dashboard -> Network & security -> IP Addresses -> Release IP to cloud
 
-release-ip-while-associated
+release-ip-while-associated -- Dashboard -> Network & security -> IP Addresses -> Release IP to cloud while associated to instance
 
 security-gr-add-rules
 
