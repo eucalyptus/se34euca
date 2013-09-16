@@ -17,6 +17,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>storeTable</td>
+	<td>css=#eips_wrapper &gt; #eips.1.1</td>
+	<td></td>
+</tr>
+<tr>
 	<td>waitForVisible</td>
 	<td>link=Dashboard</td>
 	<td></td>

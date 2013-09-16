@@ -23,6 +23,7 @@ class EucaUITestLib_Base(unittest.TestCase):
     accountname = "eucalyptus"
     username = "admin"
     password = "password"
+    protocol = "http"
     retry = 400 #waiting time in seconds for element to be present on page
     trials = 120 #trial number for verify not present methods
 
@@ -63,7 +64,7 @@ class EucaUITestLib_Base(unittest.TestCase):
         print
         print "=== setUp ==="
         #this_ui = "https://" + self.ui_ip + ":" + self.port
-        this_ui = "http://" + self.ui_ip + ":" + self.port
+        this_ui = self.protocol +"://" + self.ui_ip + ":" + self.port
         this_selenium_server_url = "http://" + self.selenium_server_ip + ":" + self.selenium_server_port + "/wd/hub"
         print "SELENIUM SERVER URL: " + this_selenium_server_url
         print "EUCALYPTUS UI PROXY URL: " + this_ui
@@ -270,6 +271,10 @@ class EucaUITestLib_Base(unittest.TestCase):
     #Experimental:
 
     def verify_element_not_present(self, element_type, element):
+
+        '''
+        Driver waits for the element to disappear from the page
+        '''
 
         this_element_type = ""
         if element_type is "LINK_TEXT" :

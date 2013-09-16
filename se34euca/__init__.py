@@ -16,6 +16,7 @@ class TestRunner(object):
         self.username = "admin"
         self.password = "password"
         self.testcases = ""
+        self.protocol = "http"
         for key in self.testclass.__dict__:
             if hasattr(self.testclass.__dict__[key], "__call__"):
                 self.testcases += key+' '
@@ -29,6 +30,7 @@ class TestRunner(object):
         parser.add_option("-u", "--user", dest="username", help="username")
         parser.add_option("-w", "--password", dest="password", help="password")
         parser.add_option("-t", "--testcase", dest="testcase", help="testcase: "+self.testcases)
+        parser.add_option("-l", "--protocol", dest="protocol", help="type of protocol ui uses: http or https")
         (options, args) = parser.parse_args()
 
         if options.selenium_server_ip is not None:
