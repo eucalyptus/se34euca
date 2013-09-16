@@ -60,9 +60,12 @@ create-secutity-group -- Dashboard -> Network & security -> Create new security 
 
 create-snapshot-register-as-inst -- Dashboard -> Storage -> Snapshots -> Create Snapshot ->  Create Image from snapshot
 
-create-volume
-create-volume-v
-delete-all-inatances
+create-volume -- Dashboard -> Storage -> Volumes -> Create volume
+
+create-volume-v -- Dashboard -> Storage -> Volumes -> Create volume named v
+
+delete-all-instances -- Dashboard -> Instances -> Terminate all instances
+
 delete-key-pair
 delete-security-group
 delete-snapshots-all
