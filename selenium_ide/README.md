@@ -52,10 +52,14 @@ chk-terminate-instance
 
 chk-terminate-instance-1
 
-create-key-pair
+create-key-pair -- Dashboard -> Network & security -> Key pairs -> Create new key pair
+
 create-sec-group-with-rules
+
 create-secutity-group
+
 create-snapshot-register-as-inst
+
 create-volume
 create-volume-v
 delete-all-inatances
