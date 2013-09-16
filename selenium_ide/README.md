@@ -24,8 +24,10 @@ chk-create-secutity-group -- Verifies security group count on Dashboard is 2
 
 chk-create-volume -- Verifies volume count on Dashboard is 1
 
-chk-create-volume-v
-chk-delete-key-pair
+chk-create-volume-v -- Verifies that there is a volume named "v" on volumes landing page, verifies volume count on Dashboard is 1
+
+chk-delete-key-pair -- Verifies key pair count on Dashboard is 0
+
 chk-delete-security-group
 chk-delete-volume
 chk-disas-ip-land-inst
