@@ -78,15 +78,15 @@ delete-volumes-all -- Dashboard -> Storage -> Volumes -> Delete all volumes
 
 detach-volume -- Dashboard -> Storage -> Volumes -> Detach volume
 
-detach-volume-inst-page
+detach-volume-inst-page -- Dashboard -> Instances -> Detach volume
 
-disassociate-ip-land-instances
+disassociate-ip-land-instances -- Dashboard -> Instances -> Disassociate IP
 
-disassociate-ip-land-ip
+disassociate-ip-land-ip -- Dashboard -> Network & security -> IP Addresses -> Disassociate IP
 
-import-key-pair
+import-key-pair -- Dashboard -> Network & security -> Import keypair
 
-launch-inst-from-images
+launch-inst-from-images -- Dashboard -> Images -> Launch instance
 
 launch-inst-from-instances
 
