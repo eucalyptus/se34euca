@@ -16,7 +16,7 @@ class TestRunner(object):
         self.username = "admin"
         self.password = "password"
         self.testcases = ""
-        self.protocol = "http"
+        self.protocol = "https"
         for key in self.testclass.__dict__:
             if hasattr(self.testclass.__dict__[key], "__call__"):
                 self.testcases += key+' '

@@ -23,7 +23,7 @@ class EucaUITestLib_Base(unittest.TestCase):
     accountname = "eucalyptus"
     username = "admin"
     password = "password"
-    protocol = "http"
+    protocol = "https"
     retry = 400 #waiting time in seconds for element to be present on page
     trials = 120 #trial number for verify not present methods
 
@@ -63,7 +63,6 @@ class EucaUITestLib_Base(unittest.TestCase):
     def setUp(self):
         print
         print "=== setUp ==="
-        #this_ui = "https://" + self.ui_ip + ":" + self.port
         this_ui = self.protocol +"://" + self.ui_ip + ":" + self.port
         this_selenium_server_url = "http://" + self.selenium_server_ip + ":" + self.selenium_server_port + "/wd/hub"
         print "SELENIUM SERVER URL: " + this_selenium_server_url
