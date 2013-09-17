@@ -10,7 +10,7 @@
 <tr><td><b>Test Suite</b></td></tr>
 <tr><td><a href="import-key-pair">import-key-pair</a></td></tr>
 <tr><td><a href="chk-create-key-pair">chk-create-key-pair</a></td></tr>
-<tr><td><a href="delete-key-pair">delete-key-pair</a></td></tr>
+<tr><td><a href="delete-imported-key-pair">delete-imported-key-pair</a></td></tr>
 <tr><td><a href="chk-delete-key-pair">chk-delete-key-pair</a></td></tr>
 <tr><td><a href="allocate-ip">allocate-ip</a></td></tr>
 <tr><td><a href="chk-allocate-ip-1">chk-allocate-ip-1</a></td></tr>
@@ -34,9 +34,9 @@
 <tr><td><a href="terminate-all-instances">terminate-all-instances</a></td></tr>
 <tr><td><a href="chk-terminate-instance">chk-terminate-instance</a></td></tr>
 <tr><td><a href="delete-volume">delete-volume</a></td></tr>
-<tr><td><a href="chk-delete-volume">chk-delete-volume</a></td></tr>
 <tr><td><a href="delete-key-pair">delete-key-pair</a></td></tr>
 <tr><td><a href="chk-delete-key-pair">chk-delete-key-pair</a></td></tr>
+<tr><td><a href="chk-delete-volume">chk-delete-volume</a></td></tr>
 </tbody></table>
 </body>
 </html>

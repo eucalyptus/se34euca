@@ -3,53 +3,53 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="selenium.base" href="https://10.111.1.51:8888/" />
-<title>chk-create-autoscaling-group-basic</title>
+<link rel="selenium.base" href="https://10.111.1.70:8888/" />
+<title>chk-disas-ip-from-myinst</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">chk-create-autoscaling-group-basic</td></tr>
+<tr><td rowspan="1" colspan="3">chk-disas-ip-from-myinst</td></tr>
 </thead><tbody>
 <tr>
-	<td>setTimeout</td>
-	<td>120000</td>
-	<td></td>
-</tr>
-<tr>
 	<td>click</td>
 	<td>id=resource-menu-dashboard</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=resource-menu-instance</td>
+	<td>id=resource-menu-netsec</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=resource-menuitem-scaling</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>link=ASG-test</td>
+	<td>id=resource-menuitem-eip</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=resource-menu-dashboard</td>
+	<td>id=columnheader-2</td>
 	<td></td>
 </tr>
 <tr>
-	<td>waitForText</td>
-	<td>css=#dashboard-scaling-groups &gt; div.status-readout &gt; span</td>
-	<td>2</td>
+	<td>click</td>
+	<td>id=columnheader-2</td>
+	<td></td>
 </tr>
 <tr>
-	<td>verifyElementPresent</td>
-	<td>css=#dashboard-scaling-groups &gt; div.status-readout &gt; span</td>
-	<td>2</td>
+	<td>click</td>
+	<td>//table[@id='eips']/thead/tr/th[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//table[@id='eips']/tbody/tr/td[3]</td>
+	<td>myinst</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Verifyling myinst&nbsp;&nbsp;not present: ${myinst}</td>
+	<td></td>
 </tr>
 
 </tbody></table>

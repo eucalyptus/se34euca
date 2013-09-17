@@ -29,7 +29,7 @@
 <tr><td><a href="terminate-instance">terminate-instance</a></td></tr>
 <tr><td><a href="chk-terminate-instance">chk-terminate-instance</a></td></tr>
 <tr><td><a href="launch-instance-from-dboard">launch-instance-from-dboard</a></td></tr>
-<tr><td><a href="chk-launch-instance-from-dboard">chk-launch-instance-from-dboard</a></td></tr>
+<tr><td><a href="chk-launch-inst-from-instances">chk-launch-inst-from-instances</a></td></tr>
 <tr><td><a href="delete-volume">delete-volume</a></td></tr>
 <tr><td><a href="delete-snapshots-all">delete-snapshots-all</a></td></tr>
 <tr><td><a href="terminate-instance">terminate-instance</a></td></tr>
