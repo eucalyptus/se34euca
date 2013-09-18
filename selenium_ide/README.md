@@ -31,6 +31,6 @@ You can find our code submission framework here: https://github.com/eucalyptus/s
 
 Tutorial on creating a Selenium IDE test: https://www.cs.drexel.edu/~spiros/teaching/SE320/slides/selenium.pdf  
 
-  
-
+UI testing demo by Alice and discussion recorded at Eucalyptus on 07-11-2013: 
+https://s3-us-west-1.amazonaws.com/eutester-ui-selenium-demo/UI+Tests+Description%2C+Python+and+Selenium+IDE+Overview+and+Demo+7-11-13+6.31+PM.mov
 
