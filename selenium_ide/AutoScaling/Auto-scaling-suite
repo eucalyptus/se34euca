@@ -9,8 +9,14 @@
 <table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
 <tr><td><b>Test Suite</b></td></tr>
 <tr><td><a href="create-launch-config-basic">create-launch-config-basic</a></td></tr>
-<tr><td><a href="../create-autoscaling-group-basic">create-autoscaling-group-basic</a></td></tr>
+<tr><td><a href="../../../../../../create-autoscaling-group-basic">create-autoscaling-group-basic</a></td></tr>
 <tr><td><a href="chk-create-autoscaling-group-basic">chk-create-autoscaling-group-basic</a></td></tr>
+<tr><td><a href="quick-scale-up-by-one">quick-scale-up-by-one</a></td></tr>
+<tr><td><a href="chk-quick-scale-up-by-one">chk-quick-scale-up-by-one</a></td></tr>
+<tr><td><a href="quick-scale-down-by-one">quick-scale-down-by-one</a></td></tr>
+<tr><td><a href="chk-quick-scale-down-by-one">chk-quick-scale-down-by-one</a></td></tr>
+<tr><td><a href="asg-edit-change-max">asg-edit-change-max</a></td></tr>
+<tr><td><a href="asg-edit-change-min">asg-edit-change-min</a></td></tr>
 <tr><td><a href="delete-autoscaling-group">delete-autoscaling-group</a></td></tr>
 <tr><td><a href="delete-all-launch-configs">delete-all-launch-configs</a></td></tr>
 </tbody></table>

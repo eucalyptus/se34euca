@@ -13,6 +13,11 @@
 </thead><tbody>
 <tr>
 	<td>click</td>
+	<td>id=resource-menu-dashboard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
 	<td>id=resource-menu-instance</td>
 	<td></td>
 </tr>
@@ -88,10 +93,9 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=resource-menu-instance</td>
+	<td>id=resource-menu-dashboard</td>
 	<td></td>
 </tr>
-
 </tbody></table>
 </body>
 </html>
