@@ -16,6 +16,9 @@ To run Selenium IDE open your Firefox browser and from "Tools" menu select "Sele
 
 To run a test suite: From "Files" menu in Selenium IDE select "Open test suite".
 
+###For the suite to run correctly, you have to start with an "empty" Eucalyptus setup, where no resources were created yet.
+
+
 ## Best practices:
 
 Click on the little sand clock picture to enable automatic wait for element to be present on web page.
