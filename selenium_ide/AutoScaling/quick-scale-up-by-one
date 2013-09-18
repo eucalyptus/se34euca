@@ -3,13 +3,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="selenium.base" href="https://10.111.1.51:8888/" />
-<title>create-autoscaling-group-basic</title>
+<link rel="selenium.base" href="http://10.111.1.173:8888/" />
+<title>quick-scale-up-by-one</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">create-autoscaling-group-basic</td></tr>
+<tr><td rowspan="1" colspan="3">quick-scale-up-by-one</td></tr>
 </thead><tbody>
 <tr>
 	<td>click</td>
@@ -28,47 +28,37 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=table-scaling-new</td>
+	<td>id=ASG-test</td>
 	<td></td>
 </tr>
 <tr>
-	<td>type</td>
-	<td>id=scalingGroupName</td>
-	<td>ASG-test</td>
+	<td>click</td>
+	<td>id=more-actions-scaling</td>
+	<td></td>
 </tr>
 <tr>
-	<td>select</td>
-	<td>id=launchConfig</td>
-	<td>label=LC-test</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=maximum</td>
-	<td>8</td>
+	<td>click</td>
+	<td>link=Quick scale</td>
+	<td></td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=desired</td>
-	<td>2</td>
+	<td>3</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=nextButton</td>
+	<td>id=button-dialog-quickscale-save</td>
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>id=nextButton</td>
-	<td></td>
+	<td>verifyText</td>
+	<td>//table[@id='scaling-table-content']/tbody/tr/td[5]</td>
+	<td>3</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=nextButton</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=finishButton</td>
+	<td>id=resource-menu-dashboard</td>
 	<td></td>
 </tr>
 
