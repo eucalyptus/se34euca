@@ -2,8 +2,7 @@
 
 UI-manual-tests suite checks major functionality of Instance operations, Storage operations, Security Group operations, IP Address operations, Key Pair operations and Image operations.
 
-Descriptiopns of all test cases can be found here: https://github.com/eucalyptus/se34euca/selenium_ide/TestCaseDescriptions.md
-
+Descriptiopns of all test cases can be found here: https://github.com/eucalyptus/se34euca/wiki/Description-of-Selenium-IDE-test-cases
 This suite can be run in parts: UI-manual-tests-part-1, UI-manual-tests-part-2, UI-manual-tests-part-3 run all test cases from UI-manual-tests in 3 shorter sequences.
 
 Auto Scaling operations and  Launch Configuration operations can be tested by Auto-scaling-suite which is located in directory named AutoScaling.
