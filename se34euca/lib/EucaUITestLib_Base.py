@@ -42,11 +42,13 @@ class EucaUITestLib_Base(unittest.TestCase):
         print
         return 0
 
-    def setUIInfo(self, ip, port):
+    def setUIInfo(self, ip, port, protocol):
         self.ui_ip = ip
         self.port = port
+        self.protocol = protocol
         print "EUCALYPTUS CONSOLE PROXY IP: " + ip
         print "EUCALYPTUS CONSOLE PROXY PORT: " + port
+        print "EUCALYPTUS CONSOLE PROXY PROTOCOL: " + protocol
         print
         return 0
 
@@ -63,7 +65,7 @@ class EucaUITestLib_Base(unittest.TestCase):
     def setUp(self):
         print
         print "=== setUp ==="
-        this_ui = self.protocol +"://" + self.ui_ip + ":" + self.port
+        this_ui = self.protocol + "://" + self.ui_ip + ":" + self.port
         this_selenium_server_url = "http://" + self.selenium_server_ip + ":" + self.selenium_server_port + "/wd/hub"
         print "SELENIUM SERVER URL: " + this_selenium_server_url
         print "EUCALYPTUS UI PROXY URL: " + this_ui

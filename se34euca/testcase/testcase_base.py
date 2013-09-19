@@ -11,8 +11,8 @@ class testcase_base(unittest.TestCase):
     def setSeleniumServerInfo(self, ip, port):
         self.eucaUITester.setSeleniumServerInfo(ip, port)
 
-    def setUIInfo(self, ip, port):
-        self.eucaUITester.setUIInfo(ip, port)
+    def setUIInfo(self, ip, port, protocol):
+        self.eucaUITester.setUIInfo(ip, port, protocol)
 
     def setUserInfo(self, accountname, username, password):
         self.eucaUITester.setUserInfo(accountname, username, password)

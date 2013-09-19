@@ -57,6 +57,10 @@ class TestRunner(object):
         if options.testcase is not None:
             self.testcase = options.testcase
 
+        if options.protocol is not None:
+            self.protocol = options.protocol
+
+
     def start_test(self):
         print "=============================="
         print "TEST "+self.testclass.__name__
@@ -70,8 +74,9 @@ class TestRunner(object):
         print "TESTCASE: " + self.testcase
         print
         ui.setSeleniumServerInfo(self.selenium_server_ip, self.selenium_server_port)
-        ui.setUIInfo(self.ui_ip, self.port)
+        ui.setUIInfo(self.ui_ip, self.port, self.protocol)
         ui.setUserInfo(self.accountname, self.username, self.password)
+
 
         print
         print "### TEST"

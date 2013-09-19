@@ -14,6 +14,7 @@ class EucaUITester():
 
     selenium_server_ip = "localhost"
     selenium_server_port = "4444"
+    protocol="https"
     ui_ip = "localhost"
     port = "8888"
     accountname = "eucalyptus"
@@ -29,12 +30,20 @@ class EucaUITester():
         print "SELENIUM SERVER PORT: " + port
         print
 
-    def setUIInfo(self, ip, port):
+    def setUIInfo(self, ip, port, protocol):
         self.ui_ip = ip
         self.port = port
+        self.protocol = protocol
         print "UI IP: " + ip
         print "PORT: " + port
+        print "PROTOCOL: " + protocol
         print
+
+    #def setUIprotocol(self, protocol):
+    #    self.protocol = protocol
+    #    print "EUCALYPTUS CONSOLE PROXY PROTOCOL: " + protocol
+    #    print
+    #    return 0
 
     def setUserInfo(self, accountname, username, password):
         self.accountname = accountname
@@ -50,7 +59,7 @@ class EucaUITester():
         print
         self.base = EucaUITestLib_Base("NoOp")
         self.base.setSeleniumServerInfo(self.selenium_server_ip, self.selenium_server_port)
-        self.base.setUIInfo(self.ui_ip, self.port)
+        self.base.setUIInfo(self.ui_ip, self.port, self.protocol)
         self.base.setUserInfo(self.accountname, self.username, self.password)
         self.base.setUp()
         self.image = EucaUITestLib_Image("NoOp")
