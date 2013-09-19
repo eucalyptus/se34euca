@@ -1,7 +1,7 @@
 from se34euca.lib.EucaUITestLib_Base import *
 
-class EucaUITestLib_Volume(EucaUITestLib_Base):
 
+class EucaUITestLib_Volume(EucaUITestLib_Base):
     def test_ui_gotopage_volumes(self):
         print
         print "Started Test: GotoPage Volumes"
@@ -51,7 +51,7 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         print
         print "Test: Create New Volume"
         self.click_element_by_id("table-volumes-new")
-        self.set_keys_by_id("volume-name",str(volume_name))
+        self.set_keys_by_id("volume-name", str(volume_name))
         self.set_keys_by_id("volume-size", "1")
         self.click_element_by_id("button-dialog-createvolume-save")
         #Verifying on Volumes Landing Page that volume Named v was created
@@ -160,13 +160,15 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         self.click_element_by_link_text("Instances")
         self.click_element_by_css_selector("li.toggle-on > ul > li > a")
         self.click_element_by_link_text("testinstance")
-        instance_id=self.get_text_by_xpath("//div[@id='tabs-1']/ul/li[2]/div[2]")
+        instance_id = self.get_text_by_xpath("//div[@id='tabs-1']/ul/li[2]/div[2]")
         self.click_element_by_link_text("Storage")
         self.click_element_by_link_text("Volumes")
         self.click_element_by_css_selector("div.table-row-status.status-available")
         self.click_element_by_id("more-actions-volumes")
         self.click_element_by_link_text("Attach to instance")
-        self.set_keys_by_css_selector("#volumes-attach-dialog-wrapper > #volumes-attach-dialog > div.dialog-inner-content > div.form-row > #volume-attach-instance-id",instance_id)
+        self.set_keys_by_css_selector(
+            "#volumes-attach-dialog-wrapper > #volumes-attach-dialog > div.dialog-inner-content > div.form-row > #volume-attach-instance-id",
+            instance_id)
         self.set_keys_by_id("volume-attach-device-name", "/dev/sdf")
         self.click_element_by_id("volumes-attach-dialog")
         self.click_element_by_id("button-dialog-attachvolume-save")
@@ -183,12 +185,13 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         print "Started Test: Check Volume Count"
         self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
-        print "Verifying that Volumes Count on Dashboard is "+volumes_count
-        self.verify_text_displayed_by_css("#dashboard-storage-volume > span",volumes_count)
+        print "Verifying that Volumes Count on Dashboard is " + volumes_count
+        self.verify_text_displayed_by_css("#dashboard-storage-volume > span", volumes_count)
         print
         print "Finished Test: Check Volume Count"
         print
         return 0
+
 
 if __name__ == "__main__":
     unittest.main()

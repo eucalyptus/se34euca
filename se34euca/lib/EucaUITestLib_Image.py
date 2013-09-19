@@ -1,7 +1,7 @@
 from se34euca.lib.EucaUITestLib_Base import *
 
-class EucaUITestLib_Image(EucaUITestLib_Base):
 
+class EucaUITestLib_Image(EucaUITestLib_Base):
     def test_ui_gotopage_images(self):
         print
         print "Started Test: GotoPage Images"

@@ -1,5 +1,4 @@
 from se34euca.lib.EucaUITestLib_Admin_Console import *
-from se34euca.lib.EucaUITestLib_Base import *
 from se34euca.lib.EucaUITestLib_Image import *
 from se34euca.lib.EucaUITestLib_Instance import *
 from se34euca.lib.EucaUITestLib_IP_Address import *
@@ -10,18 +9,18 @@ from se34euca.lib.EucaUITestLib_Volume import *
 from se34euca.lib.EucaUITestLib_Utility import *
 #from se34euca.lib.UI_Eutester import *
 
-class EucaUITester():
 
+class EucaUITester():
     selenium_server_ip = "localhost"
     selenium_server_port = "4444"
-    protocol="https"
+    protocol = "https"
     ui_ip = "localhost"
     port = "8888"
     accountname = "eucalyptus"
     username = "admin"
     password = "password"
     retry = 120
-    config_file='/Users/alicehubenko/2b_tested.lst'
+    config_file = '/Users/alicehubenko/2b_tested.lst'
 
     def setSeleniumServerInfo(self, ip, port):
         self.selenium_server_ip = ip
