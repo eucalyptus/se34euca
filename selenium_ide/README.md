@@ -25,6 +25,10 @@ Click on the little sand clock picture to enable automatic wait for element to b
 
 I recommend setting speed somewhat below "fast" to avoid Selenium IDE throwing an error caused by page components failing to load/respond quickly enough. 
 
+## How to debug and fix the tests
+
+[Selenium IDE test troubleshooting](https://github.com/eucalyptus/se34euca/wiki/How-to-debug-and-fix-a-selenium-IDE-test)
+
 ## How to contribute
 
 You can find our code submission framework here: https://github.com/eucalyptus/se34euca/wiki/Guidelines-to-contributing-to-se34euca-project
