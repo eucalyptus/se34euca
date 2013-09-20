@@ -1,8 +1,9 @@
-from se34euca.lib.EucaUITestLib_Base import *
 import time
 
-class EucaUITestLib_Security_Group(EucaUITestLib_Base):
+from se34euca.lib.EucaUITestLib_Base import *
 
+
+class EucaUITestLib_Security_Group(EucaUITestLib_Base):
     def test_ui_gotopage_security_groups(self):
         print
         print "Started Test: GotoPage Security Groups"
@@ -18,7 +19,7 @@ class EucaUITestLib_Security_Group(EucaUITestLib_Base):
         print
         return 0
 
-    def test_ui_create_security_group(self,security_group_name,security_group_description):
+    def test_ui_create_security_group(self, security_group_name, security_group_description):
         print
         print "Started Test: Create Security Group"
         self.click_element_by_link_text("Dashboard")
@@ -104,37 +105,56 @@ class EucaUITestLib_Security_Group(EucaUITestLib_Base):
         if (self.get_text_by_xpath("//table[@id='sgroups']/tbody[2]/tr/td[3]") == group_description):
             self.click_element_by_xpath("//table[@id='sgroups']/tbody[2]/tr/td[3]")
 
-        elif(self.get_text_by_xpath("//table[@id='sgroups']/tbody/tr/td[3]") == group_description):
+        elif (self.get_text_by_xpath("//table[@id='sgroups']/tbody/tr/td[3]") == group_description):
             self.click_element_by_xpath("//table[@id='sgroups']/tbody/tr/td[3]")
-
 
         print "Test: Add rules"
         self.click_element_by_id("more-actions-sgroups")
         self.click_element_by_link_text("Manage rules")
         print "Adding TCP rule"
         print
-        self.select_text_by_css_selector("div.content-sections-wrapper > div.rules.content-section > div.form-row > #sgroup-template", "Custom TCP")
-        self.set_keys_by_css_selector("div.content-sections-wrapper > div.rules.content-section > #sgroup-more-rules > div.form-row > #sgroup-port-option > #sgroup-ports","0")
-        self.set_keys_by_css_selector("div.content-sections-wrapper > div.rules.content-section > #sgroup-more-rules > div.form-row.sg-inline-options > #allow-ip","0.0.0.0/0")
-        self.click_element_by_css_selector("div.content-sections-wrapper > div.rules.content-section > #sgroup-more-rules > div.section-button-bar > #sgroup-add-rule")
+        self.select_text_by_css_selector(
+            "div.content-sections-wrapper > div.rules.content-section > div.form-row > #sgroup-template", "Custom TCP")
+        self.set_keys_by_css_selector(
+            "div.content-sections-wrapper > div.rules.content-section > #sgroup-more-rules > div.form-row > #sgroup-port-option > #sgroup-ports",
+            "0")
+        self.set_keys_by_css_selector(
+            "div.content-sections-wrapper > div.rules.content-section > #sgroup-more-rules > div.form-row.sg-inline-options > #allow-ip",
+            "0.0.0.0/0")
+        self.click_element_by_css_selector(
+            "div.content-sections-wrapper > div.rules.content-section > #sgroup-more-rules > div.section-button-bar > #sgroup-add-rule")
         print "Adding ICMP rule"
         print
-        self.select_text_by_css_selector("div.content-sections-wrapper > div.rules.content-section > div.form-row > #sgroup-template", "Custom ICMP")
-        self.set_keys_by_css_selector("div.content-sections-wrapper > div.rules.content-section > #sgroup-more-rules > div.form-row.sg-inline-options > #allow-ip","0.0.0.0/0")
-        self.click_element_by_css_selector("div.content-sections-wrapper > div.rules.content-section > #sgroup-more-rules > div.section-button-bar > #sgroup-add-rule")
+        self.select_text_by_css_selector(
+            "div.content-sections-wrapper > div.rules.content-section > div.form-row > #sgroup-template", "Custom ICMP")
+        self.set_keys_by_css_selector(
+            "div.content-sections-wrapper > div.rules.content-section > #sgroup-more-rules > div.form-row.sg-inline-options > #allow-ip",
+            "0.0.0.0/0")
+        self.click_element_by_css_selector(
+            "div.content-sections-wrapper > div.rules.content-section > #sgroup-more-rules > div.section-button-bar > #sgroup-add-rule")
         print "Adding HTTP rule"
         print
-        self.select_text_by_css_selector("div.content-sections-wrapper > div.rules.content-section > div.form-row > #sgroup-template", "HTTP (TCP port 80, for web servers)")
-        self.set_keys_by_css_selector("div.content-sections-wrapper > div.rules.content-section > #sgroup-more-rules > div.form-row.sg-inline-options > #allow-ip","0.0.0.0/0")
-        self.click_element_by_css_selector("div.content-sections-wrapper > div.rules.content-section > #sgroup-more-rules > div.section-button-bar > #sgroup-add-rule")
+        self.select_text_by_css_selector(
+            "div.content-sections-wrapper > div.rules.content-section > div.form-row > #sgroup-template",
+            "HTTP (TCP port 80, for web servers)")
+        self.set_keys_by_css_selector(
+            "div.content-sections-wrapper > div.rules.content-section > #sgroup-more-rules > div.form-row.sg-inline-options > #allow-ip",
+            "0.0.0.0/0")
+        self.click_element_by_css_selector(
+            "div.content-sections-wrapper > div.rules.content-section > #sgroup-more-rules > div.section-button-bar > #sgroup-add-rule")
         print "Adding SSH rule"
         time.sleep(30)
         print
-        self.select_text_by_css_selector("div.content-sections-wrapper > div.rules.content-section > div.form-row > #sgroup-template", "SSH (TCP port 22, for terminal access)")
+        self.select_text_by_css_selector(
+            "div.content-sections-wrapper > div.rules.content-section > div.form-row > #sgroup-template",
+            "SSH (TCP port 22, for terminal access)")
         time.sleep(3)
-        self.set_keys_by_css_selector("div.content-sections-wrapper > div.rules.content-section > #sgroup-more-rules > div.form-row > #sgroup-port-option > #sgroup-ports","0")
+        self.set_keys_by_css_selector(
+            "div.content-sections-wrapper > div.rules.content-section > #sgroup-more-rules > div.form-row > #sgroup-port-option > #sgroup-ports",
+            "0")
         time.sleep(3)
-        self.click_element_by_css_selector("div.content-sections-wrapper > div.rules.content-section > #sgroup-more-rules > div.form-row.sg-inline-options > #sgroup-ip-check")
+        self.click_element_by_css_selector(
+            "div.content-sections-wrapper > div.rules.content-section > #sgroup-more-rules > div.form-row.sg-inline-options > #sgroup-ip-check")
         time.sleep(3)
         self.click_element_by_id("sgroup-add-btn")
         print
@@ -187,8 +207,8 @@ class EucaUITestLib_Security_Group(EucaUITestLib_Base):
         print "Started Test: Check Security Group Count"
         self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
-        print "Verifying that Security Group Count on Dashboard is "+sg_count
-        self.verify_text_displayed_by_css("#dashboard-netsec-sgroup > span",sg_count)
+        print "Verifying that Security Group Count on Dashboard is " + sg_count
+        self.verify_text_displayed_by_css("#dashboard-netsec-sgroup > span", sg_count)
         print
         print "Finished Test: Check Security Group Count"
         print

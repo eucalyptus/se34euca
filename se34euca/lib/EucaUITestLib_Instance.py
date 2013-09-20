@@ -1,11 +1,9 @@
-from se34euca.lib.EucaUITestLib_Base import *
 import time
 
-
+from se34euca.lib.EucaUITestLib_Base import *
 
 
 class EucaUITestLib_Instance(EucaUITestLib_Base):
-
     def test_ui_gotopage_running(self):
         print
         print "Started Test: GotoPage Running"
@@ -47,16 +45,16 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
         print "Verifying that Running Instances Count on Dashboard is non-zero"
-        self.verify_text_not_present_by_css("div.status-readout > span","0")
+        self.verify_text_not_present_by_css("div.status-readout > span", "0")
         print
         print "Finished Test: Launch Instance Basic"
         return 0
 
 
-
     def test_ui_launch_instance_given_name_security_group_keypair(self, instance_name, security_group, keypair):
         print
-        print "Started Test: Launch Instance Given Instance Name: " + str(instance_name) + ", security group: " + security_group + ", keypair: " + keypair
+        print "Started Test: Launch Instance Given Instance Name: " + str(
+            instance_name) + ", security group: " + security_group + ", keypair: " + keypair
         print
         print "Click: LINK_TEXT -> Dashboard"
         self.click_element_by_link_text("Dashboard")
@@ -77,7 +75,7 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         print "Click: ID -> finishButton"
         self.click_element_by_id("finishButton")
         print
-        print "Verifying instance named "+ instance_name + " visible on Instances Landing Page"
+        print "Verifying instance named " + instance_name + " visible on Instances Landing Page"
         self.click_element_by_link_text("Dashboard")
         print "Click: LINK_TEXT -> Instances"
         self.click_element_by_link_text("Instances")
@@ -85,7 +83,8 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         self.click_element_by_css_selector("li.toggle-on > ul > li > a")
         self.verify_element_by_link_text(instance_name)
         print
-        print "Finished Test: Launch Instance Given Instance Name: " + str(instance_name) + ", security group: " + security_group + ", keypair: " + keypair
+        print "Finished Test: Launch Instance Given Instance Name: " + str(
+            instance_name) + ", security group: " + security_group + ", keypair: " + keypair
         print
         return 0
 
@@ -210,13 +209,13 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         self.click_element_by_css_selector("div.VS-search-inner")
         self.click_element_by_link_text("Assignment")
         self.click_element_by_link_text("Unassigned")
-        available_ip=self.get_text_by_xpath("//table[@id='eips']/tbody/tr/td[2]")
+        available_ip = self.get_text_by_xpath("//table[@id='eips']/tbody/tr/td[2]")
         self.click_element_by_link_text("Instances")
         self.click_element_by_css_selector("li.toggle-on > ul > li > a")
         self.click_element_by_css_selector("div.table-row-status.status-running")
         self.click_element_by_id("more-actions-instances")
         self.click_element_by_link_text("Associate IP address")
-        self.set_keys_by_xpath("(//input[@id='associate-selected-value'])[2]",available_ip)
+        self.set_keys_by_xpath("(//input[@id='associate-selected-value'])[2]", available_ip)
         self.click_element_by_link_text(available_ip)
         self.click_element_by_id("eip-associate-btn")
         self.click_element_by_link_text("Network & Security")
@@ -224,12 +223,12 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
 
         print "Test: Verifying " + str(available_ip) + " is in assigned state."
 
-        for i in range (1,self.trials,1):
+        for i in range(1, self.trials, 1):
             self.click_element_by_css_selector("div.VS-search-inner")
             self.click_element_by_link_text("Assignment")
             print
             print "Test: Trial " + str(i) + " : waiting for the Assigned filter to appear on IP Addresses LP..."
-            if self.is_element_present(By.LINK_TEXT,"Assigned"):
+            if self.is_element_present(By.LINK_TEXT, "Assigned"):
                 break
         print
         print "Test: Assigned filter present"
@@ -261,14 +260,14 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         self.click_element_by_css_selector("div.VS-search-inner")
         self.click_element_by_link_text("Assignment")
         self.click_element_by_link_text("Unassigned")
-        available_ip_address=self.get_text_by_xpath("/html/body/div/div[4]/div/div/div/div/div/table/tbody/tr/td[2]/a")
+        available_ip_address = self.get_text_by_xpath(
+            "/html/body/div/div[4]/div/div/div/div/div/table/tbody/tr/td[2]/a")
         self.click_element_by_id(str(available_ip_address))
         self.click_element_by_id("more-actions-eips")
         self.click_element_by_link_text("Associate with instance")
         self.set_keys_by_id("associate-selected-value", str(instance_id))
         self.click_element_by_css_selector('a:contains("testinstance")')
         self.click_element_by_id("eip-associate-btn")
-
 
 
     def test_ui_disassociate_ip_from_inst_lp(self):
@@ -314,10 +313,9 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         self.click_element_by_id("more-actions-eips")
         self.click_element_by_link_text("Disassociate from instance")
         self.click_element_by_id("btn-eip-disassociate-disassociate")
-        self.verify_text_not_present_by_xpath("//table[@id='eips']/tbody/tr/td[3]","testinstance")
+        self.verify_text_not_present_by_xpath("//table[@id='eips']/tbody/tr/td[3]", "testinstance")
         print
         print "Finished Test: Disassociate IP from IP Addresses Landing Page"
-
 
 
     def test_ui_check_running_instances_count(self, running_instances_count):
@@ -326,11 +324,10 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         print
         self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
-        print "Verifying that Running Instances Count on Dashboard is "+running_instances_count
-        self.verify_text_displayed_by_css("div.status-readout > span",running_instances_count)
+        print "Verifying that Running Instances Count on Dashboard is " + running_instances_count
+        self.verify_text_displayed_by_css("div.status-readout > span", running_instances_count)
         print
         print "Finished Test: Check Running Instances Count"
-
 
 
 if __name__ == "__main__":

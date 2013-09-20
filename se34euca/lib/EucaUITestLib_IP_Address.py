@@ -1,7 +1,7 @@
 from se34euca.lib.EucaUITestLib_Base import *
 
-class EucaUITestLib_IP_Address(EucaUITestLib_Base):
 
+class EucaUITestLib_IP_Address(EucaUITestLib_Base):
     def test_ui_allocate_ip_address(self, ip_count):
         print
         print "Started Test: Allocate IP Address: IP_COUNT " + str(ip_count)
@@ -27,8 +27,8 @@ class EucaUITestLib_IP_Address(EucaUITestLib_Base):
         print "Started Test: Check IP Address Count"
         self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
-        print "Verifying that IP Address Count on Dashboard is "+ip_count
-        self.verify_text_displayed_by_css("#dashboard-netsec-eip > span",ip_count)
+        print "Verifying that IP Address Count on Dashboard is " + ip_count
+        self.verify_text_displayed_by_css("#dashboard-netsec-eip > span", ip_count)
         print
         print "Finished Test: IP Address Count"
         print
@@ -50,6 +50,7 @@ class EucaUITestLib_IP_Address(EucaUITestLib_Base):
         print "Finished: Release IP Address"
         print
         return 0
+
 
 if __name__ == "__main__":
     unittest.main()
