@@ -155,6 +155,9 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         print
         print "Started Test: Terminate Instance Basic"
         print
+        print
+        print "Click: LINK_TEXT -> Dashboard"
+        self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
         print
         print "Test: Go to the Page Running Instances"
@@ -174,6 +177,9 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         print
         print "Started Test: Terminate Instance All"
         print
+        print
+        print "Click: LINK_TEXT -> Dashboard"
+        self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
         print
         print "Test: Go to the Page Running Instances"

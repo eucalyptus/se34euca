@@ -154,6 +154,7 @@ class EucaUITestLib_Keypair(EucaUITestLib_Base):
     def test_ui_delete_keypair_all(self):
         print
         print "Started Test: Delete Keypair All"
+        self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
         self.click_element_by_id("dashboard-netsec-keypair")
         print
