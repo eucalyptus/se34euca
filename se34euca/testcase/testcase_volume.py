@@ -1,7 +1,7 @@
 from se34euca.testcase.testcase_base import *
 
-class testcase_volume(testcase_base):
 
+class testcase_volume(testcase_base):
     def create_volume(self):
         print "=== runTest: Create Volume ==="
         self.eucaUITester.base.test_ui_login()

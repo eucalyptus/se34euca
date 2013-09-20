@@ -1,7 +1,7 @@
 from se34euca.testcase.testcase_base import *
 
-class testcase_view_page(testcase_base):
 
+class testcase_view_page(testcase_base):
     def check_login_and_logout(self):
         print "=== runTest: Check Login and Logout ==="
         print
@@ -77,12 +77,13 @@ class testcase_view_page(testcase_base):
                 self.eucaUITester.image.test_ui_gotopage_images()
                 self.eucaUITester.base.test_ui_view_page_get_dashboard_source()
                 print "Test: view_all_page_in_loop - Sleep 5 Sec"
-                print	
+                print
                 time.sleep(5)
             except:
                 print "Test: view_all_page_in_loop - Catched Exception: Try to Log Back In"
                 print
                 self.eucaUITester.base.test_ui_login()
+
 
 if __name__ == "__main__":
     unittest.main()

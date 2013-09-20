@@ -1,7 +1,7 @@
 from se34euca.lib.EucaUITestLib_Base import *
 
-class EucaUITestLib_Snapshot(EucaUITestLib_Base):
 
+class EucaUITestLib_Snapshot(EucaUITestLib_Base):
     def test_ui_delete_snapshot(self):
         print
         print "Started Test: Delete Snapshot"
@@ -73,12 +73,13 @@ class EucaUITestLib_Snapshot(EucaUITestLib_Base):
         print "Started Test: Check Snapshot Count"
         self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
-        print "Verifying that Snapshot Count on Dashboard is "+snapshot_count
-        self.verify_text_displayed_by_css("#dashboard-storage-snapshot > span",snapshot_count)
+        print "Verifying that Snapshot Count on Dashboard is " + snapshot_count
+        self.verify_text_displayed_by_css("#dashboard-storage-snapshot > span", snapshot_count)
         print
         print "Finished Test: Check Snapshot Count"
         print
         return 0
+
 
 if __name__ == "__main__":
     unittest.main()

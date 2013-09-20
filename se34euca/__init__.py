@@ -1,7 +1,7 @@
-
 import unittest, time, re
 from optparse import OptionParser
 from unittest import TestResult
+
 
 class TestRunner(object):
     testcase = None
@@ -19,8 +19,8 @@ class TestRunner(object):
         self.protocol = "https"
         for key in self.testclass.__dict__:
             if hasattr(self.testclass.__dict__[key], "__call__"):
-                self.testcases += key+' '
-	
+                self.testcases += key + ' '
+
         parser = OptionParser()
         parser.add_option("-s", "--sel_server_ip", dest="selenium_server_ip", help="selenium server ip")
         parser.add_option("-r", "--sel_server_port", dest="selenium_server_port", help="selenium server port")
@@ -29,7 +29,7 @@ class TestRunner(object):
         parser.add_option("-a", "--account", dest="accountname", help="accountname")
         parser.add_option("-u", "--user", dest="username", help="username")
         parser.add_option("-w", "--password", dest="password", help="password")
-        parser.add_option("-t", "--testcase", dest="testcase", help="testcase: "+self.testcases)
+        parser.add_option("-t", "--testcase", dest="testcase", help="testcase: " + self.testcases)
         parser.add_option("-l", "--protocol", dest="protocol", help="type of protocol ui uses: http or https")
         (options, args) = parser.parse_args()
 
@@ -63,7 +63,7 @@ class TestRunner(object):
 
     def start_test(self):
         print "=============================="
-        print "TEST "+self.testclass.__name__
+        print "TEST " + self.testclass.__name__
         print "=============================="
 
         testresult = TestResult()
@@ -77,14 +77,13 @@ class TestRunner(object):
         ui.setUIInfo(self.ui_ip, self.port, self.protocol)
         ui.setUserInfo(self.accountname, self.username, self.password)
 
-
         print
         print "### TEST"
         ui.run(testresult)
 
         print
         print "### RESULT"
-        print "Failures: "  + str(len(testresult.failures))
+        print "Failures: " + str(len(testresult.failures))
         if len(testresult.failures) > 0:
             print testresult.failures
         print "Errors: " + str(len(testresult.errors))
@@ -93,7 +92,7 @@ class TestRunner(object):
 
         print
         print "=============================="
-        print "END OF TEST : "+self.testclass.__name__
+        print "END OF TEST : " + self.testclass.__name__
         print "=============================="
         exit(len(testresult.failures) + len(testresult.errors))
 

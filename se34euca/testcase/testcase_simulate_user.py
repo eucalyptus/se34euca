@@ -1,7 +1,7 @@
 from se34euca.testcase.testcase_base import *
 
-class testcase_simulate_user(testcase_base):
 
+class testcase_simulate_user(testcase_base):
     def simulate_user_case_00(self):
         sleep_time = 2
         wait_time = 120
@@ -85,6 +85,7 @@ class testcase_simulate_user(testcase_base):
                 self.eucaUITester.base.test_ui_logout()
                 time.sleep(sleep_time)
                 self.eucaUITester.base.test_ui_login()
+
 
 if __name__ == "__main__":
     unittest.main()

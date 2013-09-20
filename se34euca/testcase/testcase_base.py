@@ -1,11 +1,8 @@
-import unittest, time, re
+import unittest
 from se34euca.lib.EucaUITester import *
 #from eucaops import Eucaops
 
 class testcase_base(unittest.TestCase):
-
-
-
     eucaUITester = EucaUITester()
 
     def setSeleniumServerInfo(self, ip, port):
@@ -19,10 +16,11 @@ class testcase_base(unittest.TestCase):
 
     def setUp(self):
         self.eucaUITester.setUp()
-      #  self.eutester = Eucaops(config_file='/Users/alicehubenko/2b_tested.lst', password='foobar')
+        #  self.eutester = Eucaops(config_file='/Users/alicehubenko/2b_tested.lst', password='foobar')
 
     def tearDown(self):
         self.eucaUITester.tearDown()
+
 
 if __name__ == "__main__":
     unittest.main()

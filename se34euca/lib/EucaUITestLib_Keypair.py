@@ -1,7 +1,7 @@
 from se34euca.lib.EucaUITestLib_Base import *
 
-class EucaUITestLib_Keypair(EucaUITestLib_Base):
 
+class EucaUITestLib_Keypair(EucaUITestLib_Base):
     def test_ui_gotopage_keypairs(self):
         print
         print "Started Test: GotoPage Keypairs"
@@ -43,7 +43,7 @@ class EucaUITestLib_Keypair(EucaUITestLib_Base):
         print
         return 0
 
-    def test_ui_generate_keypair_given_name(self,keypair_name):
+    def test_ui_generate_keypair_given_name(self, keypair_name):
         print
         print "Started Test: Generate Keypair"
         self.click_element_by_link_text("Dashboard")
@@ -79,8 +79,9 @@ class EucaUITestLib_Keypair(EucaUITestLib_Base):
         self.click_element_by_id("table-keys-extra")
         print
         print "Test: Import Keypair"
-        self.set_keys_by_id(this_id="key-import-contents",keys="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDI1x6tEjkBQCCP0ssF69vAgP2xg+N9ScoTrqRqyl5w4qEgsV/AppfHHYRKYr0N/tTyG4/z1XGNrB2SaslnRpgEOsvMZldlOnqsUujL2fgoEg+/gB92+1JhZgTjU8nL5j5BFkVTh93nSHtXHdzYl7SjlXrv26ZbyuDwJmI+s6bJQk5noJ4Q4g7N/0y9pHRvezyhgxkyX7PQoA9WJm8SqlakyhMYa0j/baMhb/ehSI0VvwNodmcaWaS6Z2F4rZS4C2DmCUDXYy/1+0tiRTjHjlPbqRKCVKam8ImWytlZD0zbdV/tpADxDpnhW2cPVpXcjy4sRzUCc8AZW+OE3LQxXild alicehubenko@Alices-MacBook-Pro.local")
-        self.set_keys_by_id('key-import-name',"import-key")
+        self.set_keys_by_id(this_id="key-import-contents",
+                            keys="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDI1x6tEjkBQCCP0ssF69vAgP2xg+N9ScoTrqRqyl5w4qEgsV/AppfHHYRKYr0N/tTyG4/z1XGNrB2SaslnRpgEOsvMZldlOnqsUujL2fgoEg+/gB92+1JhZgTjU8nL5j5BFkVTh93nSHtXHdzYl7SjlXrv26ZbyuDwJmI+s6bJQk5noJ4Q4g7N/0y9pHRvezyhgxkyX7PQoA9WJm8SqlakyhMYa0j/baMhb/ehSI0VvwNodmcaWaS6Z2F4rZS4C2DmCUDXYy/1+0tiRTjHjlPbqRKCVKam8ImWytlZD0zbdV/tpADxDpnhW2cPVpXcjy4sRzUCc8AZW+OE3LQxXild alicehubenko@Alices-MacBook-Pro.local")
+        self.set_keys_by_id('key-import-name', "import-key")
         self.click_element_by_id("keys-add-btn")
         print
         print"Test: Verification"
@@ -100,13 +101,12 @@ class EucaUITestLib_Keypair(EucaUITestLib_Base):
         print "Started Test: Check Keypair Count"
         self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
-        print "Verifying that Keypair Count on Dashboard is "+keys_count
-        self.verify_text_displayed_by_css("#dashboard-netsec-keypair > span",keys_count)
+        print "Verifying that Keypair Count on Dashboard is " + keys_count
+        self.verify_text_displayed_by_css("#dashboard-netsec-keypair > span", keys_count)
         print
         print "Finished Test: Check Keypair Count"
         print
         return 0
-
 
 
     def test_ui_delete_keypair(self):
@@ -131,7 +131,7 @@ class EucaUITestLib_Keypair(EucaUITestLib_Base):
         print
         return 0
 
-    def test_ui_delete_keypair_given_name(self,keypair_name):
+    def test_ui_delete_keypair_given_name(self, keypair_name):
         print
         print "Started Test: Delete Keypair Given Name"
         self.click_element_by_link_text("Dashboard")
@@ -145,7 +145,7 @@ class EucaUITestLib_Keypair(EucaUITestLib_Base):
         print "Test: Delete Keypair"
         self.click_element_by_link_text("Delete")
         self.click_element_by_id("btn-keys-delete-delete")
-        self.verify_element_not_present("ID",keypair_name)
+        self.verify_element_not_present("ID", keypair_name)
         print
         print "Finished Test: Delete Keypair"
         print
@@ -157,7 +157,7 @@ class EucaUITestLib_Keypair(EucaUITestLib_Base):
         self.verify_element_by_link_text("Launch new instance")
         self.click_element_by_id("dashboard-netsec-keypair")
         print
-        print "Test: Clicked the GoToPage Button"	
+        print "Test: Clicked the GoToPage Button"
         self.click_element_by_id("keys-check-all")
         self.click_element_by_id("more-actions-keys")
         print
@@ -169,6 +169,7 @@ class EucaUITestLib_Keypair(EucaUITestLib_Base):
         print "Finished Test: Delete Keypair All"
         print
         return 0
+
 
 if __name__ == "__main__":
     unittest.main()
