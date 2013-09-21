@@ -5,6 +5,7 @@ class EucaUITestLib_IP_Address(EucaUITestLib_Base):
     def test_ui_allocate_ip_address(self, ip_count):
         print
         print "Started Test: Allocate IP Address: IP_COUNT " + str(ip_count)
+        print
         self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
         self.verify_element_by_id("dashboard-netsec-eip")
@@ -25,6 +26,7 @@ class EucaUITestLib_IP_Address(EucaUITestLib_Base):
     def test_ui_check_ip_address_count(self, ip_count):
         print
         print "Started Test: Check IP Address Count"
+        print
         self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
         print "Verifying that IP Address Count on Dashboard is " + ip_count
@@ -37,6 +39,7 @@ class EucaUITestLib_IP_Address(EucaUITestLib_Base):
     def test_ui_release_ip_address(self):
         print
         print "Started Test: Release IP Address"
+        print
         self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
         print
