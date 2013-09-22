@@ -70,6 +70,7 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         self.set_keys_by_id("launch-instance-names", str(instance_name))
         print "Click: ID -> nextButton"
         self.click_element_by_id("nextButton")
+        self.click_element_by_id("nextButton")
         print "Select: ID -> launch-wizard-security-keypair-selector, 'TEXT -> None (advanced option)'"
         self.select_text_by_id("launch-wizard-security-keypair-selector", str(keypair))
         self.select_text_by_id("launch-wizard-security-sg-selector", str(security_group))

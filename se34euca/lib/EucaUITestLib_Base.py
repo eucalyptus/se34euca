@@ -23,7 +23,7 @@ class EucaUITestLib_Base(unittest.TestCase):
     protocol = "https"
     retry = 400  # waiting time in seconds for element to be present on page
     trials = 300  # trial number for verify not present methods
-    sleep_time_for_set_method = 20
+
 
     def NoOp(self):
         return 0
@@ -432,7 +432,6 @@ class EucaUITestLib_Base(unittest.TestCase):
         print "Set: Element Type: LINK_TEXT, Element: " + link_text + ", Keys: " + keys
         self.driver.find_element_by_link_text(link_text).clear()
         self.driver.find_element_by_link_text(link_text).send_keys(keys)
-        time.sleep(self.sleep_time_for_set_method)
         return 0
 
     def set_keys_by_id(self, this_id, keys):
@@ -441,7 +440,6 @@ class EucaUITestLib_Base(unittest.TestCase):
         print "Set: Element Type: ID, Element: " + this_id + ", Keys: " + keys
         self.driver.find_element_by_id(this_id).clear()
         self.driver.find_element_by_id(this_id).send_keys(keys)
-        time.sleep(self.sleep_time_for_set_method)
         return 0
 
     def set_keys_by_css_selector(self, css_selector, keys):
@@ -450,7 +448,6 @@ class EucaUITestLib_Base(unittest.TestCase):
         print "Set: Element Type: CSS_SELECTOR, Element: " + css_selector + ", Keys: " + keys
         self.driver.find_element_by_css_selector(css_selector).clear()
         self.driver.find_element_by_css_selector(css_selector).send_keys(keys)
-        time.sleep(self.sleep_time_for_set_method)
         return 0
 
     def set_keys_by_xpath(self, xpath, keys):
@@ -459,7 +456,6 @@ class EucaUITestLib_Base(unittest.TestCase):
         print "Set: Element Type: XPATH, Element: " + xpath + ", Keys: " + keys
         self.driver.find_element_by_xpath(xpath).clear()
         self.driver.find_element_by_xpath(xpath).send_keys(keys)
-        time.sleep(self.sleep_time_for_set_method)
         return 0
 
     def set_keys_by_name(self, name, keys):
@@ -467,8 +463,6 @@ class EucaUITestLib_Base(unittest.TestCase):
             raise UICheckException("Element by name not found:" + name)
         print "Set: Element Type: NAME, Element: " + name + ", Keys: " + keys
         self.driver.find_element_by_name(name).clear()
-        self.driver.find_element_by_name(name).send_keys(keys)
-        time.sleep(self.sleep_time_for_set_method)
         return 0
 
     #GET TEXT CALLS
