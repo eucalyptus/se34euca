@@ -22,7 +22,8 @@ class EucaUITestLib_Base(unittest.TestCase):
     password = "password"
     protocol = "https"
     retry = 400  # waiting time in seconds for element to be present on page
-    trials = 120  # trial number for verify not present methods
+    trials = 300  # trial number for verify not present methods
+
 
     def NoOp(self):
         return 0
@@ -319,10 +320,13 @@ class EucaUITestLib_Base(unittest.TestCase):
     def verify_text_not_present_by_xpath(self, locator, text):
         print"Verifying that text displayed at " + locator + " does not match " + text
         for i in range(1, self.trials, 1):
-            if self.get_text_by_xpath(locator) != text:
+            text_on_page = self.get_text_by_xpath(locator)
+            if text_on_page != text:
                 print "Verified " + self.get_text_by_xpath(locator) + " does not match " + text
                 return True
             else:
+                print
+                print "Found text: " + text_on_page + "( Waiting for " + text + " to disappear )"
                 print
                 print "Trial " + str(i) + " :"
 
@@ -459,7 +463,6 @@ class EucaUITestLib_Base(unittest.TestCase):
             raise UICheckException("Element by name not found:" + name)
         print "Set: Element Type: NAME, Element: " + name + ", Keys: " + keys
         self.driver.find_element_by_name(name).clear()
-        self.driver.find_element_by_name(name).send_keys(keys)
         return 0
 
     #GET TEXT CALLS

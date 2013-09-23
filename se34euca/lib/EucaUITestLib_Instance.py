@@ -7,6 +7,7 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
     def test_ui_gotopage_running(self):
         print
         print "Started Test: GotoPage Running"
+        print
         self.click_element_by_id("euca-logo")
         print
         print "Test: Received the Page Title -> " + self.driver.title
@@ -66,8 +67,14 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         self.click_element_by_id("nextButton")
         print "Wait: ID -> launch-instance-type-num-instance"
         self.verify_element_by_id("launch-instance-type-num-instance")
-        self.set_keys_by_id("launch-instance-names", str(instance_name))
-        print "Click: ID -> nextButton"
+        #self.set_keys_by_id("launch-instance-names", str(instance_name))
+        print "Enter instance name in Tag field of Launch Instance dialog"
+        self.set_keys_by_css_selector("input.focus-here","Name")
+        self.set_keys_by_css_selector('input[title="Type the value of this tag"]',instance_name)
+        time.sleep(5)
+        self.click_element_by_css_selector("div.icon_add.enabled")
+        time.sleep(5)
+        print "Click the 'Next: select security' button"
         self.click_element_by_id("nextButton")
         print "Select: ID -> launch-wizard-security-keypair-selector, 'TEXT -> None (advanced option)'"
         self.select_text_by_id("launch-wizard-security-keypair-selector", str(keypair))
@@ -104,6 +111,9 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         self.select_text_by_id("launch-wizard-security-keypair-selector", "my-sel-gen-key-00")
         print "Click: ID -> nextButton"
         self.click_element_by_id("finishButton")
+        print
+        print "Finished Test: Launch Instance from Images Landing Page"
+        print
 
     def test_ui_launch_instance_from_instances_lp(self):
         print
@@ -127,6 +137,9 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         self.select_text_by_id("launch-wizard-security-keypair-selector", "my-sel-gen-key-00")
         print "Click: ID -> nextButton"
         self.click_element_by_id("finishButton")
+        print
+        print "Finished Test: Launch Instance from Instances Landing Page"
+        print
 
     def test_ui_launch_more_like_this(self):
         print
@@ -150,6 +163,9 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         #self.set_keys_by_id("launch-more-num-instance","1")
         print "Click: ID -> btn-launch-more"
         self.click_element_by_id("btn-launch-more")
+        print
+        print "Finished Test: Launch More Like This Instance"
+        print
 
     def test_ui_terminate_instance_basic(self):
         print
@@ -255,6 +271,9 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         Picks an available IP from IP Landing Page
         and using dialog from IP Landing Page associates an instance to the available IP.
         '''
+        print
+        print "Started Test: Associate IP from IP Landing Page"
+        print
         self.click_element_by_link_text("Dashboard")
         print
         print "Test: Go to the Page Running Instances"
@@ -272,9 +291,10 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         self.click_element_by_id("more-actions-eips")
         self.click_element_by_link_text("Associate with instance")
         self.set_keys_by_id("associate-selected-value", str(instance_id))
-        self.click_element_by_css_selector('a:contains("testinstance")')
         self.click_element_by_id("eip-associate-btn")
-
+        print
+        print "Finished Test: Associate IP from IP Landing Page"
+        print
 
     def test_ui_disassociate_ip_from_inst_lp(self):
         '''
@@ -290,7 +310,9 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         #self.click_element_by_css_selector("th.wrap-content.sorting")
         #self.click_element_by_css_selector("th.wrap-content.sorting")
         #associated_instance_id=self.get_text_by_id("eips.1.2").text
-
+        print
+        print "Started Test: Disassociate IP from Instances Landing Page"
+        print
         self.click_element_by_link_text("Dashboard")
         self.click_element_by_link_text("Instances")
         self.click_element_by_css_selector("li.toggle-on > ul > li > a")
@@ -298,6 +320,9 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         self.click_element_by_link_text("More actions")
         self.click_element_by_link_text("Disassociate IP address")
         self.click_element_by_id("btn-eip-disassociate-disassociate")
+        print
+        print "Finished Test: Disassociate IP from Instances Landing Page"
+        print
 
     def test_ui_disassociate_ip_from_ip_lp(self):
         '''
@@ -307,10 +332,11 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         print
         print "Started Test: Disassociate IP from IP Addresses Landing Page"
         print
-
         self.click_element_by_link_text("Dashboard")
-        print "Test: clicked on running instances link on Dashboard"
+        self.verify_element_by_link_text("Launch new instance")
+        time.sleep(30)
         self.click_element_by_css_selector("div.status-readout > span")
+        print "Test: clicked on running instances link on Dashboard"
         self.click_element_by_link_text("testinstance")
         associated_ip_address = self.get_text_by_xpath("//div[@id='tabs-1']/ul/li[5]/div[2]")
         self.click_element_by_link_text("Network & Security")
