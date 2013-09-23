@@ -67,9 +67,14 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         self.click_element_by_id("nextButton")
         print "Wait: ID -> launch-instance-type-num-instance"
         self.verify_element_by_id("launch-instance-type-num-instance")
-        self.set_keys_by_id("launch-instance-names", str(instance_name))
-        print "Click: ID -> nextButton"
-        self.click_element_by_id("nextButton")
+        #self.set_keys_by_id("launch-instance-names", str(instance_name))
+        print "Enter instance name in Tag field of Launch Instance dialog"
+        self.set_keys_by_css_selector("input.focus-here","Name")
+        self.set_keys_by_css_selector('input[title="Type the value of this tag"]',instance_name)
+        time.sleep(5)
+        self.click_element_by_css_selector("div.icon_add.enabled")
+        time.sleep(5)
+        print "Click the 'Next: select security' button"
         self.click_element_by_id("nextButton")
         print "Select: ID -> launch-wizard-security-keypair-selector, 'TEXT -> None (advanced option)'"
         self.select_text_by_id("launch-wizard-security-keypair-selector", str(keypair))
