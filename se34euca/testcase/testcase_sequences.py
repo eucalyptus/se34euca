@@ -176,6 +176,16 @@ class testcase_sequences(testcase_base):
         self.eucaUITester.volume.test_ui_attach_volume_from_instance_lp("test-volume")
         time.sleep(sleep_time)
 
+        self.eucaUITester.base.test_ui_logout()
+        time.sleep(sleep_time)
+
+    def snapshot_operations(self):
+        sleep_time = 60
+        self.eucaUITester.base.test_ui_login()
+        time.sleep(sleep_time)
+
+        self.eucaUITester.base.test_ui_logout()
+        time.sleep(sleep_time)
 
 
 
