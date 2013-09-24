@@ -196,7 +196,9 @@ class EucaUITestLib_Security_Group(EucaUITestLib_Base):
         self.verify_element_by_link_text("Launch new instance")
         print
         print "Test: Go to the Page Security Group"
-        self.click_element_by_css_selector("#dashboard-netsec-sgroup > span")
+        self.click_element_by_id("resource-menu-netsec")
+        self.click_element_by_id("resource-menuitem-sgroup")
+        #self.click_element_by_css_selector("#dashboard-netsec-sgroup > span")
         self.click_element_by_id("sgroups-check-all")
         self.click_element_by_id("more-actions-sgroups")
         print
