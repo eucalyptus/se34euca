@@ -264,7 +264,7 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         print "Finished Test: Associate IP from Instances Landing Page"
         print
 
-    def test_ui_associate_ip_from_ip_lp(self):
+    def test_ui_associate_ip_from_ip_lp(self, instance_name):
         #broken: EUCA-7561
         '''
         Requires a running instance named "testinstance"  and an available ip.
@@ -279,13 +279,18 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         print
         print "Test: Go to the Page Running Instances"
         self.click_element_by_css_selector("div.status-readout")
-        self.click_element_by_link_text("testinstance")
+        print "Open expando of instance named " + instance_name
+        self.click_element_by_link_text(str(instance_name))
+        print "Get instance id from expando"
         instance_id = self.get_text_by_xpath("//div[@id='tabs-1']/ul/li[2]/div[2]")
+        print "Go to IP Addresses Landing Page"
         self.click_element_by_link_text("Network & Security")
         self.click_element_by_link_text("IP Addresses")
+        print "On the search bar filter by 'Assignment: Unassigned'"
         self.click_element_by_css_selector("div.VS-search-inner")
         self.click_element_by_link_text("Assignment")
         self.click_element_by_link_text("Unassigned")
+        print "Get the unassigned IP address"
         available_ip_address = self.get_text_by_xpath(
             "/html/body/div/div[4]/div/div/div/div/div/table/tbody/tr/td[2]/a")
         self.click_element_by_id(str(available_ip_address))

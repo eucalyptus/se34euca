@@ -5,6 +5,7 @@ class EucaUITestLib_Keypair(EucaUITestLib_Base):
     def test_ui_gotopage_keypairs(self):
         print
         print "Started Test: GotoPage Keypairs"
+        print
         self.click_element_by_id("euca-logo")
         print
         print "Test: Received the Page Title -> " + self.driver.title
@@ -21,6 +22,7 @@ class EucaUITestLib_Keypair(EucaUITestLib_Base):
     def test_ui_generate_keypair(self):
         print
         print "Started Test: Generate Keypair"
+        print
         self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
         self.click_element_by_id("dashboard-netsec-keypair")
@@ -45,7 +47,8 @@ class EucaUITestLib_Keypair(EucaUITestLib_Base):
 
     def test_ui_generate_keypair_given_name(self, keypair_name):
         print
-        print "Started Test: Generate Keypair"
+        print "Started Test: Generate Keypair Given Name"
+        print
         self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
         self.click_element_by_id("dashboard-netsec-keypair")
@@ -64,13 +67,14 @@ class EucaUITestLib_Keypair(EucaUITestLib_Base):
         self.verify_element_by_id(keypair_name)
         print
         print
-        print "Finished Test: Generate Keypair"
+        print "Finished Test: Generate Keypair Given Name"
         print
         return 0
 
     def test_ui_import_keypair(self):
         print
         print "Started Test: Import Keypair"
+        print
         self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
         self.click_element_by_id("dashboard-netsec-keypair")
@@ -115,6 +119,7 @@ class EucaUITestLib_Keypair(EucaUITestLib_Base):
         '''
         print
         print "Started Test: Delete Keypair"
+        print
         self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
         self.click_element_by_id("dashboard-netsec-keypair")
@@ -134,6 +139,7 @@ class EucaUITestLib_Keypair(EucaUITestLib_Base):
     def test_ui_delete_keypair_given_name(self, keypair_name):
         print
         print "Started Test: Delete Keypair Given Name"
+        print
         self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
         self.click_element_by_id("dashboard-netsec-keypair")
@@ -154,6 +160,7 @@ class EucaUITestLib_Keypair(EucaUITestLib_Base):
     def test_ui_delete_keypair_all(self):
         print
         print "Started Test: Delete Keypair All"
+        print
         self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
         self.click_element_by_id("dashboard-netsec-keypair")
