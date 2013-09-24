@@ -201,6 +201,11 @@ class testcase_sequences(testcase_base):
         sleep_time = 60
         self.eucaUITester.base.test_ui_login()
         time.sleep(sleep_time)
+        self.eucaUITester.volume.test_ui_create_volume_given_volume_name("test-volume")
+        time.sleep(sleep_time)
+        self.eucaUITester.volume.test_ui_create_snapshot_from_volume()
+        time.sleep(sleep_time)
+        self.eucaUITester.snapshot.test_ui_check_snapshot_count("1")
 
         self.eucaUITester.base.test_ui_logout()
         time.sleep(sleep_time)

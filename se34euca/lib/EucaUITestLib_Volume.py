@@ -60,7 +60,7 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         self.click_element_by_id("dashboard-storage-volume")
         self.verify_element_by_link_text(str(volume_name))
         print
-        print "Finished: Create New Volume Given Volume Name" + volume_name
+        print "Finished: Create New Volume Given Volume Name: " + volume_name
         print
         return 0
 
@@ -176,7 +176,7 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         self.click_element_by_link_text("Attach to instance")
         self.set_keys_by_css_selector(
             "#volumes-attach-dialog-wrapper > #volumes-attach-dialog > div.dialog-inner-content > div.form-row > #volume-attach-instance-id",
-            instance_id)
+            str(instance_id) + "testinstance")
         self.set_keys_by_id("volume-attach-device-name", "/dev/sdf")
         self.click_element_by_id("volumes-attach-dialog")
         self.click_element_by_id("button-dialog-attachvolume-save")
@@ -226,6 +226,8 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         self.click_element_by_link_text("Detach from instance")
         print "Click 'Yes, detach' in the detach dialog"
         self.click_element_by_id("button-dialog-detachvolume-detach")
+        print "Verify volume detached by no volumes present in 'attached' state on the volumes page"
+        self.verify_element_not_present("CSS_SELECTOR","div.table-row-status.status-in-use")
         print
         print "Finished Test: Detach Volume"
         print
@@ -263,6 +265,13 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         self.set_keys_by_id("volume-attach-volume-id", volume_id + " ("+ volume_name + ")")
         print "Click the 'Attach' button"
         self.click_element_by_id("button-dialog-attachvolume-save")
+        print "Go to Volume Landing Page"
+        self.click_element_by_link_text("Dashboard")
+        self.click_element_by_link_text("Storage")
+        self.click_element_by_link_text("Volumes")
+        print "Verify there is an attached volume present"
+        self.verify_element_by_css_selector("div.table-row-status.status-in-use")
+        print
         print
         print "Finished Test: Attach Volume from Instance Landing Page"
         print
@@ -290,9 +299,15 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         self.click_element_by_css_selector('#volume-detach-grid > tbody > tr > td > input[type="checkbox"]')
         print "Click 'Detach' button"
         self.click_element_by_id("btn-vol-detach")
+        print "Go to Volume Landing Page"
+        self.click_element_by_link_text("Dashboard")
+        self.click_element_by_link_text("Storage")
+        self.click_element_by_link_text("Volumes")
         print "Verification by waiting for attached state to disappear from Volumes Landing page"
         self.verify_element_not_present("CSS_SELECTOR","div.table-row-status.status-in-use")
-
+        print
+        print "Finished Test: Detach Volume from Instance Landing Page"
+        print
 
 
 
