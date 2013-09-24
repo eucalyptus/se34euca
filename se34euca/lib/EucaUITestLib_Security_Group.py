@@ -7,6 +7,7 @@ class EucaUITestLib_Security_Group(EucaUITestLib_Base):
     def test_ui_gotopage_security_groups(self):
         print
         print "Started Test: GotoPage Security Groups"
+        print
         self.click_element_by_id("euca-logo")
         print
         print "Test: Received the Page Title -> " + self.driver.title
@@ -22,6 +23,7 @@ class EucaUITestLib_Security_Group(EucaUITestLib_Base):
     def test_ui_create_security_group(self, security_group_name, security_group_description):
         print
         print "Started Test: Create Security Group"
+        print
         self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
         print
@@ -67,6 +69,7 @@ class EucaUITestLib_Security_Group(EucaUITestLib_Base):
     def test_ui_create_empty_security_group(self):
         print
         print "Started Test: Create Empty Security Group"
+        print
         self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
         print
@@ -89,7 +92,8 @@ class EucaUITestLib_Security_Group(EucaUITestLib_Base):
         Adds rules to empty group with prescribed description
         '''
         print
-        print "Started Test: Add rules to a Security Group"
+        print "Started Test: Add Rules to a Security Group"
+        print
         self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
         print
@@ -158,7 +162,7 @@ class EucaUITestLib_Security_Group(EucaUITestLib_Base):
         time.sleep(3)
         self.click_element_by_id("sgroup-add-btn")
         print
-        print "Finished: Create Security Group"
+        print "Finished: Add Rules to Security Group"
         print
         return 0
 
@@ -166,6 +170,7 @@ class EucaUITestLib_Security_Group(EucaUITestLib_Base):
     def test_ui_delete_security_group(self):
         print
         print "Started Test: Delete Security Group"
+        print
         self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
         print
@@ -186,6 +191,7 @@ class EucaUITestLib_Security_Group(EucaUITestLib_Base):
     def test_ui_delete_security_group_all(self):
         print
         print "Started Test: Delete Security Group All"
+        print
         self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
         print
@@ -205,6 +211,7 @@ class EucaUITestLib_Security_Group(EucaUITestLib_Base):
     def test_ui_check_security_group_count(self, sg_count):
         print
         print "Started Test: Check Security Group Count"
+        print
         self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
         print "Verifying that Security Group Count on Dashboard is " + sg_count
