@@ -19,8 +19,10 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
 
     def test_ui_create_volume(self):
         print
-        print "Started Test: Create Volume"
+        print "Started Test: Create New Volume"
         print
+        print "Test: Go to Dashboard"
+        self.click_element_by_id("resource-menu-dashboard")
         print "Test: Go to the Page Volume"
         self.click_element_by_id("dashboard-storage-volume")
         print
@@ -33,10 +35,7 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         self.click_element_by_link_text(link_text="Dashboard")
         self.click_element_by_id("dashboard-storage-volume")
         print
-        print "Finished: Create New Volume Given Volume Name"
-        print
-        print
-        print "Finished: Create New Volume"
+        print "Finished Test: Create New Volume"
         print
         return 0
 
@@ -49,7 +48,7 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         self.click_element_by_link_text("Storage")
         self.click_element_by_link_text("Volumes")
         print
-        print "Test: Create New Volume"
+        print "Test: Create a New Volume"
         self.click_element_by_id("table-volumes-new")
         self.set_keys_by_id("volume-name", str(volume_name))
         self.set_keys_by_id("volume-size", "1")
@@ -61,7 +60,7 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         self.click_element_by_id("dashboard-storage-volume")
         self.verify_element_by_link_text(str(volume_name))
         print
-        print "Finished: Create New Volume Given Volume Name"
+        print "Finished: Create New Volume Given Volume Name" + volume_name
         print
         return 0
 
@@ -69,6 +68,8 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         print
         print "Started Test: Delete Volume"
         print
+        print "Test: Go to Dashboard"
+        self.click_element_by_id("resource-menu-dashboard")
         print "Test: Go to the Page Volume"
         self.click_element_by_id("dashboard-storage-volume")
         self.click_element_by_css_selector("td.checkbox-cell > input[type=\"checkbox\"]")
@@ -86,6 +87,8 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         print
         print "Started Test: Delete Volume All"
         print
+        print "Test: Go to Dashboard"
+        self.click_element_by_id("resource-menu-dashboard")
         print "Test: Go to the Page Volume"
         self.click_element_by_id("dashboard-storage-volume")
         self.click_element_by_id("volumes-check-all")
@@ -102,6 +105,9 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
     def test_ui_create_snapshot_from_volume(self):
         print
         print "Started Test: Create Snapshot From Volume"
+        print
+        print "Test: Go to Dashboard"
+        self.click_element_by_id("resource-menu-dashboard")
         self.verify_element_by_link_text("Launch new instance")
         print
         print "Test: Go to the Page Volume"
@@ -139,7 +145,7 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         self.click_element_by_id("btn-volumes-delete-delete")
         #Verifying on Snapshots Landing Page that snapshot Named "snapshot_name" was created
         print
-        print "Verification"
+        print "Verification that snapshot " + snapshot_name + " is displayed on Snapshots Landing Page"
         self.click_element_by_link_text(link_text="Dashboard")
         self.click_element_by_id("dashboard-storage-snapshot")
         self.verify_element_by_link_text(str(snapshot_name))
@@ -152,7 +158,9 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         '''
         Attaches a volume to a running instance from Volumes Landing Page. Prerequisite: an instance named "testinstance"
         '''
+        print
         print "Started Test: Attach Volume"
+        print
         self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
         print
@@ -173,16 +181,24 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         self.click_element_by_id("volumes-attach-dialog")
         self.click_element_by_id("button-dialog-attachvolume-save")
         print
-        print "Verification"
-        self.click_element_by_link_text(link_text="Dashboard")
-        self.click_element_by_id("dashboard-storage-snapshot")
-        self.verify_element_by_link_text("testsnap")
+        print "Verification by checking that there is a volume in attached state on Volumes Landing Page"
         print
-
+        print "Click 'Dashboard' button"
+        self.click_element_by_id("resource-menu-dashboard")
+        print "Click 'Storage' button"
+        self.click_element_by_id("resource-menu-storage")
+        print "Click 'Volumes' from menu"
+        self.click_element_by_id("resource-menuitem-volume")
+        print "Verify there is an attached volume present"
+        self.verify_element_by_css_selector("div.table-row-status.status-in-use")
+        print
+        print "Finished Test: Attach Volume"
+        print
 
     def test_ui_check_volume_count(self, volumes_count):
         print
         print "Started Test: Check Volume Count"
+        print
         self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
         print "Verifying that Volumes Count on Dashboard is " + volumes_count
@@ -191,6 +207,95 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         print "Finished Test: Check Volume Count"
         print
         return 0
+
+    def test_ui_detach_volume(self):
+        print
+        print "Started Test: Detach Volume"
+        print
+        print "Click 'Dashboard' button"
+        self.click_element_by_id("resource-menu-dashboard")
+        print "Click 'Storage' button"
+        self.click_element_by_id("resource-menu-storage")
+        print "Click 'Volumes' from menu"
+        self.click_element_by_id("resource-menuitem-volume")
+        print "Check-mark a volume that is 'in use' "
+        self.click_element_by_css_selector("div.table-row-status.status-in-use")
+        print "Click the 'More actions' button"
+        self.click_element_by_id('more-actions-volumes')
+        print "Click 'Detach from instance' menu item"
+        self.click_element_by_link_text("Detach from instance")
+        print "Click 'Yes, detach' in the detach dialog"
+        self.click_element_by_id("button-dialog-detachvolume-detach")
+        print
+        print "Finished Test: Detach Volume"
+        print
+
+    def test_ui_attach_volume_from_instance_lp(self, volume_name):
+        '''
+        Attaches volume by spacified name to a running instance
+        '''
+        print
+        print "Started Test: Attach Volume from Instance Landing Page"
+        print
+        print "Click 'Dashboard' button"
+        self.click_element_by_id("resource-menu-dashboard")
+        print "Click 'Storage' button"
+        self.click_element_by_id("resource-menu-storage")
+        print "Click 'Volumes' from menu"
+        self.click_element_by_id("resource-menuitem-volume")
+        print "Clink on volume name 'test-volume' to open expando"
+        self.click_element_by_link_text(volume_name)
+        print "Store volume id of 'test-volume'"
+        volume_id = self.get_text_by_xpath("//div[@id='tabs-1']/ul/li[2]/div[2]")
+        print "Click 'Instances' button"
+        self.click_element_by_id("resource-menu-instance")
+        print "Click on 'Instances' menu item"
+        self.click_element_by_id("resource-menuitem-instance")
+        print "Check-box a running instance"
+        self.click_element_by_css_selector("div.table-row-status.status-running")
+        print "Click the 'More actions' menu"
+        self.click_element_by_id("more-actions-instances")
+        print "Click 'Attach volume' menu item"
+        self.click_element_by_link_text("Attach volume")
+        print "Verify the volume id field is visible in the 'Attach Volume' dialog"
+        self.verify_element_by_id("volume-attach-volume-id")
+        print "Type in volume id in the 'Attach Volume' dialog"
+        self.set_keys_by_id("volume-attach-volume-id", volume_id + " ("+ volume_name + ")")
+        print "Click the 'Attach' button"
+        self.click_element_by_id("button-dialog-attachvolume-save")
+        print
+        print "Finished Test: Attach Volume from Instance Landing Page"
+        print
+
+    def detach_volume_from_instance_lp(self, instance_name):
+        print
+        print "Started Test: Detach Volume from Instance Landing Page"
+        print
+        print "Click 'Dashboard' button"
+        self.click_element_by_id("resource-menu-dashboard")
+        print "Click 'Instances' button"
+        self.click_element_by_id("resource-menu-instance")
+        print "Click 'Instances' from menu"
+        self.click_element_by_id("resource-menuitem-instance")
+        print "Clink " + instance_name + " to get instance id from expando"
+        self.click_element_by_link_text(instance_name)
+        instance_id = self.get_text_by_xpath("//div[@id='tabs-1']/ul/li[2]/div[2]")
+        print "Check-mark " + instance_name
+        self.click_element_by_id(instance_id)
+        print "Click 'More actions'"
+        self.click_element_by_id("more-actions-instances")
+        print "Click 'Detach volume' on the menu"
+        self.click_element_by_link_text("Detach volume")
+        print "Click checkbox for an attached volume"
+        self.click_element_by_css_selector('#volume-detach-grid > tbody > tr > td > input[type="checkbox"]')
+        print "Click 'Detach' button"
+        self.click_element_by_id("btn-vol-detach")
+        print "Verification by waiting for attached state to disappear from Volumes Landing page"
+        self.verify_element_not_present("CSS_SELECTOR","div.table-row-status.status-in-use")
+
+
+
+
 
 
 if __name__ == "__main__":
