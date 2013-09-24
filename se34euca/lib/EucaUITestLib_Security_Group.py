@@ -100,7 +100,7 @@ class EucaUITestLib_Security_Group(EucaUITestLib_Base):
         print "Test: Go to the Page Security Group"
         self.click_element_by_link_text("Network & Security")
         self.click_element_by_link_text("Security Groups")
-        print"Test: Checkbox the security group"
+        print "Test: Checkbox the security group"
 
         #checkbox is indexed by s.group id
         #need method to find element in table or replace with eutester call
@@ -115,6 +115,7 @@ class EucaUITestLib_Security_Group(EucaUITestLib_Base):
         print "Test: Add rules"
         self.click_element_by_id("more-actions-sgroups")
         self.click_element_by_link_text("Manage rules")
+        print
         print "Adding TCP rule"
         print
         self.select_text_by_css_selector(
@@ -127,6 +128,7 @@ class EucaUITestLib_Security_Group(EucaUITestLib_Base):
             "0.0.0.0/0")
         self.click_element_by_css_selector(
             "div.content-sections-wrapper > div.rules.content-section > #sgroup-more-rules > div.section-button-bar > #sgroup-add-rule")
+        print
         print "Adding ICMP rule"
         print
         self.select_text_by_css_selector(
@@ -136,6 +138,7 @@ class EucaUITestLib_Security_Group(EucaUITestLib_Base):
             "0.0.0.0/0")
         self.click_element_by_css_selector(
             "div.content-sections-wrapper > div.rules.content-section > #sgroup-more-rules > div.section-button-bar > #sgroup-add-rule")
+        print
         print "Adding HTTP rule"
         print
         self.select_text_by_css_selector(
@@ -146,8 +149,9 @@ class EucaUITestLib_Security_Group(EucaUITestLib_Base):
             "0.0.0.0/0")
         self.click_element_by_css_selector(
             "div.content-sections-wrapper > div.rules.content-section > #sgroup-more-rules > div.section-button-bar > #sgroup-add-rule")
+        print
         print "Adding SSH rule"
-        time.sleep(30)
+        time.sleep(10)
         print
         self.select_text_by_css_selector(
             "div.content-sections-wrapper > div.rules.content-section > div.form-row > #sgroup-template",
