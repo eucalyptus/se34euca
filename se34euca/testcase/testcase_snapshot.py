@@ -21,6 +21,11 @@ class testcase_snapshot(testcase_base):
         self.eucaUITester.snapshot.test_ui_create_volume_from_snapshot()
         self.eucaUITester.base.test_ui_logout()
 
+    def register_snapshot_as_image(self):
+        print "=== runTest: Register Snapshot as Image ==="
+        self.eucaUITester.base.test_ui_login()
+        self.eucaUITester.snapshot.test_ui_register_snapshot_as_image("myimage")
+        self.eucaUITester.base.test_ui_logout()
 
 if __name__ == "__main__":
     unittest.main()

@@ -63,7 +63,7 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         self.click_element_by_link_text("Launch new instance")
         print "Click on the first image 'link'"
         self.click_element_by_css_selector("div.image-name")
-        print "Click: ID -> nextButton"
+        print "Click the 'Next' Button"
         self.click_element_by_id("nextButton")
         print "Wait: ID -> launch-instance-type-num-instance"
         self.verify_element_by_id("launch-instance-type-num-instance")
