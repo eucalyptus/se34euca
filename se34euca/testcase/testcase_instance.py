@@ -45,7 +45,7 @@ class testcase_instance(testcase_base):
         print "=== runTest: Launch Instance Named testinstance security group 'mywebservice' keypair my-sel-gen-key-00 ==="
         self.eucaUITester.base.test_ui_login()
         self.eucaUITester.instance.test_ui_launch_instance_given_name_security_group_keypair("testinstance",
-                                                                                             "mywebservice",
+                                                                                             "default",
                                                                                              "my-sel-gen-key-00")
         self.eucaUITester.base.test_ui_logout()
 
@@ -75,7 +75,7 @@ class testcase_instance(testcase_base):
     def associate_ip_from_ip_lp(self):
         print "=== runTest: Associate IP from IP Landing Page ==="
         self.eucaUITester.base.test_ui_login()
-        self.eucaUITester.instance.test_ui_associate_ip_from_ip_lp()
+        self.eucaUITester.instance.test_ui_associate_ip_from_ip_lp("testinstance")
         self.eucaUITester.base.test_ui_logout()
 
 

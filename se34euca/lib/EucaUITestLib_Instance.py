@@ -57,20 +57,18 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         print "Started Test: Launch Instance Given Instance Name: " + str(
             instance_name) + ", security group: " + security_group + ", keypair: " + keypair
         print
-        print "Click: LINK_TEXT -> Dashboard"
+        print "Click the Dashboard link"
         self.click_element_by_link_text("Dashboard")
-        print "Click: LINK_TEXT -> Launch new instance"
+        print "Click on the 'Launch new instance' button"
         self.click_element_by_link_text("Launch new instance")
-        print "Click: CSS_SELECTOR -> div.image-name"
+        print "Click on the first image 'link'"
         self.click_element_by_css_selector("div.image-name")
         print "Click: ID -> nextButton"
         self.click_element_by_id("nextButton")
         print "Wait: ID -> launch-instance-type-num-instance"
         self.verify_element_by_id("launch-instance-type-num-instance")
-        #self.set_keys_by_id("launch-instance-names", str(instance_name))
-        print "Enter instance name in Tag field of Launch Instance dialog"
-        self.set_keys_by_css_selector("input.focus-here","Name")
-        self.set_keys_by_css_selector('input[title="Type the value of this tag"]',instance_name)
+        print "Enter instance name into Name field"
+        self.set_keys_by_id("launch-instance-names", str(instance_name))
         time.sleep(5)
         self.click_element_by_css_selector("div.icon_add.enabled")
         time.sleep(5)
@@ -263,7 +261,7 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         print "Finished Test: Associate IP from Instances Landing Page"
         print
 
-    def test_ui_associate_ip_from_ip_lp(self):
+    def test_ui_associate_ip_from_ip_lp(self, instance_name):
         #broken: EUCA-7561
         '''
         Requires a running instance named "testinstance"  and an available ip.
@@ -278,13 +276,18 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         print
         print "Test: Go to the Page Running Instances"
         self.click_element_by_css_selector("div.status-readout")
-        self.click_element_by_link_text("testinstance")
+        print "Open expando of instance named " + instance_name
+        self.click_element_by_link_text(str(instance_name))
+        print "Get instance id from expando"
         instance_id = self.get_text_by_xpath("//div[@id='tabs-1']/ul/li[2]/div[2]")
+        print "Go to IP Addresses Landing Page"
         self.click_element_by_link_text("Network & Security")
         self.click_element_by_link_text("IP Addresses")
+        print "On the search bar filter by 'Assignment: Unassigned'"
         self.click_element_by_css_selector("div.VS-search-inner")
         self.click_element_by_link_text("Assignment")
         self.click_element_by_link_text("Unassigned")
+        print "Get the unassigned IP address"
         available_ip_address = self.get_text_by_xpath(
             "/html/body/div/div[4]/div/div/div/div/div/table/tbody/tr/td[2]/a")
         self.click_element_by_id(str(available_ip_address))
