@@ -187,6 +187,7 @@ class EucaUITestLib_Utility(EucaUITestLib_Base):
                 print "Test: Security Group count on Dashboard is one"
                 print
                 break
+
         print
         print "Check number of IP Addresses on Dashboard, release to cloud if not zero"
         print
@@ -194,7 +195,7 @@ class EucaUITestLib_Utility(EucaUITestLib_Base):
             print "Trial: " + str(i)
             self.click_element_by_id("resource-menu-dashboard")
             time.sleep(self.sleep_time)
-            if self.driver.find_element_by_css_selector("#dashboard-netsec-eip > span").text != str(1):
+            if self.driver.find_element_by_css_selector("#dashboard-netsec-eip > span").text != str(0):
                 num_ip_addresses = self.get_text_by_css_selector("#dashboard-netsec-eip > span")
                 print "Test: Verified number of IP Addresses on dashboard is non-zero: " + num_ip_addresses
                 print
@@ -210,7 +211,7 @@ class EucaUITestLib_Utility(EucaUITestLib_Base):
                 time.sleep(self.sleep_time)
             else:
                 print
-                print "Test: Security Group count on Dashboard is one"
+                print "Test: IP Addresses count on Dashboard is zero"
                 break
         print
         print "Finished Test: Clean Up"
