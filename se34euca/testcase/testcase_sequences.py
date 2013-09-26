@@ -223,8 +223,6 @@ class testcase_sequences(testcase_base):
 
 
 
-
-
 if __name__ == "__main__":
     unittest.main()
 

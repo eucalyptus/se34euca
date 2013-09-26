@@ -290,7 +290,9 @@ class EucaUITestLib_Base(unittest.TestCase):
     def verify_text_not_present_by_css(self, locator, text):
         print"Verifying that text displayed at " + locator + " does not match " + text
         for i in range(1, self.trials, 1):
-            if self.get_text_by_css_selector(locator) != text:
+            displayed = self.get_text_by_css_selector(locator)
+            print "Currently displayed at locator " + locator + " is " + displayed
+            if displayed != text:
                 print "Verified " + self.get_text_by_css_selector(locator) + " does not match " + text
                 return True
             else:
