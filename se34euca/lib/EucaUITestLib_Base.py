@@ -21,6 +21,9 @@ class EucaUITestLib_Base(unittest.TestCase):
     username = "admin"
     password = "password"
     protocol = "https"
+    sauce_account = "eucaqa"
+    sauce_access_key = "2715f0a3-a8d6-420f-8a7b-1d91eea4ddd0"
+    sauce_address = "@ondemand.saucelabs.com:80"
     retry = 400  # waiting time in seconds for element to be present on page
     trials = 300  # trial number for verify not present methods
 
@@ -32,11 +35,18 @@ class EucaUITestLib_Base(unittest.TestCase):
         self.driver = driver
         return 0
 
-    def setSeleniumServerInfo(self, ip, port):
+    def setSeleniumServerInfo(self, ip, port, sauce_account, sauce_address, sauce_access_key):
         self.selenium_server_ip = ip
         self.selenium_server_port = port
+        self.sauce_account = sauce_account
+        self.sauce_address = sauce_address
+        self.sauce_access_key = sauce_access_key
         print "SELENIUM SERVER IP: " + ip
         print "SELENIUM SERVER PORT: " + port
+        print
+        print "SAUCE ACCOUNT: " + sauce_account
+        print "SAUCE ACCESS KEY: " + sauce_access_key
+        print "SAUCE ADDRESS: " + sauce_address
         print
         return 0
 
@@ -64,7 +74,9 @@ class EucaUITestLib_Base(unittest.TestCase):
         print
         print "=== setUp ==="
         this_ui = self.protocol + "://" + self.ui_ip + ":" + self.port
-        this_selenium_server_url = "http://" + self.selenium_server_ip + ":" + self.selenium_server_port + "/wd/hub"
+        #this_selenium_server_url = "http://" + self.selenium_server_ip + ":" + self.selenium_server_port + "/wd/hub"
+        this_selenium_server_url = "http://" + self.selenium_server_ip + self.sauce_account + ":" + self.sauce_access_key + self.sauce_address + self.selenium_server_port + "/wd/hub"
+        #this_selenium_server_url = "http://eucaqa:2715f0a3-a8d6-420f-8a7b-1d91eea4ddd0@ondemand.saucelabs.com:80/wd/hub"
         print "SELENIUM SERVER URL: " + this_selenium_server_url
         print "EUCALYPTUS UI PROXY URL: " + this_ui
         print

@@ -17,6 +17,10 @@ class TestRunner(object):
         self.password = "password"
         self.testcases = ""
         self.protocol = "https"
+        self.sauce_account = ""
+        self.sauce_access_key = ""
+        self.sauce_address = "@ondemand.saucelabs.com:80"
+
         for key in self.testclass.__dict__:
             if hasattr(self.testclass.__dict__[key], "__call__"):
                 self.testcases += key + ' '
@@ -31,13 +35,21 @@ class TestRunner(object):
         parser.add_option("-w", "--password", dest="password", help="password")
         parser.add_option("-t", "--testcase", dest="testcase", help="testcase: " + self.testcases)
         parser.add_option("-l", "--protocol", dest="protocol", help="type of protocol ui uses: http or https")
+        parser.add_option("-n", "--sauce_account", dest="sauce_account", help="Sauce Labs account name")
+        parser.add_option("-x", "--sauce_access_key", dest="sauce_access_key", help="Sauce Labs access key")
         (options, args) = parser.parse_args()
 
         if options.selenium_server_ip is not None:
             self.selenium_server_ip = options.selenium_server_ip
+            self.sauce_access_key = ""
+            self.sauce_account = ""
+            self.sauce_address = ""
 
         if options.selenium_server_port is not None:
             self.selenium_server_port = options.selenium_server_port
+            self.sauce_access_key = ""
+            self.sauce_account = ""
+            self.sauce_address = ""
 
         if options.ui_ip is not None:
             self.ui_ip = options.ui_ip
@@ -60,6 +72,17 @@ class TestRunner(object):
         if options.protocol is not None:
             self.protocol = options.protocol
 
+        if options.sauce_account is not None:
+            self.sauce_account = options.sauce_account
+            self.selenium_server_ip = ""
+            self.selenium_server_port = ""
+
+        if options.sauce_account is not None:
+            self.sauce_access_key = options.sauce_access_key
+            self.selenium_server_ip = ""
+            self.selenium_server_port = ""
+
+
 
     def start_test(self):
         print "=============================="
@@ -73,7 +96,7 @@ class TestRunner(object):
         print "### SETUP"
         print "TESTCASE: " + self.testcase
         print
-        ui.setSeleniumServerInfo(self.selenium_server_ip, self.selenium_server_port)
+        ui.setSeleniumServerInfo(self.selenium_server_ip, self.selenium_server_port, self.sauce_account, self.sauce_access_key, self.sauce_address)
         ui.setUIInfo(self.ui_ip, self.port, self.protocol)
         ui.setUserInfo(self.accountname, self.username, self.password)
 
