@@ -19,12 +19,18 @@ class EucaUITester():
     accountname = "eucalyptus"
     username = "admin"
     password = "password"
+    sauce_account = "eucaqa"
+    sauce_access_key = "2715f0a3-a8d6-420f-8a7b-1d91eea4ddd0"
+    sauce_address = "@ondemand.saucelabs.com:80"
     retry = 120
     config_file = '/Users/alicehubenko/2b_tested.lst'
 
-    def setSeleniumServerInfo(self, ip, port):
+    def setSeleniumServerInfo(self, ip, port, sauce_account, sauce_address, sauce_access_key):
         self.selenium_server_ip = ip
         self.selenium_server_port = port
+        self.sauce_account = sauce_account
+        self.sauce_address = sauce_address
+        self.sauce_access_key = sauce_access_key
         print "SELENIUM SERVER IP: " + ip
         print "SELENIUM SERVER PORT: " + port
         print
@@ -57,7 +63,7 @@ class EucaUITester():
         print "========== Initializing EucaUITester =========="
         print
         self.base = EucaUITestLib_Base("NoOp")
-        self.base.setSeleniumServerInfo(self.selenium_server_ip, self.selenium_server_port)
+        self.base.setSeleniumServerInfo(self.selenium_server_ip, self.selenium_server_port, self.sauce_account, self.sauce_access_key, self.sauce_address)
         self.base.setUIInfo(self.ui_ip, self.port, self.protocol)
         self.base.setUserInfo(self.accountname, self.username, self.password)
         self.base.setUp()

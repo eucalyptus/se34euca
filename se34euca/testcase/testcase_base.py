@@ -5,8 +5,8 @@ from se34euca.lib.EucaUITester import *
 class testcase_base(unittest.TestCase):
     eucaUITester = EucaUITester()
 
-    def setSeleniumServerInfo(self, ip, port):
-        self.eucaUITester.setSeleniumServerInfo(ip, port)
+    def setSeleniumServerInfo(self, ip, port, sauce_account, sauce_address, sauce_access_key):
+        self.eucaUITester.setSeleniumServerInfo(ip, port, sauce_account, sauce_address, sauce_access_key)
 
     def setUIInfo(self, ip, port, protocol):
         self.eucaUITester.setUIInfo(ip, port, protocol)

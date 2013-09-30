@@ -72,7 +72,7 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         print "Click away from input field on launch instance wizard"
         time.sleep(5)
         #self.click_element_by_css_selector("div.icon_add.enabled")
-        self.click_element_by_id("wizard")
+        self.click_element_by_id("launch-wizard-note")
         time.sleep(5)
         print "Click the 'Next: select security' button"
         self.click_element_by_id("nextButton")
