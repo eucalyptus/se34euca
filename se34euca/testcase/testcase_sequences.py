@@ -52,24 +52,18 @@ class testcase_sequences(testcase_base):
         sleep_time = 20
         print "=== runTest: Keypair Operations ==="
         self.eucaUITester.base.test_ui_login()
-        self.eucaUITester.keypair.test_ui_import_keypair()
-        time.sleep(sleep_time)
+        self.eucaUITester.keypair.test_ui_import_keypair_given_name("import-key")
+        self.eucaUITester.keypair.test_ui_verify_keypair_given_name("import-key")
         self.eucaUITester.keypair.test_ui_check_keypair_count("1")
-        time.sleep(sleep_time)
         self.eucaUITester.keypair.test_ui_delete_keypair_given_name("import-key")
-        time.sleep(sleep_time)
         self.eucaUITester.keypair.test_ui_check_keypair_count("0")
-        time.sleep(sleep_time)
+        self.eucaUITester.keypair.test_ui_verify_delete_keypair_given_name("import-key")
         self.eucaUITester.keypair.test_ui_generate_keypair_given_name("my-sel-gen-key-00")
-        time.sleep(sleep_time)
+        self.eucaUITester.keypair.test_ui_verify_keypair_given_name("my-sel-gen-key-00")
         self.eucaUITester.keypair.test_ui_check_keypair_count("1")
-        time.sleep(sleep_time)
         self.eucaUITester.keypair.test_ui_delete_keypair_all()
-        time.sleep(sleep_time)
         self.eucaUITester.keypair.test_ui_check_keypair_count("0")
-        time.sleep(sleep_time)
         self.eucaUITester.base.test_ui_logout()
-        time.sleep(sleep_time)
 
     def security_group_operations(self):
         sleep_time = 60

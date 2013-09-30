@@ -290,13 +290,15 @@ class EucaUITestLib_Base(unittest.TestCase):
             this_element_type = By.NAME
 
         for i in range(1, self.trials, 1):
+            print "Wait On Removal:: Trial: " + str(i) + " Element Type: " + element_type + ", Element: " + element
             try:
                 self.driver.find_element(this_element_type, element)
-                print "Still seeing " + element + "..."
-                #return False
             except NoSuchElementException:
-                print "Verified " + element + " not present"
+                print
+                print "Verified Removal:: Element type: " + element_type + ", Element: " + element 
                 return True
+            time.sleep(1)
+        return False
 
     #VERIFY TEXT NOT PRESENT
     def verify_text_not_present_by_css(self, locator, text):
