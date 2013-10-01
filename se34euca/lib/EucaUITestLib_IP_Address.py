@@ -2,6 +2,7 @@ from se34euca.lib.EucaUITestLib_Base import *
 
 
 class EucaUITestLib_IP_Address(EucaUITestLib_Base):
+
     def test_ui_allocate_ip_address(self, ip_count):
         print
         print "Started Test: Allocate IP Address: IP_COUNT " + str(ip_count)
@@ -36,7 +37,7 @@ class EucaUITestLib_IP_Address(EucaUITestLib_Base):
         print
         return 0
 
-    def test_ui_release_ip_address(self):
+    def test_ui_release_ip_address_all(self):
         print
         print "Started Test: Release IP Address"
         print
@@ -45,7 +46,7 @@ class EucaUITestLib_IP_Address(EucaUITestLib_Base):
         print
         print "Test: Go to the Page IP Address"
         self.click_element_by_css_selector("#dashboard-netsec-eip > span")
-        self.click_element_by_css_selector("td.checkbox-cell.sorting_1 > input[type=\"checkbox\"]")
+        self.click_element_by_id("eips-check-all")
         self.click_element_by_id("more-actions-eips")
         self.click_element_by_link_text("Release to cloud")
         self.click_element_by_id("btn-eips-release-release")
