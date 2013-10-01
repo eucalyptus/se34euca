@@ -337,6 +337,7 @@ class EucaUITestLib_Base(unittest.TestCase):
         print"Verifying that text displayed at " + locator + " does not match " + text
         for i in range(1, self.trials, 1):
             text_on_page = self.get_text_by_xpath(locator)
+            time.sleep(10)
             if text_on_page != text:
                 print "Verified " + self.get_text_by_xpath(locator) + " does not match " + text
                 return True

@@ -90,7 +90,7 @@ class testcase_sequences(testcase_base):
         time.sleep(sleep_time)
 
     def ip_address_operations(self):
-        sleep_time = 40
+        sleep_time = 60
         print "=== runTest: IP Address Operations ==="
         self.eucaUITester.base.test_ui_login()
         self.eucaUITester.keypair.test_ui_import_keypair_given_name("import-key")
@@ -110,15 +110,18 @@ class testcase_sequences(testcase_base):
         time.sleep(sleep_time)
         self.eucaUITester.instance.test_ui_associate_ip_from_inst_lp()
         time.sleep(sleep_time)
-        self.eucaUITester.instance.test_ui_disassociate_ip_from_ip_lp()
-        time.sleep(sleep_time)
-        self.eucaUITester.instance.test_ui_associate_ip_from_ip_lp("testinstance")
-        time.sleep(sleep_time)
+        #self.eucaUITester.instance.test_ui_disassociate_ip_from_ip_lp()
         self.eucaUITester.instance.test_ui_disassociate_ip_from_inst_lp()
         time.sleep(sleep_time)
         self.eucaUITester.instance.test_ui_associate_ip_from_ip_lp("testinstance")
         time.sleep(sleep_time)
-        self.eucaUITester.ip_address.test_ui_release_ip_address()
+        #self.eucaUITester.instance.test_ui_disassociate_ip_from_inst_lp()
+        self.eucaUITester.instance.test_ui_disassociate_ip_from_ip_lp()
+        time.sleep(sleep_time)
+        self.eucaUITester.instance.test_ui_associate_ip_from_ip_lp("testinstance")
+        time.sleep(sleep_time)
+        self.eucaUITester.ip_address.test_ui_release_ip_address_all()
+        self.eucaUITester.ip_address.test_ui_check_ip_address_count("0")
         time.sleep(sleep_time)
         self.eucaUITester.instance.test_ui_terminate_instance_all()
         time.sleep(sleep_time)
@@ -129,8 +132,6 @@ class testcase_sequences(testcase_base):
         time.sleep(sleep_time)
         self.eucaUITester.keypair.test_ui_check_keypair_count("0")
         self.eucaUITester.security_group.test_ui_check_security_group_count("1")
-        self.eucaUITester.ip_address.test_ui_release_ip_address()
-        self.eucaUITester.ip_address.test_ui_check_ip_address_count("0")
         self.eucaUITester.base.test_ui_logout()
         time.sleep(sleep_time)
 

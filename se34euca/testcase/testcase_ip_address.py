@@ -17,7 +17,7 @@ class testcase_ip_address(testcase_base):
     def release_ip_address(self):
         print "=== runTest: Release IP Address ==="
         self.eucaUITester.base.test_ui_login()
-        self.eucaUITester.ip_address.test_ui_release_ip_address()
+        self.eucaUITester.ip_address.test_ui_release_ip_address_all()
         self.eucaUITester.base.test_ui_logout()
 
 
