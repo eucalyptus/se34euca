@@ -46,7 +46,7 @@ def main():
 	cmd = "Xvfb :0 -ac 2> /dev/null &"
 	run_cmd(cmd)
 
-	run_selenium = "nohup java -jar selenium-server-standalone-2.32.0.jar &"
+	run_selenium = "nohup java -jar selenium-server-standalone-2.32.0.jar -trustAllSSLCertificates &"
 	cmd = "cd /root/selenium-server/; " + run_selenium
 	run_cmd(cmd)
 

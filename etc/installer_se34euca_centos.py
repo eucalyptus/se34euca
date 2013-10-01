@@ -57,7 +57,7 @@ def main():
 	cmd = "Xvfb :0 -ac 2> /dev/null &"
 	run_cmd(cmd)
 
-	cmd = "sudo nohup java -jar /root/selenium-server/selenium-server-standalone-2.32.0.jar > /tmp/selenium-server.out 2> /tmp/selenium-server.err &"
+	cmd = "sudo nohup java -jar /root/selenium-server/selenium-server-standalone-2.32.0.jar -trustAllSSLCertificates > /tmp/selenium-server.out 2> /tmp/selenium-server.err &"
 	run_cmd(cmd)
 
 	cmd = "dbus-uuidgen | sudo tee -a /var/lib/dbus/machine-id"

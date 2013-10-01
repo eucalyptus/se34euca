@@ -70,9 +70,7 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         print "Enter instance name into Name field"
         self.set_keys_by_id("launch-instance-names", str(instance_name))
         print "Click away from input field on launch instance wizard"
-        time.sleep(5)
-        #self.click_element_by_css_selector("div.icon_add.enabled")
-        self.click_element_by_id("launch-wizard-note")
+        self.click_element_by_id("launch-instance-type-num-instance")
         time.sleep(5)
         print "Click the 'Next: select security' button"
         self.click_element_by_id("nextButton")
