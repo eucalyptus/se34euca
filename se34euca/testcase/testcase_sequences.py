@@ -141,6 +141,8 @@ class testcase_sequences(testcase_base):
         time.sleep(sleep_time)
         self.eucaUITester.keypair.test_ui_check_keypair_count("0")
         self.eucaUITester.security_group.test_ui_check_security_group_count("1")
+        self.eucaUITester.ip_address.test_ui_release_ip_address()
+        self.eucaUITester.ip_address.test_ui_check_ip_address_count("0")
         self.eucaUITester.base.test_ui_logout()
         time.sleep(sleep_time)
 
