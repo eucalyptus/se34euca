@@ -93,7 +93,7 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         print
         return 0
 
-    def test_ui_launch_instance_from_images_lp(self):
+    def test_ui_launch_instance_from_images_lp(self, key_pair):
         print
         print "Started Test: Launch Instance from Images Landing Page"
         print
@@ -105,15 +105,15 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         self.click_element_by_link_text("Launch instance")
         print "Click: ID -> nextButton"
         self.click_element_by_id("nextButton")
-        print "Select: ID -> launch-wizard-security-keypair-selector, TEXT -> my-sel-gen-key-00"
-        self.select_text_by_id("launch-wizard-security-keypair-selector", "my-sel-gen-key-00")
+        print "Select: ID -> launch-wizard-security-keypair-selector, TEXT -> " + key_pair
+        self.select_text_by_id("launch-wizard-security-keypair-selector", key_pair)
         print "Click: ID -> nextButton"
         self.click_element_by_id("finishButton")
         print
         print "Finished Test: Launch Instance from Images Landing Page"
         print
 
-    def test_ui_launch_instance_from_instances_lp(self):
+    def test_ui_launch_instance_from_instances_lp(self, key_pair):
         print
         print "Started Test: Launch Instance from Instances Landing Page"
         print
@@ -131,8 +131,8 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         self.click_element_by_id("nextButton")
         print "Click: ID -> nextButton"
         self.click_element_by_id("nextButton")
-        print "Select: ID -> launch-wizard-security-keypair-selector, TEXT -> my-sel-gen-key-00"
-        self.select_text_by_id("launch-wizard-security-keypair-selector", "my-sel-gen-key-00")
+        print "Select: ID -> launch-wizard-security-keypair-selector, TEXT -> "+ key_pair
+        self.select_text_by_id("launch-wizard-security-keypair-selector", key_pair)
         print "Click: ID -> nextButton"
         self.click_element_by_id("finishButton")
         print
