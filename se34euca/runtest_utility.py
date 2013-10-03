@@ -1,5 +1,8 @@
 #!/usr/bin/python
 
+import sys
+sys.path.append('..')
+
 import se34euca
 from se34euca.testcase.testcase_utility import testcase_utility
 

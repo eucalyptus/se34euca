@@ -1,5 +1,8 @@
 #!/usr/bin/python
 
+import sys
+sys.path.append('..')
+
 import se34euca
 from se34euca.testcase.testcase_simulate_user import testcase_simulate_user
 
@@ -11,4 +14,4 @@ class SimulateUser(se34euca.TestRunner):
 
 if __name__ == "__main__":
     SimulateUser().start_test()
-    
+
