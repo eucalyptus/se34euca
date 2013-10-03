@@ -27,6 +27,16 @@
 	<td></td>
 </tr>
 <tr>
+	<td>storeText</td>
+	<td>css=option.temporal</td>
+	<td>az</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${az}</td>
+	<td></td>
+</tr>
+<tr>
 	<td>waitForElementPresent</td>
 	<td>link=Storage</td>
 	<td></td>
@@ -104,7 +114,7 @@
 <tr>
 	<td>select</td>
 	<td>id=volume-add-az-selector</td>
-	<td>label=PARTI00</td>
+	<td>label=${az}</td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>

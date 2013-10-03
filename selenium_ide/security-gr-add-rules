@@ -92,9 +92,19 @@
 	<td>label=Custom TCP</td>
 </tr>
 <tr>
+	<td>waitForElementPresent</td>
+	<td>id=sgroup-ports</td>
+	<td></td>
+</tr>
+<tr>
 	<td>sendKeys</td>
 	<td>id=sgroup-ports</td>
 	<td>0</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=allow-ip</td>
+	<td>0.0.0.0/0</td>
 </tr>
 <tr>
 	<td>sendKeys</td>
@@ -110,6 +120,11 @@
 	<td>select</td>
 	<td>id=sgroup-template</td>
 	<td>label=Custom ICMP</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=allow-ip</td>
+	<td>0.0.0.0/0</td>
 </tr>
 <tr>
 	<td>sendKeys</td>

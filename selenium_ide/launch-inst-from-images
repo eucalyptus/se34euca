@@ -52,11 +52,6 @@
 	<td></td>
 </tr>
 <tr>
-	<td>verifyElementPresent</td>
-	<td>link=Launch instance</td>
-	<td></td>
-</tr>
-<tr>
 	<td>click</td>
 	<td>link=Launch instance</td>
 	<td></td>
