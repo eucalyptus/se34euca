@@ -27,7 +27,6 @@ class EucaUITestLib_Base(unittest.TestCase):
     retry = 400  # waiting time in seconds for element to be present on page
     trials = 300  # trial number for verify not present methods
 
-
     def NoOp(self):
         return 0
 
