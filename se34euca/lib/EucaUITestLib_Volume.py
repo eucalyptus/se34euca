@@ -47,11 +47,15 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         self.click_element_by_link_text("Dashboard")
         self.click_element_by_link_text("Storage")
         self.click_element_by_link_text("Volumes")
+        time.sleep(10)
         print
         print "Test: Create a New Volume"
         self.click_element_by_id("table-volumes-new")
+        time.sleep(2)
         self.set_keys_by_id("volume-name", str(volume_name))
+        time.sleep(2)
         self.set_keys_by_id("volume-size", "1")
+        time.sleep(2)
         self.click_element_by_id("button-dialog-createvolume-save")
         #Verifying on Volumes Landing Page that volume Named v was created
         print
