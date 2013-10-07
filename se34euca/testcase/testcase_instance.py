@@ -25,13 +25,13 @@ class testcase_instance(testcase_base):
     def launch_instance_from_images_lp(self):
         print "=== runTest: Launch Instance from Images Landing Page ==="
         self.eucaUITester.base.test_ui_login()
-        self.eucaUITester.instance.test_ui_launch_instance_from_images_lp()
+        self.eucaUITester.instance.test_ui_launch_instance_from_images_lp("my-sel-gen-key-00")
         self.eucaUITester.base.test_ui_logout()
 
     def launch_instance_from_instances_lp(self):
         print "=== runTest: Launch Instance from Instances Landing Page ==="
         self.eucaUITester.base.test_ui_login()
-        self.eucaUITester.instance.test_ui_launch_instance_from_instances_lp()
+        self.eucaUITester.instance.test_ui_launch_instance_from_instances_lp("my-sel-gen-key-00")
         self.eucaUITester.base.test_ui_logout()
 
     def launch_more_like_this(self):
