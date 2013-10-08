@@ -59,9 +59,14 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         print
         print "Click the Dashboard link"
         self.click_element_by_link_text("Dashboard")
+	# Temp. Sol - TO PREVENT EMPTY IMAGE COLLECTION WHEN TRYING TO LAUNCH INSTANCE FOR THE FIRST TIME	10/08/13
+	print "Click the Image link"
+        self.click_element_by_link_text("Images")
+	print "Click the Dashboard link"
+        self.click_element_by_link_text("Dashboard")
         print "Click on the 'Launch new instance' button"
         self.click_element_by_link_text("Launch new instance")
-        print "Click on the first image 'link'"
+        print "Click on an Available Image"
         self.click_element_by_css_selector("div.image-name")
         print "Click the 'Next' Button"
         self.click_element_by_id("nextButton")
