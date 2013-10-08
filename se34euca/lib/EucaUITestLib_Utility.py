@@ -65,6 +65,10 @@ class EucaUITestLib_Utility(EucaUITestLib_Base):
                 print "Test: Delete All Instances"
                 self.click_element_by_link_text("Terminate")
                 self.click_element_by_id("btn-instances-terminate-terminate")
+                growler = self.get_text_by_id("euca-notification-title")
+                print
+                print "Notification: " + growler
+                print
                 time.sleep(self.sleep_time)
             else:
                 print "Test: Instance count on Dashboard is zero"
