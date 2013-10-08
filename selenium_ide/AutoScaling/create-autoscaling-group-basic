@@ -71,7 +71,26 @@
 	<td>id=finishButton</td>
 	<td></td>
 </tr>
-
+<tr>
+	<td>storeText</td>
+	<td>id=euca-notification-title</td>
+	<td>title</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=euca-notification-desc</td>
+	<td>store</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${title}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${store}</td>
+	<td></td>
+</tr>
 </tbody></table>
 </body>
 </html>
