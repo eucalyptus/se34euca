@@ -213,6 +213,55 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         print
         return 0
 
+    def test_ui_associate_ip_given_instance_name_and_ip_address(self, instance_name, ip):
+	'''
+	Associate the IP to the Instance given input
+	'''
+	print
+        print "Started Test: Associate IP Given Instance Name and IP Address"
+        print
+	self.click_element_by_link_text("Dashboard")
+	self.click_element_by_css_selector("div.status-readout")
+	self.click_element_by_link_text(instance_name)
+        instance_id = self.get_text_by_xpath("//div[@id='tabs-1']/ul/li[2]/div[2]")
+	self.click_element_by_id(instance_id)
+        self.click_element_by_id("more-actions-instances")
+        self.click_element_by_link_text("Associate IP address")
+        self.set_keys_by_xpath("(//input[@id='associate-selected-value'])[2]", ip)
+        self.click_element_by_link_text(ip)
+        self.click_element_by_id("eip-associate-btn")
+	print
+        print "Finished Test: Associate IP Given Instance Name and IP Address"
+        print
+	return 0
+
+    def test_ui_verify_associate_ip_given_instance_name_and_ip_address(self, instance_name, ip):
+	'''
+	Verify That the IP is associated to the instance
+	'''
+	print
+        print "Started Test: Verify Associate IP Given Instance Name and IP Address."
+	print
+	print "Instance Name: " + instance_name
+	print "IP: " + ip
+        print
+	self.click_element_by_link_text("Dashboard")
+	self.click_element_by_css_selector("div.status-readout")
+	self.click_element_by_link_text(instance_name)
+        associated_ip = self.get_text_by_xpath("//div[@id='tabs-1']/ul/li[5]/div[2]")
+	print
+	print "Instance " + instance_name + " is currently associated with " + associated_ip
+	if( str(ip) != str(associated_ip) ):
+		print
+		print "FAILED TEST: Verify Associate IP Given Instance Name and IP Address"
+		print
+		return 1
+	else:
+		print
+        	print "Finished Test: Associate IP Given Instance Name and IP Address"
+        	print
+	return 0
+
     def test_ui_associate_ip_from_inst_lp(self):
         '''
         Requires a running instance and an available ip.
@@ -237,7 +286,7 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         self.click_element_by_link_text("Associate IP address")
         self.set_keys_by_xpath("(//input[@id='associate-selected-value'])[2]", available_ip)
         self.click_element_by_link_text(available_ip)
-        self.click_element_by_id("eip-associate-btn")
+        self.click_element_by_id("eip-associate-btn")     
         self.click_element_by_link_text("Network & Security")
         self.click_element_by_link_text("IP Addresses")
 
