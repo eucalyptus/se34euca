@@ -73,8 +73,8 @@
 <tr><td><a href="chk-delete-security-group">chk-delete-security-group</a></td></tr>
 <tr><td><a href="chk-attach-volume">chk-attach-volume</a></td></tr>
 <tr><td><a href="delete-snapshots-all">delete-snapshots-all</a></td></tr>
-<tr><td><a href="create-snapshot-test-snap">create-snapshot-test-snap</a></td></tr>
-<tr><td><a href="register-snapshot-test-snap-as-image">register-snapshot-test-snap-as-image</a></td></tr>
+<tr><td><a href="create-snapshot-">create-snapshot-'test-snap'</a></td></tr>
+<tr><td><a href="register-snapshot-">register-snapshot-'test-snap'-as-image</a></td></tr>
 <tr><td><a href="delete-snapshots-all">delete-snapshots-all</a></td></tr>
 <tr><td><a href="detach-volume-inst-page">detach-volume-inst-page</a></td></tr>
 <tr><td><a href="terminate-all-instances">terminate-all-instances</a></td></tr>

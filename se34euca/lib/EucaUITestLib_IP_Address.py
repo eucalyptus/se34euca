@@ -55,6 +55,25 @@ class EucaUITestLib_IP_Address(EucaUITestLib_Base):
         print
         return 0
 
+    def test_ui_get_available_ip_address(self):
+	'''
+        Returns an available IP address at random
+        '''
+        print
+        print "Started Test: Get Available IP Address"
+        print
+        self.click_element_by_link_text("Dashboard")
+        self.click_element_by_link_text("Network & Security")
+        self.click_element_by_link_text("IP Addresses")
+        self.click_element_by_css_selector("div.VS-search-inner")
+        self.click_element_by_link_text("Assignment")
+        self.click_element_by_link_text("Unassigned")
+        available_ip = self.get_text_by_xpath("//table[@id='eips']/tbody/tr/td[2]")
+        print
+        print "Finished Test: Get Available IP Address. Returning IP: " + available_ip
+        print
+        return available_ip
+
 
 if __name__ == "__main__":
     unittest.main()

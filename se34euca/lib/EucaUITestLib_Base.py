@@ -368,7 +368,7 @@ class EucaUITestLib_Base(unittest.TestCase):
     def verify_text_displayed_by_id(self, element_id, element_text):
         #print("Verifying text " +element_text+" displayed at ID "+element_id)
         for i in range(self.retry):
-            print "Wait On:: Trial: " + str(i) + ("Verifying text " + element_text + " displayed at ID " + element_id)
+            print "Wait On:: Trial: " + str(i) + " Verifying text " + element_text + " displayed at ID " + element_id
             try:
                 if element_text == self.driver.find_element_by_id(element_id).text:
                     print"Found text"
@@ -389,7 +389,7 @@ class EucaUITestLib_Base(unittest.TestCase):
     def verify_text_displayed_by_css(self, element_css, element_text):
         #print("Verifying text " +element_text+" displayed at ID "+element_css)
         for i in range(self.retry):
-            print "Wait On:: Trial: " + str(i) + ("Verifying text " + element_text + " displayed at ID " + element_css)
+            print "Wait On:: Trial: " + str(i) + " Verifying text " + element_text + " displayed at ID " + element_css
             try:
                 if element_text == self.driver.find_element_by_css_selector(element_css).text:
                     print"Found text"
