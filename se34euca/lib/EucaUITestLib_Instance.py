@@ -248,14 +248,26 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
 	self.click_element_by_link_text("Dashboard")
 	self.click_element_by_css_selector("div.status-readout")
 	self.click_element_by_link_text(instance_name)
-        associated_ip = self.get_text_by_xpath("//div[@id='tabs-1']/ul/li[5]/div[2]")
-	print
-	print "Instance " + instance_name + " is currently associated with " + associated_ip
-	if( str(ip) != str(associated_ip) ):
-		print
-		print "FAILED TEST: Verify Associate IP Given Instance Name and IP Address"
-		print
-		return 1
+
+	is_matched = False
+	count = 0
+	while( is_matched is False and count < 3 ):
+            associated_ip = self.get_text_by_xpath("//div[@id='tabs-1']/ul/li[5]/div[2]")
+	    print
+	    print "Instance " + instance_name + " is currently associated with " + associated_ip
+	    if( str(ip) == str(associated_ip) ):
+	        is_matched = True
+	        break
+	    print "Returned IP " + associated_ip + " is not matched with the input IP " + ip
+	    count = count + 1
+	    print "Sleeping 10 sec"
+	    time.sleep(10)
+
+	if( is_matched is False ):
+	    print
+	    print "FAILED TEST: Verify Associate IP Given Instance Name and IP Address"
+	    print
+	    self.fail("time out")
 	else:
 		print
         	print "Finished Test: Associate IP Given Instance Name and IP Address"
