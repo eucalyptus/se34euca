@@ -163,7 +163,6 @@ class testcase_sequences(testcase_base):
     def snapshot_operations(self):
         sleep_time = 60
         self.eucaUITester.base.test_ui_login()
-        time.sleep(sleep_time)
         self.eucaUITester.volume.test_ui_create_volume_given_volume_name("test-volume")
         time.sleep(sleep_time)
         self.eucaUITester.volume.test_ui_check_volume_count("1")
@@ -172,18 +171,15 @@ class testcase_sequences(testcase_base):
         self.eucaUITester.snapshot.test_ui_check_snapshot_count("1")
         self.eucaUITester.snapshot.test_ui_create_volume_from_snapshot()
         time.sleep(sleep_time)
+        self.eucaUITester.volume.test_ui_check_volume_count("2")
         self.eucaUITester.snapshot.test_ui_register_snapshot_as_image("test-image")
-        time.sleep(sleep_time)
-        self.eucaUITester.snapshot.test_ui_delete_all_snapshots()
-        time.sleep(sleep_time)
-        self.eucaUITester.snapshot.test_ui_check_snapshot_count("0")
-        time.sleep(sleep_time)
         self.eucaUITester.volume.test_ui_delete_volume_all()
         time.sleep(sleep_time)
         self.eucaUITester.volume.test_ui_check_volume_count("0")
-        self.eucaUITester.base.test_ui_logout()
+        self.eucaUITester.snapshot.test_ui_delete_all_snapshots()
         time.sleep(sleep_time)
-
+        self.eucaUITester.snapshot.test_ui_check_snapshot_count("0")
+        self.eucaUITester.base.test_ui_logout()
 
 
 if __name__ == "__main__":
