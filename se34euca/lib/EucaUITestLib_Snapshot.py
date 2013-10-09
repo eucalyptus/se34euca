@@ -111,7 +111,7 @@ class EucaUITestLib_Snapshot(EucaUITestLib_Base):
         print "Started Test: Check Snapshot Count"
         print
         self.click_element_by_link_text("Dashboard")
-	self.verify_element_by_link_text("Launch new instance")
+        self.verify_element_by_link_text("Launch new instance")
         print "Verifying that Snapshot Count on Dashboard is " + snapshot_count
         self.verify_text_displayed_by_css("#dashboard-storage-snapshot > span", snapshot_count)
         print
