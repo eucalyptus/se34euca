@@ -229,6 +229,47 @@ class EucaUITestLib_Base(unittest.TestCase):
         print
         return 0
 
+    # VERIFY VISIBLITY OF ELEMENT BY TYPE
+    def check_if_element_visible_by_type(self, element_type, element):
+        """
+        :param element_type:
+        :param element:
+        :return: :raise:
+        """
+
+        self.check_if_element_present_by_type(element_type, element)
+
+        is_visible = False
+        for i in range(self.retry):
+            print "Wait On Visiblity:: Trial: " + str(i) + " Element Type: " + element_type + ", Element: " + element
+            if element_type is "LINK_TEXT":
+                is_visible = self.driver.find_element_by_link_text(element).is_displayed()
+            elif element_type is "ID":
+                is_visible = self.driver.find_element_by_id(element).is_displayed()
+            elif element_type is "CSS_SELECTOR":
+                is_visible = self.driver.find_element_by_css_selector(element).is_displayed()
+            elif element_type is "XPATH":
+                is_visible = self.driver.find_element_by_xpath(element).is_displayed()
+            elif element_type is "NAME":
+                is_visible = self.driver.find_element_by_name(element).is_displayed()
+
+            if is_visible is True:
+                print "Element " + element + " is visible"
+                break
+            time.sleep(1)
+
+        if is_visible is False:
+            print "Element " + element + " is NOT visible!"
+
+        return is_visible
+
+    def verify_visible_element_by_link_text(self, element):
+        return self.check_if_element_visible_by_type("LINK_TEXT", element)
+
+    def verify_visible_element_by_id(self, element):
+        return self.check_if_element_visible_by_type("ID", element)
+
+
     # VERIFY ELEMENT BY TYPE
     def check_if_element_present_by_type(self, element_type, element):
         """

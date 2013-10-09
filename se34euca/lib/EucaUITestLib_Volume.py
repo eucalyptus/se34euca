@@ -28,9 +28,9 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         print
         print "Test: Create New Volume"
         self.click_element_by_id("table-volumes-new")
-        self.verify_element_by_id("volume-size")
+        self.verify_visible_element_by_id("volume-size")
         self.set_keys_by_id("volume-size", "1")
-        self.verify_element_by_id("button-dialog-createvolume-save")
+        self.verify_visible_element_by_id("button-dialog-createvolume-save")
         self.click_element_by_id("button-dialog-createvolume-save")
         print
         print "Finished Test: Create New Volume"
@@ -49,11 +49,11 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         print
         print "Test: Create a New Volume"
         self.click_element_by_id("table-volumes-new")
-        time.sleep(2)
+        self.verify_visible_element_by_id("volume-name")
         self.set_keys_by_id("volume-name", str(volume_name))
-        time.sleep(2)
+        self.verify_visible_element_by_id("volume-size")
         self.set_keys_by_id("volume-size", "1")
-        time.sleep(2)
+        self.verify_visible_element_by_id("button-dialog-createvolume-save")
         self.click_element_by_id("button-dialog-createvolume-save")
         #Verifying on Volumes Landing Page that volume Named v was created
         print
@@ -121,9 +121,9 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         print "Test: Create Snapshot From Volume"
         self.click_element_by_id("more-actions-volumes")
         self.click_element_by_link_text("Create snapshot from volume")
-        time.sleep(1)
-        self.verify_element_by_id("snapshot-create-description")
+        self.verify_visible_element_by_id("snapshot-create-description")
         self.set_keys_by_id("snapshot-create-description", "Snapshot by Selenium Script")
+        self.verify_visible_element_by_id("button-dialog-createsnapshot-save")
         self.click_element_by_id("button-dialog-createsnapshot-save")
         print
         print "Finished: Create Snapshot From Volume"
@@ -145,8 +145,11 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         print "Test: Create Snapshot From Volume"
         self.click_element_by_id("more-actions-volumes")
         self.click_element_by_link_text("Create snapshot from volume")
+        self.verify_visible_element_by_id("snapshot-create-name")
         self.set_keys_by_id("snapshot-create-name", str(snapshot_name))
+        self.verify_visible_element_by_id("snapshot-create-description")
         self.set_keys_by_id("snapshot-create-description", "Snapshot by Selenium Script")
+        self.verify_visible_element_by_id("btn-volumes-delete-delete")
         self.click_element_by_id("btn-volumes-delete-delete")
         #Verifying on Snapshots Landing Page that snapshot Named "snapshot_name" was created
         print
@@ -172,6 +175,7 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         print "Test: Go to the Page Instances"
         self.click_element_by_link_text("Instances")
         self.click_element_by_css_selector("li.toggle-on > ul > li > a")
+        self.verify_visible_element_by_link_text("testinstance")
         self.click_element_by_link_text("testinstance")
         instance_id = self.get_text_by_xpath("//div[@id='tabs-1']/ul/li[2]/div[2]")
         self.click_element_by_link_text("Storage")
@@ -182,8 +186,10 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         self.set_keys_by_css_selector(
             "#volumes-attach-dialog-wrapper > #volumes-attach-dialog > div.dialog-inner-content > div.form-row > #volume-attach-instance-id",
             str(instance_id) + "testinstance")
+        self.verify_visible_element_by_id("volume-attach-device-name")
         self.set_keys_by_id("volume-attach-device-name", "/dev/sdf")
         self.click_element_by_id("volumes-attach-dialog")
+        self.verify_visible_element_by_id("button-dialog-attachvolume-save")
         self.click_element_by_id("button-dialog-attachvolume-save")
         print
         print "Verification by checking that there is a volume in attached state on Volumes Landing Page"
@@ -229,8 +235,8 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         self.click_element_by_id('more-actions-volumes')
         print "Click 'Detach from instance' menu item"
         self.click_element_by_link_text("Detach from instance")
-        time.sleep(1)
         print "Click 'Yes, detach' in the detach dialog"
+        self.verify_visible_element_by_id("button-dialog-detachvolume-detach")
         self.click_element_by_id("button-dialog-detachvolume-detach")
         print "Verify volume detached by no volumes present in 'attached' state on the volumes page"
         self.verify_element_not_present("CSS_SELECTOR","div.table-row-status.status-in-use")
