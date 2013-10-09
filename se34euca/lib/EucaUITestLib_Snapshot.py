@@ -29,18 +29,18 @@ class EucaUITestLib_Snapshot(EucaUITestLib_Base):
         print "Started Test: Create Volume From Snapshot"
         print
         print "Go to Dashboard"
-        self.click_element_by_id("resource-menu-dashboard")
+ 	self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
         print
         print "Test: Go to the Page Snapshot"
         self.click_element_by_css_selector("#dashboard-storage-snapshot > span")
         self.verify_element_by_id("table-snapshots-new")
-        self.click_element_by_css_selector("td.checkbox-cell.sorting_1 > input[type=\"checkbox\"]")
+        self.click_element_by_css_selector("td.checkbox-cell > input[type=\"checkbox\"]")
         print
         print "Test: Create Volume From Snapshot"
         self.click_element_by_id("more-actions-snapshots")
         self.click_element_by_link_text("Create volume from snapshot")
-        self.click_element_by_id("btn-volumes-delete-delete")
+        self.click_element_by_id("button-dialog-createvolume-save")
         print
         print "Finished: Create Volume From Snapshot"
         print
@@ -80,12 +80,11 @@ class EucaUITestLib_Snapshot(EucaUITestLib_Base):
         print "Started Test: Register Snapshot as image"
         print
         print "Go to Dashboard"
-        self.click_element_by_id("resource-menu-dashboard")
+	self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
-        print "Click Storage button"
-        self.click_element_by_id("resource-menu-storage")
-        print "Click Snapshots menu item"
-        self.click_element_by_id("resource-menuitem-snapshot")
+	print "Test: Go to the Page Snapshot"
+        self.click_element_by_css_selector("#dashboard-storage-snapshot > span")
+	self.verify_element_by_id("table-snapshots-new")
         print "Click the 'ready' status, to check-mark the snapshot"
         self.click_element_by_css_selector("div.table-row-status.status-completed")
         print "Click the More actions button"
