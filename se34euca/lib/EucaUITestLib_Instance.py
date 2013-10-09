@@ -253,6 +253,7 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         print
 	self.click_element_by_link_text("Dashboard")
 	self.click_element_by_css_selector("div.status-readout")
+        time.sleep(1)
 	self.click_element_by_link_text(instance_name)
 
 	is_matched = False
