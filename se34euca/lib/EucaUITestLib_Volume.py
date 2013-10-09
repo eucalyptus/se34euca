@@ -121,6 +121,8 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         print "Test: Create Snapshot From Volume"
         self.click_element_by_id("more-actions-volumes")
         self.click_element_by_link_text("Create snapshot from volume")
+        time.sleep(1)
+        self.verify_element_by_id("snapshot-create-description")
         self.set_keys_by_id("snapshot-create-description", "Snapshot by Selenium Script")
         self.click_element_by_id("button-dialog-createsnapshot-save")
         print
