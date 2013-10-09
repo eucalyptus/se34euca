@@ -29,7 +29,7 @@ class EucaUITestLib_Snapshot(EucaUITestLib_Base):
         print "Started Test: Create Volume From Snapshot"
         print
         print "Go to Dashboard"
- 	self.click_element_by_link_text("Dashboard")
+        self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
         print
         print "Test: Go to the Page Snapshot"
@@ -80,11 +80,11 @@ class EucaUITestLib_Snapshot(EucaUITestLib_Base):
         print "Started Test: Register Snapshot as image"
         print
         print "Go to Dashboard"
-	self.click_element_by_link_text("Dashboard")
+        self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
-	print "Test: Go to the Page Snapshot"
+        print "Test: Go to the Page Snapshot"
         self.click_element_by_css_selector("#dashboard-storage-snapshot > span")
-	self.verify_element_by_id("table-snapshots-new")
+        self.verify_element_by_id("table-snapshots-new")
         print "Click the 'ready' status, to check-mark the snapshot"
         self.click_element_by_css_selector("div.table-row-status.status-completed")
         print "Click the More actions button"
@@ -111,7 +111,7 @@ class EucaUITestLib_Snapshot(EucaUITestLib_Base):
         print "Started Test: Check Snapshot Count"
         print
         self.click_element_by_link_text("Dashboard")
-        self.verify_element_by_link_text("Launch new instance")
+	self.verify_element_by_link_text("Launch new instance")
         print "Verifying that Snapshot Count on Dashboard is " + snapshot_count
         self.verify_text_displayed_by_css("#dashboard-storage-snapshot > span", snapshot_count)
         print
