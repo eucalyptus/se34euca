@@ -83,7 +83,8 @@ class EucaUITestLib_Snapshot(EucaUITestLib_Base):
         self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
         print "Test: Go to the Page Snapshot"
-        self.click_element_by_css_selector("#dashboard-storage-snapshot > span")
+        self.click_element_by_link_text("Storage")
+        self.click_element_by_link_text("Snapshots")
         self.verify_element_by_id("table-snapshots-new")
         print "Click the 'ready' status, to check-mark the snapshot"
         self.click_element_by_css_selector("div.table-row-status.status-completed")
