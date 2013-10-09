@@ -40,6 +40,8 @@ class EucaUITestLib_Snapshot(EucaUITestLib_Base):
         print "Test: Create Volume From Snapshot"
         self.click_element_by_id("more-actions-snapshots")
         self.click_element_by_link_text("Create volume from snapshot")
+        time.sleep(1)
+        self.verify_element_by_id("button-dialog-createvolume-save")
         self.click_element_by_id("button-dialog-createvolume-save")
         print
         print "Finished: Create Volume From Snapshot"
@@ -67,6 +69,7 @@ class EucaUITestLib_Snapshot(EucaUITestLib_Base):
             print
             print "Test: Delete All Snapshots"
             self.click_element_by_link_text("Delete")
+            time.sleep(1)
             self.click_element_by_id("button-dialog-deletesnapshot-delete")
         else:
             print "Test: Snapshot count on Dashboard was zero"
@@ -83,7 +86,8 @@ class EucaUITestLib_Snapshot(EucaUITestLib_Base):
         self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
         print "Test: Go to the Page Snapshot"
-        self.click_element_by_css_selector("#dashboard-storage-snapshot > span")
+        self.click_element_by_link_text("Storage")
+        self.click_element_by_link_text("Snapshots")
         self.verify_element_by_id("table-snapshots-new")
         print "Click the 'ready' status, to check-mark the snapshot"
         self.click_element_by_css_selector("div.table-row-status.status-completed")
