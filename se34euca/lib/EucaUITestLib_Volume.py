@@ -22,18 +22,16 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         print "Started Test: Create New Volume"
         print
         print "Test: Go to Dashboard"
-        self.click_element_by_id("resource-menu-dashboard")
+        self.click_element_by_link_text("Dashboard")
         print "Test: Go to the Page Volume"
         self.click_element_by_id("dashboard-storage-volume")
         print
         print "Test: Create New Volume"
         self.click_element_by_id("table-volumes-new")
         self.verify_element_by_id("volume-size")
-        self.set_keys_by_id("volume-size", "2")
+        self.set_keys_by_id("volume-size", "1")
+        self.verify_element_by_id("button-dialog-createvolume-save")
         self.click_element_by_id("button-dialog-createvolume-save")
-        print "Verification"
-        self.click_element_by_link_text(link_text="Dashboard")
-        self.click_element_by_id("dashboard-storage-volume")
         print
         print "Finished Test: Create New Volume"
         print
@@ -92,7 +90,7 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         print "Started Test: Delete Volume All"
         print
         print "Test: Go to Dashboard"
-        self.click_element_by_id("resource-menu-dashboard")
+        self.click_element_by_link_text("Dashboard")
         print "Test: Go to the Page Volume"
         self.click_element_by_id("dashboard-storage-volume")
         self.click_element_by_id("volumes-check-all")
@@ -100,6 +98,7 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         print "Test: Delete Volume"
         self.click_element_by_id("more-actions-volumes")
         self.click_element_by_link_text("Delete")
+        time.sleep(1)
         self.click_element_by_id("button-dialog-deletevolume-delete")
         print
         print "Finished: Delete Volume All"
@@ -217,17 +216,18 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         print "Started Test: Detach Volume"
         print
         print "Click 'Dashboard' button"
-        self.click_element_by_id("resource-menu-dashboard")
+        self.click_element_by_link_text("Dashboard")
         print "Click 'Storage' button"
-        self.click_element_by_id("resource-menu-storage")
+        self.click_element_by_link_text("Storage")
         print "Click 'Volumes' from menu"
-        self.click_element_by_id("resource-menuitem-volume")
-        print "Check-mark a volume that is 'in use' "
+        self.click_element_by_link_text("Volumes")
+        print "Check the volume in use"
         self.click_element_by_css_selector("div.table-row-status.status-in-use")
         print "Click the 'More actions' button"
         self.click_element_by_id('more-actions-volumes')
         print "Click 'Detach from instance' menu item"
         self.click_element_by_link_text("Detach from instance")
+        time.sleep(1)
         print "Click 'Yes, detach' in the detach dialog"
         self.click_element_by_id("button-dialog-detachvolume-detach")
         print "Verify volume detached by no volumes present in 'attached' state on the volumes page"
