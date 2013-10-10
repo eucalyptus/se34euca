@@ -157,7 +157,7 @@ class EucaUITestLib_Base(unittest.TestCase):
     def test_ui_logout(self):
         print
         print "Started Test: Logout"
-        self.click_element_by_id("euca-logo")
+        self.click_element_by_link_text("Dashboard")
         print
         print "Test: Received the Page Title -> " + self.driver.title
         self.verify_element_by_link_text("Launch new instance")

@@ -229,6 +229,7 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
 	self.click_element_by_link_text("Dashboard")
 	self.click_element_by_css_selector("div.status-readout")
 	self.click_element_by_link_text(instance_name)
+        time.sleep(1)
         instance_id = self.get_text_by_xpath("//div[@id='tabs-1']/ul/li[2]/div[2]")
 	self.click_element_by_id(instance_id)
         self.click_element_by_id("more-actions-instances")
@@ -347,6 +348,7 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         print "Open expando of instance named " + instance_name
         self.click_element_by_link_text(str(instance_name))
         print "Get instance id from expando"
+        time.sleep(1)
         instance_id = self.get_text_by_xpath("//div[@id='tabs-1']/ul/li[2]/div[2]")
         print "Go to IP Addresses Landing Page"
         self.click_element_by_link_text("Network & Security")
@@ -409,6 +411,7 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         self.click_element_by_css_selector("div.status-readout > span")
         print "Test: clicked on running instances link on Dashboard"
         self.click_element_by_link_text("testinstance")
+        time.sleep(1)
         associated_ip_address = self.get_text_by_xpath("//div[@id='tabs-1']/ul/li[5]/div[2]")
         self.click_element_by_link_text("Network & Security")
         self.click_element_by_link_text("IP Addresses")
