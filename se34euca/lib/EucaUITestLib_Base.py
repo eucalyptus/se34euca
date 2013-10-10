@@ -465,6 +465,7 @@ class EucaUITestLib_Base(unittest.TestCase):
             raise UICheckException("Element by link text not visible:" + link_text)
         print "Click: Element Type: LINK_TEXT, Element: " + link_text
         self.driver.find_element_by_link_text(link_text).click()
+        time.sleep(1)
         return 0
 
     def click_element_by_id(self, this_id):
@@ -474,6 +475,7 @@ class EucaUITestLib_Base(unittest.TestCase):
             raise UICheckException("Element by id not visible:" + link_text)
         print "Click: Element Type: ID, Element: " + this_id
         self.driver.find_element_by_id(this_id).click()
+        time.sleep(1)
         return 0
 
     def click_element_by_css_selector(self, css_selector):
@@ -483,6 +485,7 @@ class EucaUITestLib_Base(unittest.TestCase):
             raise UICheckException("Element by css selector not visible:" + css_selector)
         print "Click: Element Type: CSS_SELECTOR, Element: " + css_selector
         self.driver.find_element_by_css_selector(css_selector).click()
+        time.sleep(1)
         return 0
 
     def click_element_by_xpath(self, xpath):
@@ -492,6 +495,7 @@ class EucaUITestLib_Base(unittest.TestCase):
 #            raise UICheckException("Element by xpath not visible:" + xpath)
         print "Click: Element Type: XPATH, Element: " + xpath
         self.driver.find_element_by_xpath(xpath).click()
+        time.sleep(1)
         return 0
 
     def click_element_by_name(self, name):
