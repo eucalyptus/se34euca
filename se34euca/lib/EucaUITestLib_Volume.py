@@ -183,11 +183,11 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         print "Verification by checking that there is a volume in attached state on Volumes Landing Page"
         print
         print "Click 'Dashboard' button"
-        self.click_element_by_id("resource-menu-dashboard")
+        self.click_element_by_link_text("Dashboard")
         print "Click 'Storage' button"
-        self.click_element_by_id("resource-menu-storage")
+        self.click_element_by_link_text("Storage")
         print "Click 'Volumes' from menu"
-        self.click_element_by_id("resource-menuitem-volume")
+        self.click_element_by_link_text("Volumes")
         print "Verify there is an attached volume present"
         self.verify_element_by_css_selector("div.table-row-status.status-in-use")
         print
@@ -225,6 +225,15 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         self.click_element_by_link_text("Detach from instance")
         print "Click 'Yes, detach' in the detach dialog"
         self.click_element_by_id("button-dialog-detachvolume-detach")
+        print
+        print "Verification by checking that there is no volume in attached state on Volumes Landing Page"
+        print
+        print "Click 'Dashboard' button"
+        self.click_element_by_link_text("Dashboard")
+        print "Click 'Storage' button"
+        self.click_element_by_link_text("Storage")
+        print "Click 'Volumes' from menu"
+        self.click_element_by_link_text("Volumes")
         print "Verify volume detached by no volumes present in 'attached' state on the volumes page"
         self.verify_element_not_present("CSS_SELECTOR","div.table-row-status.status-in-use")
         print
@@ -309,9 +318,6 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         print
         print "Finished Test: Detach Volume from Instance Landing Page"
         print
-
-
-
 
 
 if __name__ == "__main__":
