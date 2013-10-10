@@ -138,7 +138,6 @@ class testcase_sequences(testcase_base):
         time.sleep(sleep_time)
         self.eucaUITester.volume.detach_volume_from_instance_lp("testinstance")
         time.sleep(sleep_time)
-        self.eucaUITester.volume.test_ui_attach_volume_from_instance_lp("test-volume")
         self.eucaUITester.instance.test_ui_terminate_instance_all()
         time.sleep(sleep_time)
         self.eucaUITester.instance.test_ui_check_running_instances_count("0")
