@@ -9,10 +9,10 @@ class EucaUITestLib_IP_Address(EucaUITestLib_Base):
         print
         self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
-        self.verify_element_by_id("dashboard-netsec-eip")
         print
         print "Test: Go to the Page IP Address"
         self.click_element_by_id("dashboard-netsec-eip")
+        time.sleep(3)
         self.click_element_by_id("table-eips-new")
         self.verify_element_by_id("eip-allocate-count")
         print
@@ -30,6 +30,7 @@ class EucaUITestLib_IP_Address(EucaUITestLib_Base):
         print
         self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
+        time.sleep(3)
         print "Verifying that IP Address Count on Dashboard is " + ip_count
         self.verify_text_displayed_by_css("#dashboard-netsec-eip > span", ip_count)
         print
@@ -46,6 +47,7 @@ class EucaUITestLib_IP_Address(EucaUITestLib_Base):
         print
         print "Test: Go to the Page IP Address"
         self.click_element_by_css_selector("#dashboard-netsec-eip > span")
+        time.sleep(3)
         self.click_element_by_id("eips-check-all")
         self.click_element_by_id("more-actions-eips")
         self.click_element_by_link_text("Release to cloud")
@@ -65,9 +67,11 @@ class EucaUITestLib_IP_Address(EucaUITestLib_Base):
         self.click_element_by_link_text("Dashboard")
         self.click_element_by_link_text("Network & Security")
         self.click_element_by_link_text("IP Addresses")
+        time.sleep(3)
         self.click_element_by_css_selector("div.VS-search-inner")
         self.click_element_by_link_text("Assignment")
         self.click_element_by_link_text("Unassigned")
+        time.sleep(3)
         available_ip = self.get_text_by_xpath("//table[@id='eips']/tbody/tr/td[2]")
         print
         print "Finished Test: Get Available IP Address. Returning IP: " + available_ip

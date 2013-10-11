@@ -25,6 +25,7 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         self.click_element_by_link_text("Dashboard")
         print "Test: Go to the Page Volume"
         self.click_element_by_id("dashboard-storage-volume")
+        time.sleep(3)
         print
         print "Test: Create New Volume"
         self.click_element_by_id("table-volumes-new")
@@ -43,7 +44,7 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         self.click_element_by_link_text("Dashboard")
         self.click_element_by_link_text("Storage")
         self.click_element_by_link_text("Volumes")
-        time.sleep(10)
+        time.sleep(3)
         print
         print "Test: Create a New Volume"
         self.click_element_by_id("table-volumes-new")
@@ -55,6 +56,7 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         print "Verification"
         self.click_element_by_link_text(link_text="Dashboard")
         self.click_element_by_id("dashboard-storage-volume")
+        time.sleep(3)
         self.verify_element_by_link_text(str(volume_name))
         print
         print "Finished: Create New Volume Given Volume Name: " + volume_name
@@ -69,6 +71,7 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         self.click_element_by_id("resource-menu-dashboard")
         print "Test: Go to the Page Volume"
         self.click_element_by_id("dashboard-storage-volume")
+        time.sleep(3)
         self.click_element_by_css_selector("td.checkbox-cell > input[type=\"checkbox\"]")
         print
         print "Test: Delete Volume"
@@ -88,6 +91,7 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         self.click_element_by_link_text("Dashboard")
         print "Test: Go to the Page Volume"
         self.click_element_by_id("dashboard-storage-volume")
+        time.sleep(3)
         self.click_element_by_id("volumes-check-all")
         print
         print "Test: Delete Volume"
@@ -110,6 +114,7 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         print
         print "Test: Go to the Page Volume"
         self.click_element_by_css_selector("#dashboard-storage-volume > span")
+        time.sleep(3)
         self.verify_element_by_id("table-volumes-new")
         self.click_element_by_css_selector("td.checkbox-cell > input[type=\"checkbox\"]")
         print
@@ -132,6 +137,7 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         print "Test: Go to the Page Volume"
         self.click_element_by_link_text("Storage")
         self.click_element_by_link_text("Volumes")
+        time.sleep(3)
         self.verify_element_by_id("table-volumes-new")
         self.click_element_by_css_selector("td.checkbox-cell > input[type=\"checkbox\"]")
         print
@@ -146,6 +152,7 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         print "Verification that snapshot " + snapshot_name + " is displayed on Snapshots Landing Page"
         self.click_element_by_link_text(link_text="Dashboard")
         self.click_element_by_id("dashboard-storage-snapshot")
+        time.sleep(3)
         self.verify_element_by_link_text(str(snapshot_name))
         print
         print "Finished: Create Snapshot From Volume Given Snapshot Name"
@@ -165,11 +172,13 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         print "Test: Go to the Page Instances"
         self.click_element_by_link_text("Instances")
         self.click_element_by_css_selector("li.toggle-on > ul > li > a")
+        time.sleep(3)
         self.click_element_by_link_text("testinstance")
         time.sleep(1)
         instance_id = self.get_text_by_xpath("//div[@id='tabs-1']/ul/li[2]/div[2]")
         self.click_element_by_link_text("Storage")
         self.click_element_by_link_text("Volumes")
+        time.sleep(3)
         self.click_element_by_css_selector("div.table-row-status.status-available")
         self.click_element_by_id("more-actions-volumes")
         self.click_element_by_link_text("Attach to instance")
@@ -188,6 +197,7 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         self.click_element_by_link_text("Storage")
         print "Click 'Volumes' from menu"
         self.click_element_by_link_text("Volumes")
+        time.sleep(3)
         print "Verify there is an attached volume present"
         self.verify_element_by_css_selector("div.table-row-status.status-in-use")
         print
@@ -201,6 +211,7 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
         print "Verifying that Volumes Count on Dashboard is " + volumes_count
+        time.sleep(3)
         self.verify_text_displayed_by_css("#dashboard-storage-volume > span", volumes_count)
         print
         print "Finished Test: Check Volume Count"
@@ -217,6 +228,7 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         self.click_element_by_link_text("Storage")
         print "Click 'Volumes' from menu"
         self.click_element_by_link_text("Volumes")
+        time.sleep(3)
         print "Check the volume in use"
         self.click_element_by_css_selector("div.table-row-status.status-in-use")
         print "Click the 'More actions' button"
@@ -234,6 +246,7 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         self.click_element_by_link_text("Storage")
         print "Click 'Volumes' from menu"
         self.click_element_by_link_text("Volumes")
+        time.sleep(3)
         print "Verify volume detached by no volumes present in 'attached' state on the volumes page"
         self.verify_element_not_present("CSS_SELECTOR","div.table-row-status.status-in-use")
         print
@@ -253,6 +266,7 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         self.click_element_by_id("resource-menu-storage")
         print "Click 'Volumes' from menu"
         self.click_element_by_id("resource-menuitem-volume")
+        time.sleep(3)
         print "Clink on volume name 'test-volume' to open expando"
         self.click_element_by_link_text(volume_name)
         time.sleep(1)
@@ -262,6 +276,7 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         self.click_element_by_id("resource-menu-instance")
         print "Click on 'Instances' menu item"
         self.click_element_by_id("resource-menuitem-instance")
+        time.sleep(3)
         print "Check-box a running instance"
         self.click_element_by_css_selector("div.table-row-status.status-running")
         print "Click the 'More actions' menu"
@@ -278,6 +293,7 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         self.click_element_by_link_text("Dashboard")
         self.click_element_by_link_text("Storage")
         self.click_element_by_link_text("Volumes")
+        time.sleep(3)
         print "Verify there is an attached volume present"
         self.verify_element_by_css_selector("div.table-row-status.status-in-use")
         print
@@ -295,6 +311,7 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         self.click_element_by_id("resource-menu-instance")
         print "Click 'Instances' from menu"
         self.click_element_by_id("resource-menuitem-instance")
+        time.sleep(3)
         print "Clink " + instance_name + " to get instance id from expando"
         self.click_element_by_link_text(instance_name)
         time.sleep(1)
@@ -313,6 +330,7 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         self.click_element_by_link_text("Dashboard")
         self.click_element_by_link_text("Storage")
         self.click_element_by_link_text("Volumes")
+        time.sleep(3)
         print "Verification by waiting for attached state to disappear from Volumes Landing page"
         self.verify_element_not_present("CSS_SELECTOR","div.table-row-status.status-in-use")
         print
