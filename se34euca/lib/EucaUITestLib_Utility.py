@@ -58,18 +58,22 @@ class EucaUITestLib_Utility(EucaUITestLib_Base):
                 print
                 print "Test: Go to Running Instances Page"
                 self.click_element_by_css_selector("div.status-readout > span")
-                self.verify_element_by_id("table-instances-new")
-                self.click_element_by_id("instances-check-all")
-                self.click_element_by_id("more-actions-instances")
-                print
-                print "Test: Delete All Instances"
-                self.click_element_by_link_text("Terminate")
-                self.click_element_by_id("btn-instances-terminate-terminate")
-                growler = self.get_text_by_id("euca-notification-title")
-                print
-                print "Notification: " + growler
-                print
-                time.sleep(self.sleep_time)
+                print "Test: Check if there are running instances present"
+                if self.check_if_element_visible_by_type("CSS_SELECTOR","div.table-row-status.status-running"):
+                    self.verify_element_by_id("table-instances-new")
+                    self.click_element_by_id("instances-check-all")
+                    self.click_element_by_id("more-actions-instances")
+                    print
+                    print "Test: Delete All Instances"
+                    self.click_element_by_link_text("Terminate")
+                    self.click_element_by_id("btn-instances-terminate-terminate")
+                    growler = self.get_text_by_id("euca-notification-title")
+                    print
+                    print "Notification: " + growler
+                    print
+                    time.sleep(self.sleep_time)
+                else:
+                    print "Test: Found no running instances on the landing page"
             else:
                 print "Test: Instance count on Dashboard is zero"
                 break
