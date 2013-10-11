@@ -12,6 +12,7 @@ class EucaUITestLib_Snapshot(EucaUITestLib_Base):
         print
         print "Test: Go to the Page Snapshot"
         self.click_element_by_css_selector("#dashboard-storage-snapshot > span")
+        time.sleep(3)
         self.verify_element_by_id("table-snapshots-new")
         self.click_element_by_css_selector("td.checkbox-cell.sorting_1 > input[type=\"checkbox\"]")
         self.click_element_by_id("more-actions-snapshots")
@@ -34,6 +35,7 @@ class EucaUITestLib_Snapshot(EucaUITestLib_Base):
         print
         print "Test: Go to the Page Snapshot"
         self.click_element_by_css_selector("#dashboard-storage-snapshot > span")
+        time.sleep(3)
         self.verify_element_by_id("table-snapshots-new")
         self.click_element_by_css_selector("td.checkbox-cell > input[type=\"checkbox\"]")
         print
@@ -53,6 +55,7 @@ class EucaUITestLib_Snapshot(EucaUITestLib_Base):
         print "Started Test: Delete All Snapshots"
         print
         self.test_ui_gotopage_dashboard()
+        time.sleep(3)
         print
         print "Test: Verify that snapshot count is not zero on Dashboard:"
 
@@ -63,6 +66,7 @@ class EucaUITestLib_Snapshot(EucaUITestLib_Base):
             print "Test: Snapshot count on Dashboard: " + num_snapshots
             print "Test: Go to the Page Snapshot"
             self.click_element_by_css_selector("#dashboard-storage-snapshot > span")
+            time.sleep(3)
             self.verify_element_by_id("table-snapshots-new")
             self.click_element_by_id("snapshots-check-all")
             self.click_element_by_id("more-actions-snapshots")
@@ -88,6 +92,7 @@ class EucaUITestLib_Snapshot(EucaUITestLib_Base):
         print "Test: Go to the Page Snapshot"
         self.click_element_by_link_text("Storage")
         self.click_element_by_link_text("Snapshots")
+        time.sleep(3)
         self.verify_element_by_id("table-snapshots-new")
         print "Click the 'ready' status, to check-mark the snapshot"
         self.click_element_by_css_selector("div.table-row-status.status-completed")
@@ -103,6 +108,7 @@ class EucaUITestLib_Snapshot(EucaUITestLib_Base):
         print
         print "Go to Images Landing Page"
         self.click_element_by_id("resource-menu-image")
+        time.sleep(3)
         print "Wait for " + image_name + " to become visible"
         self.verify_element_by_xpath('//td[text()="' + image_name + '"]')
         print
@@ -116,6 +122,7 @@ class EucaUITestLib_Snapshot(EucaUITestLib_Base):
         print
         self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
+        time.sleep(3)
         print "Verifying that Snapshot Count on Dashboard is " + snapshot_count
         self.verify_text_displayed_by_css("#dashboard-storage-snapshot > span", snapshot_count)
         print

@@ -182,6 +182,7 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         print
         print "Test: Go to the Page Running Instances"
         self.click_element_by_css_selector("div.status-readout")
+        time.sleep(3)
         print "Test: Terminate an Instance"
         self.click_element_by_css_selector("div.table-row-status.status-running")
         #self.click_element_by_xpath("//table[@id='instances']/tbody/tr/td[5]")
@@ -205,10 +206,9 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         print "Test: Go to the Page Running Instances"
         self.click_element_by_css_selector("div.status-readout")
         print "Test: Terminate an Instance All"
-        time.sleep(5)
+        time.sleep(3)
         print "Test: checkmark the 'all' box"
         self.click_element_by_id("instances-check-all")
-        time.sleep(5)
         print "Test: click the 'More actions' button"
         self.click_element_by_id("more-actions-instances")
         self.click_element_by_link_text("Terminate")
@@ -228,6 +228,7 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         print
 	self.click_element_by_link_text("Dashboard")
 	self.click_element_by_css_selector("div.status-readout")
+        time.sleep(3)
 	self.click_element_by_link_text(instance_name)
         time.sleep(1)
         instance_id = self.get_text_by_xpath("//div[@id='tabs-1']/ul/li[2]/div[2]")
@@ -254,7 +255,7 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         print
 	self.click_element_by_link_text("Dashboard")
 	self.click_element_by_css_selector("div.status-readout")
-	time.sleep(1)
+	time.sleep(3)
 	self.click_element_by_link_text(instance_name)
 
 	is_matched = False
@@ -295,12 +296,15 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         self.click_element_by_link_text("Dashboard")
         self.click_element_by_link_text("Network & Security")
         self.click_element_by_link_text("IP Addresses")
+        time.sleep(3)
         self.click_element_by_css_selector("div.VS-search-inner")
         self.click_element_by_link_text("Assignment")
         self.click_element_by_link_text("Unassigned")
+        time.sleep(3)
         available_ip = self.get_text_by_xpath("//table[@id='eips']/tbody/tr/td[2]")
         self.click_element_by_link_text("Instances")
         self.click_element_by_css_selector("li.toggle-on > ul > li > a")
+        time.sleep(3)
         self.click_element_by_css_selector("div.table-row-status.status-running")
         self.click_element_by_id("more-actions-instances")
         self.click_element_by_link_text("Associate IP address")
@@ -345,6 +349,7 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         print
         print "Test: Go to the Page Running Instances"
         self.click_element_by_css_selector("div.status-readout")
+        time.sleep(3)
         print "Open expando of instance named " + instance_name
         self.click_element_by_link_text(str(instance_name))
         print "Get instance id from expando"
@@ -389,6 +394,7 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         self.click_element_by_link_text("Dashboard")
         self.click_element_by_link_text("Instances")
         self.click_element_by_css_selector("li.toggle-on > ul > li > a")
+        time.sleep(3)
         self.click_element_by_css_selector("div.table-row-status.status-running")
         self.click_element_by_link_text("More actions")
         self.click_element_by_link_text("Disassociate IP address")
@@ -407,14 +413,16 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         print
         self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
-        time.sleep(30)
+        time.sleep(3)
         self.click_element_by_css_selector("div.status-readout > span")
+        time.sleep(3)
         print "Test: clicked on running instances link on Dashboard"
         self.click_element_by_link_text("testinstance")
         time.sleep(1)
         associated_ip_address = self.get_text_by_xpath("//div[@id='tabs-1']/ul/li[5]/div[2]")
         self.click_element_by_link_text("Network & Security")
         self.click_element_by_link_text("IP Addresses")
+        time.sleep(3)
         self.click_element_by_id(str(associated_ip_address))
         self.click_element_by_id("more-actions-eips")
         self.click_element_by_link_text("Disassociate from instance")
@@ -430,6 +438,7 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         print
         self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
+        time.sleep(3)
         print "Verifying that Running Instances Count on Dashboard is " + running_instances_count
         self.verify_text_displayed_by_css("div.status-readout > span", running_instances_count)
         print
