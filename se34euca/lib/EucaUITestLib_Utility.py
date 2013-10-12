@@ -58,6 +58,7 @@ class EucaUITestLib_Utility(EucaUITestLib_Base):
                 print
                 print "Test: Go to Running Instances Page"
                 self.click_element_by_css_selector("div.status-readout > span")
+                time.sleep(3)
                 print "Test: Check if there are running instances present"
                 if self.check_if_element_visible_by_type("CSS_SELECTOR","div.table-row-status.status-running"):
                     self.verify_element_by_id("table-instances-new")
@@ -67,10 +68,10 @@ class EucaUITestLib_Utility(EucaUITestLib_Base):
                     print "Test: Delete All Instances"
                     self.click_element_by_link_text("Terminate")
                     self.click_element_by_id("btn-instances-terminate-terminate")
-                    growler = self.get_text_by_id("euca-notification-title")
-                    print
-                    print "Notification: " + growler
-                    print
+               #     growler = self.get_text_by_id("euca-notification-title")
+               #     print
+               #     print "Notification: " + growler
+               #     print
                     time.sleep(self.sleep_time)
                 else:
                     print "Test: Found no running instances on the landing page"
@@ -90,6 +91,7 @@ class EucaUITestLib_Utility(EucaUITestLib_Base):
                 print
                 print "Test: Go to Snapshots Landing Page"
                 self.click_element_by_css_selector("#dashboard-storage-snapshot > span")
+                time.sleep(3)
                 self.verify_element_by_id("table-snapshots-new")
                 self.click_element_by_id("snapshots-check-all")
                 self.click_element_by_id("more-actions-snapshots")
@@ -115,7 +117,7 @@ class EucaUITestLib_Utility(EucaUITestLib_Base):
                 print
                 print "Test: Go to Key Pairs Landing Page"
                 self.click_element_by_css_selector("#dashboard-netsec-keypair > span")
-
+                time.sleep(3)
                 self.verify_element_by_id("table-keys-new")
                 self.click_element_by_id("keys-check-all")
                 self.click_element_by_id("more-actions-keys")
@@ -144,12 +146,14 @@ class EucaUITestLib_Utility(EucaUITestLib_Base):
                 self.click_element_by_id("resource-menu-storage")
                 print "Click 'Volumes' from menu"
                 self.click_element_by_id("resource-menuitem-volume")
+                time.sleep(3)
                 print "Filter for available volumes"
                 self.click_element_by_css_selector("div.VS-search-inner")
                 self.click_element_by_link_text("All Text")
                 self.set_keys_by_xpath("//input[@value]","available")
-                self.click_element_by_css_selector("div.VS-search-inner")
                 #self.click_element_by_id("volumes-wrapper")
+                time.sleep(3)
+                self.click_element_by_css_selector("div.VS-search-inner")
                 if self.driver.find_element_by_css_selector("div.table-row-status.status-available"):
                     self.verify_element_by_id("table-volumes-new")
                     self.click_element_by_id("volumes-check-all")
@@ -182,6 +186,8 @@ class EucaUITestLib_Utility(EucaUITestLib_Base):
                 print
                 print "Test: Go to Security Groups Landing Page"
                 self.click_element_by_css_selector("#dashboard-netsec-sgroup > span")
+                time.sleep(3)
+                self.click_element_by_css_selector("div.VS-search-inner")
                 self.verify_element_by_id("table-sgroups-new")
                 self.click_element_by_id("sgroups-check-all")
                 self.click_element_by_id("more-actions-sgroups")
@@ -209,6 +215,8 @@ class EucaUITestLib_Utility(EucaUITestLib_Base):
                 print
                 print "Test: Go to IP Addresses Landing Page"
                 self.click_element_by_css_selector("#dashboard-netsec-eip > span")
+                time.sleep(3)
+                self.click_element_by_css_selector("div.VS-search-inner")
                 self.verify_element_by_id("table-eips-new")
                 self.click_element_by_id("eips-check-all")
                 self.click_element_by_id("more-actions-eips")

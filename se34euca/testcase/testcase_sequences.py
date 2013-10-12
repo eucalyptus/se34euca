@@ -117,14 +117,12 @@ class testcase_sequences(testcase_base):
 
     def volume_operations(self):
         sleep_time = 60
-        print "=== runTest: Instance Operations ==="
+        print "=== runTest: Volume Operations ==="
         self.eucaUITester.base.test_ui_login()
         self.eucaUITester.keypair.test_ui_import_keypair_given_name("import-key")
         self.eucaUITester.keypair.test_ui_verify_keypair_given_name("import-key")
         self.eucaUITester.keypair.test_ui_check_keypair_count("1")
-        self.eucaUITester.instance.test_ui_launch_instance_given_name_security_group_keypair("testinstance",
-                                                                                             "default",
-                                                                                          "import-key")
+        self.eucaUITester.instance.test_ui_launch_instance_given_name_security_group_keypair("testinstance", "default", "import-key")
         self.eucaUITester.volume.test_ui_create_volume()
         time.sleep(sleep_time)
         self.eucaUITester.volume.test_ui_check_volume_count("1")
@@ -133,14 +131,26 @@ class testcase_sequences(testcase_base):
         self.eucaUITester.volume.test_ui_detach_volume()
         self.eucaUITester.volume.test_ui_delete_volume_all()
         time.sleep(sleep_time)
+        self.eucaUITester.keypair.test_ui_delete_keypair_all()
+        time.sleep(sleep_time)
+        self.eucaUITester.keypair.test_ui_check_keypair_count("0")
         self.eucaUITester.volume.test_ui_check_volume_count("0")
+        self.eucaUITester.base.test_ui_logout()
+
+    def volume_operations_02(self):
+        sleep_time = 60
+        print "=== runTest: Volume Operations 02 ==="
+        self.eucaUITester.base.test_ui_login()
+        self.eucaUITester.keypair.test_ui_import_keypair_given_name("import-key")
+        self.eucaUITester.keypair.test_ui_verify_keypair_given_name("import-key")
+        self.eucaUITester.keypair.test_ui_check_keypair_count("1")
+        self.eucaUITester.instance.test_ui_launch_instance_given_name_security_group_keypair("testinstance", "default", "import-key")
         self.eucaUITester.volume.test_ui_create_volume_given_volume_name("test-volume")
         time.sleep(sleep_time)
         self.eucaUITester.volume.test_ui_attach_volume_from_instance_lp("test-volume")
         time.sleep(sleep_time)
         self.eucaUITester.volume.detach_volume_from_instance_lp("testinstance")
         time.sleep(sleep_time)
-        self.eucaUITester.volume.test_ui_attach_volume_from_instance_lp("test-volume")
         self.eucaUITester.instance.test_ui_terminate_instance_all()
         time.sleep(sleep_time)
         self.eucaUITester.instance.test_ui_check_running_instances_count("0")

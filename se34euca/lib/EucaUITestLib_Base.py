@@ -157,7 +157,7 @@ class EucaUITestLib_Base(unittest.TestCase):
     def test_ui_logout(self):
         print
         print "Started Test: Logout"
-        self.click_element_by_id("euca-logo")
+        self.click_element_by_link_text("Dashboard")
         print
         print "Test: Received the Page Title -> " + self.driver.title
         self.verify_element_by_link_text("Launch new instance")
@@ -268,6 +268,15 @@ class EucaUITestLib_Base(unittest.TestCase):
 
     def verify_visible_element_by_id(self, element):
         return self.check_if_element_visible_by_type("ID", element)
+
+    def verify_visible_element_by_css_selector(self, element):
+        return self.check_if_element_visible_by_type("CSS_SELECTOR", element)
+
+    def verify_visible_element_by_xpath(self, element):
+        return self.check_if_element_visible_by_type("XPATH", element)
+
+    def verify_visible_element_by_name(self, element):
+        return self.check_if_element_visible_by_type("NAME", element)
 
 
     # VERIFY ELEMENT BY TYPE
@@ -452,34 +461,48 @@ class EucaUITestLib_Base(unittest.TestCase):
     def click_element_by_link_text(self, link_text):
         if self.check_if_element_present_by_type("LINK_TEXT", link_text) is not 0:
             raise UICheckException("Element by link text not present: " + link_text)
+        if self.check_if_element_visible_by_type("LINK_TEXT", link_text) is not True:
+            raise UICheckException("Element by link text not visible:" + link_text)
         print "Click: Element Type: LINK_TEXT, Element: " + link_text
         self.driver.find_element_by_link_text(link_text).click()
+        time.sleep(1)
         return 0
 
     def click_element_by_id(self, this_id):
         if self.check_if_element_present_by_type("ID", this_id) is not 0:
             raise UICheckException("Element by id not present: " + this_id)
+        if self.check_if_element_visible_by_type("ID", this_id) is not True:
+            raise UICheckException("Element by id not visible:" + link_text)
         print "Click: Element Type: ID, Element: " + this_id
         self.driver.find_element_by_id(this_id).click()
+        time.sleep(1)
         return 0
 
     def click_element_by_css_selector(self, css_selector):
         if self.check_if_element_present_by_type("CSS_SELECTOR", css_selector) is not 0:
             raise UICheckException("Element by css selector not present: " + css_selector)
+        if self.check_if_element_visible_by_type("CSS_SELECTOR", css_selector) is not True:
+            raise UICheckException("Element by css selector not visible:" + css_selector)
         print "Click: Element Type: CSS_SELECTOR, Element: " + css_selector
         self.driver.find_element_by_css_selector(css_selector).click()
+        time.sleep(1)
         return 0
 
     def click_element_by_xpath(self, xpath):
         if self.check_if_element_present_by_type("XPATH", xpath) is not 0:
             raise UICheckException("Element by xpath not present: " + xpath)
+#        if self.check_if_element_visible_by_type("XPATH", xpath) is not True:
+#            raise UICheckException("Element by xpath not visible:" + xpath)
         print "Click: Element Type: XPATH, Element: " + xpath
         self.driver.find_element_by_xpath(xpath).click()
+        time.sleep(1)
         return 0
 
     def click_element_by_name(self, name):
         if self.check_if_element_present_by_type("NAME", name) is not 0:
             raise UICheckException("Element by name not present: " + name)
+        if self.check_if_element_visible_by_type("NAME", name) is not True:
+            raise UICheckException("Element by name not visible:" + name)
         print "Click: Element Type: NAME, Element: " + name
         self.driver.find_element_by_name(name).click()
         return 0
@@ -488,6 +511,8 @@ class EucaUITestLib_Base(unittest.TestCase):
     def set_keys_by_link_text(self, link_text, keys):
         if self.check_if_element_present_by_type("LINK_TEXT", link_text) is not 0:
             raise UICheckException("Element by link text not present:" + link_text)
+        if self.check_if_element_visible_by_type("LINK_TEXT", link_text) is not True:
+            raise UICheckException("Element by link text not visible:" + link_text)
         print "Set: Element Type: LINK_TEXT, Element: " + link_text + ", Keys: " + keys
         self.driver.find_element_by_link_text(link_text).clear()
         self.driver.find_element_by_link_text(link_text).send_keys(keys)
@@ -496,6 +521,8 @@ class EucaUITestLib_Base(unittest.TestCase):
     def set_keys_by_id(self, this_id, keys):
         if self.check_if_element_present_by_type("ID", this_id) is not 0:
             raise UICheckException("Element by id not present:" + this_id)
+        if self.check_if_element_visible_by_type("ID", this_id) is not True:
+            raise UICheckException("Element by id not visible:" + link_text)
         print "Set: Element Type: ID, Element: " + this_id + ", Keys: " + keys
         self.driver.find_element_by_id(this_id).clear()
         self.driver.find_element_by_id(this_id).send_keys(keys)
@@ -504,6 +531,8 @@ class EucaUITestLib_Base(unittest.TestCase):
     def set_keys_by_css_selector(self, css_selector, keys):
         if self.check_if_element_present_by_type("CSS_SELECTOR", css_selector) is not 0:
             raise UICheckException("Element by css selector not present:" + css_selector)
+        if self.check_if_element_visible_by_type("CSS_SELECTOR", css_selector) is not True:
+            raise UICheckException("Element by css selector not visible:" + css_selector)
         print "Set: Element Type: CSS_SELECTOR, Element: " + css_selector + ", Keys: " + keys
         self.driver.find_element_by_css_selector(css_selector).clear()
         self.driver.find_element_by_css_selector(css_selector).send_keys(keys)
@@ -512,6 +541,8 @@ class EucaUITestLib_Base(unittest.TestCase):
     def set_keys_by_xpath(self, xpath, keys):
         if self.check_if_element_present_by_type("XPATH", xpath) is not 0:
             raise UICheckException("Element by xpath not found :" + xpath)
+#        if self.check_if_element_visible_by_type("XPATH", xpath) is not True:
+#            raise UICheckException("Element by xpath not visible:" + xpath)
         print "Set: Element Type: XPATH, Element: " + xpath + ", Keys: " + keys
         self.driver.find_element_by_xpath(xpath).clear()
         self.driver.find_element_by_xpath(xpath).send_keys(keys)
@@ -520,6 +551,8 @@ class EucaUITestLib_Base(unittest.TestCase):
     def set_keys_by_name(self, name, keys):
         if self.check_if_element_present_by_type("NAME", name) is not 0:
             raise UICheckException("Element by name not found:" + name)
+        if self.check_if_element_visible_by_type("NAME", name) is not True:
+            raise UICheckException("Element by name not visible:" + name)
         print "Set: Element Type: NAME, Element: " + name + ", Keys: " + keys
         self.driver.find_element_by_name(name).clear()
         return 0
@@ -528,30 +561,40 @@ class EucaUITestLib_Base(unittest.TestCase):
     def get_text_by_link_text(self, link_text):
         if self.check_if_element_present_by_type("LINK_TEXT", link_text) is not 0:
             raise UICheckException("Element by link text not present:" + link_text)
+        if self.check_if_element_visible_by_type("LINK_TEXT", link_text) is not True:
+            raise UICheckException("Element by link text not visible:" + link_text)
         print "Get Text: Element Type: LINK_TEXT, Element: " + link_text
         return self.driver.find_element_by_link_text(link_text).text
 
     def get_text_by_id(self, this_id):
         if self.check_if_element_present_by_type("ID", this_id) is not 0:
             raise UICheckException("Element by id not present:" + this_id)
+        if self.check_if_element_visible_by_type("ID", this_id) is not True:
+            raise UICheckException("Element by id not visible:" + link_text)
         print "Get Text: Element Type: ID, Element: " + this_id
         return self.driver.find_element_by_id(this_id).text
 
     def get_text_by_css_selector(self, css_selector):
         if self.check_if_element_present_by_type("CSS_SELECTOR", css_selector) is not 0:
             raise UICheckException("Element by css selector not present:" + css_selector)
+        if self.check_if_element_visible_by_type("CSS_SELECTOR", css_selector) is not True:
+            raise UICheckException("Element by css selector not visible:" + css_selector)
         print "Get Text: Element Type: CSS_SELECTOR, Element: " + css_selector
         return self.driver.find_element_by_css_selector(css_selector).text
 
     def get_text_by_xpath(self, xpath):
         if self.check_if_element_present_by_type("XPATH", xpath) is not 0:
             raise UICheckException("Element by xpath not present: " + xpath)
+#        if self.check_if_element_visible_by_type("XPATH", xpath) is not True:
+#            raise UICheckException("Element by xpath not visible:" + xpath)
         print "Get Text: Element Type: XPATH, Element: " + xpath
         return self.driver.find_element_by_xpath(xpath).text
 
     def get_text_by_name(self, name):
         if self.check_if_element_present_by_type("NAME", name) is not 0:
             raise UICheckException("Element by name not present: " + name)
+        if self.check_if_element_visible_by_type("NAME", name) is not True:
+            raise UICheckException("Element by name not visible:" + name)
         print "Click: Element Type: NAME, Element: " + name
         return self.driver.find_element_by_name(name).text
 
@@ -559,6 +602,8 @@ class EucaUITestLib_Base(unittest.TestCase):
     def select_text_by_link_text(self, link_text, visible_text):
         if self.check_if_element_present_by_type("LINK_TEXT", link_text) is not 0:
             raise UICheckException("Element by link text not present: " + link_text)
+        if self.check_if_element_visible_by_type("LINK_TEXT", link_text) is not True:
+            raise UICheckException("Element by link text not visible:" + link_text)
         print "Select: Element Type: LINK_TEXT, Element: " + link_text + ", Text: " + visible_text
         Select(self.driver.find_element_by_link_text(link_text)).select_by_visible_text(visible_text)
         return 0
@@ -566,6 +611,8 @@ class EucaUITestLib_Base(unittest.TestCase):
     def select_text_by_id(self, this_id, visible_text):
         if self.check_if_element_present_by_type("ID", this_id) is not 0:
             raise UICheckException("Element by id not present: " + this_id)
+        if self.check_if_element_visible_by_type("ID", this_id) is not True:
+            raise UICheckException("Element by id not visible:" + link_text)
         print "Select: Element Type: ID, Element: " + this_id + ", Text: " + visible_text
         Select(self.driver.find_element_by_id(this_id)).select_by_visible_text(visible_text)
         return 0
@@ -573,6 +620,8 @@ class EucaUITestLib_Base(unittest.TestCase):
     def select_text_by_css_selector(self, css_selector, visible_text):
         if self.check_if_element_present_by_type("CSS_SELECTOR", css_selector) is not 0:
             raise UICheckException("Element by css selector not present: " + css_selector)
+        if self.check_if_element_visible_by_type("CSS_SELECTOR", css_selector) is not True:
+            raise UICheckException("Element by css selector not visible:" + css_selector)
         print "Select: Element Type: CSS_SELECTOR, Element: " + css_selector + ", Text: " + visible_text
         Select(self.driver.find_element_by_css_selector(css_selector)).select_by_visible_text(visible_text)
         return 0
@@ -580,6 +629,8 @@ class EucaUITestLib_Base(unittest.TestCase):
     def select_text_by_xpath(self, xpath, visible_text):
         if self.check_if_element_present_by_type("XPATH", xpath) is not 0:
             raise UICheckException("Element by xpath not present: " + xpath)
+#        if self.check_if_element_visible_by_type("XPATH", xpath) is not True:
+#            raise UICheckException("Element by xpath not visible:" + xpath)
         print "Select: Element Type: XPATH, Element: " + xpath + ", Text: " + visible_text
         Select(self.driver.find_element_by_xpath(xpath)).select_by_visible_text(visible_text)
         return 0
@@ -587,6 +638,8 @@ class EucaUITestLib_Base(unittest.TestCase):
     def select_text_by_name(self, name, visible_text):
         if self.check_if_element_present_by_type("NAME", name) is not 0:
             raise UICheckException("Element by name not present: " + name)
+        if self.check_if_element_visible_by_type("NAME", name) is not True:
+            raise UICheckException("Element by name not visible:" + name)
         print "Select: Element Type: NAME, Element: " + name + ", Text: " + visible_text
         Select(self.driver.find_element_by_name(name)).select_by_visible_text(visible_text)
         return 0
