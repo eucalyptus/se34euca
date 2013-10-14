@@ -184,6 +184,25 @@ class testcase_sequences(testcase_base):
         self.eucaUITester.base.test_ui_logout()
 
 
+    def xss_check_operations(self):
+        sleep_time = 60
+        print "=== runTest: XSS Check Operations ==="
+        self.eucaUITester.base.test_ui_login()
+        self.eucaUITester.keypair.test_ui_import_keypair_given_name("import-key")
+        self.eucaUITester.keypair.test_ui_verify_keypair_given_name("import-key")
+        self.eucaUITester.keypair.test_ui_check_keypair_count("1")
+        self.eucaUITester.instance.test_ui_launch_instance_given_name_security_group_keypair("<img src=x onerror=alert(1)>", "default", "import-key")
+        self.eucaUITester.volume.test_ui_create_volume_given_volume_name("<img src=x onerror=alert(1)>")
+        time.sleep(sleep_time)
+        self.eucaUITester.instance.test_ui_check_running_instances_count("1")
+        self.eucaUITester.volume.test_ui_check_volume_count("1")
+        self.eucaUITester.volume.test_ui_create_snapshot_from_volume_given_snapshot_name("<img src=x onerror=alert(1)>", "<img src=x onerror=alert(1)>")
+        time.sleep(sleep_time)
+        self.eucaUITester.snapshot.test_ui_check_snapshot_count("1")
+        self.eucaUITester.snapshot.test_ui_register_snapshot_as_image("XSS-image")
+        self.eucaUITester.base.test_ui_logout()
+
+
 if __name__ == "__main__":
     unittest.main()
 
