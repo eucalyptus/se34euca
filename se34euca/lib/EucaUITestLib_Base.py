@@ -76,10 +76,10 @@ class EucaUITestLib_Base(unittest.TestCase):
         this_ui = self.protocol + "://" + self.ui_ip + ":" + self.port
         #this_selenium_server_url = "http://" + self.selenium_server_ip + ":" + self.selenium_server_port + "/wd/hub"
         if self.sauce_access_key != None:
-            desired_capabilities = webdriver.DesiredCapabilities.CHROME
-            desired_capabilities['version'] = '27'
+            desired_capabilities = webdriver.DesiredCapabilities.FIREFOX
+            desired_capabilities['version'] = '24'
             desired_capabilities['platform'] = 'Windows 8'
-            desired_capabilities['name'] = 'Testing Chrome on Windows 8 '
+            desired_capabilities['name'] = 'Testing FF 24 on Windows 8'
 
         else:
             desired_capabilities = webdriver.DesiredCapabilities.FIREFOX
