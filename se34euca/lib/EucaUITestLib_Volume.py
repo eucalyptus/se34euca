@@ -342,6 +342,78 @@ class EucaUITestLib_Volume(EucaUITestLib_Base):
         print "Finished Test: Detach Volume from Instance Landing Page"
         print
 
+    def test_ui_get_volume_id_given_volume_name(self, volume_name):
+        print
+        print "Started VOLUME LANDING PAGE OPERATION: Return Volume ID Given Volume Name"
+        print "Volume Name: " + volume_name
+        print
+        self.click_element_by_link_text(volume_name)
+        time.sleep(3)
+        volume_id = "NULL"
+        volume_id = self.get_text_by_css_selector("ul.volume-expanded:nth-child(1) > li:nth-child(2) > div:nth-child(2)")
+        print
+        print "Finsihed VOLUME LANDING PAGE OPERATION: Return Volume ID Given Volume Name"
+        print "Returning Volume ID: " + volume_id
+        print
+        return volume_id
+
+    def test_ui_tag_volume_given_volume_name(self, volume_name, key, value):
+        print
+        print "Started Test: Tag Volume Given Volume Name"
+        print "Volume Name: " + volume_name
+        print "Key: " + key
+        print "Value: " + value
+        print
+        print "Go to Volume Landing Page"
+        self.click_element_by_link_text("Dashboard")
+        self.click_element_by_link_text("Storage")
+        self.click_element_by_link_text("Volumes")
+        time.sleep(3)
+        volume_id = self.test_ui_get_volume_id_given_volume_name(volume_name)
+        self.click_element_by_id(volume_id)
+        self.click_element_by_link_text("More actions")
+        self.click_element_by_link_text("Manage tags")
+        time.sleep(3)
+        self.set_keys_by_id("inputbox_newtag_name", key)
+        self.set_keys_by_id("inputbox_newtag_value", value)
+        time.sleep(1)
+        self.click_element_by_id("button-dialog-edittags-save")
+        print
+        print "Finished Test: Tag Volume Given Volume Name"
+        print
+
+    def test_ui_verify_tag_given_volume_name(self, volume_name, key, value):
+        print
+        print "Started Test: Verify Tag Given Volume Name"
+        print "Volume Name: " + volume_name
+        print "Key: " + key
+        print "Value: " + value
+        print
+        print "Go to Volume Landing Page"
+        self.click_element_by_link_text("Dashboard")
+        self.click_element_by_link_text("Storage")
+        self.click_element_by_link_text("Volumes")
+        time.sleep(3)
+        self.click_element_by_link_text(volume_name)
+        time.sleep(3)
+        self.click_element_by_link_text("Tags")
+        time.sleep(1)
+        match_string = str(key) + " " + str(value)
+        is_found = False
+        block = self.get_text_by_css_selector("#tabs-2")
+        tags = block.split("\n")
+        for tag in tags:
+            print "Tag: " + tag
+            if( tag == match_string ):
+              print "Found the Tag."
+              is_found = True
+        if( is_found is False):
+            print "FAILED Test: Verify Tag Given Volume Name"
+            return 1
+        print
+        print "Finished Test: Verify Tag Given Volume Name"
+        print
+        return 0
 
 if __name__ == "__main__":
     unittest.main()

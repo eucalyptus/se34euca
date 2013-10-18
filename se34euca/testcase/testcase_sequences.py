@@ -185,7 +185,6 @@ class testcase_sequences(testcase_base):
         self.eucaUITester.snapshot.test_ui_check_snapshot_count("0")
         self.eucaUITester.base.test_ui_logout()
 
-
     def xss_check_operations(self):
         sleep_time = 60
         print "=== runTest: XSS Check Operations ==="
@@ -212,6 +211,24 @@ class testcase_sequences(testcase_base):
         # NAME THE NEW IMAGE WITH AN XSS STRING
         self.eucaUITester.image.test_ui_tag_image_given_emi_name("XSS-image", "Name", "<img src=x onerror=alert(1)>")
         self.eucaUITester.image.test_ui_verify_emi_name_tag_given_image_name("XSS-image", "<img src=x onerror=alert(1)>")
+        self.eucaUITester.base.test_ui_logout()
+
+
+    def tagging_operations(self):
+        sleep_time = 60
+        self.eucaUITester.base.test_ui_login()
+        self.eucaUITester.volume.test_ui_create_volume_given_volume_name("tag-test")
+        time.sleep(sleep_time)
+        self.eucaUITester.volume.test_ui_check_volume_count("1")
+        self.eucaUITester.volume.test_ui_tag_volume_given_volume_name("tag-test", "1", "A")
+        self.eucaUITester.volume.test_ui_tag_volume_given_volume_name("tag-test", "2", "B")
+        self.eucaUITester.volume.test_ui_tag_volume_given_volume_name("tag-test", "3", "C")
+        self.eucaUITester.volume.test_ui_verify_tag_given_volume_name("tag-test", "1", "A")
+        self.eucaUITester.volume.test_ui_verify_tag_given_volume_name("tag-test", "2", "B")
+        self.eucaUITester.volume.test_ui_verify_tag_given_volume_name("tag-test", "3", "C")
+        self.eucaUITester.volume.test_ui_delete_volume_all()
+        time.sleep(sleep_time)
+        self.eucaUITester.volume.test_ui_check_volume_count("0")
         self.eucaUITester.base.test_ui_logout()
 
 
