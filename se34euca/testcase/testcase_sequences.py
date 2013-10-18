@@ -175,6 +175,8 @@ class testcase_sequences(testcase_base):
         time.sleep(sleep_time)
         self.eucaUITester.volume.test_ui_check_volume_count("2")
         self.eucaUITester.snapshot.test_ui_register_snapshot_as_image("test-image")
+        time.sleep(sleep_time)
+        self.eucaUITester.image.test_ui_check_image_count("2")
         self.eucaUITester.volume.test_ui_delete_volume_all()
         time.sleep(sleep_time)
         self.eucaUITester.volume.test_ui_check_volume_count("0")
@@ -188,18 +190,28 @@ class testcase_sequences(testcase_base):
         sleep_time = 60
         print "=== runTest: XSS Check Operations ==="
         self.eucaUITester.base.test_ui_login()
+        # CREATE A NEW KEYPAIR FOR LAUNCHING INSTANCE
         self.eucaUITester.keypair.test_ui_import_keypair_given_name("import-key")
         self.eucaUITester.keypair.test_ui_verify_keypair_given_name("import-key")
         self.eucaUITester.keypair.test_ui_check_keypair_count("1")
+        # LAUNCH INSTANCE WITH AN XSS INJECTED INSTANCE NAME
         self.eucaUITester.instance.test_ui_launch_instance_given_name_security_group_keypair("<img src=x onerror=alert(1)>", "default", "import-key")
+        # CREATE A VOLUME WITH AN XSS INJECTED VOLUME NAME
         self.eucaUITester.volume.test_ui_create_volume_given_volume_name("<img src=x onerror=alert(1)>")
         time.sleep(sleep_time)
         self.eucaUITester.instance.test_ui_check_running_instances_count("1")
         self.eucaUITester.volume.test_ui_check_volume_count("1")
+        # CREATE A SNAPSHOT WITH AN XSS INJECTED SNAPSHOT NAME
         self.eucaUITester.volume.test_ui_create_snapshot_from_volume_given_snapshot_name("<img src=x onerror=alert(1)>", "<img src=x onerror=alert(1)>")
         time.sleep(sleep_time)
         self.eucaUITester.snapshot.test_ui_check_snapshot_count("1")
+        # REGISTER THE SNAPSHOT AS AN IMAGE
         self.eucaUITester.snapshot.test_ui_register_snapshot_as_image("XSS-image")
+        time.sleep(sleep_time)
+        self.eucaUITester.image.test_ui_check_image_count("2")
+        # NAME THE NEW IMAGE WITH AN XSS STRING
+        self.eucaUITester.image.test_ui_tag_image_given_emi_name("XSS-image", "Name", "<img src=x onerror=alert(1)>")
+        self.eucaUITester.image.test_ui_verify_emi_name_tag_given_image_name("XSS-image", "<img src=x onerror=alert(1)>")
         self.eucaUITester.base.test_ui_logout()
 
 
