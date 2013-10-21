@@ -55,7 +55,7 @@ class testcase_instance(testcase_base):
         self.eucaUITester.base.test_ui_login()
         self.eucaUITester.instance.test_ui_launch_instance_basic()
         time.sleep(pause)
-        self.eucaUITester.instance.test_ui_terminate_instance_basic()
+        self.eucaUITester.instance.test_ui_terminate_instance_all()
         self.eucaUITester.base.test_ui_logout()
         time.sleep(pause)
 

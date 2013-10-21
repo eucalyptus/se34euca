@@ -101,7 +101,7 @@ class testcase_sequences(testcase_base):
         self.eucaUITester.ip_address.test_ui_check_ip_address_count("1")
         available_ip = self.eucaUITester.ip_address.test_ui_get_available_ip_address()
         self.eucaUITester.instance.test_ui_associate_ip_given_instance_name_and_ip_address("testinstance", available_ip)
-	self.eucaUITester.instance.test_ui_verify_associate_ip_given_instance_name_and_ip_address("testinstance", available_ip)
+        self.eucaUITester.instance.test_ui_verify_associate_ip_given_instance_name_and_ip_address("testinstance", available_ip)
         #self.eucaUITester.instance.test_ui_associate_ip_from_inst_lp()
         self.eucaUITester.instance.test_ui_disassociate_ip_from_inst_lp()
         self.eucaUITester.instance.test_ui_associate_ip_from_ip_lp("testinstance")
