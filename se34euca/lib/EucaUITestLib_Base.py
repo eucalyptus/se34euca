@@ -75,7 +75,7 @@ class EucaUITestLib_Base(unittest.TestCase):
         print "=== setUp ==="
         this_ui = self.protocol + "://" + self.ui_ip + ":" + self.port
         #this_selenium_server_url = "http://" + self.selenium_server_ip + ":" + self.selenium_server_port + "/wd/hub"
-        if self.sauce_access_key != None:
+        if self.sauce_access_key != "":
             desired_capabilities = webdriver.DesiredCapabilities.INTERNETEXPLORER
             desired_capabilities['version'] = '10'
             desired_capabilities['platform'] = 'Windows 8'
