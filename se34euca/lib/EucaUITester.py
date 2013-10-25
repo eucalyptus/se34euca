@@ -20,7 +20,7 @@ class EucaUITester():
     username = "admin"
     password = "password"
     sauce_account = "eucaqa"
-    sauce_access_key = "2715f0a3-a8d6-420f-8a7b-1d91eea4ddd0"
+    sauce_access_key = ""
     sauce_address = "@ondemand.saucelabs.com:80"
     retry = 120
     config_file = '/Users/alicehubenko/2b_tested.lst'
