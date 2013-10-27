@@ -22,7 +22,7 @@ class EucaUITestLib_Base(unittest.TestCase):
     password = "password"
     protocol = "https"
     sauce_account = "eucaqa"
-    sauce_access_key = "2715f0a3-a8d6-420f-8a7b-1d91eea4ddd0"
+    sauce_access_key = ""
     sauce_address = "@ondemand.saucelabs.com:80"
     retry = 400  # waiting time in seconds for element to be present on page
     trials = 300  # trial number for verify not present methods
@@ -83,6 +83,7 @@ class EucaUITestLib_Base(unittest.TestCase):
 
         else:
             desired_capabilities = webdriver.DesiredCapabilities.FIREFOX
+
 
         this_selenium_server_url = "http://" + self.selenium_server_ip + self.sauce_account + ":" + self.sauce_access_key + self.sauce_address + self.selenium_server_port + "/wd/hub"
         #this_selenium_server_url = "http://eucaqa:2715f0a3-a8d6-420f-8a7b-1d91eea4ddd0@ondemand.saucelabs.com:80/wd/hub"
