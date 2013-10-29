@@ -74,6 +74,8 @@ class testcase_sequences(testcase_base):
         self.eucaUITester.security_group.test_ui_check_security_group_count("2")
         time.sleep(sleep_time)
         time.sleep(sleep_time)
+        self.eucaUITester.security_group.test_ui_check_security_group_sort()
+        time.sleep(sleep_time)
         self.eucaUITester.security_group.test_ui_add_rules_to_security_group("test")
         time.sleep(sleep_time)
         time.sleep(sleep_time)

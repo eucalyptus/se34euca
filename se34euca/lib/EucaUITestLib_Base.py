@@ -468,6 +468,29 @@ class EucaUITestLib_Base(unittest.TestCase):
         displayed_text = self.driver.find_element_by_css_selector(element_css).text
         print("Text displayed at ID " + element_css + " is " + displayed_text)
 
+    def verify_text_displayed_by_xpath(self, locator, element_text):
+        #print("Verifying text " +element_text+" displayed at xpath "+locator)
+        displayed_text = None
+        for i in range(self.retry):
+            print "Wait On:: Trial: " + str(i) + " Verifying text " + element_text + " displayed at xpath " + locator
+            try:
+                text_on_page = self.get_text_by_xpath(locator)
+                if element_text == text_on_page:
+                    print"Found text"
+                    displayed_text = text_on_page
+                    break
+            except:
+                pass
+            time.sleep(1)
+        else:
+            self.fail("time out")
+        try:
+            self.assertEqual(element_text, displayed_text)
+        except AssertionError as e:
+            self.verificationErrors.append(str(e))
+
+        print("Text displayed at xpath " + locator + " is " + displayed_text)
+
     #CLICK CALLS
     def click_element_by_link_text(self, link_text):
         if self.check_if_element_present_by_type("LINK_TEXT", link_text) is not 0:
