@@ -58,7 +58,7 @@ class EucaUITestLib_IP_Address(EucaUITestLib_Base):
         return 0
 
     def test_ui_get_available_ip_address(self):
-	'''
+        '''
         Returns an available IP address at random
         '''
         print

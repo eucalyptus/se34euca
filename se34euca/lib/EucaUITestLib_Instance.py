@@ -59,11 +59,11 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         print
         print "Click the Dashboard link"
         self.click_element_by_link_text("Dashboard")
-	# Temp. Sol - TO PREVENT EMPTY IMAGE COLLECTION WHEN TRYING TO LAUNCH INSTANCE FOR THE FIRST TIME	10/08/13
-	print "Click the Image link"
+        # Temp. Sol - TO PREVENT EMPTY IMAGE COLLECTION WHEN TRYING TO LAUNCH INSTANCE FOR THE FIRST TIME	10/08/13
+        print "Click the Image link"
         self.click_element_by_link_text("Images")
-	time.sleep(5)
-	print "Click the Dashboard link"
+        time.sleep(5)
+        print "Click the Dashboard link"
         self.click_element_by_link_text("Dashboard")
         print "Click on the 'Launch new instance' button"
         self.click_element_by_link_text("Launch new instance")
@@ -220,68 +220,68 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         return 0
 
     def test_ui_associate_ip_given_instance_name_and_ip_address(self, instance_name, ip):
-	'''
-	Associate the IP to the Instance given input
-	'''
-	print
+        '''
+        Associate the IP to the Instance given input
+        '''
+        print
         print "Started Test: Associate IP Given Instance Name and IP Address"
         print
-	self.click_element_by_link_text("Dashboard")
-	self.click_element_by_css_selector("div.status-readout")
+        self.click_element_by_link_text("Dashboard")
+        self.click_element_by_css_selector("div.status-readout")
         time.sleep(3)
-	self.click_element_by_link_text(instance_name)
+        self.click_element_by_link_text(instance_name)
         time.sleep(1)
         instance_id = self.get_text_by_xpath("//div[@id='tabs-1']/ul/li[2]/div[2]")
-	self.click_element_by_id(instance_id)
+        self.click_element_by_id(instance_id)
         self.click_element_by_id("more-actions-instances")
         self.click_element_by_link_text("Associate IP address")
         self.set_keys_by_xpath("(//input[@id='associate-selected-value'])[2]", ip)
         self.click_element_by_link_text(ip)
         self.click_element_by_id("eip-associate-btn")
-	print
+        print
         print "Finished Test: Associate IP Given Instance Name and IP Address"
         print
-	return 0
+        return 0
 
     def test_ui_verify_associate_ip_given_instance_name_and_ip_address(self, instance_name, ip):
-	'''
-	Verify That the IP is associated to the instance
-	'''
-	print
-        print "Started Test: Verify Associate IP Given Instance Name and IP Address."
-	print
-	print "Instance Name: " + instance_name
-	print "IP: " + ip
+        '''
+        Verify That the IP is associated to the instance
+        '''
         print
-	self.click_element_by_link_text("Dashboard")
-	self.click_element_by_css_selector("div.status-readout")
-	time.sleep(3)
-	self.click_element_by_link_text(instance_name)
+        print "Started Test: Verify Associate IP Given Instance Name and IP Address."
+        print
+        print "Instance Name: " + instance_name
+        print "IP: " + ip
+        print
+        self.click_element_by_link_text("Dashboard")
+        self.click_element_by_css_selector("div.status-readout")
+        time.sleep(3)
+        self.click_element_by_link_text(instance_name)
 
-	is_matched = False
-	count = 0
-	while( is_matched is False and count < 3 ):
+        is_matched = False
+        count = 0
+        while( is_matched is False and count < 3 ):
             associated_ip = self.get_text_by_xpath("//div[@id='tabs-1']/ul/li[5]/div[2]")
-	    print
-	    print "Instance " + instance_name + " is currently associated with " + associated_ip
-	    if( str(ip) == str(associated_ip) ):
-	        is_matched = True
-	        break
-	    print "Returned IP " + associated_ip + " is not matched with the input IP " + ip
-	    count = count + 1
-	    print "Sleeping 10 sec"
-	    time.sleep(10)
+            print
+            print "Instance " + instance_name + " is currently associated with " + associated_ip
+            if( str(ip) == str(associated_ip) ):
+                is_matched = True
+                break
+            print "Returned IP " + associated_ip + " is not matched with the input IP " + ip
+            count = count + 1
+            print "Sleeping 10 sec"
+            time.sleep(10)
 
-	if( is_matched is False ):
-	    print
-	    print "FAILED TEST: Verify Associate IP Given Instance Name and IP Address"
-	    print
-	    self.fail("time out")
-	else:
-		print
-        	print "Finished Test: Associate IP Given Instance Name and IP Address"
-        	print
-	return 0
+        if( is_matched is False ):
+            print
+            print "FAILED TEST: Verify Associate IP Given Instance Name and IP Address"
+            print
+            self.fail("time out")
+        else:
+                print
+               	print "Finished Test: Associate IP Given Instance Name and IP Address"
+                print
+        return 0
 
     def test_ui_associate_ip_from_inst_lp(self):
         '''
