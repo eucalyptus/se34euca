@@ -62,23 +62,8 @@
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>link=v</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>//div[@id='tabs-1']/ul/li[2]/div[2]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForVisible</td>
-	<td>//div[@id='tabs-1']/ul/li[2]/div[2]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//div[@id='tabs-1']/ul/li[2]/div[2]</td>
+	<td>storeAttribute </td>
+	<td>xpath=//td/a[text()=&quot;v&quot;]/@title</td>
 	<td>vol_id</td>
 </tr>
 <tr>

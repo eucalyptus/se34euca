@@ -32,6 +32,16 @@
 	<td></td>
 </tr>
 <tr>
+	<td>storeText</td>
+	<td>css=option.temporal</td>
+	<td>AZ</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${AZ}</td>
+	<td></td>
+</tr>
+<tr>
 	<td>waitForElementPresent</td>
 	<td>link=Instances</td>
 	<td></td>
@@ -105,6 +115,11 @@
 	<td>type</td>
 	<td>id=launch-instance-type-num-instance</td>
 	<td>1</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=launch-instance-type-az</td>
+	<td>label=${AZ}</td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
