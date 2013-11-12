@@ -27,6 +27,19 @@ class testcase_snapshot(testcase_base):
         self.eucaUITester.snapshot.test_ui_register_snapshot_as_image("myimage")
         self.eucaUITester.base.test_ui_logout()
 
+    def populate_registered_images(self):
+        sleep_time = 10
+        image_count = 70
+        imagename_prefix = "zzz-pop-image"
+        self.eucaUITester.base.test_ui_login()
+        for x in range(0, image_count):
+          index = "%03d" % (x)
+          imagename = imagename_prefix + "-" + index
+          self.eucaUITester.snapshot.test_ui_register_snapshot_as_image(str(imagename))
+          time.sleep(sleep_time)
+        self.eucaUITester.base.test_ui_logout()
+
+
 if __name__ == "__main__":
     unittest.main()
 
