@@ -104,11 +104,13 @@ class EucaUITestLib_Snapshot(EucaUITestLib_Base):
         print "Click 'Save' button"
         self.click_element_by_id("button-dialog-registersnapshot-save")
         print
-        print "Verifying image " + image_name + "is visible on the Images Landing Page"
+        print "Verifying image " + image_name + " is visible on the Images Landing Page"
         print
         print "Go to Images Landing Page"
         self.click_element_by_id("resource-menu-image")
         time.sleep(3)
+        print "Sort the landing page by the image name"
+        self.click_element_by_id("columnheader-2")
         print "Wait for " + image_name + " to become visible"
         self.verify_element_by_xpath('//td[text()="' + image_name + '"]')
         print
