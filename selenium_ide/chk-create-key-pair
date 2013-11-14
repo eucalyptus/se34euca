@@ -27,6 +27,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForNotBodyText</td>
+	<td>css=img</td>
+	<td></td>
+</tr>
+<tr>
 	<td>waitForText</td>
 	<td>id=dashboard-netsec-keypair</td>
 	<td>1 Key Pairs</td>

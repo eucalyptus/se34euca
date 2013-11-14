@@ -52,6 +52,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForNotBodyText</td>
+	<td>css=img</td>
+	<td></td>
+</tr>
+<tr>
 	<td>waitForVisible</td>
 	<td>id=eips-check-all</td>
 	<td></td>

@@ -37,6 +37,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForVisible</td>
+	<td>css=div.table-row-status.status-running</td>
+	<td></td>
+</tr>
+<tr>
 	<td>waitForElementPresent</td>
 	<td>id=instances-check-all</td>
 	<td></td>

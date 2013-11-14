@@ -67,6 +67,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForNotBodyText</td>
+	<td>css=img</td>
+	<td></td>
+</tr>
+<tr>
 	<td>waitForElementPresent</td>
 	<td>id=table-volumes-new</td>
 	<td></td>

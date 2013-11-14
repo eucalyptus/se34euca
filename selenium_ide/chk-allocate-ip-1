@@ -22,6 +22,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForNotBodyText</td>
+	<td>css=img</td>
+	<td></td>
+</tr>
+<tr>
 	<td>waitForText</td>
 	<td>css=#dashboard-netsec-eip &gt; span</td>
 	<td>1</td>

@@ -99,7 +99,7 @@
 <tr>
 	<td>waitForElementPresent</td>
 	<td>id=snapshot-create-name</td>
-	<td>test-snap</td>
+	<td></td>
 </tr>
 <tr>
 	<td>type</td>
