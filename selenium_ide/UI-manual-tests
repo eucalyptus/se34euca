@@ -31,9 +31,7 @@
 <tr><td><a href="chk-create-volume-v">chk-create-volume-v</a></td></tr>
 <tr><td><a href="attach-volume-from-inst-page">attach-volume-from-inst-page</a></td></tr>
 <tr><td><a href="chk-attach-volume">chk-attach-volume</a></td></tr>
-<tr><td><a href="terminate-instance">terminate-instance</a></td></tr>
-<tr><td><a href="chk-terminate-instance-1">chk-terminate-instance-1</a></td></tr>
-<tr><td><a href="terminate-instance">terminate-instance</a></td></tr>
+<tr><td><a href="terminate-all-instances">terminate-all-instances</a></td></tr>
 <tr><td><a href="chk-terminate-instance">chk-terminate-instance</a></td></tr>
 <tr><td><a href="launch-inst-from-instances">launch-inst-from-instances</a></td></tr>
 <tr><td><a href="create-security-group">create-security-group</a></td></tr>

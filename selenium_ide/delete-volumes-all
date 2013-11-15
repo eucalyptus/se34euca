@@ -47,6 +47,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForElementPresent</td>
+	<td>css=div.table-row-status.status-available</td>
+	<td></td>
+</tr>
+<tr>
 	<td>waitForVisible</td>
 	<td>id=volumes-check-all</td>
 	<td></td>
