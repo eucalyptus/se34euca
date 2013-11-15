@@ -37,11 +37,6 @@
 	<td>*found.</td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>10000</td>
-	<td></td>
-</tr>
-<tr>
 	<td>waitForVisible</td>
 	<td>id=eips-check-all</td>
 	<td></td>
