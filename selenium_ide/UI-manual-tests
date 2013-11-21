@@ -59,7 +59,6 @@
 <tr><td><a href="chk-allocate-ip-1">chk-allocate-ip-1</a></td></tr>
 <tr><td><a href="associate-ip-land-ip">associate-ip-land-ip</a></td></tr>
 <tr><td><a href="disassociate-ip-land-instances">disassociate-ip-land-instances</a></td></tr>
-<tr><td><a href="chk-disas-ip-land-inst">chk-disas-ip-land-inst</a></td></tr>
 <tr><td><a href="snapshot-to-volume">snapshot-to-volume</a></td></tr>
 <tr><td><a href="associate-ip-land-ip">associate-ip-land-ip</a></td></tr>
 <tr><td><a href="disassociate-ip-land-ip">disassociate-ip-land-ip</a></td></tr>
