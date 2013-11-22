@@ -12,6 +12,11 @@
 <tr><td rowspan="1" colspan="3">create-snapshot-register-as-inst</td></tr>
 </thead><tbody>
 <tr>
+	<td>setTimeout</td>
+	<td>240000</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>link=Storage</td>
 	<td></td>
@@ -37,11 +42,6 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForText</td>
-	<td>css=div.table-row-status.status-completed</td>
-	<td></td>
-</tr>
-<tr>
 	<td>waitForElementPresent</td>
 	<td>link=test-snap</td>
 	<td></td>
@@ -52,18 +52,13 @@
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>link=test-snap</td>
+	<td>waitForText</td>
+	<td>css=div.table-row-status.status-completed</td>
 	<td></td>
 </tr>
 <tr>
-	<td>selectWindow</td>
-	<td>null</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//div[@id='tabs-1']/ul/li[2]/div[2]</td>
+	<td>storeAttribute</td>
+	<td>//td/a[text()=&quot;test-snap&quot;]/@title</td>
 	<td>snap_id</td>
 </tr>
 <tr>
