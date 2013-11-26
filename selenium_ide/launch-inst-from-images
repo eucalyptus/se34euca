@@ -107,6 +107,11 @@
 	<td>label=key-pair1</td>
 </tr>
 <tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
+</tr>
+<tr>
 	<td>select</td>
 	<td>id=launch-wizard-security-keypair-selector</td>
 	<td>label=key-pair1</td>
