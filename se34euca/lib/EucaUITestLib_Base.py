@@ -93,7 +93,7 @@ class EucaUITestLib_Base(unittest.TestCase):
         if self.selenium_server_ip is not "localhost":
             print "SET REMOTE WEBDRIVER AT: " + this_selenium_server_url
             self.driver = webdriver.Remote(this_selenium_server_url, desired_capabilities = desired_capabilities)
-                                           #webdriver.DesiredCapabilities.FIREFOX)
+
 
         else:
             print "SET LOCAL WEBDRIVER"
