@@ -17,7 +17,6 @@ class testcase_instance(testcase_base):
     def terminate_instance_all(self):
         print "=== runTest: Terminate Instance All ==="
         self.eucaUITester.base.test_ui_login()
-
         self.eucaUITester.instance.test_ui_terminate_instance_all()
         self.eucaUITester.instance.test_ui_check_running_instances_count(0)
         self.eucaUITester.base.test_ui_logout()
