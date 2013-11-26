@@ -71,11 +71,6 @@
 	<td>link=Tags</td>
 	<td></td>
 </tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>//div[@id='tabs-2']/div/table/tbody/tr[5]/td/span</td>
-	<td></td>
-</tr>
 </tbody></table>
 </body>
 </html>

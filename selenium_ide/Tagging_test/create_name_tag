@@ -43,7 +43,7 @@
 </tr>
 <tr>
 	<td>type</td>
-	<td>css=input.focus-here</td>
+	<td>id=inputbox_newtag_name</td>
 	<td>Name</td>
 </tr>
 <tr>
