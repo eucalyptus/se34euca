@@ -33,6 +33,21 @@
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
+	<td>//select/option</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=option.temporal</td>
+	<td>AZ</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${AZ}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
 	<td>link=Images</td>
 	<td></td>
 </tr>
@@ -47,6 +62,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForNotBodyText</td>
+	<td>css=img</td>
+	<td></td>
+</tr>
+<tr>
 	<td>waitForElementPresent</td>
 	<td>link=Launch instance</td>
 	<td></td>
@@ -55,6 +75,11 @@
 	<td>click</td>
 	<td>link=Launch instance</td>
 	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=launch-instance-type-az</td>
+	<td>label=${AZ}</td>
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
@@ -80,6 +105,11 @@
 	<td>verifyElementPresent</td>
 	<td>id=launch-wizard-security-keypair-selector</td>
 	<td>label=key-pair1</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>5000</td>
+	<td></td>
 </tr>
 <tr>
 	<td>select</td>

@@ -2,6 +2,7 @@ from se34euca.testcase.testcase_base import *
 
 
 class testcase_security_group(testcase_base):
+
     def create_security_group(self):
         print "=== runTest: Create Security Group ==="
         self.eucaUITester.base.test_ui_login()
@@ -10,7 +11,7 @@ class testcase_security_group(testcase_base):
         self.eucaUITester.base.test_ui_logout()
 
     def create_empty_security_group(self):
-        print "=== runTest: Create Empty Security Group ==="
+        print "=== runTest: Create Empty Security Group with Name 'mywebservice-01' and  Description 'test' ==="
         self.eucaUITester.base.test_ui_login()
         self.eucaUITester.security_group.test_ui_create_empty_security_group()
         self.eucaUITester.base.test_ui_logout()

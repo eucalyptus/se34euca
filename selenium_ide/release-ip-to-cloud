@@ -23,32 +23,22 @@
 </tr>
 <tr>
 	<td>waitForVisible</td>
-	<td>link=Network &amp; Security</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>link=Network &amp; Security</td>
+	<td>css=#dashboard-netsec-eip &gt; span</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>link=Network &amp; Security</td>
+	<td>css=#dashboard-netsec-eip &gt; span</td>
 	<td></td>
 </tr>
 <tr>
-	<td>waitForVisible</td>
-	<td>link=IP Addresses</td>
-	<td></td>
+	<td>waitForText</td>
+	<td>//div[@id='eips_wrapper']/div[4]/div[4]/span[2]</td>
+	<td>*found.</td>
 </tr>
 <tr>
-	<td>verifyElementPresent</td>
-	<td>link=IP Addresses</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=IP Addresses</td>
+	<td>pause</td>
+	<td>10000</td>
 	<td></td>
 </tr>
 <tr>

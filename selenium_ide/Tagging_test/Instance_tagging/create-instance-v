@@ -3,54 +3,55 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="selenium.base" href="https://10.111.1.173:8888/" />
-<title>chk-allocate-ip-1</title>
+<link rel="selenium.base" href="https://10.111.5.8:8888/" />
+<title>create-instance-v</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">chk-allocate-ip-1</td></tr>
+<tr><td rowspan="1" colspan="3">create-instance-v</td></tr>
 </thead><tbody>
 <tr>
-	<td>waitForElementPresent</td>
-	<td>link=Dashboard</td>
+	<td>click</td>
+	<td>id=resource-menu-dashboard</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>link=Dashboard</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForNotBodyText</td>
-	<td>css=img</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForText</td>
-	<td>css=#dashboard-netsec-eip &gt; span</td>
-	<td>1</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>css=#dashboard-netsec-eip &gt; span</td>
-	<td>1</td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>css=#dashboard-netsec-eip &gt; span</td>
-	<td>IPs</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>Number of IP Addreses expected/actual: 1/${IPs}</td>
+	<td>link=Launch new instance</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>link=Dashboard</td>
+	<td>css=div.image-name</td>
 	<td></td>
 </tr>
+<tr>
+	<td>click</td>
+	<td>id=nextButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=launch-instance-names</td>
+	<td>v</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=nextButton</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=launch-wizard-security-keypair-selector</td>
+	<td>label=None (advanced option)</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=finishButton</td>
+	<td></td>
+</tr>
+
 </tbody></table>
 </body>
 </html>

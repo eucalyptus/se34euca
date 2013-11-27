@@ -72,11 +72,6 @@
 	<td></td>
 </tr>
 <tr>
-	<td>refresh</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
 	<td>waitForVisible</td>
 	<td>id=table-eips-new</td>
 	<td></td>

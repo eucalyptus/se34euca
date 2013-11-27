@@ -32,23 +32,33 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForVisible</td>
+	<td>link=v</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>xpath=//td/a[text()=&quot;v&quot;]/@title</td>
+	<td>vol_id</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${vol}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=${vol}</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>link=v</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>css=td.checkbox-cell &gt; input[type=&quot;checkbox&quot;]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
 	<td>id=more-actions-volumes</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>css=body..no_search</td>
 	<td></td>
 </tr>
 <tr>
@@ -124,11 +134,6 @@
 <tr>
 	<td>click</td>
 	<td>link=Tags</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>//div[@id='tabs-2']/div/table/tbody/tr[4]/td/span</td>
 	<td></td>
 </tr>
 </tbody></table>

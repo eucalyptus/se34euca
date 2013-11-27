@@ -97,6 +97,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>refresh</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
 	<td>waitForElementPresent</td>
 	<td>css=div.table-row-status.status-running</td>
 	<td></td>
@@ -143,22 +148,22 @@
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
-	<td>xpath=(//input[@id='associate-selected-value'])[2]</td>
+	<td>id=associate-selected-value</td>
 	<td></td>
 </tr>
 <tr>
 	<td>verifyElementPresent</td>
-	<td>xpath=(//input[@id='associate-selected-value'])[2]</td>
+	<td>id=associate-selected-value</td>
 	<td></td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>xpath=(//input[@id='associate-selected-value'])[2]</td>
+	<td>id=associate-selected-value</td>
 	<td>${my_ip}</td>
 </tr>
 <tr>
 	<td>typeKeys</td>
-	<td>xpath=(//input[@id='associate-selected-value'])[2]</td>
+	<td>id=associate-selected-value</td>
 	<td>${my_ip}</td>
 </tr>
 <tr>
@@ -178,11 +183,6 @@
 </tr>
 <tr>
 	<td>waitForElementPresent</td>
-	<td>id=eip-associate-btn</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForVisible</td>
 	<td>id=eip-associate-btn</td>
 	<td></td>
 </tr>

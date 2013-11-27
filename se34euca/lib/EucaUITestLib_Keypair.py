@@ -31,7 +31,7 @@ class EucaUITestLib_Keypair(EucaUITestLib_Base):
         self.click_element_by_id("table-keys-new")
         print
         print "Test: Generate New Keypair"
-        self.set_keys_by_id("key-name", "my-sel-gen-key-00")
+        self.set_keys_by_id("key-add-name", "my-sel-gen-key-00")
         self.click_element_by_id("keys-add-btn")
         print
         print "Finished Test: Generate Keypair"

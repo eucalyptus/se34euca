@@ -76,10 +76,10 @@ class EucaUITestLib_Base(unittest.TestCase):
         this_ui = self.protocol + "://" + self.ui_ip + ":" + self.port
         #this_selenium_server_url = "http://" + self.selenium_server_ip + ":" + self.selenium_server_port + "/wd/hub"
         if self.sauce_access_key != "":
-            desired_capabilities = webdriver.DesiredCapabilities.INTERNETEXPLORER
-            desired_capabilities['version'] = '10'
+            desired_capabilities = webdriver.DesiredCapabilities.FIREFOX
+            desired_capabilities['version'] = '25'
             desired_capabilities['platform'] = 'Windows 8'
-            desired_capabilities['name'] = 'Testing IE 10 on Windows 8'
+            desired_capabilities['name'] = 'Testing FF 25 on Windows 8'
 
         else:
             desired_capabilities = webdriver.DesiredCapabilities.FIREFOX
@@ -93,7 +93,7 @@ class EucaUITestLib_Base(unittest.TestCase):
         if self.selenium_server_ip is not "localhost":
             print "SET REMOTE WEBDRIVER AT: " + this_selenium_server_url
             self.driver = webdriver.Remote(this_selenium_server_url, desired_capabilities = desired_capabilities)
-                                           #webdriver.DesiredCapabilities.FIREFOX)
+
 
         else:
             print "SET LOCAL WEBDRIVER"

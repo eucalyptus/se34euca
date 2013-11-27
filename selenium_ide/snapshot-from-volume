@@ -13,7 +13,7 @@
 </thead><tbody>
 <tr>
 	<td>setTimeout</td>
-	<td>110000</td>
+	<td>150000</td>
 	<td></td>
 </tr>
 <tr>
@@ -49,6 +49,11 @@
 <tr>
 	<td>click</td>
 	<td>link=Volumes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
 	<td></td>
 </tr>
 <tr>
@@ -99,7 +104,7 @@
 <tr>
 	<td>waitForElementPresent</td>
 	<td>id=snapshot-create-name</td>
-	<td>test-snap</td>
+	<td></td>
 </tr>
 <tr>
 	<td>type</td>

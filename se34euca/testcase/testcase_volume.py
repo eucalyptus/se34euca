@@ -45,6 +45,12 @@ class testcase_volume(testcase_base):
         self.eucaUITester.volume.test_ui_attach_volume()
         self.eucaUITester.base.test_ui_logout()
 
+    def attach_volume_from_instance_lp(self):
+        print "=== runTest: Attach Volume From Instances Landing Page ==="
+        self.eucaUITester.base.test_ui_login()
+        self.eucaUITester.test_ui_attach_volume_from_instance_lp()
+        self.eucaUITester.base.test_ui_logout()
+
 
 if __name__ == "__main__":
     unittest.main()

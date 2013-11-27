@@ -21,6 +21,7 @@
 <tr><td><a href="delete_undelete_delete_tag">delete_undelete_delete_tag</a></td></tr>
 <tr><td><a href="cancel_edit_name_tag">cancel_edit_name_tag</a></td></tr>
 <tr><td><a href="cancel_edit_name_tag_value">cancel_edit_name_tag_value</a></td></tr>
+<tr><td><a href="delete_all_tags_except_name">delete_all_tags_except_name</a></td></tr>
 </tbody></table>
 </body>
 </html>

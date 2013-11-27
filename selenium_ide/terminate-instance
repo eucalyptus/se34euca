@@ -38,7 +38,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>css=li.toggle-on &gt; ul &gt; li &gt; a</td>
+	<td>id=resource-menuitem-instance</td>
 	<td></td>
 </tr>
 <tr>
@@ -47,7 +47,17 @@
 	<td></td>
 </tr>
 <tr>
-	<td>verifyElementPresent</td>
+	<td>waitForElementPresent</td>
+	<td>css=a.table-refresh</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a.table-refresh</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
 	<td>css=div.table-row-status.status-running</td>
 	<td></td>
 </tr>

@@ -9,7 +9,7 @@ class testcase_ip_address(testcase_base):
         self.eucaUITester.base.test_ui_logout()
 
     def allocate_ip_address(self):
-        print "=== runTest: Allocate Two IP Addresses ==="
+        print "=== runTest: Allocates One IP Address ==="
         self.eucaUITester.base.test_ui_login()
         self.eucaUITester.ip_address.test_ui_allocate_ip_address(1)
         self.eucaUITester.base.test_ui_logout()

@@ -42,6 +42,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForNotBodyText</td>
+	<td>css=img</td>
+	<td></td>
+</tr>
+<tr>
 	<td>waitForElementPresent</td>
 	<td>css=td.checkbox-cell &gt; input[type=&quot;checkbox&quot;]</td>
 	<td></td>
