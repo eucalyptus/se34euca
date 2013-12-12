@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <title>Test Suite</title>
+</head>
+<body>
+<table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
+<tr><td><b>Test Suite</b></td></tr>
+<tr><td><a href="delete_name_tag">delete_name_tag</a></td></tr>
+<tr><td><a href="create_name_tag">create_name_tag</a></td></tr>
+<tr><td><a href="add_tags_to_volume">add_tags_to_volume</a></td></tr>
+<tr><td><a href="add_another_tag">add_another_tag</a></td></tr>
+<tr><td><a href="delete_tag">delete_tag</a></td></tr>
+<tr><td><a href="add_another_tag">add_another_tag</a></td></tr>
+<tr><td><a href="edit_key_and_tag">edit_key_and_tag</a></td></tr>
+<tr><td><a href="delete_undelete_tag">delete_undelete_tag</a></td></tr>
+<tr><td><a href="delete_undelete_delete_tag">delete_undelete_delete_tag</a></td></tr>
+<tr><td><a href="cancel_edit_name_tag">cancel_edit_name_tag</a></td></tr>
+<tr><td><a href="cancel_edit_name_tag_value">cancel_edit_name_tag_value</a></td></tr>
+</tbody></table>
+</body>
+</html>

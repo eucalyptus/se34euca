@@ -4,12 +4,12 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="https://10.111.1.61:8888/" />
-<title>delete_undelete_tag</title>
+<title>delete_undelete_delete_tag</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">delete_undelete_tag</td></tr>
+<tr><td rowspan="1" colspan="3">delete_undelete_delete_tag</td></tr>
 </thead><tbody>
 <tr>
 	<td>click</td>
@@ -32,18 +32,8 @@
 	<td></td>
 </tr>
 <tr>
-	<td>storeAttribute</td>
-	<td>xpath=//td/a[text()=&quot;v&quot;]/@title</td>
-	<td>vol</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${vol}</td>
-	<td></td>
-</tr>
-<tr>
 	<td>click</td>
-	<td>id=${vol}</td>
+	<td>css=td.checkbox-cell &gt; input[type=&quot;checkbox&quot;]</td>
 	<td></td>
 </tr>
 <tr>
@@ -78,33 +68,13 @@
 </tr>
 <tr>
 	<td>click</td>
+	<td>//tbody[5]/tr/td[4]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
 	<td>id=button-dialog-edittags-save</td>
 	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>5</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=${vol}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=more-actions-volumes</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=Manage tags</td>
-	<td></td>
-</tr>
-<tr>
-	<td>assertText</td>
-	<td>//tbody[5]/tr/td[2]/span</td>
-	<td>my Key and Tag</td>
 </tr>
 </tbody></table>
 </body>

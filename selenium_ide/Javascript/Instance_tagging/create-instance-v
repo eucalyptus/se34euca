@@ -4,13 +4,23 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="https://10.111.5.8:8888/" />
-<title>delete_all_tags_except_name</title>
+<title>create-instance-v</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">delete_all_tags_except_name</td></tr>
+<tr><td rowspan="1" colspan="3">create-instance-v</td></tr>
 </thead><tbody>
+<tr>
+	<td>getEval</td>
+	<td></td>
+	<td>this.browserbot.getUserWindow().concatStrings(&quot;Selenium&quot;,&quot;IDE&quot;)</td>
+</tr>
+<tr>
+	<td>verifyEval</td>
+	<td>this.browserbot.getUserWindow().document.getElementById(&quot;selecttype&quot;).options.length</td>
+	<td>4</td>
+</tr>
 <tr>
 	<td>click</td>
 	<td>id=resource-menu-dashboard</td>
@@ -18,67 +28,47 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=resource-menu-storage</td>
+	<td>link=Launch new instance</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=resource-menuitem-volume</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeAttribute</td>
-	<td>xpath=//td/a[text()=&quot;v&quot;]/@title</td>
-	<td>vol_id</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${vol_id}</td>
+	<td>css=div.image-name</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=${vol_id}</td>
+	<td>id=nextButton</td>
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>id=more-actions-volumes</td>
-	<td></td>
+	<td>type</td>
+	<td>id=launch-instance-names</td>
+	<td>v</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>css=body..no_search</td>
+	<td>id=nextButton</td>
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>link=Manage tags</td>
-	<td></td>
+	<td>select</td>
+	<td>id=launch-wizard-security-keypair-selector</td>
+	<td>label=None (advanced option)</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>css=body..no_search</td>
+	<td>id=finishButton</td>
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>//tbody[2]/tr/td[4]/div</td>
+	<td>waitForVisible</td>
+	<td>css=div.table-row-status.status-running</td>
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>//tbody[3]/tr/td[4]/div</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//tbody[4]/tr/td[4]/div</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=button-dialog-edittags-save</td>
+	<td>waitForVisible</td>
+	<td>link=v</td>
 	<td></td>
 </tr>
 </tbody></table>

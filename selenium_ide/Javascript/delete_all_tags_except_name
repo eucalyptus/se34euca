@@ -3,47 +3,37 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="selenium.base" href="https://10.111.1.61:8888/" />
-<title>delete_undelete_tag</title>
+<link rel="selenium.base" href="https://10.111.5.8:8888/" />
+<title>delete_all_tags_except_name</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">delete_undelete_tag</td></tr>
+<tr><td rowspan="1" colspan="3">delete_all_tags_except_name</td></tr>
 </thead><tbody>
 <tr>
 	<td>click</td>
-	<td>link=Dashboard</td>
+	<td>id=resource-menu-dashboard</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>link=Storage</td>
+	<td>id=resource-menu-storage</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>link=Volumes</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=v</td>
+	<td>id=resource-menuitem-volume</td>
 	<td></td>
 </tr>
 <tr>
 	<td>storeAttribute</td>
-	<td>xpath=//td/a[text()=&quot;v&quot;]/@title</td>
-	<td>vol</td>
+	<td> //td/a[text()=&quot;v&quot;]/@title</td>
+	<td>vol_id</td>
 </tr>
 <tr>
 	<td>echo</td>
-	<td>${vol}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=${vol}</td>
+	<td>${vol_id}</td>
 	<td></td>
 </tr>
 <tr>
@@ -53,17 +43,32 @@
 </tr>
 <tr>
 	<td>click</td>
+	<td>css=body..no_search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
 	<td>link=Manage tags</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>css=td.checkbox-cell</td>
+	<td>css=body..no_search</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>css=td.checkbox-cell &gt; input[type=&quot;checkbox&quot;]</td>
+	<td>//tbody[2]/tr/td[4]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tbody[3]/tr/td[4]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tbody[4]/tr/td[4]/div</td>
 	<td></td>
 </tr>
 <tr>
@@ -73,38 +78,8 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>//tbody[5]/tr[3]/td[3]/div</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
 	<td>id=button-dialog-edittags-save</td>
 	<td></td>
-</tr>
-<tr>
-	<td>pause</td>
-	<td>5</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=${vol}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=more-actions-volumes</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=Manage tags</td>
-	<td></td>
-</tr>
-<tr>
-	<td>assertText</td>
-	<td>//tbody[5]/tr/td[2]/span</td>
-	<td>my Key and Tag</td>
 </tr>
 </tbody></table>
 </body>
