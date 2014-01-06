@@ -17,6 +17,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForVisible</td>
+	<td>id=account</td>
+	<td></td>
+</tr>
+<tr>
 	<td>type</td>
 	<td>id=account</td>
 	<td>ui-test-acct-00</td>
