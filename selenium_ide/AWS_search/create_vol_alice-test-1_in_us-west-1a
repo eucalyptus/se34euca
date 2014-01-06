@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://10.111.5.7:8888/" />
+<title>create_vol_alice-test-1_in_us-west-1a</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">create_vol_alice-test-1_in_us-west-1a</td></tr>
+</thead><tbody>
+<tr>
+	<td>click</td>
+	<td>id=resource-menu-dashboard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=resource-menu-storage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=resource-menuitem-volume</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=table-volumes-new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=volume-name</td>
+	<td>alice-test-1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=volume-size</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=volume-add-az-selector</td>
+	<td>label=us-west-1a</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=button-dialog-createvolume-save</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

@@ -8,6 +8,7 @@
 <body>
 <table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
 <tr><td><b>Test Suite</b></td></tr>
+<tr><td><a href="login_ui-test-acct-00_user00">login_ui-test-acct-00_user00</a></td></tr>
 <tr><td><a href="import-key-pair">import-key-pair</a></td></tr>
 <tr><td><a href="chk-create-key-pair">chk-create-key-pair</a></td></tr>
 <tr><td><a href="delete-imported-key-pair">delete-imported-key-pair</a></td></tr>
