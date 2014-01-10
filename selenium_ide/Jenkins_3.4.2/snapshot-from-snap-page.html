@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://10.111.5.23:8888/" />
+<title>snapshot-from-snap-page</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">snapshot-from-snap-page</td></tr>
+</thead><tbody>
+<tr>
+	<td>click</td>
+	<td>link=Dashboard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Storage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Storage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Storage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Volumes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Volumes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Volumes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=th.narrow-cell.sorting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=th.narrow-cell.sorting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=th.narrow-cell.sorting</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=th.narrow-cell.sorting_asc</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=th.narrow-cell.sorting_desc</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//table[@id='volumes']/tbody/tr/td[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>//table[@id='volumes']/tbody/tr/td[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//table[@id='volumes']/tbody/tr/td[2]</td>
+	<td>vol</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${vol}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Storage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Storage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Storage</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>link=Snapshots</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>link=Snapshots</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Snapshots</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=table-snapshots-new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=table-snapshots-new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=table-snapshots-new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=snapshot-create-volume-id</td>
+	<td>${vol}</td>
+</tr>
+<tr>
+	<td>typeKeys</td>
+	<td>id=snapshot-create-volume-id</td>
+	<td>${vol}</td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=.ui-menu-item</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=.ui-menu-item</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=a:contains(&quot;${vol}&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>css=a:contains(&quot;${vol}&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a:contains(&quot;${vol}&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>id=snapshot-create-description</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyElementPresent</td>
+	<td>id=snapshot-create-description</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=snapshot-create-description</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>typeKeys</td>
+	<td>id=snapshot-create-description</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=snapshot-create-btn</td>
+	<td>Create</td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=snapshot-create-btn</td>
+	<td>Create</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=snapshot-create-btn</td>
+	<td>Create</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Dashboard</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
