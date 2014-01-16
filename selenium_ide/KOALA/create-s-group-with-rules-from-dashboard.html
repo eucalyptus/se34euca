@@ -4,27 +4,27 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="http://10.111.101.112:8888/" />
-<title>create-s-group-with-rules-and-tags</title>
+<title>create-s-group-with-rules-from-dashboard</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">create-s-group-with-rules-and-tags</td></tr>
+<tr><td rowspan="1" colspan="3">create-s-group-with-rules-from-dashboard</td></tr>
 </thead><tbody>
 <tr>
 	<td>clickAndWait</td>
-	<td>id=resource-menuitem-sgroup</td>
+	<td>id=resource-menu-dashboard</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Create new security group</td>
+	<td>link=Create security group</td>
 	<td></td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=name</td>
-	<td>group</td>
+	<td>s.group-from-dashboard</td>
 </tr>
 <tr>
 	<td>type</td>
@@ -33,7 +33,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>name=from_port</td>
+	<td>id=sgroup-use-my-ip</td>
 	<td></td>
 </tr>
 <tr>
@@ -48,27 +48,27 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>name=cidr_ip</td>
+	<td>link=Add rule</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>name=traffictype</td>
+	<td>css=b</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>name=cidr_ip</td>
+	<td>css=a.chosen-single&gt;span </td>
 	<td></td>
 </tr>
 <tr>
-	<td>type</td>
-	<td>name=cidr_ip</td>
-	<td>0.0.0.0/0</td>
+	<td>click</td>
+	<td>//div[@id='rules-editor']/div[2]/div[2]/div[4]/div[2]/label[2]/div/a/span</td>
+	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>name=traffictype</td>
+	<td>css=label.securitygroupname &gt; input[name=&quot;traffictype&quot;]</td>
 	<td></td>
 </tr>
 <tr>
@@ -77,33 +77,8 @@
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>name=icmp_range</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=sgroup-use-my-ip</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=Add rule</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>//div[@id='tag-editor']/div[2]/div[2]/div/div/input</td>
-	<td>1</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>css=input.taginput.value</td>
-	<td>2</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=add-tag-btn</td>
+	<td>clickAndWait</td>
+	<td>css=button.button</td>
 	<td></td>
 </tr>
 <tr>
@@ -111,11 +86,7 @@
 	<td>css=button.button</td>
 	<td></td>
 </tr>
-<tr>
-	<td>storeText</td>
-	<td>css=div.alert-box.alert</td>
-	<td>alert</td>
-</tr>
+
 </tbody></table>
 </body>
 </html>
