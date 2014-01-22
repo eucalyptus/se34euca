@@ -439,7 +439,7 @@ class EucaUITestLib_Instance(EucaUITestLib_Base):
         self.click_element_by_link_text("Dashboard")
         self.verify_element_by_link_text("Launch new instance")
         time.sleep(3)
-        print "Verifying that Running Instances Count on Dashboard is " + running_instances_count
+        print "Verifying that Running Instances Count on Dashboard is " + str(running_instances_count)
         self.verify_text_displayed_by_css("div.status-readout > span", running_instances_count)
         print
         print "Finished Test: Check Running Instances Count"

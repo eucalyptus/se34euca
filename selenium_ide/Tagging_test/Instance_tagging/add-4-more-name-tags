@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="https://10.111.5.8:8888/" />
+<title>add-4-more-name-tags</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">add-4-more-name-tags</td></tr>
+</thead><tbody>
+<tr>
+	<td>click</td>
+	<td>id=resource-menu-dashboard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=resource-menu-instance</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=resource-menuitem-instance</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>xpath=//td/a[text()=&quot;v&quot;]/@title</td>
+	<td>instance_id</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${instance_id}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=${instance_id}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=more-actions-instances</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Manage tags</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=inputbox_newtag_name</td>
+	<td>color</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=inputbox_newtag_value</td>
+	<td>Blue</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.icon_add.enabled &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=inputbox_newtag_name</td>
+	<td>group</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=inputbox_newtag_value</td>
+	<td>Dev-ops</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.icon_add.enabled &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=inputbox_newtag_name</td>
+	<td>role</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=inputbox_newtag_value</td>
+	<td>Worker</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.icon_add.enabled &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=inputbox_newtag_name</td>
+	<td>status</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=inputbox_newtag_value</td>
+	<td>Important</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.icon_add.enabled &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=button-dialog-edittags-save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=v</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=.ui-tabs-anchor:contains(&quot;Tags&quot;)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='tabs-3']/div[2]/div/table/tbody/tr[5]/td[2]/span</td>
+	<td>Important</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=more-actions-instances</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Manage tags</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tbody[5]/tr/td[2]/span</td>
+	<td>Important</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=button-dialog-edittags-cancel</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

@@ -58,12 +58,87 @@
 </tr>
 <tr>
 	<td>click</td>
+	<td>//tbody[3]/tr[2]/td[3]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
 	<td>//tbody[3]/tr/td[3]/div</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=button-dialog-edittags-save</td>
+	<td>//tbody[4]/tr[2]/td[4]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tbody[3]/tr/td[3]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tbody[3]/tr[2]/td[3]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tbody[4]/tr/td[3]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tbody[4]/tr[2]/td[3]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.icon_edit.tag-control</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[2]/td[3]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.icon_edit.tag-control</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=tr.edit-tags-edit &gt; td &gt; input</td>
+	<td>Name</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tr[2]/td[3]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tbody[4]/tr/td[3]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tbody[4]/tr[2]/td[3]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tbody[4]/tr/td[3]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//tbody[4]/tr[2]/td[3]/div</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=button-dialog-edittags-cancel</td>
 	<td></td>
 </tr>
 </tbody></table>

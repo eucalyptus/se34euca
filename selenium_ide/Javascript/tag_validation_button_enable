@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://euca-jerry.brainfood.com/" />
+<title>tag_validation_save_button</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">tag_validation_save_button</td></tr>
+</thead><tbody>
+<tr>
+	<td>click</td>
+	<td>link=Dashboard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Images</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input[type=&quot;checkbox&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=more-actions-images</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Manage tags</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=body..no_search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=button.ui-state-disabled</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.focus-here</td>
+	<td>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=span.error</td>
+	<td>*</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=button.ui-state-disabled</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.ui-state-disabled</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=button.ui-state-disabled</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input.focus-here</td>
+	<td>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=span.error</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=button.ui-state-disabled</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input[title=&quot;Type the value of this tag&quot;]</td>
+	<td>xxx</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.icon_add.enabled</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.icon_edit.tag-control</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=tr.edit-tags-edit &gt; td &gt; input</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=span.error</td>
+	<td>*</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.icon_cancel.tag-control</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//button[@type='button'])[2]</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
