@@ -1,4 +1,6 @@
 
+var gotoLabels= {};
+**************************************
 /**
  * @Author : Florent BREHERET
  * @Function : Activate an implicite wait on action commands when trying to find elements.
@@ -156,4 +158,31 @@ try {
 }
 
 
+********************************************************************************************
+Selenium.prototype.doGotoLabel = function( label )
+{
+    if( undefined == gotoLabels[label] ) {
+        throw new Error( "Specified label '" + label + "' is not found." );
+    }
+    this.continueFromRow( gotoLabels[ label ] );
+};
+Selenium.prototype.doGoto = Selenium.prototype.doGotoLabel;
+Selenium.prototype.doGotoIf = function( condition, label )
+{
+    if( eval(condition) ) this.doGotoLabel( label );
+}
+Selenium.prototype.doPush= function(value, varName)
+{
+    if(!storedVars[varName]) {
+        storedVars[varName] = new Array();
+    }
+    if(typeof storedVars[varName] !== 'object') {
+        throw new Error("Cannot push value onto non-array " + varName);
+    } else {
+        storedVars[varName].push(value);
+    }
+}
 
+********************************
+
+Selenium.prototype.doLabel = function(){};
