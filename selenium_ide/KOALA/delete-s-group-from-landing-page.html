@@ -17,13 +17,53 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForVisible</td>
+	<td>id=resource-menu-netsec</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
 	<td>id=resource-menu-netsec</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>id=resource-menuitem-sgroup</td>
+	<td>id=resource-menuitem-securitygroups</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>link=group</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeAttribute</td>
+	<td>//td/a[text()=&quot;group&quot;]@href</td>
+	<td>store</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${store}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['store'].slice(16,27);</td>
+	<td>sg</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${sg}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=item-dropdown_${sg}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>Drop down for actions menu did not open</td>
 	<td></td>
 </tr>
 <tr>
