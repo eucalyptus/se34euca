@@ -16,26 +16,6 @@
 	<td></td>
 </tr>
 <tr>
-	<td>storeEval</td>
-	<td>storedVars['urlplus'].slice(1,24)</td>
-	<td>url</td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>storedVars['urlplus'].split('.')[2]</td>
-	<td>account</td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>storedVars['urlplus'].split('.')[3]</td>
-	<td>user</td>
-</tr>
-<tr>
-	<td>storeEval</td>
-	<td>storedVars['urlplus'].split('.')[4]</td>
-	<td>password</td>
-</tr>
-<tr>
 	<td>open</td>
 	<td>${url}</td>
 	<td></td>
