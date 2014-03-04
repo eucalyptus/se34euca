@@ -4,12 +4,12 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="http://10.111.101.112:8888/" />
-<title>launch-instance-from-instances-lp</title>
+<title>terminate-all-instances</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">launch-instance-from-instances-lp</td></tr>
+<tr><td rowspan="1" colspan="3">terminate-all-instances</td></tr>
 </thead><tbody>
 <tr>
 	<td>waitForVisible</td>
@@ -23,44 +23,35 @@
 </tr>
 <tr>
 	<td>waitForVisible</td>
-	<td>id=resource-menu-instances</td>
+	<td>css=i.fi-cloud.icon</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>id=resource-menu-instances</td>
+	<td>css=i.fi-cloud.icon</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForVisible</td>
-	<td>id=launch-instance-btn</td>
+	<td>id=terminate-instances-btn</td>
 	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=launch-instance-btn</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>link=precise-server-cloudimg-amd64-ext3.img</td>
-	<td></td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=instance_type</td>
-	<td>label=t1.micro: 1 CPUs, 256 memory (MB), 5 disk (GB,root device)</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=visit-step-3</td>
+	<td>id=terminate-instances-btn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>xpath=(//input[@value='Yes, Terminate'])[2]</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>//button[@type='submit']</td>
+	<td>xpath=(//input[@value='Yes, Terminate'])[2]</td>
 	<td></td>
 </tr>
+
 </tbody></table>
 </body>
 </html>

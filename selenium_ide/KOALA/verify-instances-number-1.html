@@ -12,16 +12,30 @@
 <tr><td rowspan="1" colspan="3">verify-instances-number-1</td></tr>
 </thead><tbody>
 <tr>
+	<td>waitForVisible</td>
+	<td>id=resource-menu-dashboard</td>
+	<td></td>
+</tr>
+<tr>
 	<td>clickAndWait</td>
 	<td>id=resource-menu-dashboard</td>
 	<td></td>
 </tr>
 <tr>
-	<td>verifyText</td>
-	<td>css=em.ng-binding</td>
+	<td>refresh</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=running-instances-count</td>
 	<td>1</td>
 </tr>
-
+<tr>
+	<td>verifyText</td>
+	<td>id=running-instances-count</td>
+	<td>1</td>
+</tr>
 </tbody></table>
 </body>
 </html>
