@@ -12,6 +12,16 @@
 <tr><td rowspan="1" colspan="3">get_dashboard_counts</td></tr>
 </thead><tbody>
 <tr>
+	<td>setSpeed</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>setTimeout</td>
+	<td>120000</td>
+	<td></td>
+</tr>
+<tr>
 	<td>waitForVisible</td>
 	<td>id=resource-menu-dashboard</td>
 	<td></td>
@@ -19,6 +29,11 @@
 <tr>
 	<td>clickAndWait</td>
 	<td>id=resource-menu-dashboard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=running-instances-count</td>
 	<td></td>
 </tr>
 <tr>
@@ -32,33 +47,8 @@
 	<td></td>
 </tr>
 <tr>
-	<td>storeText</td>
+	<td>waitForVisible</td>
 	<td>id=stopped-instances-count</td>
-	<td>stopped_instances</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${keypairs}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>id=securitygroups-count</td>
-	<td>s_groups</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${s_groups}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>id=keypairs-count</td>
-	<td>keypairs</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${keypairs}</td>
 	<td></td>
 </tr>
 <tr>
@@ -72,9 +62,69 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForVisible</td>
+	<td>id=securitygroups-count</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=securitygroups-count</td>
+	<td>s_groups</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${s_groups}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=keypairs-count</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=keypairs-count</td>
+	<td>keypairs</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${keypairs}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=stopped-instances-count</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=stopped-instances-count</td>
+	<td>stopped_instances</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${stopped_instances}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=scalinggroup-instances-count</td>
+	<td></td>
+</tr>
+<tr>
 	<td>storeText</td>
 	<td>id=scalinggroup-instances-count</td>
 	<td>instances_in_scaling_groups</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${instances_in_scaling_groups}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=ipaddresses-count</td>
+	<td></td>
 </tr>
 <tr>
 	<td>storeText</td>
@@ -84,6 +134,11 @@
 <tr>
 	<td>echo</td>
 	<td>${ips}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=volumes-count</td>
 	<td></td>
 </tr>
 <tr>
@@ -97,6 +152,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForVisible</td>
+	<td>id=snapshots-count</td>
+	<td></td>
+</tr>
+<tr>
 	<td>storeText</td>
 	<td>id=snapshots-count</td>
 	<td>snapshots</td>
@@ -107,6 +167,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForVisible</td>
+	<td>id=users-count</td>
+	<td></td>
+</tr>
+<tr>
 	<td>storeText</td>
 	<td>id=users-count</td>
 	<td>iam_users</td>
@@ -114,6 +179,11 @@
 <tr>
 	<td>echo</td>
 	<td>${iam_users}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=groups-count</td>
 	<td></td>
 </tr>
 <tr>
