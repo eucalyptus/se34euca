@@ -32,13 +32,33 @@
 	<td></td>
 </tr>
 <tr>
-	<td>storeEval</td>
-	<td>${running_instances}+1;</td>
-	<td>running_instances_new</td>
+	<td>storeText</td>
+	<td>id=stopped-instances-count</td>
+	<td>stopped_instances</td>
 </tr>
 <tr>
 	<td>echo</td>
-	<td>${running_instances_new}</td>
+	<td>${keypairs}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=securitygroups-count</td>
+	<td>s_groups</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${s_groups}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=keypairs-count</td>
+	<td>keypairs</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${keypairs}</td>
 	<td></td>
 </tr>
 <tr>
@@ -47,18 +67,63 @@
 	<td>stopped_instances</td>
 </tr>
 <tr>
-	<td>storeText</td>
-	<td>id=securitygroups-count</td>
-	<td>s_groups</td>
+	<td>echo</td>
+	<td>${stopped_instances}</td>
+	<td></td>
 </tr>
 <tr>
-	<td>storeEval</td>
-	<td>${s_groups}+1;</td>
-	<td>s_groups_new</td>
+	<td>storeText</td>
+	<td>id=scalinggroup-instances-count</td>
+	<td>instances_in_scaling_groups</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=ipaddresses-count</td>
+	<td>ips</td>
 </tr>
 <tr>
 	<td>echo</td>
-	<td>${s_groups_new}</td>
+	<td>${ips}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=volumes-count</td>
+	<td>volumes</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${volumes}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=snapshots-count</td>
+	<td>snapshots</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${snapshots}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=users-count</td>
+	<td>iam_users</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${iam_users}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=groups-count</td>
+	<td>iam_groups</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${iam_groups}</td>
 	<td></td>
 </tr>
 </tbody></table>

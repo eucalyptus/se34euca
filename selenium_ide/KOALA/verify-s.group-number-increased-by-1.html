@@ -17,6 +17,11 @@
 	<td></td>
 </tr>
 <tr>
+	<td>setTimeout</td>
+	<td>120000</td>
+	<td></td>
+</tr>
+<tr>
 	<td>waitForVisible</td>
 	<td>id=resource-menu-dashboard</td>
 	<td></td>
@@ -29,16 +34,6 @@
 <tr>
 	<td>waitForVisible</td>
 	<td>id=securitygroups-count</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>id=securitygroups-count</td>
-	<td>count</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${count}</td>
 	<td></td>
 </tr>
 <tr>
@@ -60,6 +55,11 @@
 	<td>echo</td>
 	<td>${s_groups}</td>
 	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=securitygroups-count</td>
+	<td>${s_groups}</td>
 </tr>
 </tbody></table>
 </body>
