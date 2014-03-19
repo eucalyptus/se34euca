@@ -22,13 +22,23 @@
 	<td></td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
+	<td>waitForVisible</td>
 	<td>id=resource-menu-dashboard</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>css=i.fi-key.icon </td>
+	<td>id=resource-menu-dashboard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>css=#key-pairs &gt; div.tile &gt; div.content &gt; a &gt; i.icon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#key-pairs &gt; div.tile &gt; div.content &gt; a &gt; i.icon</td>
 	<td></td>
 </tr>
 <tr>
@@ -37,13 +47,28 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForVisible</td>
+	<td>css=span.button.dropdown &gt; span</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
-	<td>link=Delete keypair</td>
+	<td>css=span.button.dropdown &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=delete-keypair-action</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
 	<td>css=button.button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=resource-menu-netsec</td>
 	<td></td>
 </tr>
 <tr>
@@ -57,8 +82,28 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForVisible</td>
+	<td>css=i.fi-widget</td>
+	<td></td>
+</tr>
+<tr>
 	<td>click</td>
-	<td>link=Delete</td>
+	<td>css=i.fi-widget</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>link=Delete key</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Delete key</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>css=button.button</td>
 	<td></td>
 </tr>
 <tr>

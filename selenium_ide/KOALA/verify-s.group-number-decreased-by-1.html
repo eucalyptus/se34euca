@@ -4,21 +4,16 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="http://10.111.101.112:8888/" />
-<title>verify-instances-number-1</title>
+<title>verify-s.group-number-1</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">verify-instances-number-1</td></tr>
+<tr><td rowspan="1" colspan="3">verify-s.group-number-1</td></tr>
 </thead><tbody>
 <tr>
 	<td>setSpeed</td>
 	<td>500</td>
-	<td></td>
-</tr>
-<tr>
-	<td>setTimeout</td>
-	<td>120000</td>
 	<td></td>
 </tr>
 <tr>
@@ -32,24 +27,29 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>40000</td>
+	<td>storeEval</td>
+	<td>${s_groups}-1;</td>
+	<td>s_groups_new</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${s_groups_new}</td>
 	<td></td>
 </tr>
 <tr>
-	<td>refreshAndWait</td>
-	<td></td>
+	<td>storeEval</td>
+	<td>${s_groups_new}</td>
+	<td>s_groups</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${s_groups}</td>
 	<td></td>
 </tr>
 <tr>
-	<td>waitForText</td>
-	<td>id=running-instances-count</td>
-	<td>1</td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>id=running-instances-count</td>
-	<td>1</td>
+	<td>storeText</td>
+	<td>id=securitygroups-count</td>
+	<td>${s_groups}</td>
 </tr>
 </tbody></table>
 </body>

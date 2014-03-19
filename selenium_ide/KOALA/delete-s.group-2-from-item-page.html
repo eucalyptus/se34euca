@@ -4,26 +4,16 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="http://10.111.101.112:8888/" />
-<title>verify-instances-number-1</title>
+<title>delete-s.group-from-item-page</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">verify-instances-number-1</td></tr>
+<tr><td rowspan="1" colspan="3">delete-s.group-from-item-page</td></tr>
 </thead><tbody>
 <tr>
 	<td>setSpeed</td>
 	<td>500</td>
-	<td></td>
-</tr>
-<tr>
-	<td>setTimeout</td>
-	<td>120000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForVisible</td>
-	<td>id=resource-menu-dashboard</td>
 	<td></td>
 </tr>
 <tr>
@@ -32,24 +22,34 @@
 	<td></td>
 </tr>
 <tr>
-	<td>pause</td>
-	<td>40000</td>
+	<td>clickAndWait</td>
+	<td>id=securitygroups-count</td>
 	<td></td>
 </tr>
 <tr>
-	<td>refreshAndWait</td>
-	<td></td>
+	<td>waitForVisible</td>
+	<td>link=${group_2}</td>
 	<td></td>
 </tr>
 <tr>
-	<td>waitForText</td>
-	<td>id=running-instances-count</td>
-	<td>1</td>
+	<td>clickAndWait</td>
+	<td>link=${group_2}</td>
+	<td></td>
 </tr>
 <tr>
-	<td>verifyText</td>
-	<td>id=running-instances-count</td>
-	<td>1</td>
+	<td>click</td>
+	<td>//div[@id='contentwrap']/div[3]/div/div/span/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=delete-securitygroup-action</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=form.ng-pristine.ng-valid &gt; button.button</td>
+	<td></td>
 </tr>
 </tbody></table>
 </body>

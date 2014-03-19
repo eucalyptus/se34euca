@@ -4,12 +4,12 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="http://10.111.101.112:8888/" />
-<title>launch-instance-from-instances-lp</title>
+<title>verify-s.group-number-2</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">launch-instance-from-instances-lp</td></tr>
+<tr><td rowspan="1" colspan="3">verify-s.group-number-2</td></tr>
 </thead><tbody>
 <tr>
 	<td>setSpeed</td>
@@ -17,11 +17,6 @@
 	<td></td>
 </tr>
 <tr>
-	<td>setTimeout</td>
-	<td>120000</td>
-	<td></td>
-</tr>
-<tr>
 	<td>waitForVisible</td>
 	<td>id=resource-menu-dashboard</td>
 	<td></td>
@@ -33,62 +28,37 @@
 </tr>
 <tr>
 	<td>waitForVisible</td>
-	<td>id=resource-menu-instances</td>
+	<td>id=securitygroups-count</td>
 	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=resource-menu-instances</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForVisible</td>
-	<td>id=launch-instance-btn</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=launch-instance-btn</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForVisible</td>
-	<td>css=b.ng-binding</td>
-	<td>image</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>css=b.ng-binding</td>
-	<td>image</td>
+	<td>id=securitygroups-count</td>
+	<td>count</td>
 </tr>
 <tr>
 	<td>echo</td>
-	<td>${image}</td>
+	<td>${count}</td>
 	<td></td>
 </tr>
 <tr>
-	<td>type</td>
-	<td>id=image-id-input</td>
-	<td>${image}</td>
+	<td>storeEval</td>
+	<td>${s_groups}+1;</td>
+	<td>s_groups_new</td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>id=image-id-btn</td>
+	<td>echo</td>
+	<td>${s_groups_new}</td>
 	<td></td>
 </tr>
 <tr>
-	<td>type</td>
-	<td>id=instance_type</td>
-	<td>m1.medium</td>
+	<td>storeEval</td>
+	<td>${s_groups_new}</td>
+	<td>s_groups</td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>css=#visit-step-3 &gt; span</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=launch-instance-btn-step3</td>
+	<td>echo</td>
+	<td>${s_groups}</td>
 	<td></td>
 </tr>
 </tbody></table>
