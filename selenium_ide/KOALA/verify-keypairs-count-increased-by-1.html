@@ -52,13 +52,23 @@
 	<td></td>
 </tr>
 <tr>
+	<td>waitForVisible</td>
+	<td>id=keypairs-count</td>
+	<td></td>
+</tr>
+<tr>
 	<td>storeText</td>
 	<td>id=keypairs-count</td>
 	<td>count</td>
 </tr>
 <tr>
+	<td>storeEval</td>
+	<td>1</td>
+	<td>k</td>
+</tr>
+<tr>
 	<td>while</td>
-	<td>${count}&lt;${keypairs}</td>
+	<td>${count}&lt;${keypairs} &amp;&amp; ${k}&lt;20</td>
 	<td></td>
 </tr>
 <tr>
@@ -70,6 +80,21 @@
 	<td>refreshAndWait</td>
 	<td></td>
 	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=keypairs-count</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=keypairs-count</td>
+	<td>count</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${k}+1</td>
+	<td>k</td>
 </tr>
 <tr>
 	<td>endWhile</td>
