@@ -57,9 +57,34 @@
 	<td></td>
 </tr>
 <tr>
-	<td>verifyText</td>
+	<td>storeText</td>
 	<td>id=running-instances-count</td>
-	<td>${keypairs}</td>
+	<td>count</td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>${count}&lt;${running_instances}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=running-instances-count</td>
+	<td>$running_instances}</td>
 </tr>
 
 </tbody></table>
