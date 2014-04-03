@@ -3,13 +3,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="selenium.base" href="http://10.111.101.112:8888/" />
-<title>create-key-pair-key_2-from-landing-page</title>
+<link rel="selenium.base" href="http://10.111.5.153:8888/" />
+<title>detach_volume_1_on_its_detail_page</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">create-key-pair-key_2-from-landing-page</td></tr>
+<tr><td rowspan="1" colspan="3">detach_volume_1_on_its_detail_page</td></tr>
 </thead><tbody>
 <tr>
 	<td>setSpeed</td>
@@ -33,59 +33,60 @@
 </tr>
 <tr>
 	<td>waitForVisible</td>
-	<td>id=resource-menu-netsec</td>
+	<td>css=#volumes &gt; div.tile &gt; div.content &gt; a &gt; i.icon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#volumes &gt; div.tile &gt; div.content &gt; a &gt; i.icon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>link=${volume_1_name_id}</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=resource-menu-netsec</td>
+	<td>link=${volume_1_name_id}</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForVisible</td>
-	<td>id=resource-menuitem-keypairs</td>
+	<td>css=span.button.dropdown</td>
 	<td></td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>id=resource-menuitem-keypairs</td>
+	<td>click</td>
+	<td>css=span.button.dropdown</td>
 	<td></td>
 </tr>
 <tr>
 	<td>waitForVisible</td>
-	<td>id=create-keypair-btn</td>
+	<td>id=detach-volume-action</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=detach-volume-action</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>css=div.row &gt; input.button.expand</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>id=create-keypair-btn</td>
+	<td>css=div.row &gt; input.button.expand</td>
 	<td></td>
 </tr>
 <tr>
-	<td>storeEval</td>
-	<td>(Math.random().toString(36)+&quot;000000000&quot;).slice(2,7);</td>
-	<td>str</td>
+	<td>waitForText</td>
+	<td>//div[@id='contentwrap']/div[3]/div/form/div/div[2]/span</td>
+	<td>available</td>
 </tr>
-<tr>
-	<td>type</td>
-	<td>id=key-name</td>
-	<td>key${str}</td>
-</tr>
-<tr>
-	<td>store</td>
-	<td>key${str}</td>
-	<td>key_2</td>
-</tr>
-<tr>
-	<td>echo</td>
-	<td>${key_2}</td>
-	<td></td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>css=button.button</td>
-	<td></td>
-</tr>
+
 </tbody></table>
 </body>
 </html>
