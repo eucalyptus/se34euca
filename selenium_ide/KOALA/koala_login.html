@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="selenium.base" href="http://10.111.101.112:8888/" />
+<!-- <link rel="selenium.base" href="http://10.111.101.112:8888/" /> -->
 <title>koala_login</title>
 </head>
 <body>
@@ -13,46 +13,46 @@
 </thead><tbody>
 <tr>
 	<td>setSpeed</td>
-	<td>200</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>setTimeout</td>
+	<td>120000</td>
 	<td></td>
 </tr>
 <tr>
 	<td>open</td>
-	<td>http://10.111.101.112:8888/</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=account</td>
 	<td></td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=account</td>
-	<td>ui-test-acct-02</td>
+	<td>ui-test-acct-00</td>
 </tr>
 <tr>
-	<td>typeKeys</td>
-	<td>id=account</td>
-	<td>ui-test-acct-02</td>
+	<td>waitForVisible</td>
+	<td>id=username</td>
+	<td></td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=username</td>
-	<td>user00</td>
-</tr>
-<tr>
-	<td>typeKeys</td>
-	<td>id=username</td>
-	<td>user00</td>
+	<td>admin</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=password</td>
-	<td>mypassword5</td>
+	<td>mypassword0</td>
 </tr>
 <tr>
-	<td>typeKeys</td>
-	<td>id=password</td>
-	<td>mypassword5</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
+	<td>click</td>
 	<td>id=euca-login-button</td>
 	<td></td>
 </tr>

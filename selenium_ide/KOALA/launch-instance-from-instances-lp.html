@@ -12,51 +12,85 @@
 <tr><td rowspan="1" colspan="3">launch-instance-from-instances-lp</td></tr>
 </thead><tbody>
 <tr>
-	<td>clickAndWait</td>
-	<td>id=resource-menuitem-instance</td>
+	<td>setSpeed</td>
+	<td>500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>setTimeout</td>
+	<td>120000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=resource-menu-dashboard</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Launch Instance</td>
+	<td>id=resource-menu-dashboard</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=resource-menu-instances</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=precise-server-cloudimg-amd64-ext3.img</td>
+	<td>id=resource-menu-instances</td>
 	<td></td>
 </tr>
 <tr>
-	<td>select</td>
-	<td>id=zone</td>
-	<td>label=PARTI01</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=instance_type</td>
-	<td>label=t1.micro: 1 CPUs, 256 memory (MB), 5 disk (GB,root device)</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=visit-step-3</td>
+	<td>waitForVisible</td>
+	<td>id=launch-instance-btn</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>//button[@type='submit']</td>
+	<td>id=launch-instance-btn</td>
 	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>css=b.ng-binding</td>
+	<td>image</td>
 </tr>
 <tr>
 	<td>storeText</td>
-	<td>css=div.alert-box.success</td>
-	<td>message</td>
+	<td>css=b.ng-binding</td>
+	<td>image</td>
 </tr>
 <tr>
 	<td>echo</td>
-	<td>${message}</td>
+	<td>${image}</td>
 	<td></td>
 </tr>
-
+<tr>
+	<td>type</td>
+	<td>id=image-id-input</td>
+	<td>${image}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=image-id-btn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=instance_type</td>
+	<td>m1.small</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#visit-step-3 &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=launch-instance-btn-step3</td>
+	<td></td>
+</tr>
 </tbody></table>
 </body>
 </html>

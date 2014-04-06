@@ -17,29 +17,49 @@
 	<td></td>
 </tr>
 <tr>
+	<td>setTimeout</td>
+	<td>60000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=resource-menu-dashboard</td>
+	<td></td>
+</tr>
+<tr>
 	<td>clickAndWait</td>
 	<td>id=resource-menu-dashboard</td>
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>id=resource-menu-netsec</td>
+	<td>waitForVisible</td>
+	<td>link=Create key pair</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>id=resource-menuitem-keypair</td>
+	<td>link=Create key pair</td>
 	<td></td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
-	<td>link=Create new key pair</td>
-	<td></td>
+	<td>storeEval</td>
+	<td>Math.random().toString(36).substring(7);</td>
+	<td>str</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=key-name</td>
-	<td>test-key1</td>
+	<td>group${str}</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>group${str}</td>
+	<td>key_1</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${key_1}</td>
+	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>

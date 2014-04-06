@@ -13,7 +13,12 @@
 </thead><tbody>
 <tr>
 	<td>setSpeed</td>
-	<td>200</td>
+	<td>300</td>
+	<td></td>
+</tr>
+<tr>
+	<td>setTimeout</td>
+	<td>100000</td>
 	<td></td>
 </tr>
 <tr>
@@ -52,38 +57,23 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
+	<td>waitForVisible</td>
 	<td>link=myinst</td>
 	<td></td>
 </tr>
 <tr>
-	<td>verifyElementPresent</td>
-	<td>link=myinst</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=myinst</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForElementPresent</td>
-	<td>//div[@id='tabs-1']/ul/li[2]/div[2]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyElementPresent</td>
-	<td>//div[@id='tabs-1']/ul/li[2]/div[2]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>storeText</td>
-	<td>//div[@id='tabs-1']/ul/li[2]/div[2]</td>
+	<td>storeAttribute </td>
+	<td>//td/a[text()=&quot;myinst&quot;]/@title</td>
 	<td>inst_id</td>
 </tr>
 <tr>
 	<td>echo</td>
 	<td>${inst_id}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
 	<td></td>
 </tr>
 <tr>
@@ -147,7 +137,7 @@
 	<td></td>
 </tr>
 <tr>
-	<td>waitForElementPresent</td>
+	<td>waitForVisible</td>
 	<td>link=Associate with instance</td>
 	<td></td>
 </tr>
@@ -175,6 +165,11 @@
 	<td>typeKeys</td>
 	<td>id=associate-selected-value</td>
 	<td>${inst_id} (myinst)</td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>css=a:contains(&quot;myinst&quot;)</td>
+	<td></td>
 </tr>
 <tr>
 	<td>click</td>

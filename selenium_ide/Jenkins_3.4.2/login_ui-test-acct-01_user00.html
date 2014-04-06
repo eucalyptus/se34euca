@@ -3,13 +3,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="selenium.base" href="https://10.111.5.8:8888/" />
-<title>login_ui-test-acct-00_user00</title>
+<title>login_ui-test-acct-01_user00</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">login_ui-test-acct-00_user00</td></tr>
+<tr><td rowspan="1" colspan="3">login_ui-test-acct-01_user00</td></tr>
 </thead><tbody>
 <tr>
 	<td>setSpeed</td>
@@ -17,8 +16,53 @@
 	<td></td>
 </tr>
 <tr>
+	<td>echo</td>
+	<td>${urlplus}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{${urlplus}.slice(0,24)};</td>
+	<td>url</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${url}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{${urlplus}.split('@')[1];};</td>
+	<td>account</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${account}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{${urlplus}.split('@')[2];};</td>
+	<td>user</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${user}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{${urlplus}.split('@')[3];};</td>
+	<td>password</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${password}</td>
+	<td></td>
+</tr>
+<tr>
 	<td>open</td>
-	<td>https://10.111.5.8:8888</td>
+	<td>${url}</td>
 	<td></td>
 </tr>
 <tr>
@@ -29,36 +73,46 @@
 <tr>
 	<td>type</td>
 	<td>id=account</td>
-	<td>ui-test-acct-01</td>
+	<td>${account}</td>
 </tr>
 <tr>
 	<td>typeKeys</td>
 	<td>id=account</td>
-	<td>ui-test-acct-01</td>
+	<td>${account}</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=username</td>
-	<td>user00</td>
+	<td>${user}</td>
 </tr>
 <tr>
 	<td>typeKeys</td>
 	<td>id=username</td>
-	<td>user00</td>
+	<td>${user}</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=password</td>
-	<td>mypassword3</td>
+	<td>${password}</td>
 </tr>
 <tr>
 	<td>typeKeys</td>
 	<td>id=password</td>
-	<td>mypassword3</td>
+	<td>${password}</td>
 </tr>
 <tr>
 	<td>click</td>
 	<td>name=login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>javascript{Selenium.prototype.doCaptureEntirePageScreenshot(&quot;se34euca\capture.png&quot;) ;};</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=resource-menu-dashboard</td>
 	<td></td>
 </tr>
 </tbody></table>
