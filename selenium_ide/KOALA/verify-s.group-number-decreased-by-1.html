@@ -42,13 +42,53 @@
 	<td></td>
 </tr>
 <tr>
-	<td>storeEval</td>
-	<td>${s_groups_new}</td>
-	<td>s_groups</td>
+	<td>waitForVisible</td>
+	<td>id=securitygroups-count</td>
+	<td></td>
 </tr>
 <tr>
-	<td>echo</td>
-	<td>${s_groups}</td>
+	<td>storeText</td>
+	<td>id=securitygroups-count</td>
+	<td>count</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>1</td>
+	<td>k</td>
+</tr>
+<tr>
+	<td>while</td>
+	<td>${count}&gt;${s_groups_new}&amp;&amp; ${k}&lt;20</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=securitygroups-count</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=securitygroups-count</td>
+	<td>count</td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>${k}+1</td>
+	<td>k</td>
+</tr>
+<tr>
+	<td>endWhile</td>
+	<td></td>
 	<td></td>
 </tr>
 <tr>
@@ -59,7 +99,17 @@
 <tr>
 	<td>verifyText</td>
 	<td>id=securitygroups-count</td>
+	<td>${s_groups_new}</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=securitygroups-count</td>
+	<td>s_groups</td>
+</tr>
+<tr>
+	<td>echo</td>
 	<td>${s_groups}</td>
+	<td></td>
 </tr>
 </tbody></table>
 </body>
